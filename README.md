@@ -1,1 +1,1 @@
-### Typescript MCP Server
+#Typescript MCP Server
