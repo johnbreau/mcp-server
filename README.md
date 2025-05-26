@@ -1,4 +1,4 @@
-# Obsidian Vault CLI
+# Typescript MCP Server with Obsidian Integration
 
 A command-line interface for interacting with your Obsidian vault.
 
