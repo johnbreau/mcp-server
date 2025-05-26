@@ -25,6 +25,11 @@ A command-line interface for interacting with your Obsidian vault.
 
 ### Client Application
 
+To start the backend:
+```bash
+npm run dev
+```
+
 To start the React frontend:
 
 1. Navigate to the client directory:
