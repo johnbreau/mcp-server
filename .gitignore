@@ -1,4 +1,11 @@
-node_modules/
+# Ignore environment files
 .env
 .env.example    
+
+# Ignore log files
+*.log
+
+# Ignore folders
+temp/ 
 dist/
+node_modules/
