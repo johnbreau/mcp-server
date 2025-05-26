@@ -8,8 +8,22 @@ const toolRouter = Router();
 const toolsDir = path.join(__dirname, "tools");
 
 fs.readdirSync(toolsDir).forEach((file) => {
-  const tool: MCPTool = require(path.join(toolsDir, file)).default;
-  toolRouter.all(`/tools/${tool.name}`, async (req, res) => {
+  if (!file.endsWith('.js') && !file.endsWith('.ts')) return;
+  
+  console.log(`Loading tool from file: ${file}`);
+  const toolPath = path.join(toolsDir, file);
+  const toolModule = require(toolPath);
+  const tool: MCPTool = toolModule.default;
+  
+  if (!tool || !tool.name) {
+    console.error(`Invalid tool in file ${file}: missing default export or name property`);
+    return;
+  }
+  
+  const routePath = `/tools/${tool.name}`;
+  console.log(`Registering tool: ${tool.name} at ${routePath}`);
+  
+  toolRouter.all(routePath, async (req, res) => {
     try {
       const result = await tool.run(req.method === "POST" ? req.body : req.query);
       res.json(result);
