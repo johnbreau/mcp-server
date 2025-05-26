@@ -20,6 +20,73 @@ A command-line interface for interacting with your Obsidian vault.
    OBSIDIAN_VAULT_PATH=/path/to/your/obsidian/vault
    ```
 
+
+## Development
+
+### Available Scripts
+
+This project includes several npm scripts to help with development and testing:
+
+#### Start the Application
+```bash
+npm start
+```
+Starts the application using `ts-node`. The server will be available at `http://localhost:3000` by default (or the port specified in your environment variables).
+
+#### Development Mode with Auto-Reload
+```bash
+npm run dev
+```
+Starts the application in development mode using `nodemon`, which automatically restarts the server when you make changes to any TypeScript file in the `src` directory.
+
+#### Build the Project
+```bash
+npm run build
+```
+Compiles TypeScript files to JavaScript in the `dist` directory.
+
+#### Run Tests
+```bash
+npm test
+```
+Runs the test suite (currently no tests are configured).
+
+#### Run CLI Tool
+```bash
+# Run the CLI tool directly
+npm run cli [command]
+
+# Examples:
+npm run cli list
+npm run cli search "query"
+npm run cli read "path/to/note.md"
+```
+
+### Environment Variables
+
+The application uses the following environment variables:
+
+- `OBSIDIAN_VAULT_PATH`: Path to your Obsidian vault (required)
+- `PORT`: Port number for the server (default: 3000)
+
+Create a `.env` file in the project root to set these variables:
+```env
+OBSIDIAN_VAULT_PATH=/path/to/your/obsidian/vault
+PORT=3000
+```
+
+### Project Structure
+
+- `src/` - Source code
+  - `tools/` - MCP tool implementations
+    - `obsidian.ts` - Obsidian vault integration
+  - `index.ts` - Main application entry point
+  - `router.ts` - API route definitions
+  - `types.ts` - TypeScript type definitions
+- `dist/` - Compiled JavaScript (created when running `npm run build`)
+- `test-obsidian.ts` - Test script for Obsidian tool
+- `src/cli.ts` - Command-line interface
+
 ## CLI Usage
 
 ### Getting Started
@@ -166,69 +233,3 @@ curl -X POST http://localhost:3000/api/tools/obsidian/read \
   -H "Content-Type: application/json" \
   -d '{"filePath": "00_Slipbox/SomeNote.md"}'
 ```
-
-## Development
-
-### Available Scripts
-
-This project includes several npm scripts to help with development and testing:
-
-#### Start the Application
-```bash
-npm start
-```
-Starts the application using `ts-node`. The server will be available at `http://localhost:3000` by default (or the port specified in your environment variables).
-
-#### Development Mode with Auto-Reload
-```bash
-npm run dev
-```
-Starts the application in development mode using `nodemon`, which automatically restarts the server when you make changes to any TypeScript file in the `src` directory.
-
-#### Build the Project
-```bash
-npm run build
-```
-Compiles TypeScript files to JavaScript in the `dist` directory.
-
-#### Run Tests
-```bash
-npm test
-```
-Runs the test suite (currently no tests are configured).
-
-#### Run CLI Tool
-```bash
-# Run the CLI tool directly
-npm run cli [command]
-
-# Examples:
-npm run cli list
-npm run cli search "query"
-npm run cli read "path/to/note.md"
-```
-
-### Environment Variables
-
-The application uses the following environment variables:
-
-- `OBSIDIAN_VAULT_PATH`: Path to your Obsidian vault (required)
-- `PORT`: Port number for the server (default: 3000)
-
-Create a `.env` file in the project root to set these variables:
-```env
-OBSIDIAN_VAULT_PATH=/path/to/your/obsidian/vault
-PORT=3000
-```
-
-### Project Structure
-
-- `src/` - Source code
-  - `tools/` - MCP tool implementations
-    - `obsidian.ts` - Obsidian vault integration
-  - `index.ts` - Main application entry point
-  - `router.ts` - API route definitions
-  - `types.ts` - TypeScript type definitions
-- `dist/` - Compiled JavaScript (created when running `npm run build`)
-- `test-obsidian.ts` - Test script for Obsidian tool
-- `src/cli.ts` - Command-line interface
