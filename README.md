@@ -23,11 +23,32 @@ A command-line interface for interacting with your Obsidian vault.
 
 ## Development
 
+### Client Application
+
+To start the React frontend:
+
+1. Navigate to the client directory:
+   ```bash
+   cd client
+   ```
+
+2. Install dependencies (if not already installed):
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+The application will be available at `http://localhost:5173` by default.
+
 ### Available Scripts
 
 This project includes several npm scripts to help with development and testing:
 
-#### Start the Application
+#### Start the Server Application
 ```bash
 npm start
 ```

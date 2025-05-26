@@ -3,32 +3,31 @@ import fs from 'fs-extra';
 import fg from 'fast-glob';
 import path from 'path';
 
-interface SearchResult {
+export interface SearchResult {
   path: string;
-  title: string;
-  excerpt: string;
+  content: string;
+  lastModified: string;
   size: number;
-  modified: Date;
 }
 
-interface ListResult {
+export interface ListResult {
   path: string;
   files: Array<{
     path: string;
     name: string;
     size: number;
-    modified?: Date;
+    modified?: string;
   }>;
   total: number;
 }
 
-interface ReadResult {
+export interface ReadResult {
   path: string;
   title: string;
   content: string;
   size: number;
-  created?: Date;
-  modified?: Date;
+  created?: string;
+  modified?: string;
 }
 
 type ObsidianParams = {
@@ -38,10 +37,13 @@ type ObsidianParams = {
   limit?: number;
 };
 
-const OBSIDIAN_VAULT_PATH = process.env.OBSIDIAN_VAULT_PATH || '';
-
-if (!OBSIDIAN_VAULT_PATH) {
-  console.warn('OBSIDIAN_VAULT_PATH environment variable is not set. Obsidian tool may not work correctly.');
+function getVaultPath(): string {
+  const vaultPath = process.env.OBSIDIAN_VAULT_PATH;
+  if (!vaultPath) {
+    console.error('OBSIDIAN_VAULT_PATH environment variable is not set. Please set it in your .env file.');
+    throw new Error('OBSIDIAN_VAULT_PATH environment variable is not set');
+  }
+  return vaultPath;
 }
 
 class ObsidianTool implements MCPTool {
@@ -50,12 +52,8 @@ class ObsidianTool implements MCPTool {
   
   async run(params: Record<string, any>): Promise<any> {
     const { action, query = '', path: filePath = '', limit = 10 } = params as ObsidianParams;
-    
-    if (!OBSIDIAN_VAULT_PATH) {
-      throw new Error('OBSIDIAN_VAULT_PATH environment variable is not set');
-    }
-
-    const fullPath = path.join(OBSIDIAN_VAULT_PATH, filePath);
+    const vaultPath = getVaultPath();
+    const fullPath = path.join(vaultPath, filePath);
 
     try {
       switch (action) {
@@ -66,7 +64,7 @@ class ObsidianTool implements MCPTool {
           return await this.readNote(fullPath);
           
         case 'list':
-          return await this.listNotes(fullPath, limit);
+          return await this.listNotes(filePath, limit);
           
         default:
           throw new Error(`Unknown action: ${action}`);
@@ -82,43 +80,47 @@ class ObsidianTool implements MCPTool {
     }
   }
 
-  async searchNotes(query: string, limit: number): Promise<{ results: SearchResult[] }> {
+  async searchNotes(query: string, limit: number = 5): Promise<{ results: SearchResult[] }> {
+    console.log('searchNotes called with query:', { query, limit });
     if (!query) {
-      throw new Error('Search query is required');
+      console.log('Empty query, returning empty results');
+      return { results: [] };
     }
 
+    const searchPath = getVaultPath();
+    console.log('Searching in vault path:', searchPath);
+    const results: SearchResult[] = [];
+
     try {
-      const files = await fg('**/*.md', {
-        cwd: OBSIDIAN_VAULT_PATH,
+      const files = await fg(`${searchPath}/**/*.md`, {
         ignore: ['**/.obsidian/**', '**/node_modules/**'],
-        absolute: true,
         onlyFiles: true,
+        caseSensitiveMatch: false,
+        absolute: true,
+        dot: false,
+        followSymbolicLinks: true,
       });
 
-      const results: SearchResult[] = [];
       const searchTerm = query.toLowerCase();
-      
+
       for (const file of files) {
         if (results.length >= limit) break;
-        
+
         try {
           const content = await fs.readFile(file, 'utf-8');
           if (content.toLowerCase().includes(searchTerm)) {
-            const relativePath = path.relative(OBSIDIAN_VAULT_PATH, file);
+            const relativePath = path.relative(searchPath, file);
+            const stats = await fs.stat(file);
             results.push({
               path: relativePath,
-              title: path.basename(file, '.md'),
-              excerpt: this.getExcerpt(content, searchTerm),
+              content: content.slice(0, 200) + (content.length > 200 ? '...' : ''),
+              lastModified: stats.mtime.toISOString(),
               size: content.length,
-              modified: (await fs.stat(file)).mtime
             });
           }
-        } catch (error: unknown) {
-          if (error instanceof Error) {
-            console.warn(`Error reading file ${file}:`, error.message);
-          } else {
-            console.warn(`Error reading file ${file}:`, String(error));
-          }
+        } catch (error) {
+          console.error(`Error reading file ${file}:`, error);
+          continue;
         }
       }
 
@@ -135,21 +137,23 @@ class ObsidianTool implements MCPTool {
   }
 
   async readNote(filePath: string): Promise<ReadResult> {
+    const vaultPath = getVaultPath();
+    const fullPath = path.join(vaultPath, filePath);
+    
     try {
-      if (!(await fs.pathExists(filePath))) {
+      if (!(await fs.pathExists(fullPath))) {
         throw new Error(`File not found: ${filePath}`);
       }
-
-      const content = await fs.readFile(filePath, 'utf-8');
-      const stats = await fs.stat(filePath);
+      const content = await fs.readFile(fullPath, 'utf-8');
+      const stats = await fs.stat(fullPath);
       
       return {
-        path: path.relative(OBSIDIAN_VAULT_PATH, filePath),
-        title: path.basename(filePath, '.md'),
+        path: filePath,
+        title: path.basename(fullPath, '.md'),
         content,
         size: content.length,
-        created: stats.birthtime,
-        modified: stats.mtime,
+        created: stats.birthtime.toISOString(),
+        modified: stats.mtime.toISOString()
       };
     } catch (error: unknown) {
       if (error instanceof Error) {
@@ -162,30 +166,58 @@ class ObsidianTool implements MCPTool {
     }
   }
 
-  async listNotes(directory: string, limit: number): Promise<ListResult> {
+  async listNotes(directory: string = '', limit: number = 10): Promise<ListResult> {
+    const vaultPath = getVaultPath();
+    const basePath = path.join(vaultPath, directory || '');
+    const fullPath = path.resolve(basePath);
+
+    // Verify the path is within the vault
+    if (!fullPath.startsWith(vaultPath)) {
+      throw new Error('Access denied: Path is outside the vault');
+    }
+
     try {
-      const fullPath = path.join(OBSIDIAN_VAULT_PATH, directory);
-      
-      if (!(await fs.pathExists(fullPath))) {
-        throw new Error(`Directory not found: ${directory}`);
+      // Get all markdown files in the directory
+      const filePaths = await fg(`${basePath}/**/*.md`, {
+        ignore: ['**/node_modules/**', '**/.git/**'],
+        onlyFiles: true,
+        caseSensitiveMatch: false,
+        absolute: true,
+        dot: false,
+        followSymbolicLinks: true,
+      });
+
+      // Process files up to the limit
+      const filesToProcess = filePaths.slice(0, limit);
+      const fileResults: Array<{
+        path: string;
+        name: string;
+        size: number;
+        modified: string;
+      } | null> = [];
+
+      for (const filePath of filesToProcess) {
+        try {
+          const stats = await fs.stat(filePath);
+          fileResults.push({
+            path: path.relative(vaultPath, filePath),
+            name: path.basename(filePath, '.md'),
+            size: stats.size,
+            modified: stats.mtime.toISOString()
+          });
+        } catch (error) {
+          console.error(`Error processing file ${filePath}:`, error);
+          fileResults.push(null);
+        }
       }
 
-      const files = await fg('**/*.md', {
-        cwd: fullPath,
-        ignore: ['**/.obsidian/**', '**/node_modules/**'],
-        onlyFiles: true,
-        stats: true,
-      });
+      // Filter out any null results from failed file processing
+      const validFiles = fileResults.filter((file): file is NonNullable<typeof file> => file !== null);
 
       return {
         path: directory,
-        files: files.slice(0, limit).map(file => ({
-          path: file.path,
-          name: path.basename(file.path, '.md'),
-          size: file.stats?.size || 0,
-          modified: file.stats?.mtime,
-        })),
-        total: files.length,
+        files: validFiles,
+        total: filePaths.length
       };
     } catch (error: unknown) {
       if (error instanceof Error) {
