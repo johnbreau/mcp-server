@@ -27,9 +27,13 @@ interface SearchResult {
   relevance?: number;
 }
 
-interface SemanticSearchResult {
-  reasoning: string;
-  results: SearchResult[];
+interface SemanticSearchResponse {
+  success: boolean;
+  data: {
+    results: SearchResult[];
+    reasoning: string;
+    total: number;
+  };
 }
 
 interface Message {
@@ -45,7 +49,7 @@ export function SearchPage() {
   const [activeTab, setActiveTab] = useState<string | null>('keyword');
   const [searchError, setSearchError] = useState<string | null>(null);
   const [keywordResults, setKeywordResults] = useState<SearchResult[]>([]);
-  const [semanticResults, setSemanticResults] = useState<SemanticSearchResult | null>(null);
+  const [semanticResults, setSemanticResults] = useState<SemanticSearchResponse | null>(null);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
@@ -114,12 +118,26 @@ export function SearchPage() {
 
     try {
       const result = await api.semanticSearch(query);
-      setSemanticResults(result);
+      setSemanticResults({
+        success: result.success,
+        data: {
+          results: result.data.results || [],
+          reasoning: result.data.reasoning || '',
+          total: result.data.total || 0
+        }
+      });
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Failed to perform semantic search';
       console.error('Semantic search error:', error);
       setSearchError(`Error: ${errorMessage}`);
-      setSemanticResults(null);
+      setSemanticResults({
+        success: false,
+        data: {
+          results: [],
+          reasoning: errorMessage,
+          total: 0
+        }
+      });
     } finally {
       setIsSearching(false);
     }
@@ -155,21 +173,43 @@ export function SearchPage() {
   };
 
   // Handle sending a message (for chat functionality)
-  const handleSendMessage = useCallback(() => {
+  const handleSendMessage = useCallback(async () => {
     if (!messageInput.trim()) return;
 
     const userMessage: Message = { role: 'user', content: messageInput };
     setMessages(prev => [...prev, userMessage]);
     setMessageInput('');
+    setIsSearching(true);
 
-    // Simulate assistant response (replace with actual API call)
-    setTimeout(() => {
-      const assistantMessage: Message = {
+    try {
+      // Call the API to get a response
+      const response = await api.askQuestion(messageInput);
+      
+      // Log the full response for debugging
+      console.log('AI Response:', response);
+      
+      // Check if the response is successful and has the expected structure
+      if (response?.success && response.data?.answer) {
+        const assistantMessage: Message = {
+          role: 'assistant',
+          content: response.data.answer
+        };
+        setMessages(prev => [...prev, assistantMessage]);
+      } else {
+        throw new Error('Invalid response format from server');
+      }
+    } catch (error) {
+      console.error('Error getting AI response:', error);
+      
+      const errorMessage: Message = {
         role: 'assistant',
-        content: `I received your message: "${messageInput}". This is a simulated response.`
+        content: 'Sorry, I encountered an error processing your request. Please try again.'
       };
-      setMessages(prev => [...prev, assistantMessage]);
-    }, 1000);
+      
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsSearching(false);
+    }
   }, [messageInput]);
 
   // Handle pressing Enter in the message input
@@ -258,31 +298,41 @@ export function SearchPage() {
 
           {isSearching && searchQuery ? (
             <Loader />
-          ) : semanticResults ? (
+          ) : semanticResults?.success ? (
             <Stack gap="md">
-              <Paper p="md" withBorder>
-                <Text fw={500}>AI Analysis:</Text>
-                <Text>{semanticResults.reasoning}</Text>
-              </Paper>
+              {semanticResults.data.reasoning && (
+                <Paper p="md" withBorder>
+                  <Text fw={500}>AI Analysis:</Text>
+                  <Text>{semanticResults.data.reasoning}</Text>
+                </Paper>
+              )}
               
-              <Text size="sm" c="dimmed">
-                Found {semanticResults.results.length} relevant notes:
-              </Text>
-              
-              {semanticResults.results.map((result, index) => (
-                <Card key={index} withBorder>
-                  <Text fw={500}>{result.path}</Text>
-                  <Text size="sm" lineClamp={3}>
-                    {result.content}
+              {semanticResults.data.results?.length > 0 ? (
+                <>
+                  <Text size="sm" c="dimmed">
+                    Found {semanticResults.data.results.length} relevant notes:
                   </Text>
-                  {result.relevance !== undefined && (
-                    <Badge color="green" size="sm" mt="xs">
-                      Relevance: {(result.relevance * 100).toFixed(1)}%
-                    </Badge>
-                  )}
-                </Card>
-              ))}
+                  
+                  {semanticResults.data.results.map((result, index) => (
+                    <Card key={index} withBorder>
+                      <Text fw={500}>{result.path}</Text>
+                      <Text size="sm" lineClamp={3}>
+                        {result.content}
+                      </Text>
+                      {result.relevance !== undefined && (
+                        <Badge color="green" size="sm" mt="xs">
+                          Relevance: {(result.relevance * 100).toFixed(1)}%
+                        </Badge>
+                      )}
+                    </Card>
+                  ))}
+                </>
+              ) : (
+                <Text>No results found for your search.</Text>
+              )}
             </Stack>
+          ) : semanticResults?.success === false ? (
+            <Text color="red">Error: {semanticResults.data.reasoning || 'Failed to perform search'}</Text>
           ) : searchQuery ? (
             <Text>No semantic results found for "{searchQuery}"</Text>
           ) : (

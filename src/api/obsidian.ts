@@ -15,47 +15,61 @@ const apiClient = axios.create({
 export const api: ApiClient = {
   searchNotes: async (query: string, limit: number = 5): Promise<SearchResult[]> => {
     try {
-      // First list all notes to get their paths
-      let allNotes = await api.listNotes('', 1000);
-      
-      // Filter notes by query if provided
-      if (query) {
-        const queryLower = query.toLowerCase();
-        allNotes = allNotes.filter(note => 
-          note.name.toLowerCase().includes(queryLower) ||
-          note.path.toLowerCase().includes(queryLower)
-        );
+      if (!query) {
+        return [];
       }
       
-      // Apply limit
-      const notesToProcess = allNotes.slice(0, Math.min(limit, 10)); // Max 10 notes for performance
+      console.log(`Searching for: "${query}"`);
       
-      // Get the content of each note
-      const notePromises = notesToProcess.map(async (note) => {
+      // First list all notes to get their paths
+      const allNotes = await api.listNotes('', 100); // Limit to 100 notes for performance
+      console.log(`Found ${allNotes.length} notes to search through`);
+      
+      if (allNotes.length === 0) {
+        console.log('No notes found to search');
+        return [];
+      }
+      
+      // Get the content of each note first
+      const notesWithContent = [];
+      
+      for (const note of allNotes.slice(0, 20)) { // Limit to 20 notes for performance
         try {
           const content = await api.getNote(note.path);
-          return {
+          notesWithContent.push({
             path: note.path,
+            name: note.name,
             content: content.content,
             lastModified: note.lastModified || new Date().toISOString(),
             size: note.size || 0
-          } as SearchResult;
+          });
         } catch (error) {
           console.error(`Error getting note ${note.path}:`, error);
-          return null;
         }
-      });
+      }
       
-      const notesWithContent = await Promise.all(notePromises);
+      console.log(`Successfully retrieved content for ${notesWithContent.length} notes`);
       
-      // Filter out any failed notes and ensure we have valid SearchResult objects
-      return notesWithContent.filter((note): note is SearchResult => 
-        note !== null && 
-        'path' in note && 
-        'content' in note &&
-        'lastModified' in note &&
-        'size' in note
+      if (notesWithContent.length === 0) {
+        return [];
+      }
+      
+      // Filter notes by content
+      const queryLower = query.toLowerCase();
+      const matchingNotes = notesWithContent.filter(note => 
+        note.name.toLowerCase().includes(queryLower) ||
+        note.path.toLowerCase().includes(queryLower) ||
+        note.content.toLowerCase().includes(queryLower)
       );
+      
+      console.log(`Found ${matchingNotes.length} matching notes`);
+      
+      // If we have matches, return them, otherwise return the most recent notes
+      const results = matchingNotes.length > 0 
+        ? matchingNotes 
+        : notesWithContent.slice(0, Math.min(limit, 5)); // Fallback to most recent
+      
+      return results.slice(0, limit);
     } catch (error) {
       console.error('Error in searchNotes:', error);
       throw error;

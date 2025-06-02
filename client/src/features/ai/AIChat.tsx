@@ -42,23 +42,49 @@ export function AIChat() {
 
     try {
       // Use the appropriate API method based on the input
-      let response;
+      let response: string;
+      
       if (input.toLowerCase().startsWith('summarize')) {
         // For demo purposes, using the first note's content
         const notes = await api.listNotes();
         if (notes.length > 0) {
           const note = await api.getNote(notes[0].path);
-          response = await api.summarizeNote(note.content);
+          const result = await api.summarizeNote(note.content);
+          if (result.success) {
+            response = result.summary;
+          } else {
+            response = `Failed to generate summary: ${result.error || 'Unknown error'}`;
+          }
+        } else {
+          response = 'No notes found to summarize.';
         }
       } else if (input.toLowerCase().includes('?')) {
-        response = await api.askQuestion(input);
+        const result = await api.askQuestion(input);
+        if (result.success) {
+          // Access answer, context, and sources from the data object
+          response = result.data.answer;
+          // Add context and sources if available
+          if (result.data.context || result.data.sources?.length) {
+            response += '\n\n';
+            if (result.data.context) response += `Context: ${result.data.context}\n`;
+            if (result.data.sources?.length) response += `Sources: ${result.data.sources.join(', ')}`;
+          }
+        } else {
+          response = `Error: ${result.message || 'Failed to get an answer'}`;
+        }
       } else {
-        response = await api.semanticSearch(input, 3);
+        const result = await api.semanticSearch(input, 3);
+        if (result.success && result.data.results.length > 0) {
+          response = `Found ${result.data.results.length} relevant notes.\n\n${result.data.reasoning || 'Relevant notes found:'}\n\n` +
+            result.data.results.map(r => `**${r.path}**: ${r.content.substring(0, 200)}...`).join('\n\n');
+        } else {
+          response = result.data.reasoning || 'No relevant notes found.';
+        }
       }
 
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: typeof response === 'string' ? response : JSON.stringify(response, null, 2),
+        content: response,
         isUser: false,
         timestamp: new Date(),
       };
@@ -68,7 +94,7 @@ export function AIChat() {
       console.error('Error getting AI response:', error);
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: 'Sorry, I encountered an error processing your request.',
+        content: `Error: ${error instanceof Error ? error.message : 'Failed to process your request'}`,
         isUser: false,
         timestamp: new Date(),
       };
