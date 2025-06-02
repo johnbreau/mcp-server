@@ -52,8 +52,6 @@ class ObsidianTool implements MCPTool {
   
   async run(params: Record<string, any>): Promise<any> {
     const { action, query = '', path: filePath = '', limit = 10 } = params as ObsidianParams;
-    const vaultPath = getVaultPath();
-    const fullPath = path.join(vaultPath, filePath);
 
     try {
       switch (action) {
@@ -61,7 +59,8 @@ class ObsidianTool implements MCPTool {
           return await this.searchNotes(query, limit);
           
         case 'read':
-          return await this.readNote(fullPath);
+          // The filePath should be relative to the vault, not an absolute path
+          return await this.readNote(filePath);
           
         case 'list':
           return await this.listNotes(filePath, limit);
@@ -92,37 +91,75 @@ class ObsidianTool implements MCPTool {
     const results: SearchResult[] = [];
 
     try {
-      const files = await fg(`${searchPath}/**/*.md`, {
-        ignore: ['**/.obsidian/**', '**/node_modules/**'],
+      // Search for all files in the vault
+      const files = await fg([`${searchPath}/**/*`], {
+        ignore: [
+          '**/.obsidian/**',
+          '**/node_modules/**',
+          '**/.git/**',
+          '**/.DS_Store',
+          '**/.*' // Skip hidden files/directories
+        ],
         onlyFiles: true,
         caseSensitiveMatch: false,
         absolute: true,
         dot: false,
-        followSymbolicLinks: true,
+        followSymbolicLinks: true
       });
 
+      console.log(`Found ${files.length} files to search through`);
       const searchTerm = query.toLowerCase();
+      let filesProcessed = 0;
+      let filesWithContent = 0;
 
-      for (const file of files) {
+      for (const filePath of files) {
         if (results.length >= limit) break;
+        filesProcessed++;
 
         try {
-          const content = await fs.readFile(file, 'utf-8');
-          if (content.toLowerCase().includes(searchTerm)) {
-            const relativePath = path.relative(searchPath, file);
-            const stats = await fs.stat(file);
-            results.push({
-              path: relativePath,
-              content: content.slice(0, 200) + (content.length > 200 ? '...' : ''),
-              lastModified: stats.mtime.toISOString(),
-              size: content.length,
-            });
+          // Skip non-text files
+          if (!['.md', '.txt', ''].includes(path.extname(filePath).toLowerCase())) {
+            continue;
+          }
+          
+          const stats = await fs.stat(filePath);
+          
+          // Skip files that are too large (> 1MB)
+          if (stats.size > 1024 * 1024) {
+            console.log(`Skipping large file: ${filePath} (${Math.round(stats.size / 1024)} KB)`);
+            continue;
+          }
+          
+          try {
+            const content = await fs.readFile(filePath, 'utf-8');
+            filesWithContent++;
+            
+            if (content.toLowerCase().includes(searchTerm)) {
+              // Get relative path from the vault root
+              let relativePath = path.relative(searchPath, filePath);
+              // Remove leading slashes or backslashes
+              relativePath = relativePath.replace(/^[\\/]+/, '');
+              
+              console.log(`Found matching file: ${relativePath}`);
+              
+              results.push({
+                path: relativePath.endsWith('.md') ? relativePath.slice(0, -3) : relativePath,
+                content: content.slice(0, 200) + (content.length > 200 ? '...' : ''),
+                lastModified: stats.mtime.toISOString(),
+                size: content.length,
+              });
+            }
+          } catch (error) {
+            console.error(`Error reading file ${filePath}:`, error);
+            continue;
           }
         } catch (error) {
-          console.error(`Error reading file ${file}:`, error);
+          console.error(`Error processing file ${filePath}:`, error);
           continue;
         }
       }
+      
+      console.log(`Processed ${filesProcessed} files, found ${filesWithContent} with content, ${results.length} matches`);
 
       return { results };
     } catch (error: unknown) {
@@ -138,12 +175,38 @@ class ObsidianTool implements MCPTool {
 
   async readNote(filePath: string): Promise<ReadResult> {
     const vaultPath = getVaultPath();
-    const fullPath = path.join(vaultPath, filePath);
+    
+    // Remove any leading slashes or backslashes to prevent path issues
+    const cleanPath = filePath.replace(/^[\\/]+/, '');
+    
+    // Ensure the file has a .md extension if not already present
+    const normalizedPath = cleanPath.endsWith('.md') ? cleanPath : `${cleanPath}.md`;
+    const fullPath = path.join(vaultPath, normalizedPath);
     
     try {
       if (!(await fs.pathExists(fullPath))) {
-        throw new Error(`File not found: ${filePath}`);
+        // Try without adding .md if the file already has it
+        const altPath = cleanPath.endsWith('.md') 
+          ? path.join(vaultPath, cleanPath.slice(0, -3))
+          : fullPath;
+        
+        if (await fs.pathExists(altPath)) {
+          const content = await fs.readFile(altPath, 'utf-8');
+          const stats = await fs.stat(altPath);
+          
+          return {
+            path: cleanPath,
+            title: path.basename(altPath, '.md'),
+            content,
+            size: content.length,
+            created: stats.birthtime.toISOString(),
+            modified: stats.mtime.toISOString()
+          };
+        }
+        
+        throw new Error(`File not found in vault (${vaultPath}): ${filePath} (tried: ${fullPath} and ${altPath})`);
       }
+      
       const content = await fs.readFile(fullPath, 'utf-8');
       const stats = await fs.stat(fullPath);
       

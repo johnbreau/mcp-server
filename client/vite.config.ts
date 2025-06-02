@@ -13,20 +13,28 @@ export default defineConfig({
     cors: true,
     // Proxy API requests to the backend
     proxy: {
-      '/tools': {
+      '/api': {
         target: 'http://localhost:3000',
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path,
         configure: (proxy) => {
           proxy.on('error', (err) => {
-            console.log('Proxy error:', err);
+            console.error('Proxy error:', err);
           });
           proxy.on('proxyReq', (_, req) => {
-            console.log('Sending Request to:', {
+            console.log('Proxying request:', {
               method: req.method,
               url: req.url,
               headers: req.headers,
+            });
+          });
+          
+          proxy.on('proxyRes', (proxyRes) => {
+            console.log('Received response:', {
+              statusCode: proxyRes.statusCode,
+              statusMessage: proxyRes.statusMessage,
+              headers: proxyRes.headers,
             });
           });
           proxy.on('proxyRes', (proxyRes, req) => {
