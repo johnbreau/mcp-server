@@ -8,7 +8,7 @@ console.log('- NODE_ENV:', process.env.NODE_ENV);
 
 if (!process.env.OPENAI_API_KEY) {
   console.error('ERROR: OPENAI_API_KEY is not set in environment variables');
-  process.exit(1);
+  throw new Error('OPENAI_API_KEY is not set in environment variables');
 }
 
 // Initialize OpenAI client
@@ -16,37 +16,56 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+interface SemanticSearchResponse {
+  results: SearchResult[];
+  reasoning: string;
+}
+
 export class AIService {
   static async semanticSearch(
     query: string, 
     notes: SearchResult[], 
     limit: number = 5
-  ): Promise<{results: SearchResult[], reasoning: string}> {
+  ): Promise<SemanticSearchResponse> {
+    if (!query || typeof query !== 'string') {
+      throw new Error('Query must be a non-empty string');
+    }
+    
+    if (!Array.isArray(notes)) {
+      throw new Error('Notes must be an array');
+    }
+    
     if (notes.length === 0) {
       return { results: [], reasoning: 'No notes available to search.' };
     }
+    
     const prompt = `You are a helpful assistant that helps find relevant notes based on semantic meaning.
-    Given the following notes and a query, return the most relevant notes in order of relevance.
-    
-    Query: "${query}"
-    
-    Notes:
-    ${notes.map((note, i) => `[${i}] ${note.path}: ${note.content.substring(0, 200)}...`).join('\n')}
-    
-    Return a JSON object with:
-    - reasoning: A brief explanation of why these notes are relevant
-    - results: An array of indices of the most relevant notes in order of relevance`;
+Given the following notes and a query, return the most relevant notes in order of relevance.
+
+Query: "${query}"
+
+Notes:
+${notes.map((note, i) => `[${i}] ${note.path}: ${note.content.substring(0, 200)}...`).join('\n')}
+
+Return a JSON object with:
+- reasoning: A brief explanation of why these notes are relevant
+- results: An array of indices of the most relevant notes in order of relevance`;
 
     console.log('Sending prompt to OpenAI...');
     console.log('Prompt length:', prompt.length);
-    console.log('First 100 chars of prompt:', prompt.substring(0, 100) + '...');
     
     try {
       const completion = await openai.chat.completions.create({
-        model: "gpt-4-turbo",
+        model: "gpt-4-turbo-preview",
         messages: [
-          { role: "system", content: "You are a helpful assistant that analyzes and retrieves relevant information. Always respond with valid JSON." },
-          { role: "user", content: prompt }
+          { 
+            role: "system", 
+            content: "You are a helpful assistant that analyzes and retrieves relevant information. Always respond with valid JSON." 
+          },
+          { 
+            role: "user", 
+            content: prompt 
+          }
         ],
         temperature: 0.3,
         response_format: { type: "json_object" }  // This ensures the response is valid JSON
@@ -82,40 +101,68 @@ export class AIService {
 }
 
   static async summarizeNote(content: string): Promise<string> {
-    const prompt = `Summarize the following note concisely while preserving key information:
+    if (!content || typeof content !== 'string') {
+      throw new Error('Content must be a non-empty string');
+    }
     
-    ${content}`;
-
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4-turbo",
-      messages: [
-        { role: "system", content: "You are a helpful assistant that creates concise summaries." },
-        { role: "user", content: prompt }
-      ],
-      temperature: 0.3,
-      max_tokens: 300,
-    });
-
-    return completion.choices[0]?.message?.content || 'Unable to generate summary';
+    const prompt = `Please provide a concise summary of the following note content:\n\n${content}\n\nSummary:`;
+    
+    try {
+      const completion = await openai.chat.completions.create({
+        model: "gpt-4-turbo-preview",
+        messages: [
+          { 
+            role: "system", 
+            content: "You are a helpful assistant that summarizes notes concisely." 
+          },
+          { 
+            role: "user", 
+            content: prompt 
+          }
+        ],
+        temperature: 0.3,
+        max_tokens: 200
+      });
+      
+      return completion.choices[0]?.message?.content?.trim() || 'No summary available.';
+    } catch (error) {
+      console.error('Error in summarizeNote:', error);
+      throw new Error(`Failed to generate summary: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
   }
 
   static async answerQuestion(question: string, context: string): Promise<string> {
-    const prompt = `Answer the following question based on the provided context. If the context doesn't contain enough information, say so.
+    if (!question || typeof question !== 'string') {
+      throw new Error('Question must be a non-empty string');
+    }
     
-    Question: ${question}
+    if (!context || typeof context !== 'string') {
+      throw new Error('Context must be a non-empty string');
+    }
     
-    Context:
-    ${context}`;
-
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4-turbo",
-      messages: [
-        { role: "system", content: "You are a helpful assistant that answers questions based on the provided context." },
-        { role: "user", content: prompt }
-      ],
-      temperature: 0.3,
-    });
-
-    return completion.choices[0]?.message?.content || 'Unable to generate an answer';
+    const prompt = `Based on the following context, please answer the question. If the context doesn't contain enough information, say so.\n\nContext: ${context}\n\nQuestion: ${question}\n\nAnswer:`;
+    
+    try {
+      const completion = await openai.chat.completions.create({
+        model: "gpt-4-turbo-preview",
+        messages: [
+          { 
+            role: "system", 
+            content: "You are a helpful assistant that answers questions based on the provided context. If the context doesn't contain enough information, say so." 
+          },
+          { 
+            role: "user", 
+            content: prompt 
+          }
+        ],
+        temperature: 0.3,
+        max_tokens: 500
+      });
+      
+      return completion.choices[0]?.message?.content?.trim() || 'I could not generate an answer.';
+    } catch (error) {
+      console.error('Error in answerQuestion:', error);
+      throw new Error(`Failed to generate answer: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
   }
 }

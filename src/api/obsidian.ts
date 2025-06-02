@@ -1,12 +1,15 @@
 import axios from 'axios';
+import path from 'path';
 import { SearchResult, NoteInfo, NoteContent, ApiClient } from '../types/obsidian';
 
 // Create axios instance with base URL
 const apiClient = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'http://localhost:3000/api',
   headers: {
     'Content-Type': 'application/json',
   },
+  withCredentials: true,
+  timeout: 10000, // 10 second timeout
 });
 
 export const api: ApiClient = {
@@ -61,27 +64,77 @@ export const api: ApiClient = {
 
   listNotes: async (directory: string = '', limit: number = 10): Promise<NoteInfo[]> => {
     try {
+      console.log('Fetching notes from directory:', directory, 'with limit:', limit);
       const response = await apiClient.post('/tools/obsidian', { 
         action: 'list',
         path: directory, 
         limit 
       });
-      return response.data.files || [];
-    } catch (error) {
-      console.error('Error listing notes:', error);
+      
+      console.log('List notes response:', response.data);
+      
+      // Handle both response structures for backward compatibility
+      const files = response.data.files || [];
+      
+      return files.map((file: { 
+        path: string; 
+        name?: string; 
+        modified?: string; 
+        size?: number 
+      }) => ({
+        path: file.path,
+        name: file.name || path.basename(file.path, '.md'),
+        lastModified: file.modified || new Date().toISOString(),
+        size: file.size || 0
+      }));
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error)) {
+        console.error('Error listing notes:', {
+          message: error.message,
+          status: error.response?.status,
+          data: error.response?.data
+        });
+      } else if (error instanceof Error) {
+        console.error('Error listing notes:', error.message);
+      } else {
+        console.error('Unknown error listing notes');
+      }
       throw error;
     }
   },
 
   getNote: async (filePath: string): Promise<NoteContent> => {
     try {
+      console.log('Fetching note:', filePath);
       const response = await apiClient.post('/tools/obsidian', { 
         action: 'read',
         path: filePath 
       });
-      return { content: response.data.content || '' };
-    } catch (error) {
-      console.error('Error getting note:', error);
+      
+      console.log('Get note response:', { 
+        path: filePath,
+        contentLength: response.data.content?.length || 0 
+      });
+      
+      return { 
+        content: response.data.content || '',
+        ...(response.data.title && { title: response.data.title }),
+        ...(response.data.modified && { lastModified: response.data.modified }),
+        ...(response.data.size && { size: response.data.size })
+      };
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error)) {
+        console.error('Error getting note:', {
+          path: filePath,
+          message: error.message,
+          status: error.response?.status,
+          data: error.response?.data
+        });
+      } else if (error instanceof Error) {
+        console.error(`Error getting note ${filePath}:`, error.message);
+      } else {
+        console.error('Unknown error getting note:', filePath);
+      }
       throw error;
     }
   },

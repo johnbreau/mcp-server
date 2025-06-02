@@ -14,6 +14,9 @@ export interface NoteInfo {
 
 export interface NoteContent {
   content: string;
+  title?: string;
+  lastModified?: string;
+  size?: number;
 }
 
 export interface ApiClient {

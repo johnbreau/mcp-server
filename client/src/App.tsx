@@ -9,7 +9,7 @@ import {
   useLocation, 
   Link as RouterLink 
 } from 'react-router-dom';
-import { IconSearch, IconList, IconHome } from '@tabler/icons-react';
+import { IconSearch, IconList, IconHome, IconRobot } from '@tabler/icons-react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
@@ -18,6 +18,7 @@ import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
 import NotesListPage from './pages/NotesListPage';
 import NoteViewer from './pages/NoteViewer';
+import AIPage from './pages/AIPage';
 
 type CustomAppShellProps = Omit<AppShellProps, 'navbar' | 'header'> & {
   navbar?: Omit<NonNullable<AppShellProps['navbar']>, 'children'> & { children?: React.ReactNode };
@@ -68,6 +69,7 @@ const Navbar = () => (
       <NavLink to="/" icon={<IconHome size={16} />} label="Home" />
       <NavLink to="/search" icon={<IconSearch size={16} />} label="Search" />
       <NavLink to="/notes" icon={<IconList size={16} />} label="Browse Notes" />
+      <NavLink to="/ai" icon={<IconRobot size={16} />} label="AI Assistant" />
     </AppShell.Section>
   </AppShell.Navbar>
 );
@@ -111,6 +113,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/search" element={<SearchPage />} />
+                <Route path="/ai" element={<AIPage />} />
                 <Route path="/notes">
                   <Route index element={<NotesListPage />} />
                   <Route path=":path/*" element={<NoteViewer />} />
