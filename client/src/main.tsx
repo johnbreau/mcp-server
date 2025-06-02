@@ -1,60 +1,83 @@
+console.log('main.tsx: Starting application...');
+
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { MantineProvider, createTheme, Text } from '@mantine/core';
+import { MantineProvider, createTheme } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
+import '@mantine/core/styles.css';
+import '@mantine/notifications/styles.css';
 import './index.css';
 import App from './App';
 
+// Create a simple theme
 const theme = createTheme({
-  /** Put your theme overrides here */
-  fontFamily: 'Inter, sans-serif',
+  fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
+  primaryColor: 'blue',
+  defaultRadius: 'md',
 });
+
+console.log('main.tsx: Imports completed');
+
+console.log('main.tsx: Checking for root element');
 
 // Check if the root element exists
 const rootElement = document.getElementById('root');
+console.log('main.tsx: Root element:', rootElement);
 
 if (!rootElement) {
-  // If root element doesn't exist, create it and append to body
-  const newRoot = document.createElement('div');
-  newRoot.id = 'root';
-  document.body.appendChild(newRoot);
-  
-  // Render error message
-  createRoot(newRoot).render(
-    <MantineProvider theme={theme}>
-      <div style={{ padding: '2rem' }}>
-        <Text size="xl" fw={500} c="red">
-          Error: Root element was not found. A new root element has been created.
-        </Text>
-      </div>
-    </MantineProvider>
-  );
-  
-  console.error('Root element not found. A new root element has been created.');
+  console.error('main.tsx: Failed to find the root element');
+  const errorDiv = document.createElement('div');
+  errorDiv.style.color = 'red';
+  errorDiv.style.padding = '20px';
+  errorDiv.style.fontFamily = 'Arial, sans-serif';
+  errorDiv.innerHTML = `
+    <h1>Error: Root element not found</h1>
+    <p>Could not find an element with id 'root' in the HTML.</p>
+    <p>Please make sure your index.html file contains a div with id="root".</p>
+  `;
+  document.body.appendChild(errorDiv);
 } else {
   // Root element exists, render the app normally
   try {
-    createRoot(rootElement).render(
-      <React.StrictMode>
-        <MantineProvider theme={theme}>
-          <Notifications position="top-right" />
-          <App />
-        </MantineProvider>
-      </React.StrictMode>
-    );
-  } catch (error) {
-    // Handle any errors during rendering
-    console.error('Failed to render the app:', error);
+    console.log('main.tsx: Rendering application...');
+    const root = createRoot(rootElement);
+    console.log('main.tsx: Root created, rendering App component');
     
-    // Render error message
-    createRoot(rootElement).render(
-      <MantineProvider theme={theme}>
-        <div style={{ padding: '2rem' }}>
-          <Text size="xl" fw={500} c="red">
-            Error: Failed to load the application. Please check the console for details.
-          </Text>
-        </div>
+    // Create a temporary app to ensure Mantine is properly initialized
+    const TempApp = () => (
+      <MantineProvider 
+        theme={theme}
+        defaultColorScheme="light"
+      >
+        <Notifications position="top-right" />
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
       </MantineProvider>
     );
+    
+    root.render(<TempApp />);
+    console.log('main.tsx: Render completed');
+  } catch (error) {
+    // Handle any errors during rendering
+    console.error('main.tsx: Error rendering application:', error);
+    
+    const errorDiv = document.createElement('div');
+    errorDiv.style.color = 'red';
+    errorDiv.style.padding = '20px';
+    errorDiv.style.fontFamily = 'Arial, sans-serif';
+    errorDiv.innerHTML = `
+      <h1>Error: Application failed to render</h1>
+      <p>${error instanceof Error ? error.message : 'Unknown error'}</p>
+      <p>Check the browser console for more details.</p>
+    `;
+    
+    // Clear any existing content in the root
+    if (rootElement) {
+      rootElement.innerHTML = '';
+      rootElement.appendChild(errorDiv);
+    } else {
+      document.body.appendChild(errorDiv);
+    }
   }
 }
