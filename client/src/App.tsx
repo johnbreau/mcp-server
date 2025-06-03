@@ -8,7 +8,6 @@ import {
   Navigate
 } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 // Import components
 import { Header } from './components/Header';
@@ -100,7 +99,7 @@ const App = () => {
             <Route path="*" element={<Navigate to="/search" replace />} />
           </Routes>
         </CustomAppShell>
-        <ReactQueryDevtools initialIsOpen={false} />
+        {/* DevTools removed */}
       </Router>
     </QueryClientProvider>
   );

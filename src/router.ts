@@ -1,10 +1,15 @@
 // src/router.ts
-import { Router, Request, Response, NextFunction } from 'express';
-import fs from 'fs';
-import path from 'path';
+import { Router, type Request, type Response, type NextFunction } from 'express';
 
 const router = Router();
-const toolsDir = path.join(__dirname, 'tools');
+
+// Log the current working directory for debugging
+console.log('Current working directory:', process.cwd());
+
+// Add error handler for unhandled promise rejections
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
 
 // Handle preflight requests
 router.options('*', (_req: Request, res: Response) => {
@@ -15,57 +20,102 @@ router.options('*', (_req: Request, res: Response) => {
 
 // Helper function to handle tool execution
 const executeTool = async (toolName: string, input: any, res: Response): Promise<void> => {
-  const toolPath = path.join(toolsDir, `${toolName}.ts`);
+  console.log(`\n=== Executing tool: ${toolName} ===`);
+  console.log('Input:', JSON.stringify(input, null, 2));
   
-  if (!fs.existsSync(toolPath)) {
-    res.status(404).json({ error: `Tool not found: ${toolName}` });
-    return;
-  }
-
   try {
-    const toolModule = require(toolPath);
-    const tool = toolModule.default;
-
-    if (!tool?.run) {
-      throw new Error(`Invalid tool: ${toolName}`);
+    console.log(`Attempting to load tool: ${toolName}`);
+    
+    // Use the tool loader
+    const { loadTool } = await import('./tools/loader.js');
+    const tool = await loadTool(toolName);
+    console.log(`Successfully loaded tool: ${toolName}`);
+    
+    if (!tool || typeof tool.run !== 'function') {
+      throw new Error(`Tool ${toolName} does not export a valid run function`);
     }
-
+    
+    // Execute the tool
     const result = await tool.run(input);
-    res.json(result);
+    console.log('Tool execution result:', result);
+    
+    // Send success response
+    res.json({
+      success: true,
+      data: result,
+      tool: toolName
+    });
   } catch (error) {
-    console.error('Tool execution error:', error);
+    console.error(`Error executing tool ${toolName}:`, error);
+    
+    // Handle specific error types
+    if (error instanceof Error) {
+      if (error.message.includes('Cannot find module')) {
+        res.status(404).json({
+          error: 'Tool not found',
+          message: `The tool '${toolName}' could not be found or loaded`,
+          tool: toolName
+        });
+        return;
+      }
+      
+      // Handle validation errors
+      if (error.name === 'ValidationError') {
+        res.status(400).json({
+          error: 'Validation Error',
+          message: error.message,
+          tool: toolName,
+          details: (error as any).details
+        });
+        return;
+      }
+    }
+    
+    // Generic error response
     res.status(500).json({
-      error: 'Internal server error',
-      message: error instanceof Error ? error.message : 'Unknown error',
-      ...(process.env.NODE_ENV === 'development' && { 
-        stack: error instanceof Error ? error.stack : undefined 
-      })
+      error: 'Tool execution failed',
+      message: error instanceof Error ? error.message : 'An unknown error occurred',
+      tool: toolName,
+      stack: process.env.NODE_ENV === 'development' ? (error as Error).stack : undefined
     });
   }
 };
 
 // Register tool routes
-router.get('/:tool', (req: Request, res: Response, next: NextFunction) => {
+export const handleToolRequest = async (req: Request, res: Response, next: NextFunction) => {
   const toolName = req.params.tool;
+  const input = req.method === 'GET' ? req.query : req.body;
+  
   if (!toolName) {
-    res.status(400).json({ error: 'No tool specified' });
-    return;
+    return res.status(400).json({
+      error: 'Tool name is required',
+      message: 'Please provide a tool name in the URL path (e.g., /api/tools/obsidian)'
+    });
   }
-
-  console.log(`[${new Date().toISOString()}] GET /api/tools/${toolName}`, { input: req.query });
-  executeTool(toolName, req.query, res).catch(next);
-});
-
-// POST handler
-router.post('/:tool', (req: Request, res: Response, next: NextFunction) => {
-  const toolName = req.params.tool;
-  if (!toolName) {
-    res.status(400).json({ error: 'No tool specified' });
+  
+  // Log the request
+  console.log(`[${new Date().toISOString()}] ${req.method} /api/tools/${toolName}`);
+  console.log('Input:', JSON.stringify(input, null, 2));
+  
+  try {
+    await executeTool(toolName, input, res);
     return;
+  } catch (error) {
+    console.error(`Error in handleToolRequest for ${toolName}:`, error);
+    next(error);
+    return; // Ensure we don't continue execution after calling next()
   }
+};
 
-  console.log(`[${new Date().toISOString()}] POST /api/tools/${toolName}`, { input: req.body });
-  executeTool(toolName, req.body, res).catch(next);
+// GET /api/tools/:tool
+router.get('/:tool', handleToolRequest);
+
+// POST /api/tools/:tool
+router.post('/:tool', handleToolRequest);
+
+// Health check endpoint
+router.get('/health', (_req: Request, res: Response) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
 export default router;

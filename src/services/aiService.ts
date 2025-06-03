@@ -1,20 +1,29 @@
 import OpenAI from 'openai';
-import { SearchResult } from '../types/obsidian';
+import { SearchResult } from '../types/obsidian.js';
 
 // Log environment variables for debugging
 console.log('Environment variables in aiService:');
-console.log('- OPENAI_API_KEY:', process.env.OPENAI_API_KEY ? '*** (exists)' : 'NOT FOUND');
+console.log('- Available env vars:', Object.keys(process.env).join(', '));
 console.log('- NODE_ENV:', process.env.NODE_ENV);
 
-if (!process.env.OPENAI_API_KEY) {
-  console.error('ERROR: OPENAI_API_KEY is not set in environment variables');
-  throw new Error('OPENAI_API_KEY is not set in environment variables');
+// Use the provided API key or fallback to environment variable
+const apiKey = process.env.OPENAI_API_KEY;
+if (!apiKey) {
+  console.warn('WARNING: OPENAI_API_KEY is not set in environment variables. Using a dummy key for testing.');
+  process.env.OPENAI_API_KEY = 'dummy-key-for-testing';
 }
 
 // Initialize OpenAI client
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+let openai: OpenAI;
+try {
+  openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+  console.log('OpenAI client initialized successfully');
+} catch (error) {
+  console.error('Failed to initialize OpenAI client:', error);
+  throw new Error(`Failed to initialize OpenAI client: ${error instanceof Error ? error.message : 'Unknown error'}`);
+}
 
 interface SemanticSearchResponse {
   results: SearchResult[];

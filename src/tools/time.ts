@@ -1,5 +1,5 @@
 // src/tools/time.ts
-import { MCPTool } from "../types";
+import { MCPTool } from "../types.js";
 
 const timeTool: MCPTool = {
   name: "time",

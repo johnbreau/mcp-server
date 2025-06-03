@@ -1,6 +1,6 @@
 import axios from 'axios';
 import path from 'path';
-import { SearchResult, NoteInfo, NoteContent, ApiClient } from '../types/obsidian';
+import { SearchResult, NoteInfo, NoteContent, ApiClient } from '../types/obsidian.js';
 
 // Create axios instance with base URL
 const apiClient = axios.create({
