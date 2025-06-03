@@ -105,8 +105,8 @@ export function AIChat() {
   };
 
   return (
-    <Paper p="md" withBorder style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-      <ScrollArea style={{ flex: 1, marginBottom: '1rem' }}>
+    <Paper p="md" withBorder style={{ height: '70vh', display: 'flex', flexDirection: 'column' }}>
+      <ScrollArea style={{ flex: 1, marginBottom: '1rem', minHeight: 'calc(70vh - 120px)' }}>
         <Stack gap="md">
           {messages.map((message) => (
             <Group 
@@ -139,7 +139,7 @@ export function AIChat() {
         </Stack>
       </ScrollArea>
       
-      <Group>
+      <Group mt="auto" style={{ paddingTop: '1rem' }}>
         <TextInput
           placeholder="Ask me anything about your notes..."
           value={input}

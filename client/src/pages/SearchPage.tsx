@@ -6,7 +6,6 @@ import {
   Text, 
   TextInput, 
   Button, 
-  Switch, 
   Loader, 
   Tabs, 
   Paper, 
@@ -16,7 +15,7 @@ import {
   Badge,
   ActionIcon
 } from '@mantine/core';
-import { IconSearch, IconMessage, IconSend } from '@tabler/icons-react';
+import { IconSearch, IconMessage } from '@tabler/icons-react';
 // API client for backend communication
 const API_BASE_URL = 'http://localhost:3000/api';
 
@@ -97,10 +96,9 @@ const api = {
     }
   }
 };
-
 // Type definitions
 type IndexingStatus = 'idle' | 'indexing' | 'complete' | 'error';
-type SearchTab = 'keyword' | 'semantic' | 'chat';
+type SearchTab = 'keyword' | 'semantic';
 
 interface BackendSearchResult {
   path: string;
@@ -120,12 +118,6 @@ interface SearchResult {
   score?: number;
 }
 
-interface ChatMessage {
-  id: string;
-  content: string;
-  sender: 'user' | 'assistant';
-  timestamp: Date;
-}
 
 interface SearchState {
   query: string;
@@ -134,12 +126,6 @@ interface SearchState {
   error: string | null;
   activeTab: SearchTab;
   useSemanticSearch: boolean;
-}
-
-interface ChatState {
-  messages: ChatMessage[];
-  messageInput: string;
-  isSending: boolean;
 }
 
 interface IndexingState {
@@ -160,11 +146,6 @@ export function SearchPage() {
     useSemanticSearch: false,
   });
 
-  const [chatState, setChatState] = useState<ChatState>({
-    messages: [],
-    messageInput: '',
-    isSending: false,
-  });
 
   const [indexingState, setIndexingState] = useState<IndexingState>({
     isModalOpen: false,
@@ -177,8 +158,6 @@ export function SearchPage() {
   const searchStateRef = useRef(searchState);
   searchStateRef.current = searchState;
 
-  const chatStateRef = useRef(chatState);
-  chatStateRef.current = chatState;
 
   // Debounced query for search optimization
   useDebouncedValue(searchState.query, 300);
@@ -242,13 +221,16 @@ export function SearchPage() {
     }));
   }, []);
 
-  const handleSemanticToggle = useCallback((event: React.ChangeEvent<HTMLInputElement>): void => {
-    setSearchState((prev: SearchState) => ({
-      ...prev,
-      useSemanticSearch: event.currentTarget.checked,
-      activeTab: event.currentTarget.checked ? 'semantic' : 'keyword',
-      results: []
-    }));
+  // Handle tab changes
+  const handleTabChange = useCallback((value: string | null): void => {
+    if (value) {
+      setSearchState(prev => ({
+        ...prev,
+        activeTab: value as SearchTab,
+        useSemanticSearch: value === 'semantic',
+        results: []
+      }));
+    }
   }, []);
 
   const handleSearchKeyPress = useCallback((event: React.KeyboardEvent<HTMLInputElement>): void => {
@@ -268,64 +250,6 @@ export function SearchPage() {
     }));
   }, []);
 
-  // Chat handlers
-  const handleSendMessage = useCallback(async (): Promise<void> => {
-    const { messageInput } = chatStateRef.current;
-    const trimmedMessage = messageInput.trim();
-    if (!trimmedMessage) return;
-
-    const userMessage: ChatMessage = {
-      id: Date.now().toString(),
-      content: trimmedMessage,
-      sender: 'user',
-      timestamp: new Date()
-    };
-
-    setChatState((prev: ChatState) => ({
-      ...prev,
-      messages: [...prev.messages, userMessage],
-      messageInput: '',
-      isSending: true
-    }));
-
-    try {
-      // Simulate AI response
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      const aiResponse: ChatMessage = {
-        id: (Date.now() + 1).toString(),
-        content: `This is a simulated response to: ${trimmedMessage}`,
-        sender: 'assistant',
-        timestamp: new Date()
-      };
-
-      setChatState((prev: ChatState) => ({
-        ...prev,
-        messages: [...prev.messages, aiResponse],
-        isSending: false
-      }));
-    } catch (error) {
-      console.error('Error sending message:', error);
-      setChatState((prev: ChatState) => ({
-        ...prev,
-        isSending: false
-      }));
-    }
-  }, []);
-
-  const handleMessageChange = useCallback((event: React.ChangeEvent<HTMLInputElement>): void => {
-    setChatState((prev: ChatState) => ({
-      ...prev,
-      messageInput: event.target.value
-    }));
-  }, []);
-
-  const handleChatKeyPress = useCallback((event: React.KeyboardEvent<HTMLInputElement>): void => {
-    if (event.key === 'Enter' && !event.shiftKey) {
-      event.preventDefault();
-      handleSendMessage();
-    }
-  }, [handleSendMessage]);
 
   // Indexing handlers
   const closeIndexingModal = useCallback((): void => {
@@ -369,28 +293,21 @@ export function SearchPage() {
     }
   }, []);
 
-  const { query, results, isLoading, error, activeTab, useSemanticSearch } = searchState;
-  const { messages, messageInput, isSending } = chatState;
+  const { query, results, isLoading, error, activeTab } = searchState;
+
   const { isModalOpen, status, progress } = indexingState;
 
   return (
     <Container size="lg" py="xl">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
         <Title order={2}>Search Notes</Title>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <Switch
-            label="Use Semantic Search"
-            checked={useSemanticSearch}
-            onChange={handleSemanticToggle}
-          />
-          <Button
-            leftSection={<IconMessage size={16} />}
-            onClick={openIndexingModal}
-            variant="outline"
-          >
-            Index Vault
-          </Button>
-        </div>
+        <Button
+          leftSection={<IconMessage size={16} />}
+          onClick={openIndexingModal}
+          variant="outline"
+        >
+          Index Vault
+        </Button>
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
@@ -411,15 +328,13 @@ export function SearchPage() {
         />
       </div>
 
-      <Tabs value={activeTab} onChange={(value: string | null) => {
-        if (value) {
-          setSearchState(prev => ({ ...prev, activeTab: value as SearchTab }));
-        }
-      }}>
+      <Tabs 
+        value={activeTab} 
+        onChange={(value) => handleTabChange(value)}
+      >
         <Tabs.List>
           <Tabs.Tab value="keyword">Keyword</Tabs.Tab>
           <Tabs.Tab value="semantic">Semantic</Tabs.Tab>
-          <Tabs.Tab value="chat">Chat</Tabs.Tab>
         </Tabs.List>
 
         <Tabs.Panel value="keyword" pt="md">
@@ -468,57 +383,7 @@ export function SearchPage() {
           )}
         </Tabs.Panel>
 
-        <Tabs.Panel value="chat" pt="md">
-          <div style={{ display: 'flex', flexDirection: 'column', height: '60vh' }}>
-            <div style={{ flex: 1, overflowY: 'auto', marginBottom: '1rem' }}>
-              <Stack gap="md">
-                {messages.map((message) => (
-                  <div
-                    key={message.id}
-                    style={{
-                      display: 'flex',
-                      justifyContent: message.sender === 'user' ? 'flex-end' : 'flex-start',
-                    }}
-                  >
-                    <Paper
-                      p="md"
-                      shadow="xs"
-                      style={{
-                        maxWidth: '80%',
-                        backgroundColor: message.sender === 'user' ? 'var(--mantine-color-blue-0)' : 'var(--mantine-color-white)',
-                      }}
-                    >
-                      <Text size="sm" c="dimmed">
-                        {message.sender === 'user' ? 'You' : 'Assistant'}
-                      </Text>
-                      <Text>{message.content}</Text>
-                      <Text size="xs" c="dimmed" mt={4}>
-                        {message.timestamp.toLocaleTimeString()}
-                      </Text>
-                    </Paper>
-                  </div>
-                ))}
-              </Stack>
-            </div>
 
-            <div style={{ display: 'flex', gap: '0.5rem' }}>
-              <TextInput
-                placeholder="Type a message..."
-                value={messageInput}
-                onChange={handleMessageChange}
-                onKeyDown={handleChatKeyPress}
-                style={{ flex: 1 }}
-              />
-              <Button
-                onClick={handleSendMessage}
-                loading={isSending}
-                leftSection={<IconSend size={16} />}
-              >
-                Send
-              </Button>
-            </div>
-          </div>
-        </Tabs.Panel>
       </Tabs>
 
       <Modal
