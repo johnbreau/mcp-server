@@ -8,6 +8,7 @@
 # Ignore folders
 temp/ 
 dist/
+dist-esm/
 node_modules/
 client/node_modules/
 client/dist/
