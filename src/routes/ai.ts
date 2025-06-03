@@ -1,10 +1,10 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import path from 'path';
-import { AIService } from '../services/aiService';
-import { api } from '../api/obsidian';
+import { AIService } from '../services/aiService.js';
+import { api } from '../api/obsidian.js';
 
 // Import types
-import { SearchResult } from '../types/obsidian';
+import { SearchResult } from '../types/obsidian.js';
 
 // Define response type
 interface ApiResponse<T = any> {
@@ -17,8 +17,8 @@ interface ApiResponse<T = any> {
 declare global {
   namespace Express {
     interface Response {
-      apiSuccess: <T>(data: T, statusCode?: number) => Response;
-      apiError: (message: string, statusCode?: number) => Response;
+      apiSuccess: <T>(data: T, statusCode?: number) => void;
+      apiError: (message: string, statusCode?: number) => void;
     }
   }
 }
@@ -44,12 +44,12 @@ const router = Router();
 router.use((_req: Request, res: Response, next: NextFunction) => {
   res.apiSuccess = function<T>(data: T, statusCode = 200) {
     const response: ApiResponse<T> = { success: true, data };
-    return this.status(statusCode).json(response);
+    this.status(statusCode).json(response);
   };
 
   res.apiError = function(message: string, statusCode = 500) {
     const response: ApiResponse = { success: false, error: message };
-    return this.status(statusCode).json(response);
+    this.status(statusCode).json(response);
   };
   
   next();
@@ -66,68 +66,108 @@ const semanticSearchHandler = async (req: Request, res: Response, next: NextFunc
   try {
     const { query, limit = 5 } = req.body as SearchRequest;
     
-    if (!query) {
-      res.apiError('Query is required', 400);
-      return;
+    if (!query || typeof query !== 'string' || query.trim() === '') {
+      return res.apiError('Query must be a non-empty string', 400);
     }
 
-    console.log('Starting semantic search for query:', query);
+    console.log(`[${new Date().toISOString()}] Starting semantic search for query: "${query}"`);
     
-    // First, get the list of notes
-    const allNotes = await api.listNotes('', 100);
-    console.log(`Found ${allNotes.length} notes in vault`);
-    
-    if (allNotes.length === 0) {
-      console.error('No notes found in the vault');
-      res.apiSuccess({
-        results: [],
-        reasoning: 'No notes found in the vault.',
-        total: 0
-      });
-      return;
-    }
-    
-    // Get the content of each note (limited for performance)
-    const notesToProcess = allNotes.slice(0, 10);
-    console.log(`Processing ${notesToProcess.length} notes`);
-    
-    const notesWithContent: SearchResult[] = [];
-    
-    for (const note of notesToProcess) {
-      try {
-        const content = await api.getNote(note.path);
-        notesWithContent.push({
-          path: note.path,
-          content: content.content,
-          lastModified: note.lastModified || new Date().toISOString(),
-          size: note.size || 0
+    // First, try to find exact matches using basic text search
+    try {
+      const exactMatches = await api.searchNotes(query, 10);
+      
+      if (exactMatches && exactMatches.length > 0) {
+        console.log(`Found ${exactMatches.length} exact matches`);
+        return res.apiSuccess({
+          results: exactMatches,
+          reasoning: 'Found matching notes using basic text search.',
+          total: exactMatches.length,
+          searchType: 'exact'
         });
-      } catch (error) {
-        console.error(`Error getting note ${note.path}:`, error);
       }
+    } catch (searchError) {
+      console.warn('Basic search failed, falling back to semantic search:', searchError);
     }
     
-    console.log(`Successfully retrieved content for ${notesWithContent.length} notes`);
+    console.log('No exact matches found, falling back to semantic search');
     
-    if (notesWithContent.length === 0) {
-      res.apiSuccess({
-        results: [],
-        reasoning: 'Could not retrieve content for any notes.',
-        total: 0
+    // If no exact matches, try to get a list of recent or relevant notes
+    try {
+      const recentNotes = await api.listNotes('', 20); // Get 20 most recent notes
+      
+      if (!recentNotes || !Array.isArray(recentNotes) || recentNotes.length === 0) {
+        console.log('No notes found in the vault');
+        return res.apiSuccess({
+          results: [],
+          reasoning: 'No notes found in the vault.',
+          total: 0,
+          searchType: 'none'
+        });
+      }
+      
+      console.log(`Processing ${recentNotes.length} recent notes for semantic search`);
+      
+      // Get content for notes (in parallel with concurrency limit)
+      const notesWithContent: SearchResult[] = [];
+      const BATCH_SIZE = 5; // Process 5 notes at a time
+      
+      for (let i = 0; i < recentNotes.length; i += BATCH_SIZE) {
+        const batch = recentNotes.slice(i, i + BATCH_SIZE);
+        const batchPromises = batch.map(async (note: { path: string; modified?: string; size?: number }) => {
+          try {
+            const content = await api.getNote(note.path);
+            return {
+              path: note.path,
+              content: content.content,
+              lastModified: note.modified || new Date().toISOString(),
+              size: note.size || 0
+            } as SearchResult;
+          } catch (error) {
+            console.warn(`Error getting note ${note.path}:`, error instanceof Error ? error.message : 'Unknown error');
+            return null;
+          }
+        });
+        
+        const batchResults = await Promise.all(batchPromises);
+        const validResults = batchResults.filter((note): note is SearchResult => note !== null);
+        notesWithContent.push(...validResults);
+        
+        if (notesWithContent.length >= 10) {
+          // We have enough notes to work with
+          break;
+        }
+      }
+      
+      console.log(`Successfully retrieved content for ${notesWithContent.length} notes`);
+      
+      if (notesWithContent.length === 0) {
+        return res.apiSuccess({
+          results: [],
+          reasoning: 'Could not retrieve content for any notes.',
+          total: 0,
+          searchType: 'none'
+        });
+      }
+      
+      // Perform semantic search on the notes with content
+      const { results, reasoning } = await AIService.semanticSearch(query, notesWithContent, limit);
+      
+      return res.apiSuccess({
+        results,
+        reasoning,
+        total: results.length,
+        searchType: 'semantic'
       });
-      return;
+      
+    } catch (error) {
+      console.error('Error in semantic search handler:', error);
+      return res.apiError(
+        `Failed to perform search: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        500
+      );
     }
-    
-    // Now perform semantic search on the notes with content
-    const { results, reasoning } = await AIService.semanticSearch(query, notesWithContent, limit);
-    
-    res.apiSuccess({
-      results,
-      reasoning,
-      total: results.length
-    });
   } catch (error) {
-    console.error('Error in semantic search handler:', error);
+    console.error('Unexpected error in semantic search handler:', error);
     next(error);
   }
 };

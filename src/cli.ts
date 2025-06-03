@@ -8,7 +8,7 @@ dotenv.config({ path: path.resolve(__dirname, '..', '.env') });
 // Now import other dependencies after environment is loaded
 import { Command } from 'commander';
 import chalk from 'chalk';
-import obsidian from './tools/obsidian';
+import obsidian from './tools/obsidian.js';
 
 const program = new Command();
 
@@ -38,19 +38,21 @@ program
       const limit = parseInt(options.limit, 10);
       console.log(chalk.blue(`\nSearching for "${query}" (max ${limit} results)...\n`));
       
-      const results = await obsidian.searchNotes(query, limit);
+      const { results } = await obsidian.searchNotes(query, limit);
       
-      if (results.results.length === 0) {
+      if (results.length === 0) {
         console.log(chalk.yellow('No results found.'));
         return;
       }
       
-      results.results.forEach((note, index) => {
-        console.log(chalk.green.bold(`${index + 1}. ${note.title}`));
+      results.forEach((note, index) => {
+        const fileName = note.path.split('/').pop() || 'Untitled';
+        console.log(chalk.green.bold(`${index + 1}. ${fileName}`));
         console.log(chalk.gray(`  Path: ${note.path}`));
-        console.log(chalk.gray(`  Modified: ${new Date(note.modified).toLocaleString()}`));
+        console.log(chalk.gray(`  Modified: ${new Date(note.lastModified).toLocaleString()}`));
         console.log(chalk.gray(`  Size: ${Math.ceil(note.size / 1024)} KB`));
-        console.log(chalk.white(`  ${note.excerpt || 'No excerpt available'}\n`));
+        const preview = note.content.length > 100 ? note.content.substring(0, 100) + '...' : note.content;
+        console.log(chalk.white(`  ${preview || 'No content available'}\n`));
       });
     } catch (error) {
       handleError(error, 'search');

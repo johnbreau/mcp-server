@@ -61,9 +61,11 @@ const aiApiClient = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL || '/api',
   headers: {
     'Content-Type': 'application/json',
+    'Accept': 'application/json, text/plain, */*'
   },
   withCredentials: true,
-  timeout: 120000, // 2 minutes timeout for AI requests
+  timeout: 300000, // 5 minutes timeout for AI requests (indexing can take a while)
+  responseType: 'json'
 });
 
 // Add request interceptor for logging
@@ -240,17 +242,29 @@ export const api = {
   // AI Service Methods
   semanticSearch: async (query: string, limit: number = 5): Promise<SemanticSearchResult> => {
     try {
-      console.log('Sending semantic search request with query:', { query, limit });
-      const response = await aiApiClient.post('/ai/semantic-search', { query, limit });
-      
-      // Ensure the response has the expected structure
-      if (!response.data || !response.data.data) {
-        console.error('Invalid response format from semantic search:', response.data);
-        throw new Error('Invalid response format from semantic search');
-      }
+      console.log('Sending semantic search request for:', query);
+      const response = await aiApiClient.post('/obsidian', {
+        action: 'search',
+        query,
+        limit,
+        semantic: true
+      });
       
       console.log('Semantic search response:', response.data);
-      return response.data;
+      
+      // Ensure the response has the correct structure
+      if (response.data && response.data.results) {
+        return {
+          success: true,
+          data: {
+            results: response.data.results,
+            total: response.data.results.length,
+            reasoning: response.data.reasoning || 'Semantic search completed'
+          }
+        };
+      }
+      
+      throw new Error('Invalid response format from server');
     } catch (error) {
       console.error('Error performing semantic search:', error);
       // Return a properly structured error response
