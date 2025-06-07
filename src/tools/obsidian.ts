@@ -145,8 +145,6 @@ class ObsidianTool implements MCPTool {
   async searchNotes(query: string, limit: number = 5): Promise<{ results: SearchResult[] }> {
     try {
       const vaultPath = getVaultPath();
-      const searchPath = vaultPath; // Search the entire vault by default
-      
       console.log('=== Starting search ===');
       console.log(`Vault path: ${vaultPath}`);
       console.log(`Searching for: "${query}"`);
@@ -166,37 +164,47 @@ class ObsidianTool implements MCPTool {
         return { results: [] };
       }
       
-      // Get all markdown files in the vault
-      const files = await fg(`${searchPath}/**/*.{md,mdx}`, {
-        ignore: [
-          '**/node_modules/**',
-          '**/.git/**',
-          '**/.obsidian/**',
-          '**/.*', // Skip hidden files/directories
-          '**/node_modules',
-          '**/bower_components',
-          '**/jspm_packages',
-          '**/Thumbs.db',
-          '**/ehthumbs.db',
-          '**/Desktop.ini'
-        ],
+      // Get all markdown files in the vault using the same pattern as listNotes
+      const filePaths = await fg([
+        `${vaultPath}/**/*.md`,
+        `!${vaultPath}/**/node_modules/**`,
+        `!${vaultPath}/**/.git/**`,
+        `!${vaultPath}/**/.obsidian/**`,
+        `!${vaultPath}/**/.*`,
+        `!${vaultPath}/**/node_modules`,
+        `!${vaultPath}/**/bower_components`,
+        `!${vaultPath}/**/jspm_packages`,
+        `!${vaultPath}/**/Thumbs.db`,
+        `!${vaultPath}/**/ehthumbs.db`,
+        `!${vaultPath}/**/Desktop.ini`
+      ], {
         onlyFiles: true,
         caseSensitiveMatch: false,
         absolute: true,
         dot: false,
         followSymbolicLinks: false,
-        stats: false,
         unique: true
       });
 
-      console.log(`Found ${files.length} files to search through`);
+      console.log(`Found ${filePaths.length} markdown files to search through`);
 
       // Process files in batches to avoid memory issues
-      const BATCH_SIZE = 20;
-      for (let i = 0; i < files.length && results.length < limit * 2; i += BATCH_SIZE) {
-        const batch = files.slice(i, i + BATCH_SIZE);
+      const BATCH_SIZE = 10;
+      for (let i = 0; i < filePaths.length && results.length < limit * 2; i += BATCH_SIZE) {
+        const batch = filePaths.slice(i, i + BATCH_SIZE);
+        console.log(`Processing batch ${i / BATCH_SIZE + 1} of ${Math.ceil(filePaths.length / BATCH_SIZE)}`);
+        
         const batchPromises = batch.map(async (filePath) => {
           try {
+            const relativePath = path.relative(vaultPath, filePath);
+            console.log(`Processing file: ${relativePath}`);
+            
+            // Skip files in the .obsidian directory
+            if (relativePath.split(path.sep).includes('.obsidian')) {
+              console.log(`Skipping file in .obsidian directory: ${relativePath}`);
+              return null;
+            }
+            
             const content = await fs.readFile(filePath, 'utf-8');
             const lowerContent = content.toLowerCase();
             
@@ -218,8 +226,10 @@ class ObsidianTool implements MCPTool {
             
             const stats = await fs.stat(filePath).catch(() => null);
             
+            console.log(`Found match in file: ${relativePath}`);
+            
             return {
-              path: path.relative(vaultPath, filePath).replace(/\.md$/, ''),
+              path: relativePath.replace(/\.md$/i, ''), // Remove .md extension (case-insensitive)
               content: excerpt,
               lastModified: stats?.mtime?.toISOString() || new Date().toISOString(),
               size: content.length
@@ -314,16 +324,22 @@ class ObsidianTool implements MCPTool {
   async readNote(filePath: string): Promise<ReadResult> {
     const vaultPath = getVaultPath();
     
+    console.log(`Reading note: ${filePath} from vault: ${vaultPath}`);
+    
     // Normalize the file path
-    const normalizedPath = filePath.replace(/^[\\/]+/, '').replace(/\.md$/, '');
+    const normalizedPath = filePath.replace(/^[\\/]+/, '').replace(/\.md$/i, ''); // Case-insensitive .md removal
     
     // Try different possible file paths and extensions
     const possiblePaths = [
       `${normalizedPath}.md`,
       `${normalizedPath}/index.md`,
       path.join(normalizedPath, 'index.md'),
-      path.join(path.dirname(normalizedPath), `${path.basename(normalizedPath)}.md`)
+      path.join(path.dirname(normalizedPath), `${path.basename(normalizedPath)}.md`),
+      path.join(vaultPath, `${normalizedPath}.md`),
+      path.join(vaultPath, normalizedPath, 'index.md')
     ];
+    
+    console.log(`Trying paths:`, possiblePaths);
     
     let content = '';
     let stats = null;
@@ -331,12 +347,15 @@ class ObsidianTool implements MCPTool {
     
     // Try each possible path
     for (const possiblePath of possiblePaths) {
-      const fullPath = path.join(vaultPath, possiblePath);
+      const fullPath = possiblePath.startsWith(vaultPath) ? possiblePath : path.join(vaultPath, possiblePath);
+      console.log(`Trying path: ${fullPath}`);
+      
       try {
         if (await fs.pathExists(fullPath)) {
+          console.log(`Found file at: ${fullPath}`);
           content = await fs.readFile(fullPath, 'utf-8');
           stats = await fs.stat(fullPath);
-          foundPath = possiblePath;
+          foundPath = fullPath;
           break;
         }
       } catch (error) {
@@ -345,7 +364,9 @@ class ObsidianTool implements MCPTool {
     }
     
     if (!stats) {
-      throw new Error(`Note not found: ${filePath}. Tried: ${possiblePaths.join(', ')}`);
+      const errorMsg = `Note not found: ${filePath}. Tried: ${possiblePaths.join(', ')}`;
+      console.error(errorMsg);
+      throw new Error(errorMsg);
     }
     
     try {
@@ -353,17 +374,27 @@ class ObsidianTool implements MCPTool {
       const { frontmatter, content: processedContent } = this.parseFrontmatter(content);
       const contentWithLinks = this.processWikilinks(processedContent);
       
-      return {
-        path: foundPath.replace(/\.md$/, ''), // Remove .md extension from the path
-        title: frontmatter?.title || path.basename(foundPath, '.md'),
-        content: contentWithLinks,
-        size: content.length,
-        created: stats.birthtime.toISOString(),
-        modified: stats.mtime.toISOString()
+      const result = {
+        success: true,
+        data: {
+          path: foundPath.replace(/\.md$/i, ''), // Remove .md extension (case-insensitive)
+          title: frontmatter?.title || path.basename(foundPath, '.md'),
+          content: contentWithLinks,
+          size: content.length,
+          created: stats.birthtime.toISOString(),
+          modified: stats.mtime.toISOString(),
+          lastModified: stats.mtime.toISOString() // Alias for modified
+        }
       };
+      
+      console.log(`Successfully read note: ${foundPath}`);
+      console.log(`Content length: ${content.length} chars`);
+      console.log(`Frontmatter:`, frontmatter);
+      
+      return result.data;
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      console.error('Error processing note:', errorMessage);
+      console.error('Error processing note:', errorMessage, error);
       throw new Error(`Failed to process note: ${errorMessage}`);
     }
   }
@@ -442,8 +473,13 @@ class ObsidianTool implements MCPTool {
 
   async listNotes(directory: string = '', limit: number = 10): Promise<ListResult> {
     const vaultPath = getVaultPath();
-    const basePath = path.join(vaultPath, directory || '');
+    console.log(`Vault path: ${vaultPath}`);
+    
+    // If no directory is specified, list all top-level directories in the vault
+    const basePath = directory ? path.join(vaultPath, directory) : vaultPath;
     const fullPath = path.resolve(basePath);
+    
+    console.log(`Listing notes in: ${fullPath}`);
 
     // Verify the path is within the vault
     if (!fullPath.startsWith(vaultPath)) {
@@ -451,15 +487,33 @@ class ObsidianTool implements MCPTool {
     }
 
     try {
-      // Get all markdown files in the directory
-      const filePaths = await fg(`${basePath}/**/*.md`, {
-        ignore: ['**/node_modules/**', '**/.git/**'],
+      // First, try to list the directory contents to check if it exists
+      try {
+        await fs.access(fullPath);
+      } catch (error) {
+        console.error(`Directory does not exist or is not accessible: ${fullPath}`);
+        return {
+          path: directory,
+          files: [],
+          total: 0
+        };
+      }
+
+      // Get all markdown files in the directory and its subdirectories
+      const filePaths = await fg([
+        `${basePath}/**/*.md`,
+        `!${basePath}/**/node_modules/**`,
+        `!${basePath}/**/.git/**`,
+        `!${basePath}/**/.obsidian/**`
+      ], {
         onlyFiles: true,
         caseSensitiveMatch: false,
         absolute: true,
         dot: false,
-        followSymbolicLinks: true,
+        followSymbolicLinks: false,
       });
+
+      console.log(`Found ${filePaths.length} markdown files in ${fullPath}`);
 
       // Process files up to the limit
       const filesToProcess = filePaths.slice(0, limit);
@@ -473,8 +527,16 @@ class ObsidianTool implements MCPTool {
       for (const filePath of filesToProcess) {
         try {
           const stats = await fs.stat(filePath);
+          const relativePath = path.relative(vaultPath, filePath);
+          
+          // Skip files in the .obsidian directory
+          if (relativePath.split(path.sep).includes('.obsidian')) {
+            console.log(`Skipping file in .obsidian directory: ${relativePath}`);
+            continue;
+          }
+          
           fileResults.push({
-            path: path.relative(vaultPath, filePath),
+            path: relativePath.replace(/\.md$/, ''), // Remove .md extension for Obsidian-style paths
             name: path.basename(filePath, '.md'),
             size: stats.size,
             modified: stats.mtime.toISOString()
@@ -487,6 +549,8 @@ class ObsidianTool implements MCPTool {
 
       // Filter out any null results from failed file processing
       const validFiles = fileResults.filter((file): file is NonNullable<typeof file> => file !== null);
+
+      console.log(`Successfully processed ${validFiles.length} files`);
 
       return {
         path: directory,

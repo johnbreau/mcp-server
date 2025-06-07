@@ -93,9 +93,12 @@ const semanticSearchHandler = async (req: Request, res: Response, next: NextFunc
     
     // If no exact matches, try to get a list of recent or relevant notes
     try {
+      console.log('Fetching recent notes...');
       const recentNotes = await api.listNotes('', 20); // Get 20 most recent notes
       
-      if (!recentNotes || !Array.isArray(recentNotes) || recentNotes.length === 0) {
+      console.log('Recent notes:', JSON.stringify(recentNotes, null, 2));
+      
+      if (!Array.isArray(recentNotes) || recentNotes.length === 0) {
         console.log('No notes found in the vault');
         return res.apiSuccess({
           results: [],
@@ -113,7 +116,7 @@ const semanticSearchHandler = async (req: Request, res: Response, next: NextFunc
       
       for (let i = 0; i < recentNotes.length; i += BATCH_SIZE) {
         const batch = recentNotes.slice(i, i + BATCH_SIZE);
-        const batchPromises = batch.map(async (note: { path: string; modified?: string; size?: number }) => {
+        const batchPromises = batch.map(async (note: { path: string; modified?: string; size?: number; name?: string }) => {
           try {
             const content = await api.getNote(note.path);
             return {

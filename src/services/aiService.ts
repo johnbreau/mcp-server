@@ -1,28 +1,33 @@
 import OpenAI from 'openai';
 import { SearchResult } from '../types/obsidian.js';
 
-// Log environment variables for debugging
-console.log('Environment variables in aiService:');
-console.log('- Available env vars:', Object.keys(process.env).join(', '));
-console.log('- NODE_ENV:', process.env.NODE_ENV);
+let openaiInstance: OpenAI | null = null;
 
-// Use the provided API key or fallback to environment variable
-const apiKey = process.env.OPENAI_API_KEY;
-if (!apiKey) {
-  console.warn('WARNING: OPENAI_API_KEY is not set in environment variables. Using a dummy key for testing.');
-  process.env.OPENAI_API_KEY = 'dummy-key-for-testing';
-}
+function getOpenAIClient(): OpenAI {
+  if (openaiInstance) {
+    return openaiInstance;
+  }
 
-// Initialize OpenAI client
-let openai: OpenAI;
-try {
-  openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-  });
-  console.log('OpenAI client initialized successfully');
-} catch (error) {
-  console.error('Failed to initialize OpenAI client:', error);
-  throw new Error(`Failed to initialize OpenAI client: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  // Get the API key from environment variables
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    const errorMsg = 'ERROR: OPENAI_API_KEY is not set in environment variables. Please set it in your .env file.';
+    console.error(errorMsg);
+    throw new Error(errorMsg);
+  }
+
+  try {
+    console.log('Initializing OpenAI client with API key:', `${apiKey.substring(0, 8)}...${apiKey.substring(apiKey.length - 4)}`);
+    openaiInstance = new OpenAI({
+      apiKey: apiKey,
+    });
+    console.log('OpenAI client initialized successfully');
+    return openaiInstance;
+  } catch (error) {
+    const errorMsg = `Failed to initialize OpenAI client: ${error instanceof Error ? error.message : 'Unknown error'}`;
+    console.error(errorMsg);
+    throw new Error(errorMsg);
+  }
 }
 
 interface SemanticSearchResponse {
@@ -64,6 +69,7 @@ Return a JSON object with:
     console.log('Prompt length:', prompt.length);
     
     try {
+      const openai = getOpenAIClient();
       const completion = await openai.chat.completions.create({
         model: "gpt-4-turbo-preview",
         messages: [
@@ -117,6 +123,7 @@ Return a JSON object with:
     const prompt = `Please provide a concise summary of the following note content:\n\n${content}\n\nSummary:`;
     
     try {
+      const openai = getOpenAIClient();
       const completion = await openai.chat.completions.create({
         model: "gpt-4-turbo-preview",
         messages: [
@@ -152,6 +159,7 @@ Return a JSON object with:
     const prompt = `Based on the following context, please answer the question. If the context doesn't contain enough information, say so.\n\nContext: ${context}\n\nQuestion: ${question}\n\nAnswer:`;
     
     try {
+      const openai = getOpenAIClient();
       const completion = await openai.chat.completions.create({
         model: "gpt-4-turbo-preview",
         messages: [
