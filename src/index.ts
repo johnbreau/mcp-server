@@ -30,13 +30,24 @@ try {
   console.log('.env file exists and is readable');
   
   // Load environment variables
-  const result = dotenv.config({ path: envPath });
+  const result = dotenv.config({ path: envPath, override: true });
   
   if (result.error) {
     console.error('Error loading .env file:', result.error);
+    throw result.error;
   } else {
     console.log('Environment variables loaded successfully');
-    console.log('Available environment variables:', Object.keys(process.env).join(', '));
+    // Only log non-sensitive environment variable names
+    const envVars = Object.keys(process.env).filter(key => !key.toLowerCase().includes('key') && !key.toLowerCase().includes('secret'));
+    console.log('Available environment variables:', envVars.join(', '));
+    
+    // Verify required environment variables
+    if (!process.env.OPENAI_API_KEY) {
+      throw new Error('OPENAI_API_KEY is not set in the .env file');
+    }
+    if (!process.env.OBSIDIAN_VAULT_PATH) {
+      throw new Error('OBSIDIAN_VAULT_PATH is not set in the .env file');
+    }
   }
 } catch (err) {
   console.error('Error accessing .env file:', err);
@@ -44,6 +55,16 @@ try {
   
   // Try to load without path as fallback
   dotenv.config();
+  
+  // Verify required environment variables
+  if (!process.env.OPENAI_API_KEY) {
+    console.error('ERROR: OPENAI_API_KEY is not set in environment variables');
+    process.exit(1);
+  }
+  if (!process.env.OBSIDIAN_VAULT_PATH) {
+    console.error('ERROR: OBSIDIAN_VAULT_PATH is not set in environment variables');
+    process.exit(1);
+  }
 }
 
 // Debug log environment variables
