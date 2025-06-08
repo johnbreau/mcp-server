@@ -1,5 +1,5 @@
 import { Title, Container, SimpleGrid, Space } from '@mantine/core';
-import { CalendarView } from '../features/calendar/CalendarView';
+import CalendarView from '../features/calendar/CalendarView';
 import { RandomJournalEntry } from '../features/journal/RandomJournalEntry';
 
 export default function HomePage() {
