@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { format, isSameDay, subMonths, addMonths, parseISO } from 'date-fns';
+import { format, isSameDay, subMonths, addMonths } from 'date-fns';
 import { 
   Box, 
   Text, 
@@ -38,10 +38,20 @@ export default function CalendarView() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Parse date string to Date object if needed
-  const parseDate = useCallback((date: Date | string | null): Date => {
-    if (!date) return new Date();
-    return date instanceof Date ? date : new Date(date);
+  // Format time for display
+  const formatEventTime = useCallback((date: Date | string): string => {
+    const dateObj = typeof date === 'string' ? new Date(date) : date;
+    return format(dateObj, 'h:mm a');
+  }, []);
+
+  // Handle date selection from the calendar
+  const handleDateSelect = useCallback((date: Date) => {
+    setSelectedDate(date);
+  }, []);
+
+  // Handle calendar change event
+  const handleCalendarChange = useCallback((date: Date) => {
+    setSelectedDate(date);
   }, []);
 
   // Navigation handlers
@@ -51,6 +61,13 @@ export default function CalendarView() {
 
   const handleNextMonth = useCallback(() => {
     setCurrentMonth(current => addMonths(current, 1));
+  }, []);
+
+  // Handle date selection
+  const handleDateChange = useCallback((date: Date | null) => {
+    if (date) {
+      setSelectedDate(date);
+    }
   }, []);
 
   // Fetch events when the month changes
@@ -181,9 +198,10 @@ export default function CalendarView() {
         <Box mt="md">
           <MantineCalendar
             value={selectedDate}
-            onChange={(date) => setSelectedDate(parseDate(date))}
-            renderDay={(date) => {
-              const dayDate = parseDate(date);
+            onChange={handleCalendarChange}
+            renderDay={(date: Date) => {
+              // Ensure date is a Date object
+              const dayDate = typeof date === 'string' ? new Date(date) : (date || new Date());
               const day = dayDate.getDate();
               const today = new Date();
               const dayHasEvents = hasEvents(dayDate);
@@ -203,13 +221,10 @@ export default function CalendarView() {
                       : 'transparent',
                     position: 'relative',
                     color: isSelected ? 'white' : 'inherit',
-                    cursor: 'pointer',
-color: isSelected ? 'white' : 'inherit',
                     border: isToday ? `2px solid ${theme.colors.blue[6]}` : 'none',
                     cursor: 'pointer',
-  
                   }}
-                  onClick={() => setSelectedDate(date)}
+                  onClick={() => handleDateSelect(dayDate)}
                 >
                   {day}
                   {dayHasEvents && (
