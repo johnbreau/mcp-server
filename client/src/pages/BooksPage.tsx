@@ -1,8 +1,7 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import { 
   Container, 
   Title, 
-  Card, 
   Text, 
   Group, 
   Image, 
@@ -13,13 +12,14 @@ import {
   Alert,
   Box,
   Badge,
-  SimpleGrid,
   TextInput,
   useMantineTheme,
-  useMantineColorScheme
+  useMantineColorScheme,
+  Flex,
+  Paper,
+  Anchor
 } from '@mantine/core';
-import { IconBook, IconAlertCircle, IconRefresh, IconSearch } from '@tabler/icons-react';
-import type { MantineTheme } from '@mantine/core';
+import { IconBook, IconAlertCircle, IconRefresh, IconSearch, IconExternalLink } from '@tabler/icons-react';
 
 interface Book {
   title: string;
@@ -153,83 +153,92 @@ export default function BooksPage() {
           </Button>
         </Box>
       ) : (
-        <SimpleGrid 
-          cols={{ base: 1, sm: 2, md: 3, lg: 4 }} 
-          spacing="lg" 
-          mt="xl"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-            gap: theme.spacing.lg,
-            marginTop: theme.spacing.xl,
-          }}
-        >
+        <Stack gap="md" mt="xl">
           {filteredBooks.map((book, index) => (
-            <Card 
+            <Paper 
               key={index}
-              shadow="sm"
-              padding="lg"
+              withBorder 
+              p="md" 
               radius="md"
-              component="a"
-              href={`https://goodreads.com${book.link}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              component="div"
               style={{
-                display: 'flex',
-                flexDirection: 'column',
-                height: '100%',
                 transition: 'all 0.2s ease',
-              }}
-              styles={{
-                root: (theme: MantineTheme) => ({
-                  '&:hover': {
-                    transform: 'translateY(-5px)',
-                    boxShadow: theme.shadows.md,
-                  },
-                }),
+                '&:hover': {
+                  transform: 'translateX(5px)',
+                },
               }}
             >
-              <Card.Section>
-                <Image
-                  src={book.coverImage}
-                  h={300}
-                  alt={`Cover of ${book.title}`}
+              <Flex gap="lg" align="flex-start">
+                <Box 
                   style={{
-                    objectFit: 'contain',
-                    backgroundColor: colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-                  }}
-                />
-              </Card.Section>
-
-              <Stack gap="xs" mt="md" style={{ flexGrow: 1 }}>
-                <Text 
-                  lineClamp={2}
-                  style={{
-                    fontWeight: 600,
-                    lineHeight: 1.2,
-                    marginBottom: `calc(${theme.spacing.xs} / 2)`,
+                    flex: '0 0 80px',
+                    width: '80px',
+                    height: '120px',
+                    backgroundColor: colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1],
+                    borderRadius: theme.radius.sm,
+                    overflow: 'hidden',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
                   }}
                 >
-                  {book.title}
-                </Text>
-                <Text 
-                  size="sm" 
-                  lineClamp={1}
-                  color={colorScheme === 'dark' ? 'dimmed' : 'gray.7'}
-                >
-                  {book.author}
-                </Text>
+                  <Image
+                    src={book.coverImage}
+                    height={110}
+                    width={70}
+                    fit="contain"
+                    alt={`Cover of ${book.title}`}
+                  />
+                </Box>
                 
-                <Group justify="space-between" mt="auto" wrap="nowrap">
-                  <Rating value={book.rating} readOnly size="sm" />
-                  <Text size="xs" c="dimmed" lineClamp={1}>
-                    Read: {book.dateRead}
+                <Stack gap="xs" style={{ flex: 1, minWidth: 0 }}>
+                  <Group justify="space-between" align="flex-start" wrap="nowrap">
+                    <div>
+                      <Text fw={600} size="lg" lineClamp={2}>
+                        {book.title}
+                      </Text>
+                      <Text size="sm" c="dimmed">
+                        {book.author}
+                      </Text>
+                    </div>
+                    <Group gap="xs">
+                      <Rating value={book.rating} fractions={2} readOnly size="sm" />
+                      <Text size="sm" fw={500}>
+                        {book.rating.toFixed(1)}
+                      </Text>
+                    </Group>
+                  </Group>
+                  
+                  <Text size="sm" c="dimmed">
+                    Read on {new Date(book.dateRead).toLocaleDateString(undefined, {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
                   </Text>
-                </Group>
-              </Stack>
-            </Card>
+                  
+                  <Group gap="xs" mt="auto" justify="space-between">
+                    <Badge variant="light">
+                      {book.rating >= 4 ? 'Loved it' : book.rating >= 3 ? 'Liked it' : 'Read it'}
+                    </Badge>
+                    <Anchor 
+                      href={`https://goodreads.com${book.link}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      size="sm"
+                    >
+                      <Group gap={4}>
+                        View on Goodreads
+                        <IconExternalLink size={14} />
+                      </Group>
+                    </Anchor>
+                  </Group>
+                </Stack>
+              </Flex>
+            </Paper>
           ))}
-        </SimpleGrid>
+        </Stack>
       )}
     </Container>
   );
