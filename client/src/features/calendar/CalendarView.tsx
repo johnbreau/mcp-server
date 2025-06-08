@@ -200,7 +200,6 @@ export default function CalendarView() {
         </Group>
         <Box mt="md">
           <MantineCalendar
-            value={selectedDate}
             getDayProps={(date) => ({
               onClick: () => handleCalendarChange(date),
             })}
