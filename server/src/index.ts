@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import goodreadsRoutes from './routes/goodreads';
 import timelineRoutes from './routes/timeline';
+import calendarRoutes from './routes/calendar';
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use((req, res, next) => {
 // API Routes
 app.use('/api/books', goodreadsRoutes);
 app.use('/api/timeline', timelineRoutes);
+app.use('/api/calendar', calendarRoutes);
 
 // Log all registered routes
 const printRoutes = () => {

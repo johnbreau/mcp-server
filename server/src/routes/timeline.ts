@@ -25,11 +25,22 @@ router.get('/', async (req: Request, res: Response) => {
     // In a real implementation, you would query your database here
     // and filter events based on the date range
     
-    // For now, return the mock data
-    res.json({
+    // Return the mock data in the format expected by the frontend
+    const responseData = {
       success: true,
-      data: mockTimelineEvents
-    });
+      data: mockTimelineEvents.map(event => ({
+        id: event.id,
+        timestamp: event.timestamp,
+        title: event.title,
+        description: event.description,
+        type: event.type,
+        metadata: event.metadata || {},
+        source: event.source || 'api'
+      }))
+    };
+
+    console.log('Sending timeline response:', JSON.stringify(responseData, null, 2));
+    res.json(responseData);
     
   } catch (error) {
     console.error('Error fetching timeline events:', error);

@@ -40,8 +40,13 @@ export default function CalendarView() {
 
   // Format time for display
   const formatEventTime = useCallback((date: Date | string): string => {
-    const dateObj = typeof date === 'string' ? new Date(date) : date;
-    return format(dateObj, 'h:mm a');
+    try {
+      const dateObj = typeof date === 'string' ? parseDateString(date) : date;
+      return format(dateObj, 'h:mm a');
+    } catch (error) {
+      console.error('Error formatting time:', error, date);
+      return '';
+    }
   }, []);
 
   // Handle date selection from the calendar
@@ -75,59 +80,65 @@ export default function CalendarView() {
 
   // Fetch events when the month changes
   const fetchEvents = useCallback(async (start: Date, end: Date) => {
-    console.log('Fetching events...');
+    console.log('Fetching Apple Calendar events...');
     setIsLoading(true);
     setError(null);
 
     try {
-      console.log(`Fetching events from ${start} to ${end}`);
+      // Format dates as ISO strings for the API
+      const startStr = start.toISOString();
+      const endStr = end.toISOString();
 
-      // Format dates as YYYY-MM-DD for the API
-      const startStr = format(start, 'yyyy-MM-dd');
-      const endStr = format(end, 'yyyy-MM-dd');
-
-      console.log(`API URL: /api/timeline?start=${startStr}&end=${endStr}`);
-      const response = await fetch(`/api/timeline?start=${startStr}&end=${endStr}`);
+      console.log(`Fetching calendar events from ${startStr} to ${endStr}`);
+      const response = await fetch(`/api/calendar/events?start=${encodeURIComponent(startStr)}&end=${encodeURIComponent(endStr)}`);
       console.log('Response status:', response.status);
 
       if (!response.ok) {
         const errorText = await response.text();
         console.error('API Error:', errorText);
-        throw new Error(`Failed to fetch events: ${response.status} ${response.statusText}`);
+        throw new Error(`Failed to fetch calendar events: ${response.status} ${response.statusText}`);
+      }
+
+      interface CalendarEvent {
+        id: string;
+        title: string;
+        start: string;
+        end: string;
+        description: string;
+        location: string;
+        isAllDay: boolean;
+        calendar: string;
       }
 
       interface ApiResponse {
         success: boolean;
-        data: Array<{
-          id: string;
-          timestamp: string;
-          title: string;
-          description?: string;
-          type: string;
-          metadata?: Record<string, unknown>;
-          source?: string;
-        }>;
+        data: CalendarEvent[];
       }
 
       const responseData = await response.json() as ApiResponse;
-      console.log('API Response:', responseData);
+      console.log('Calendar API Response:', responseData);
 
       if (!responseData.success) {
-        throw new Error('Failed to fetch events: API returned unsuccessful response');
+        throw new Error('Failed to fetch calendar events: API returned unsuccessful response');
       }
 
       const eventsData = responseData.data || [];
-      console.log('Received events:', eventsData);
+      console.log('Received calendar events:', eventsData);
 
-      // Transform API response to TimelineItem format
-      const transformedEvents = eventsData.map((item) => ({
-        id: item.id,
-        timestamp: item.timestamp, // Using timestamp instead of date
-        title: item.title,
-        description: item.description || '',
-        type: item.type,
-        metadata: item.metadata,
-        source: item.source
+      // Transform calendar events to TimelineItem format
+      const transformedEvents = eventsData.map((event) => ({
+        id: event.id,
+        timestamp: event.start, // Using event start time as timestamp
+        title: event.title,
+        description: event.description || '',
+        type: 'event',
+        metadata: {
+          isAllDay: event.isAllDay,
+          location: event.location,
+          calendar: event.calendar,
+          end: event.end
+        },
+        source: 'apple-calendar'
       }));
 
       setEvents(transformedEvents);
@@ -139,6 +150,25 @@ export default function CalendarView() {
     }
   }, []);
 
+  // Helper function to parse date strings from the API
+  const parseDateString = (dateStr: string): Date => {
+    // Try parsing with the format: "Sunday, June 8, 2025 at 12:00:00 PM"
+    const parsed = new Date(dateStr);
+    if (!isNaN(parsed.getTime())) {
+      return parsed;
+    }
+    
+    // If that fails, try removing the "at" and parse again
+    const cleanedStr = dateStr.replace(' at ', ' ');
+    const cleanedParsed = new Date(cleanedStr);
+    if (!isNaN(cleanedParsed.getTime())) {
+      return cleanedParsed;
+    }
+    
+    console.warn('Could not parse date string:', dateStr);
+    return new Date(); // Fallback to current date
+  };
+
   // Get events for the selected date
   const getEventsForDate = useCallback((date: string | Date | null): TimelineItem[] => {
     if (!date) return [];
@@ -148,10 +178,10 @@ export default function CalendarView() {
 
     return events.filter(event => {
       try {
-        const eventDate = new Date(event.timestamp);
+        const eventDate = parseDateString(event.timestamp);
         return isSameDay(eventDate, targetDate);
       } catch (error) {
-        console.error('Error processing event date:', error);
+        console.error('Error processing event date:', error, event);
         return false;
       }
     });
@@ -161,10 +191,10 @@ export default function CalendarView() {
   const hasEvents = useCallback((date: Date): boolean => {
     return events.some(event => {
       try {
-        const eventDate = new Date(event.timestamp);
+        const eventDate = parseDateString(event.timestamp);
         return isSameDay(eventDate, date);
       } catch (error) {
-        console.error('Error processing event date:', error);
+        console.error('Error processing event date:', error, event);
         return false;
       }
     });
@@ -261,28 +291,39 @@ export default function CalendarView() {
               <Text c="dimmed">No events for this day</Text>
             ) : (
               <div>
-                {selectedDateEvents.map((event) => (
-                  <div
-                    key={event.id}
-                    style={{
-                      padding: theme.spacing.xs,
-                      marginBottom: theme.spacing.xs,
-                      borderRadius: theme.radius.sm,
-                      backgroundColor: colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
-    
-                      cursor: 'pointer',
-                    }}
-                    onClick={() => setSelectedDate(new Date(event.timestamp))}
-                  >
-                    <Text size="sm" fw={500}>{event.title}</Text>
-                    {event.description && (
-                      <Text size="xs" c="dimmed">{event.description}</Text>
-                    )}
-                    <Text size="xs" c="dimmed">
-                      {formatEventTime(event.timestamp)}
-                    </Text>
-                  </div>
-                ))}
+                {selectedDateEvents.map((event) => {
+                  try {
+                    const eventDate = parseDateString(event.timestamp);
+                    return (
+                      <div
+                        key={event.id}
+                        style={{
+                          padding: '8px',
+                          margin: '4px 0',
+                          borderRadius: '4px',
+                          backgroundColor: colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
+                          cursor: 'pointer',
+                        }}
+                        onClick={() => setSelectedDate(eventDate)}
+                      >
+                        <Text size="sm" fw={500}>
+                          {event.title}
+                        </Text>
+                        {event.description && (
+                          <Text size="xs" c="dimmed">
+                            {event.description}
+                          </Text>
+                        )}
+                        <Text size="xs" c="dimmed">
+                          {formatEventTime(event.timestamp)}
+                        </Text>
+                      </div>
+                    );
+                  } catch (error) {
+                    console.error('Error rendering event:', error, event);
+                    return null;
+                  }
+                })}
               </div>
             )}
           </Box>

@@ -42,13 +42,16 @@ export default function BooksPage() {
     
     try {
       const response = await fetch('/api/books/read');
-      const data = await response.json();``
+      const data = await response.json();
       
       if (!response.ok) {
         throw new Error(data.error || 'Failed to load books');
       }
       
-      setBooks(data.data || []);
+      // The API returns { success: true, data: books }
+      // but the scraper returns the books array directly
+      const booksData = Array.isArray(data) ? data : (data.data || []);
+      setBooks(booksData);
     } catch (err) {
       console.error('Error fetching books:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
