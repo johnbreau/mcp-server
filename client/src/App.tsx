@@ -17,6 +17,7 @@ import SearchPage from './pages/SearchPage';
 import NotesListPage from './pages/NotesListPage';
 import NoteViewer from './pages/NoteViewer';
 import AIPage from './pages/AIPage';
+import CalendarView from './features/calendar/CalendarView';
 
 const queryClient = new QueryClient();
 
@@ -96,6 +97,7 @@ const App = () => {
             <Route path="/notes" element={<NotesListPage />} />
             <Route path="/notes/:path" element={<NoteViewer />} />
             <Route path="/ai" element={<AIPage />} />
+            <Route path="/calendar" element={<CalendarView />} />
             <Route path="*" element={<Navigate to="/search" replace />} />
           </Routes>
         </CustomAppShell>

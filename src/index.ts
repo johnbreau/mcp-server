@@ -6,6 +6,8 @@ import express from 'express';
 import cors from 'cors';
 import toolRouter from './router.js';
 import aiRouter from './routes/ai.js';
+import timelineRouter from './routes/timeline.js';
+import calendarRouter from './routes/calendar.js';
 
 // Add error handling for unhandled promise rejections
 process.on('unhandledRejection', (reason, promise) => {
@@ -99,9 +101,11 @@ app.use((req, _res, next) => {
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
-// Mount routes
-app.use("/api/tools", toolRouter);
-app.use("/api/ai", aiRouter);
+// Mount routers
+app.use('/api/tools', toolRouter);
+app.use('/api/ai', aiRouter);
+app.use('/api/timeline', timelineRouter);
+app.use('/api/calendar', calendarRouter);
 
 // Add a test endpoint
 app.get('/api/test', (_req, res) => {

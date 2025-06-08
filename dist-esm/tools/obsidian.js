@@ -79,7 +79,6 @@ class ObsidianTool {
     async searchNotes(query, limit = 5) {
         try {
             const vaultPath = getVaultPath();
-            const searchPath = vaultPath;
             console.log('=== Starting search ===');
             console.log(`Vault path: ${vaultPath}`);
             console.log(`Searching for: "${query}"`);
@@ -94,33 +93,39 @@ class ObsidianTool {
                 console.log('No search terms provided');
                 return { results: [] };
             }
-            const files = await fg(`${searchPath}/**/*.{md,mdx}`, {
-                ignore: [
-                    '**/node_modules/**',
-                    '**/.git/**',
-                    '**/.obsidian/**',
-                    '**/.*',
-                    '**/node_modules',
-                    '**/bower_components',
-                    '**/jspm_packages',
-                    '**/Thumbs.db',
-                    '**/ehthumbs.db',
-                    '**/Desktop.ini'
-                ],
+            const filePaths = await fg([
+                `${vaultPath}/**/*.md`,
+                `!${vaultPath}/**/node_modules/**`,
+                `!${vaultPath}/**/.git/**`,
+                `!${vaultPath}/**/.obsidian/**`,
+                `!${vaultPath}/**/.*`,
+                `!${vaultPath}/**/node_modules`,
+                `!${vaultPath}/**/bower_components`,
+                `!${vaultPath}/**/jspm_packages`,
+                `!${vaultPath}/**/Thumbs.db`,
+                `!${vaultPath}/**/ehthumbs.db`,
+                `!${vaultPath}/**/Desktop.ini`
+            ], {
                 onlyFiles: true,
                 caseSensitiveMatch: false,
                 absolute: true,
                 dot: false,
                 followSymbolicLinks: false,
-                stats: false,
                 unique: true
             });
-            console.log(`Found ${files.length} files to search through`);
-            const BATCH_SIZE = 20;
-            for (let i = 0; i < files.length && results.length < limit * 2; i += BATCH_SIZE) {
-                const batch = files.slice(i, i + BATCH_SIZE);
+            console.log(`Found ${filePaths.length} markdown files to search through`);
+            const BATCH_SIZE = 10;
+            for (let i = 0; i < filePaths.length && results.length < limit * 2; i += BATCH_SIZE) {
+                const batch = filePaths.slice(i, i + BATCH_SIZE);
+                console.log(`Processing batch ${i / BATCH_SIZE + 1} of ${Math.ceil(filePaths.length / BATCH_SIZE)}`);
                 const batchPromises = batch.map(async (filePath) => {
                     try {
+                        const relativePath = path.relative(vaultPath, filePath);
+                        console.log(`Processing file: ${relativePath}`);
+                        if (relativePath.split(path.sep).includes('.obsidian')) {
+                            console.log(`Skipping file in .obsidian directory: ${relativePath}`);
+                            return null;
+                        }
                         const content = await fs.readFile(filePath, 'utf-8');
                         const lowerContent = content.toLowerCase();
                         const allTermsFound = searchTerms.every(term => lowerContent.includes(term));
@@ -138,8 +143,9 @@ class ObsidianTool {
                         if (end < content.length)
                             excerpt = `${excerpt}...`;
                         const stats = await fs.stat(filePath).catch(() => null);
+                        console.log(`Found match in file: ${relativePath}`);
                         return {
-                            path: path.relative(vaultPath, filePath).replace(/\.md$/, ''),
+                            path: relativePath.replace(/\.md$/i, ''),
                             content: excerpt,
                             lastModified: stats?.mtime?.toISOString() || new Date().toISOString(),
                             size: content.length
@@ -210,23 +216,29 @@ class ObsidianTool {
     }
     async readNote(filePath) {
         const vaultPath = getVaultPath();
-        const normalizedPath = filePath.replace(/^[\\/]+/, '').replace(/\.md$/, '');
+        console.log(`Reading note: ${filePath} from vault: ${vaultPath}`);
+        const normalizedPath = filePath.replace(/^[\\/]+/, '').replace(/\.md$/i, '');
         const possiblePaths = [
             `${normalizedPath}.md`,
             `${normalizedPath}/index.md`,
             path.join(normalizedPath, 'index.md'),
-            path.join(path.dirname(normalizedPath), `${path.basename(normalizedPath)}.md`)
+            path.join(path.dirname(normalizedPath), `${path.basename(normalizedPath)}.md`),
+            path.join(vaultPath, `${normalizedPath}.md`),
+            path.join(vaultPath, normalizedPath, 'index.md')
         ];
+        console.log(`Trying paths:`, possiblePaths);
         let content = '';
         let stats = null;
         let foundPath = '';
         for (const possiblePath of possiblePaths) {
-            const fullPath = path.join(vaultPath, possiblePath);
+            const fullPath = possiblePath.startsWith(vaultPath) ? possiblePath : path.join(vaultPath, possiblePath);
+            console.log(`Trying path: ${fullPath}`);
             try {
                 if (await fs.pathExists(fullPath)) {
+                    console.log(`Found file at: ${fullPath}`);
                     content = await fs.readFile(fullPath, 'utf-8');
                     stats = await fs.stat(fullPath);
-                    foundPath = possiblePath;
+                    foundPath = fullPath;
                     break;
                 }
             }
@@ -235,23 +247,33 @@ class ObsidianTool {
             }
         }
         if (!stats) {
-            throw new Error(`Note not found: ${filePath}. Tried: ${possiblePaths.join(', ')}`);
+            const errorMsg = `Note not found: ${filePath}. Tried: ${possiblePaths.join(', ')}`;
+            console.error(errorMsg);
+            throw new Error(errorMsg);
         }
         try {
             const { frontmatter, content: processedContent } = this.parseFrontmatter(content);
             const contentWithLinks = this.processWikilinks(processedContent);
-            return {
-                path: foundPath.replace(/\.md$/, ''),
-                title: frontmatter?.title || path.basename(foundPath, '.md'),
-                content: contentWithLinks,
-                size: content.length,
-                created: stats.birthtime.toISOString(),
-                modified: stats.mtime.toISOString()
+            const result = {
+                success: true,
+                data: {
+                    path: foundPath.replace(/\.md$/i, ''),
+                    title: frontmatter?.title || path.basename(foundPath, '.md'),
+                    content: contentWithLinks,
+                    size: content.length,
+                    created: stats.birthtime.toISOString(),
+                    modified: stats.mtime.toISOString(),
+                    lastModified: stats.mtime.toISOString()
+                }
             };
+            console.log(`Successfully read note: ${foundPath}`);
+            console.log(`Content length: ${content.length} chars`);
+            console.log(`Frontmatter:`, frontmatter);
+            return result.data;
         }
         catch (error) {
             const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-            console.error('Error processing note:', errorMessage);
+            console.error('Error processing note:', errorMessage, error);
             throw new Error(`Failed to process note: ${errorMessage}`);
         }
     }
@@ -305,27 +327,50 @@ class ObsidianTool {
     }
     async listNotes(directory = '', limit = 10) {
         const vaultPath = getVaultPath();
-        const basePath = path.join(vaultPath, directory || '');
+        console.log(`Vault path: ${vaultPath}`);
+        const basePath = directory ? path.join(vaultPath, directory) : vaultPath;
         const fullPath = path.resolve(basePath);
+        console.log(`Listing notes in: ${fullPath}`);
         if (!fullPath.startsWith(vaultPath)) {
             throw new Error('Access denied: Path is outside the vault');
         }
         try {
-            const filePaths = await fg(`${basePath}/**/*.md`, {
-                ignore: ['**/node_modules/**', '**/.git/**'],
+            try {
+                await fs.access(fullPath);
+            }
+            catch (error) {
+                console.error(`Directory does not exist or is not accessible: ${fullPath}`);
+                return {
+                    path: directory,
+                    files: [],
+                    total: 0
+                };
+            }
+            const filePaths = await fg([
+                `${basePath}/**/*.md`,
+                `!${basePath}/**/node_modules/**`,
+                `!${basePath}/**/.git/**`,
+                `!${basePath}/**/.obsidian/**`
+            ], {
                 onlyFiles: true,
                 caseSensitiveMatch: false,
                 absolute: true,
                 dot: false,
-                followSymbolicLinks: true,
+                followSymbolicLinks: false,
             });
+            console.log(`Found ${filePaths.length} markdown files in ${fullPath}`);
             const filesToProcess = filePaths.slice(0, limit);
             const fileResults = [];
             for (const filePath of filesToProcess) {
                 try {
                     const stats = await fs.stat(filePath);
+                    const relativePath = path.relative(vaultPath, filePath);
+                    if (relativePath.split(path.sep).includes('.obsidian')) {
+                        console.log(`Skipping file in .obsidian directory: ${relativePath}`);
+                        continue;
+                    }
                     fileResults.push({
-                        path: path.relative(vaultPath, filePath),
+                        path: relativePath.replace(/\.md$/, ''),
                         name: path.basename(filePath, '.md'),
                         size: stats.size,
                         modified: stats.mtime.toISOString()
@@ -337,6 +382,7 @@ class ObsidianTool {
                 }
             }
             const validFiles = fileResults.filter((file) => file !== null);
+            console.log(`Successfully processed ${validFiles.length} files`);
             return {
                 path: directory,
                 files: validFiles,

@@ -1,7 +1,11 @@
 // src/router.ts
 import { Router, type Request, type Response, type NextFunction } from 'express';
+import timelineRouter from './routes/timeline.js';
 
 const router = Router();
+
+// Mount the timeline router at /api/timeline
+router.use('/timeline', timelineRouter);
 
 // Log the current working directory for debugging
 console.log('Current working directory:', process.cwd());
