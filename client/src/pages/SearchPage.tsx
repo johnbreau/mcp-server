@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useDebouncedValue } from '@mantine/hooks';
 import { 
   Container, 
@@ -10,439 +10,298 @@ import {
   Tabs, 
   Paper, 
   Stack, 
-  Progress, 
-  Modal, 
+  Group,
   Badge,
-  ActionIcon
+  Card
 } from '@mantine/core';
-import { IconSearch, IconMessage } from '@tabler/icons-react';
-// API client for backend communication
-const API_BASE_URL = 'http://localhost:3000/api';
-
-const api = {
-  searchNotes: async (query: string) => {
-    try {
-      const url = `${API_BASE_URL}/tools/obsidian`;
-      console.log('Fetching from URL (searchNotes):', url);
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          action: 'search',
-          query,
-          limit: 10
-        })
-      });
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      
-      const data = await response.json();
-      console.log('Raw data from backend (searchNotes):', JSON.stringify(data, null, 2));
-      // Map the backend results to the expected frontend format
-      const results = data && data.data && Array.isArray(data.data.results) ? data.data.results as BackendSearchResult[] : [];
-      return results.map((result, index) => ({
-        id: result.path || `result-${index}`,
-        title: result.path ? result.path.split('/').pop() || 'Untitled' : 'Untitled',
-        content: result.content || '',
-        path: result.path || '',
-        lastModified: result.lastModified || new Date().toISOString(),
-        size: result.size || 0
-      }));
-    } catch (error) {
-      console.error('Error searching notes:', error);
-      throw error;
-    }
-  },
-  
-  semanticSearch: async (query: string) => {
-    try {
-      const url = `${API_BASE_URL}/ai/semantic-search`;
-      console.log('Fetching from URL (semanticSearch):', url);
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          query,
-          limit: 10
-        })
-      });
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      
-      const data = await response.json();
-      console.log('Raw data from backend (semanticSearch):', JSON.stringify(data, null, 2));
-      // Map the semantic search results to the expected frontend format
-      const results = data && data.data && Array.isArray(data.data.results) ? data.data.results as BackendSearchResult[] : [];
-      return results.map((result, index) => ({
-        id: result.path || `result-${index}`,
-        title: result.path ? result.path.split('/').pop() || 'Untitled' : 'Untitled',
-        content: result.content || '',
-        path: result.path || '',
-        score: result.score,
-        lastModified: result.lastModified || new Date().toISOString(),
-        size: result.size || 0
-      }));
-    } catch (error) {
-      console.error('Error performing semantic search:', error);
-      throw error;
-    }
-  }
-};
-// Type definitions
-type IndexingStatus = 'idle' | 'indexing' | 'complete' | 'error';
-type SearchTab = 'keyword' | 'semantic';
-
-interface BackendSearchResult {
-  path: string;
-  content: string;
-  lastModified?: string;
-  size?: number;
-  score?: number;
-}
+import { IconSearch, IconBook, IconMessage, IconBrain } from '@tabler/icons-react';
+import { api } from '../api/obsidian';
 
 interface SearchResult {
-  id: string;
-  title: string;
-  content: string;
   path: string;
+  content: string;
   lastModified: string;
   size: number;
   score?: number;
+  relevance?: number;
 }
 
-
-interface SearchState {
-  query: string;
-  results: SearchResult[];
-  isLoading: boolean;
-  error: string | null;
-  activeTab: SearchTab;
-  useSemanticSearch: boolean;
+interface SemanticResult {
+  reasoning: string;
+  results: Array<SearchResult & { relevance: number }>;
 }
 
-interface IndexingState {
-  isModalOpen: boolean;
-  status: IndexingStatus;
-  progress: number;
-  error: string | null;
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
 }
 
-export function SearchPage() {
-  // State
-  const [searchState, setSearchState] = useState<SearchState>({
-    query: '',
-    results: [],
-    isLoading: false,
-    error: null,
-    activeTab: 'keyword',
-    useSemanticSearch: false,
-  });
+export default function SearchPage() {
+  const [activeTab, setActiveTab] = useState<string | null>('keywords');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearching, setIsSearching] = useState(false);
+  const [searchError, setSearchError] = useState<string | null>(null);
+  const [keywordResults, setKeywordResults] = useState<SearchResult[]>([]);
+  const [semanticResults, setSemanticResults] = useState<SemanticResult | null>(null);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [messageInput, setMessageInput] = useState('');
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  const [debouncedQuery] = useDebouncedValue(searchQuery, 300);
 
-  const [indexingState, setIndexingState] = useState<IndexingState>({
-    isModalOpen: false,
-    status: 'idle',
-    progress: 0,
-    error: null,
-  });
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-  // Refs for state to avoid stale closures in callbacks
-  const searchStateRef = useRef(searchState);
-  searchStateRef.current = searchState;
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  };
 
-  // Debounced query for search optimization
-  useDebouncedValue(searchState.query, 300);
-
-  // Search handlers
-  const handleSearchSubmit = useCallback(async (): Promise<void> => {
-    const { query, useSemanticSearch } = searchStateRef.current;
-    if (!query.trim()) {
-      setSearchState((prev: SearchState) => ({
-        ...prev,
-        results: [],
-        error: null
-      }));
+  const handleSearch = useCallback(async () => {
+    if (!debouncedQuery.trim()) {
+      setKeywordResults([]);
+      setSemanticResults(null);
       return;
     }
 
+    setIsSearching(true);
+    setSearchError(null);
+
     try {
-      setSearchState((prev: SearchState) => ({
-        ...prev,
-        isLoading: true,
-        error: null
-      }));
-
-      let searchResults: SearchResult[] = [];
-      
-      if (useSemanticSearch) {
-        const apiResponse = await api.semanticSearch(query);
-        console.log('Processed results from api.semanticSearch:', JSON.stringify(apiResponse, null, 2));
-        searchResults = Array.isArray(apiResponse) ? apiResponse : [];
-      } else {
-        const apiResponse = await api.searchNotes(query);
-        console.log('Processed results from api.searchNotes:', JSON.stringify(apiResponse, null, 2));
-        searchResults = Array.isArray(apiResponse) ? apiResponse : [];
+      if (activeTab === 'keywords') {
+        const results = await api.searchNotes(debouncedQuery, 10);
+        setKeywordResults(results);
+      } else if (activeTab === 'semantic') {
+        const response = await fetch(`/api/obsidian/semantic?q=${encodeURIComponent(debouncedQuery)}`);
+        if (!response.ok) throw new Error('Failed to perform semantic search');
+        const data = await response.json();
+        setSemanticResults(data);
       }
-
-      setSearchState((prev: SearchState) => ({
-        ...prev,
-        results: searchResults, // Use the correctly populated searchResults here
-        isLoading: false,
-        error: searchResults.length === 0 
-          ? 'No results found. Try different keywords or enable semantic search for more relevant results.' 
-          : null
-      }));
-
-
-    } catch (error) {
-      console.error('Search error:', error);
-      setSearchState((prev: SearchState) => ({
-        ...prev,
-        isLoading: false,
-        error: 'An error occurred while searching. Please try again.'
-      }));
+    } catch (err) {
+      console.error('Search error:', err);
+      setSearchError('Failed to perform search. Please try again.');
+    } finally {
+      setIsSearching(false);
     }
-  }, []);
+  }, [debouncedQuery, activeTab]);
 
-  const handleSearchChange = useCallback((event: React.ChangeEvent<HTMLInputElement>): void => {
-    setSearchState((prev: SearchState) => ({
-      ...prev,
-      query: event.target.value,
-      error: null
-    }));
-  }, []);
+  useEffect(() => {
+    if (activeTab === 'chat') return;
+    handleSearch();
+  }, [activeTab, debouncedQuery, handleSearch]);
 
-  // Handle tab changes
-  const handleTabChange = useCallback((value: string | null): void => {
-    if (value) {
-      setSearchState(prev => ({
-        ...prev,
-        activeTab: value as SearchTab,
-        useSemanticSearch: value === 'semantic',
-        results: []
-      }));
-    }
-  }, []);
+  const handleMessageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setMessageInput(event.target.value);
+  };
 
-  const handleSearchKeyPress = useCallback((event: React.KeyboardEvent<HTMLInputElement>): void => {
-    if (event.key === 'Enter') {
+  const handleMessageKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault();
-      handleSearchSubmit();
+      handleSendMessage();
     }
-  }, [handleSearchSubmit]);
+  };
 
-  // Open indexing modal - used in JSX
-  const openIndexingModal = useCallback((): void => {
-    setIndexingState((prev: IndexingState) => ({
-      ...prev,
-      isModalOpen: true,
-      status: 'idle',
-      progress: 0
-    }));
-  }, []);
+  const handleSendMessage = async () => {
+    if (!messageInput.trim()) return;
 
-
-  // Indexing handlers
-  const closeIndexingModal = useCallback((): void => {
-    setIndexingState((prev: IndexingState) => ({
-      ...prev,
-      isModalOpen: false,
-      status: 'idle',
-      progress: 0,
-      error: null
-    }));
-  }, []);
-
-  const handleIndexVault = useCallback(async (): Promise<void> => {
-    setIndexingState((prev: IndexingState) => ({
-      ...prev,
-      status: 'indexing',
-      progress: 0,
-      error: null
-    }));
+    const userMessage: Message = { role: 'user', content: messageInput };
+    setMessages(prev => [...prev, userMessage]);
+    setMessageInput('');
+    setIsSearching(true);
 
     try {
-      // Simulate indexing progress (replace with actual API call)
-      const totalSteps = 10;
-      for (let i = 0; i <= totalSteps; i++) {
-        await new Promise(resolve => setTimeout(resolve, 300));
-        const progress = Math.min(100, Math.round((i / totalSteps) * 100));
-        
-        setIndexingState((prev: IndexingState) => ({
-          ...prev,
-          progress,
-          status: progress === 100 ? 'complete' : 'indexing'
-        }));
-      }
-    } catch (error) {
-      console.error('Indexing error:', error);
-      setIndexingState((prev: IndexingState) => ({
-        ...prev,
-        status: 'error',
-        error: 'Failed to index vault. Please try again.'
-      }));
+      const response = await fetch('/api/obsidian/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          messages: [...messages, userMessage].map(m => ({
+            role: m.role,
+            content: m.content
+          }))
+        })
+      });
+
+      if (!response.ok) throw new Error('Failed to get response');
+      
+      const data = await response.json();
+      setMessages(prev => [...prev, { role: 'assistant', content: data.response }]);
+    } catch (err) {
+      console.error('Chat error:', err);
+      setMessages(prev => [...prev, { 
+        role: 'assistant', 
+        content: 'Sorry, I encountered an error. Please try again.' 
+      }]);
+    } finally {
+      setIsSearching(false);
     }
-  }, []);
-
-  const { query, results, isLoading, error, activeTab } = searchState;
-
-  const { isModalOpen, status, progress } = indexingState;
+  };
 
   return (
     <Container size="lg" py="xl">
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-        <Title order={2}>Search Notes</Title>
-        <Button
-          leftSection={<IconMessage size={16} />}
-          onClick={openIndexingModal}
-          variant="outline"
-        >
-          Index Vault
-        </Button>
-      </div>
+      <Title order={2} mb="xl">
+        Search Notes
+      </Title>
 
-      <div style={{ marginBottom: '1.5rem' }}>
-        <TextInput
-          placeholder="Search your notes..."
-          value={query}
-          onChange={handleSearchChange}
-          onKeyDown={handleSearchKeyPress}
-          rightSection={
-            isLoading ? (
-              <Loader size="xs" />
-            ) : (
-              <ActionIcon onClick={handleSearchSubmit}>
-                <IconSearch size={16} />
-              </ActionIcon>
-            )
-          }
-        />
-      </div>
-
-      <Tabs 
-        value={activeTab} 
-        onChange={(value) => handleTabChange(value)}
-      >
+      <Tabs value={activeTab} onChange={setActiveTab}>
         <Tabs.List>
-          <Tabs.Tab value="keyword">Keyword</Tabs.Tab>
-          <Tabs.Tab value="semantic">Semantic</Tabs.Tab>
+          <Tabs.Tab value="keywords" leftSection={<IconSearch size={14} />}>
+            Keyword Search
+          </Tabs.Tab>
+          <Tabs.Tab value="semantic" leftSection={<IconBrain size={14} />}>
+            Semantic Search
+          </Tabs.Tab>
+          <Tabs.Tab value="chat" leftSection={<IconMessage size={14} />}>
+            Chat with Notes
+          </Tabs.Tab>
         </Tabs.List>
 
-        <Tabs.Panel value="keyword" pt="md">
-          {error ? (
-            <Text c="red">{error}</Text>
-          ) : results.length > 0 ? (
+        <Tabs.Panel value="keywords" pt="md">
+          <TextInput
+            placeholder="Search notes by keywords..."
+            value={searchQuery}
+            onChange={handleSearchChange}
+            rightSection={isSearching ? <Loader size="sm" /> : <IconSearch size={16} />}
+            mb="md"
+          />
+
+          {searchError && activeTab === 'keywords' && (
+            <Text color="red" size="sm" mb="md">
+              {searchError}
+            </Text>
+          )}
+
+          {isSearching && searchQuery ? (
+            <Loader />
+          ) : keywordResults.length > 0 ? (
             <Stack gap="md">
-              {results.map((result) => (
-                <Paper key={result.id} p="md" shadow="xs">
-                  <Title order={4}>{result.title}</Title>
-                  <Text size="sm" c="dimmed">{result.path}</Text>
-                  <Text mt="xs">{result.content.substring(0, 200)}...</Text>
-                  {result.score !== undefined && (
-                    <Badge color="blue" mt="xs">
-                      Score: {result.score.toFixed(2)}
-                    </Badge>
-                  )}
-                </Paper>
-              ))}
+              <Text size="sm" c="dimmed">
+                Found {keywordResults.length} results:
+              </Text>
+              <Stack gap="md">
+                {keywordResults.map((result, index) => (
+                  <Card key={index} withBorder>
+                    <Text fw={500}>{result.path}</Text>
+                    <Text size="sm" lineClamp={2}>
+                      {result.content}
+                    </Text>
+                    {result.score !== undefined && (
+                      <Badge color="blue" size="sm" mt="xs">
+                        Score: {result.score.toFixed(2)}
+                      </Badge>
+                    )}
+                  </Card>
+                ))}
+              </Stack>
             </Stack>
+          ) : searchQuery ? (
+            <Text>No results found for "{searchQuery}"</Text>
           ) : (
-            <Text>No results found. Try a different search query.</Text>
+            <Text>Enter a search term to find notes</Text>
           )}
         </Tabs.Panel>
 
         <Tabs.Panel value="semantic" pt="md">
-          {error ? (
-            <Text c="red">{error}</Text>
-          ) : results.length > 0 ? (
+          <TextInput
+            placeholder="Ask a question about your notes..."
+            value={searchQuery}
+            onChange={handleSearchChange}
+            rightSection={isSearching ? <Loader size="sm" /> : <IconSearch size={16} />}
+            mb="md"
+          />
+
+          {searchError && activeTab === 'semantic' && (
+            <Text color="red" size="sm" mb="md">
+              {searchError}
+            </Text>
+          )}
+
+          {isSearching && searchQuery ? (
+            <Loader />
+          ) : semanticResults ? (
             <Stack gap="md">
-              {results.map((result) => (
-                <Paper key={result.id} p="md" shadow="xs">
-                  <Title order={4}>{result.title}</Title>
-                  <Text size="sm" c="dimmed">{result.path}</Text>
-                  <Text mt="xs">{result.content.substring(0, 200)}...</Text>
-                  {result.score !== undefined && (
-                    <Badge color="blue" mt="xs">
-                      Score: {result.score.toFixed(2)}
+              <Paper p="md" withBorder>
+                <Text fw={500}>AI Analysis:</Text>
+                <Text>{semanticResults.reasoning}</Text>
+              </Paper>
+              
+              <Text size="sm" c="dimmed">
+                Found {semanticResults.results.length} relevant notes:
+              </Text>
+              
+              {semanticResults.results.map((result, index) => (
+                <Card key={index} withBorder>
+                  <Text fw={500}>{result.path}</Text>
+                  <Text size="sm" lineClamp={3}>
+                    {result.content}
+                  </Text>
+                  {result.relevance !== undefined && (
+                    <Badge color="green" size="sm" mt="xs">
+                      Relevance: {(result.relevance * 100).toFixed(1)}%
                     </Badge>
                   )}
-                </Paper>
+                </Card>
               ))}
             </Stack>
+          ) : searchQuery ? (
+            <Text>No semantic results found for "{searchQuery}"</Text>
           ) : (
-            <Text>No semantic results found. Try a different search query.</Text>
+            <Text>Ask a question to search your notes using AI</Text>
           )}
         </Tabs.Panel>
 
-
-      </Tabs>
-
-      <Modal
-        opened={isModalOpen}
-        onClose={closeIndexingModal}
-        title="Indexing Vault"
-        size="lg"
-      >
-        <div style={{ textAlign: 'center' }}>
-          <Text mb="md">
-            {status === 'indexing'
-              ? 'Indexing your vault...'
-              : status === 'complete'
-              ? 'Indexing complete!'
-              : 'Ready to index your vault?'}
-          </Text>
-          
-          {status === 'indexing' && (
-            <div style={{ position: 'relative', marginBottom: '1rem' }}>
-              <Progress
-                value={progress}
-                size="lg"
-                radius="xl"
-                animated
-                mb="md"
+        <Tabs.Panel value="chat" pt="md">
+          <Stack gap="md" style={{ height: '60vh' }}>
+            <Paper p="md" withBorder style={{ flex: 1, overflowY: 'auto' }}>
+              <Stack gap="md">
+                {messages.map((message, index) => (
+                  <div 
+                    key={index}
+                    style={{
+                      display: 'flex',
+                      justifyContent: message.role === 'user' ? 'flex-end' : 'flex-start',
+                      marginBottom: '1rem',
+                    }}
+                  >
+                    <div 
+                      style={{
+                        maxWidth: '80%',
+                        padding: '0.75rem',
+                        borderRadius: '0.5rem',
+                        backgroundColor: message.role === 'user' ? '#e3f2fd' : '#f5f5f5',
+                      }}
+                    >
+                      <Text>{message.content}</Text>
+                    </div>
+                  </div>
+                ))}
+                <div ref={messagesEndRef} />
+              </Stack>
+            </Paper>
+            
+            <Group gap="xs">
+              <TextInput
+                placeholder="Type your message..."
+                value={messageInput}
+                onChange={handleMessageChange}
+                onKeyDown={handleMessageKeyDown}
+                style={{ flex: 1 }}
+                disabled={isSearching}
               />
-              <Text 
-                size="sm" 
-                style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  color: 'white',
-                  fontWeight: 'bold'
-                }}
+              <Button 
+                onClick={handleSendMessage}
+                loading={isSearching}
+                disabled={!messageInput.trim()}
               >
-                {Math.round(progress)}%
-              </Text>
-            </div>
-          )}
-
-          {status === 'complete' ? (
-            <Button onClick={closeIndexingModal} fullWidth>
-              Close
-            </Button>
-          ) : (
-            <Button
-              onClick={handleIndexVault}
-              loading={status === 'indexing'}
-              fullWidth
-            >
-              {status === 'indexing' ? 'Indexing...' : 'Start Indexing'}
-            </Button>
-          )}
-        </div>
-      </Modal>
+                Send
+              </Button>
+            </Group>
+          </Stack>
+        </Tabs.Panel>
+      </Tabs>
     </Container>
   );
-};
-
-export default SearchPage;
+}
