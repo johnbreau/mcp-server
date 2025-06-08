@@ -88,6 +88,7 @@ export default function CalendarView() {
 
       console.log(`API URL: /api/timeline?start=${startStr}&end=${endStr}`);
       const response = await fetch(`/api/timeline?start=${startStr}&end=${endStr}`);
+      console.log('Response status:', response.status);
 
       if (!response.ok) {
         const errorText = await response.text();

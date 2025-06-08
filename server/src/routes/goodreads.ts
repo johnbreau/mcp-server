@@ -12,7 +12,7 @@ interface Book {
   link: string;
 }
 
-router.get('/books/read', async (req, res) => {
+router.get('/read', async (req, res) => {
   let browser;
   try {
     console.log('Environment variables:', {

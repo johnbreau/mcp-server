@@ -42,7 +42,7 @@ export default function BooksPage() {
     
     try {
       const response = await fetch('/api/books/read');
-      const data = await response.json();
+      const data = await response.json();``
       
       if (!response.ok) {
         throw new Error(data.error || 'Failed to load books');
