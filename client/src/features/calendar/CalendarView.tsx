@@ -50,8 +50,11 @@ export default function CalendarView() {
   }, []);
 
   // Handle calendar change event
-  const handleCalendarChange = useCallback((date: Date) => {
-    setSelectedDate(date);
+  const handleCalendarChange = useCallback((date: string | Date | null) => {
+    if (date) {
+      const newDate = typeof date === 'string' ? new Date(date) : date;
+      setSelectedDate(newDate);
+    }
   }, []);
 
   // Navigation handlers
@@ -64,11 +67,11 @@ export default function CalendarView() {
   }, []);
 
   // Handle date selection
-  const handleDateChange = useCallback((date: Date | null) => {
-    if (date) {
-      setSelectedDate(date);
-    }
-  }, []);
+  // const handleDateChange = useCallback((date: Date | null) => {
+  //   if (date) {
+  //     setSelectedDate(date);
+  //   }
+  // }, []);
 
   // Fetch events when the month changes
   const fetchEvents = useCallback(async (start: Date, end: Date) => {
@@ -198,10 +201,12 @@ export default function CalendarView() {
         <Box mt="md">
           <MantineCalendar
             value={selectedDate}
-            onChange={handleCalendarChange}
-            renderDay={(date: Date) => {
-              // Ensure date is a Date object
-              const dayDate = typeof date === 'string' ? new Date(date) : (date || new Date());
+            getDayProps={(date) => ({
+              onClick: () => handleCalendarChange(date),
+            })}
+            renderDay={(date) => {
+              // Convert date to Date object if it's a string
+              const dayDate = date ? new Date(date) : new Date();
               const day = dayDate.getDate();
               const today = new Date();
               const dayHasEvents = hasEvents(dayDate);
