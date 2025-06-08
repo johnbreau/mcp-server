@@ -31,7 +31,7 @@
   },
   "name": "mcp-server",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "main": "dist/index.js",
   "bin": {
     "obsidian-cli": "./dist/cli.js"

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { 
   Container, 
   Title, 
@@ -14,10 +14,11 @@ import {
   Box,
   Badge,
   SimpleGrid,
+  TextInput,
   useMantineTheme,
   useMantineColorScheme
 } from '@mantine/core';
-import { IconBook, IconAlertCircle, IconRefresh } from '@tabler/icons-react';
+import { IconBook, IconAlertCircle, IconRefresh, IconSearch } from '@tabler/icons-react';
 import type { MantineTheme } from '@mantine/core';
 
 interface Book {
@@ -33,8 +34,10 @@ export default function BooksPage() {
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
   const [books, setBooks] = useState<Book[]>([]);
+  const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const fetchBooks = async () => {
     setLoading(true);
@@ -52,6 +55,7 @@ export default function BooksPage() {
       // but the scraper returns the books array directly
       const booksData = Array.isArray(data) ? data : (data.data || []);
       setBooks(booksData);
+      setFilteredBooks(booksData);
     } catch (err) {
       console.error('Error fetching books:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
@@ -59,6 +63,20 @@ export default function BooksPage() {
       setLoading(false);
     }
   };
+
+  // Filter books based on search query
+  useEffect(() => {
+    if (searchQuery.trim() === '') {
+      setFilteredBooks(books);
+    } else {
+      const query = searchQuery.toLowerCase();
+      const filtered = books.filter(book => 
+        book.title.toLowerCase().includes(query) || 
+        book.author.toLowerCase().includes(query)
+      );
+      setFilteredBooks(filtered);
+    }
+  }, [searchQuery, books]);
 
   useEffect(() => {
     fetchBooks();
@@ -79,7 +97,7 @@ export default function BooksPage() {
           <IconBook size={32} />
           <Title order={1}>My Read Books</Title>
           <Badge color="blue" variant="filled" size="lg">
-            {books.length} books
+            {filteredBooks.length} of {books.length} books
           </Badge>
         </Group>
         <Button 
@@ -87,9 +105,18 @@ export default function BooksPage() {
           onClick={fetchBooks}
           loading={loading}
           variant="outline"
+          mr="sm"
         >
           Refresh
         </Button>
+        <TextInput
+          placeholder="Search books..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.currentTarget.value)}
+          leftSection={<IconSearch size={16} />}
+          style={{ flex: 1, maxWidth: 300 }}
+          disabled={loading}
+        />
       </Group>
 
       {error && (
@@ -103,7 +130,7 @@ export default function BooksPage() {
         </Alert>
       )}
 
-      {!loading && books.length === 0 ? (
+      {!loading && filteredBooks.length === 0 ? (
         <Box style={{
           display: 'flex',
           flexDirection: 'column',
@@ -137,7 +164,7 @@ export default function BooksPage() {
             marginTop: theme.spacing.xl,
           }}
         >
-          {books.map((book, index) => (
+          {filteredBooks.map((book, index) => (
             <Card 
               key={index}
               shadow="sm"

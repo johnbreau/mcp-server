@@ -1,11 +1,19 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import goodreadsRoutes from './routes/goodreads';
 import timelineRoutes from './routes/timeline';
 import calendarRoutes from './routes/calendar';
+import obsidianRoutes from './routes/obsidian';
 
-dotenv.config();
+// Load environment variables from .env file
+const envPath = path.resolve(process.cwd(), '.env');
+dotenv.config({ path: envPath });
+
+console.log('Environment variables loaded from:', envPath);
+console.log('OBSIDIAN_VAULT_PATH:', process.env.OBSIDIAN_VAULT_PATH || 'Not set');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -24,6 +32,7 @@ app.use((req, res, next) => {
 app.use('/api/books', goodreadsRoutes);
 app.use('/api/timeline', timelineRoutes);
 app.use('/api/calendar', calendarRoutes);
+app.use('/api/tools/obsidian', obsidianRoutes);
 
 // Log all registered routes
 const printRoutes = () => {
