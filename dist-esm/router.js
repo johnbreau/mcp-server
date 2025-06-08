@@ -1,5 +1,7 @@
 import { Router } from 'express';
+import timelineRouter from './routes/timeline.js';
 const router = Router();
+router.use('/timeline', timelineRouter);
 console.log('Current working directory:', process.cwd());
 process.on('unhandledRejection', (reason, promise) => {
     console.error('Unhandled Rejection at:', promise, 'reason:', reason);
@@ -12,11 +14,11 @@ router.options('*', (_req, res) => {
 const executeTool = async (toolName, input, res) => {
     console.log(`\n=== Executing tool: ${toolName} ===`);
     console.log('Input:', JSON.stringify(input, null, 2));
-    const toolModulePath = `../tools/${toolName}.js`;
-    console.log(`Importing tool from: ${toolModulePath}`);
     try {
-        const toolModule = await import(toolModulePath);
-        const tool = toolModule.default;
+        console.log(`Attempting to load tool: ${toolName}`);
+        const { loadTool } = await import('./tools/loader.js');
+        const tool = await loadTool(toolName);
+        console.log(`Successfully loaded tool: ${toolName}`);
         if (!tool || typeof tool.run !== 'function') {
             throw new Error(`Tool ${toolName} does not export a valid run function`);
         }

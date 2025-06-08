@@ -64,12 +64,22 @@ export const api = {
                 path: directory,
                 limit
             });
-            console.log('List notes response:', response.data);
-            const files = response.data.files || [];
+            console.log('List notes response:', JSON.stringify(response.data, null, 2));
+            let files = [];
+            if (response.data?.success && response.data?.data?.files) {
+                files = response.data.data.files;
+            }
+            else if (Array.isArray(response.data)) {
+                files = response.data;
+            }
+            else if (response.data?.files) {
+                files = response.data.files;
+            }
+            console.log(`Processing ${files.length} files`);
             return files.map((file) => ({
                 path: file.path,
                 name: file.name || path.basename(file.path, '.md'),
-                lastModified: file.modified || new Date().toISOString(),
+                lastModified: file.modified || file.lastModified || new Date().toISOString(),
                 size: file.size || 0
             }));
         }
@@ -97,15 +107,21 @@ export const api = {
                 action: 'read',
                 path: filePath
             });
-            console.log('Get note response:', {
+            console.log('Get note response:', JSON.stringify({
                 path: filePath,
-                contentLength: response.data.content?.length || 0
-            });
+                responseData: response.data,
+                contentLength: response.data?.content?.length || 0,
+                hasContent: !!response.data?.content
+            }, null, 2));
+            const responseData = response.data?.data || response.data;
+            if (!responseData) {
+                throw new Error('Empty response from server');
+            }
             return {
-                content: response.data.content || '',
-                ...(response.data.title && { title: response.data.title }),
-                ...(response.data.modified && { lastModified: response.data.modified }),
-                ...(response.data.size && { size: response.data.size })
+                content: responseData.content || '',
+                title: responseData.title || path.basename(filePath, '.md'),
+                lastModified: responseData.modified || responseData.lastModified || new Date().toISOString(),
+                size: responseData.size || 0
             };
         }
         catch (error) {

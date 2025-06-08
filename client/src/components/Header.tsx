@@ -30,7 +30,7 @@ export function Header() {
       <Group justify="space-between" style={{ width: '100%' }}>
         <Group>
           <Text fw={700} size="lg">
-            Obsidian AI
+            Breau Bot
           </Text>
           <Group gap="xs">
             {items}

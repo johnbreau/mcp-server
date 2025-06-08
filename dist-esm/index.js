@@ -5,6 +5,8 @@ import express from 'express';
 import cors from 'cors';
 import toolRouter from './router.js';
 import aiRouter from './routes/ai.js';
+import timelineRouter from './routes/timeline.js';
+import calendarRouter from './routes/calendar.js';
 process.on('unhandledRejection', (reason, promise) => {
     console.error('Unhandled Rejection at:', promise, 'reason:', reason);
 });
@@ -12,22 +14,46 @@ process.on('uncaughtException', (error) => {
     console.error('Uncaught Exception:', error);
 });
 const envPath = path.resolve(process.cwd(), '.env');
+console.log('Current working directory:', process.cwd());
 console.log('Loading environment variables from:', envPath);
-console.log('Current working directory:', process.cwd());
 try {
-    dotenv.config({ path: envPath });
-    console.log('Environment variables loaded successfully');
-    console.log('OPENAI_API_KEY:', process.env.OPENAI_API_KEY ? '*** (exists)' : 'NOT FOUND');
+    await fs.access(envPath, fs.constants.R_OK);
+    console.log('.env file exists and is readable');
+    const result = dotenv.config({ path: envPath, override: true });
+    if (result.error) {
+        console.error('Error loading .env file:', result.error);
+        throw result.error;
+    }
+    else {
+        console.log('Environment variables loaded successfully');
+        const envVars = Object.keys(process.env).filter(key => !key.toLowerCase().includes('key') && !key.toLowerCase().includes('secret'));
+        console.log('Available environment variables:', envVars.join(', '));
+        if (!process.env.OPENAI_API_KEY) {
+            throw new Error('OPENAI_API_KEY is not set in the .env file');
+        }
+        if (!process.env.OBSIDIAN_VAULT_PATH) {
+            throw new Error('OBSIDIAN_VAULT_PATH is not set in the .env file');
+        }
+    }
 }
-catch (error) {
-    console.error('Error loading .env file:', error);
-    process.exit(1);
+catch (err) {
+    console.error('Error accessing .env file:', err);
+    console.log('Falling back to process.env for environment variables');
+    dotenv.config();
+    if (!process.env.OPENAI_API_KEY) {
+        console.error('ERROR: OPENAI_API_KEY is not set in environment variables');
+        process.exit(1);
+    }
+    if (!process.env.OBSIDIAN_VAULT_PATH) {
+        console.error('ERROR: OBSIDIAN_VAULT_PATH is not set in environment variables');
+        process.exit(1);
+    }
 }
-console.log('Environment variables:');
-console.log('- OBSIDIAN_VAULT_PATH:', process.env.OBSIDIAN_VAULT_PATH);
-console.log('- PORT:', process.env.PORT);
-console.log('Current working directory:', process.cwd());
-console.log('Environment file:', path.resolve(process.cwd(), '.env'));
+console.log('Environment variables after loading:');
+console.log('- OBSIDIAN_VAULT_PATH:', process.env.OBSIDIAN_VAULT_PATH || 'Not set');
+console.log('- PORT:', process.env.PORT || '3000 (default)');
+console.log('- NODE_ENV:', process.env.NODE_ENV || 'development');
+console.log('- OPENAI_API_KEY:', process.env.OPENAI_API_KEY ? '*** (exists)' : 'NOT FOUND');
 const app = express();
 const corsOptions = {
     origin: 'http://localhost:5173',
@@ -43,8 +69,10 @@ app.use((req, _res, next) => {
 });
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
-app.use("/api/tools", toolRouter);
-app.use("/api/ai", aiRouter);
+app.use('/api/tools', toolRouter);
+app.use('/api/ai', aiRouter);
+app.use('/api/timeline', timelineRouter);
+app.use('/api/calendar', calendarRouter);
 app.get('/api/test', (_req, res) => {
     res.json({
         message: 'Test endpoint is working',
