@@ -6,7 +6,8 @@ import path from 'path';
 
 dotenv.config();
 
-const CACHE_DIR = path.join(__dirname, '../../.cache');
+// Use a relative path from the project root
+const CACHE_DIR = path.join(process.cwd(), '.cache');
 const CACHE_FILE = path.join(CACHE_DIR, 'goodreads_books.json');
 const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
 

@@ -3,10 +3,10 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import goodreadsRoutes from './routes/goodreads';
-import timelineRoutes from './routes/timeline';
-import calendarRoutes from './routes/calendar';
-import obsidianRoutes from './routes/obsidian';
+import goodreadsRoutes from './routes/goodreads.js';
+import timelineRoutes from './routes/timeline.js';
+import calendarRoutes from './routes/calendar.js';
+import obsidianRoutes from './routes/obsidian.js';
 
 // Load environment variables from .env file
 const envPath = path.resolve(process.cwd(), '.env');

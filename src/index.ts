@@ -7,7 +7,6 @@ import cors from 'cors';
 import toolRouter from './router.js';
 import aiRouter from './routes/ai.js';
 import timelineRouter from './routes/timeline.js';
-import calendarRouter from './routes/calendar.js';
 
 // Add error handling for unhandled promise rejections
 process.on('unhandledRejection', (reason, promise) => {
@@ -26,125 +25,127 @@ const envPath = path.resolve(process.cwd(), '.env');
 console.log('Current working directory:', process.cwd());
 console.log('Loading environment variables from:', envPath);
 
-// Debug: Check if file exists and is readable
-try {
-  await fs.access(envPath, fs.constants.R_OK);
-  console.log('.env file exists and is readable');
-  
-  // Load environment variables
-  const result = dotenv.config({ path: envPath, override: true });
-  
-  if (result.error) {
-    console.error('Error loading .env file:', result.error);
-    throw result.error;
-  } else {
-    console.log('Environment variables loaded successfully');
-    // Only log non-sensitive environment variable names
-    const envVars = Object.keys(process.env).filter(key => !key.toLowerCase().includes('key') && !key.toLowerCase().includes('secret'));
-    console.log('Available environment variables:', envVars.join(', '));
+// Wrap the main code in an async IIFE to handle top-level await
+(async () => {
+  try {
+    // Debug: Check if file exists and is readable
+    await fs.access(envPath, fs.constants.R_OK);
+    console.log('.env file exists and is readable');
+    
+    // Load environment variables
+    const result = dotenv.config({ path: envPath, override: true });
+    
+    if (result.error) {
+      console.error('Error loading .env file:', result.error);
+      throw result.error;
+    } else {
+      console.log('Environment variables loaded successfully');
+      // Only log non-sensitive environment variable names
+      const envVars = Object.keys(process.env).filter(key => !key.toLowerCase().includes('key') && !key.toLowerCase().includes('secret'));
+      console.log('Available environment variables:', envVars.join(', '));
+      
+      // Verify required environment variables
+      if (!process.env.OPENAI_API_KEY) {
+        throw new Error('OPENAI_API_KEY is not set in the .env file');
+      }
+      if (!process.env.OBSIDIAN_VAULT_PATH) {
+        throw new Error('OBSIDIAN_VAULT_PATH is not set in the .env file');
+      }
+    }
+  } catch (err) {
+    console.error('Error accessing .env file:', err);
+    console.log('Falling back to process.env for environment variables');
+    
+    // Try to load without path as fallback
+    dotenv.config();
     
     // Verify required environment variables
     if (!process.env.OPENAI_API_KEY) {
-      throw new Error('OPENAI_API_KEY is not set in the .env file');
+      console.error('ERROR: OPENAI_API_KEY is not set in environment variables');
+      process.exit(1);
     }
     if (!process.env.OBSIDIAN_VAULT_PATH) {
-      throw new Error('OBSIDIAN_VAULT_PATH is not set in the .env file');
+      console.error('ERROR: OBSIDIAN_VAULT_PATH is not set in environment variables');
+      process.exit(1);
     }
   }
-} catch (err) {
-  console.error('Error accessing .env file:', err);
-  console.log('Falling back to process.env for environment variables');
-  
-  // Try to load without path as fallback
-  dotenv.config();
-  
-  // Verify required environment variables
-  if (!process.env.OPENAI_API_KEY) {
-    console.error('ERROR: OPENAI_API_KEY is not set in environment variables');
-    process.exit(1);
-  }
-  if (!process.env.OBSIDIAN_VAULT_PATH) {
-    console.error('ERROR: OBSIDIAN_VAULT_PATH is not set in environment variables');
-    process.exit(1);
-  }
-}
 
-// Debug log environment variables
-console.log('Environment variables after loading:');
-console.log('- OBSIDIAN_VAULT_PATH:', process.env.OBSIDIAN_VAULT_PATH || 'Not set');
-console.log('- PORT:', process.env.PORT || '3000 (default)');
-console.log('- NODE_ENV:', process.env.NODE_ENV || 'development');
-console.log('- OPENAI_API_KEY:', process.env.OPENAI_API_KEY ? '*** (exists)' : 'NOT FOUND');
+  // Debug log environment variables
+  console.log('Environment variables after loading:');
+  console.log('- OBSIDIAN_VAULT_PATH:', process.env.OBSIDIAN_VAULT_PATH || 'Not set');
+  console.log('- PORT:', process.env.PORT || '3000 (default)');
+  console.log('- NODE_ENV:', process.env.NODE_ENV || 'development');
+  console.log('- OPENAI_API_KEY:', process.env.OPENAI_API_KEY ? '*** (exists)' : 'NOT FOUND');
 
-const app = express();
+  const app = express();
 
-// Enable CORS for development
-const corsOptions = {
-  origin: 'http://localhost:5173',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-  credentials: true
-};
+  // Enable CORS for development
+  const corsOptions = {
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    credentials: true
+  };
 
-app.use(cors(corsOptions));
+  app.use(cors(corsOptions));
 
-// Handle preflight requests
-app.options('*', cors(corsOptions));
+  // Handle preflight requests
+  app.options('*', cors(corsOptions));
 
-// Log all requests
-app.use((req, _res, next) => {
-  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
-  next();
-});
-
-// Parse JSON bodies
-app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ extended: true }));
-
-// Mount routers
-app.use('/api/tools', toolRouter);
-app.use('/api/ai', aiRouter);
-app.use('/api/timeline', timelineRouter);
-app.use('/api/calendar', calendarRouter);
-
-// Add a test endpoint
-app.get('/api/test', (_req, res) => {
-  res.json({
-    message: 'Test endpoint is working',
-    obsidianPath: process.env.OBSIDIAN_VAULT_PATH,
-    env: process.env.NODE_ENV
+  // Log all requests
+  app.use((req, _res, next) => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    next();
   });
-});
 
-app.get('/api/env-test', async (_req, res) => {
-  try {
-    const vaultPath = process.env.OBSIDIAN_VAULT_PATH || '';
-    let vaultExists = false;
-    
-    if (vaultPath) {
-      try {
-        await fs.access(vaultPath);
-        vaultExists = true;
-      } catch (error) {
-        vaultExists = false;
-      }
-    }
-    
+  // Parse JSON bodies
+  app.use(express.json({ limit: '10mb' }));
+  app.use(express.urlencoded({ extended: true }));
+
+  // Mount routers
+  app.use('/api/tools', toolRouter);
+  app.use('/api/ai', aiRouter);
+  app.use('/api/timeline', timelineRouter);
+
+  // Add a test endpoint
+  app.get('/api/test', (_req, res) => {
     res.json({
-      vaultPath,
-      vaultExists
+      message: 'Test endpoint is working',
+      obsidianPath: process.env.OBSIDIAN_VAULT_PATH,
+      env: process.env.NODE_ENV
     });
-  } catch (error) {
-    console.error('Error in /api/env-test:', error);
-    res.status(500).json({
-      error: 'Internal server error',
-      message: error instanceof Error ? error.message : 'Unknown error'
-    });
-  }
-});
+  });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🔌 MCP server running at http://localhost:${PORT}`);
-  console.log(`- OBSIDIAN_VAULT_PATH: ${process.env.OBSIDIAN_VAULT_PATH || 'Not set!'}`);
-});
+  app.get('/api/env-test', async (_req, res) => {
+    try {
+      const vaultPath = process.env.OBSIDIAN_VAULT_PATH || '';
+      let vaultExists = false;
+      
+      if (vaultPath) {
+        try {
+          await fs.access(vaultPath);
+          vaultExists = true;
+        } catch (error) {
+          vaultExists = false;
+        }
+      }
+      
+      res.json({
+        vaultPath,
+        vaultExists
+      });
+    } catch (error) {
+      console.error('Error in /api/env-test:', error);
+      res.status(500).json({
+        error: 'Internal server error',
+        message: error instanceof Error ? error.message : 'Unknown error'
+      });
+    }
+  });
+
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`🔌 MCP server running at http://localhost:${PORT}`);
+    console.log(`- OBSIDIAN_VAULT_PATH: ${process.env.OBSIDIAN_VAULT_PATH || 'Not set!'}`);
+  });
+})();

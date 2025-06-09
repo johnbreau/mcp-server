@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import calendarService from '../services/calendarService';
+import calendarService from '../services/calendarService.js';
 import { parseISO, isValid } from 'date-fns';
 
 const router = Router();

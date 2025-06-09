@@ -29,11 +29,12 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "api/*": ["src/api/*"],
-      "services/*": ["src/services/*"],
-      "types/*": ["src/types/*"]
-    }
+      "@/*": ["./src/*"],
+      "types/*": ["./src/types/*"]
+    },
+    "composite": true,
+    "incremental": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist", "server"]
 }

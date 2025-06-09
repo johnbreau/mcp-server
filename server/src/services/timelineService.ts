@@ -1,5 +1,5 @@
 import { startOfDay, endOfDay, addDays, isValid } from 'date-fns';
-import calendarService from '../../server/src/services/calendarService';
+import calendarService from './calendarService.js';
 
 /**
  * Safely parses a date from various input types
