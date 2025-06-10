@@ -4,8 +4,7 @@ import path from 'path';
 
 const router = Router();
 
-// Get the current directory in CommonJS
-const vaultRoot = process.cwd();
+// Vault path will be determined by environment variable or default
 
 // Helper function to get vault path from environment or use default
 const getVaultPath = () => {

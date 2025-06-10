@@ -14,7 +14,7 @@
     "strict": true,
     "skipLibCheck": true,
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./server/src",
     "resolveJsonModule": true,
     "sourceMap": true,
     "declaration": true,
@@ -35,6 +35,6 @@
     "composite": true,
     "incremental": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "server"]
+  "include": ["server/src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

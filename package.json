@@ -42,12 +42,12 @@
   },
   "scripts": {
     "clean": "rm -rf dist dist-esm",
-    "build": "npm run clean && tsc && tsc -p tsconfig.esm.json",
+    "build": "npm run clean && tsc",
     "start": "node dist/index.js",
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch server/src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:obsidian": "npm run build && node test-obsidian.js",
-    "cli": "tsx src/cli.ts"
+    "cli": "tsx server/src/cli.ts"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,3747 @@
+{
+  "data": {
+    "books": [
+      {
+        "title": "Source Code: My Beginnings",
+        "author": "Gates, Bill",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "May 29, 2025",
+        "link": "https://www.goodreads.com/book/show/213034913-source-code"
+      },
+      {
+        "title": "Project Hail Mary",
+        "author": "Weir, Andy",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "May 2025",
+        "link": "https://www.goodreads.com/book/show/54493401-project-hail-mary"
+      },
+      {
+        "title": "A Technique for Producing Ideas",
+        "author": "Young, James Webb",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Apr 28, 2025",
+        "link": "https://www.goodreads.com/book/show/534755.A_Technique_for_Producing_Ideas"
+      },
+      {
+        "title": "Don't Believe Everything You Think",
+        "author": "Nguyen, Joseph",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Apr 06, 2025",
+        "link": "https://www.goodreads.com/book/show/60726415-don-t-believe-everything-you-think"
+      },
+      {
+        "title": "Colored Television",
+        "author": "Senna, Danzy",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Mar 17, 2025",
+        "link": "https://www.goodreads.com/book/show/201102398-colored-television"
+      },
+      {
+        "title": "Grant",
+        "author": "Chernow, Ron",
+        "coverImage": "",
+        "rating": "amazing",
+        "dateRead": "Mar 08, 2025",
+        "link": "https://www.goodreads.com/book/show/34237826-grant"
+      },
+      {
+        "title": "Hum",
+        "author": "Phillips, Helen",
+        "coverImage": "",
+        "rating": "amazing",
+        "dateRead": "Jan 06, 2025",
+        "link": "https://www.goodreads.com/book/show/195791689-hum"
+      },
+      {
+        "title": "All Fours",
+        "author": "July, Miranda",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Dec 24, 2024",
+        "link": "https://www.goodreads.com/book/show/197798168-all-fours"
+      },
+      {
+        "title": "Brothers",
+        "author": "Halen, Alex Van",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Dec 17, 2024",
+        "link": "https://www.goodreads.com/book/show/206728658-brothers"
+      },
+      {
+        "title": "Chemistry",
+        "author": "Wang, Weike",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Dec 14, 2024",
+        "link": "https://www.goodreads.com/book/show/31684925-chemistry"
+      },
+      {
+        "title": "Orbital",
+        "author": "Harvey, Samantha",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Dec 05, 2024",
+        "link": "https://www.goodreads.com/book/show/123136728-orbital"
+      },
+      {
+        "title": "Martyr!",
+        "author": "Akbar, Kaveh",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 20, 2024",
+        "link": "https://www.goodreads.com/book/show/139400713-martyr"
+      },
+      {
+        "title": "’Salem’s Lot",
+        "author": "King, Stephen",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 12, 2024",
+        "link": "https://www.goodreads.com/book/show/11590._Salem_s_Lot"
+      },
+      {
+        "title": "James",
+        "author": "Everett, Percival",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 2024",
+        "link": "https://www.goodreads.com/book/show/173754979-james"
+      },
+      {
+        "title": "The Philosopher of Palo Alto: Mark Weiser, Xerox PARC, and the Original Internet of Things",
+        "author": "Tinnell, John",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 22, 2024",
+        "link": "https://www.goodreads.com/book/show/62707933-the-philosopher-of-palo-alto"
+      },
+      {
+        "title": "Blitzed: Drugs in the Third Reich",
+        "author": "Ohler, Norman",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 15, 2024",
+        "link": "https://www.goodreads.com/book/show/32279524-blitzed"
+      },
+      {
+        "title": "The Dark Half",
+        "author": "King, Stephen",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Oct 2024",
+        "link": "https://www.goodreads.com/book/show/11597.The_Dark_Half"
+      },
+      {
+        "title": "The Ministry of Time",
+        "author": "Bradley, Kaliane",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Sep 29, 2024",
+        "link": "https://www.goodreads.com/book/show/199798179-the-ministry-of-time"
+      },
+      {
+        "title": "The Buy Side: A Wall Street Trader's Tale of Spectacular Excess",
+        "author": "Duff, Turney",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 15, 2024",
+        "link": "https://www.goodreads.com/book/show/15998338-the-buy-side"
+      },
+      {
+        "title": "Think Again: The Power of Knowing What You Don't Know",
+        "author": "Grant, Adam M.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2024",
+        "link": "https://www.goodreads.com/book/show/55539565-think-again"
+      },
+      {
+        "title": "The Trackers",
+        "author": "Frazier, Charles",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2024",
+        "link": "https://www.goodreads.com/book/show/61609871-the-trackers"
+      },
+      {
+        "title": "The Storyteller: Tales of Life and Music",
+        "author": "Grohl, Dave",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 29, 2024",
+        "link": "https://www.goodreads.com/book/show/57648017-the-storyteller"
+      },
+      {
+        "title": "The Field of the Cloth of Gold",
+        "author": "Mills, Magnus",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 22, 2024",
+        "link": "https://www.goodreads.com/book/show/23471579-the-field-of-the-cloth-of-gold"
+      },
+      {
+        "title": "The Road to Unfreedom: Russia, Europe, America",
+        "author": "Snyder, Timothy",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 2024",
+        "link": "https://www.goodreads.com/book/show/36217163-the-road-to-unfreedom"
+      },
+      {
+        "title": "Earth to Moon: A Memoir",
+        "author": "Zappa, Moon Unit",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 15, 2024",
+        "link": "https://www.goodreads.com/book/show/61980307-earth-to-moon"
+      },
+      {
+        "title": "Happy-Go-Lucky",
+        "author": "Sedaris, David",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2024",
+        "link": "https://www.goodreads.com/book/show/58989873-happy-go-lucky"
+      },
+      {
+        "title": "This Isn't Happening: Radiohead's \"Kid A\" and the Beginning of the 21st Century",
+        "author": "Hyden, Steven",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 29, 2024",
+        "link": "https://www.goodreads.com/book/show/50358096-this-isn-t-happening"
+      },
+      {
+        "title": "The Gratitude Diaries: How a Year Looking on the Bright Side Can Transform Your Life",
+        "author": "Kaplan, Janice",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 15, 2024",
+        "link": "https://www.goodreads.com/book/show/24611936-the-gratitude-diaries"
+      },
+      {
+        "title": "Wellness",
+        "author": "Hill, Nathan",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "May 2024",
+        "link": "https://www.goodreads.com/book/show/65650229-wellness"
+      },
+      {
+        "title": "The Algebra of Happiness: Notes on the Pursuit of Success, Love, and Meaning",
+        "author": "Galloway, Scott",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 22, 2024",
+        "link": "https://www.goodreads.com/book/show/42872963-the-algebra-of-happiness"
+      },
+      {
+        "title": "Endless Frontier: Vannevar Bush, Engineer of the American Century",
+        "author": "Zachary, G. Pascal",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 15, 2024",
+        "link": "https://www.goodreads.com/book/show/475762.Endless_Frontier"
+      },
+      {
+        "title": "Four Thousand Weeks: Time Management for Mortals",
+        "author": "Burkeman, Oliver",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2024",
+        "link": "https://www.goodreads.com/book/show/54785515-four-thousand-weeks"
+      },
+      {
+        "title": "All It Takes Is a Goal: The 3-Step Plan to Ditch Regret and Tap Into Your Massive Potential",
+        "author": "Acuff, Jon",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 15, 2024",
+        "link": "https://www.goodreads.com/book/show/122910345-all-it-takes-is-a-goal"
+      },
+      {
+        "title": "10 Natural Laws of Successful Time and Life Management",
+        "author": "Smith, Hyrum W.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2024",
+        "link": "https://www.goodreads.com/book/show/543270.10_Natural_Laws_of_Successful_Time_and_Life_Management"
+      },
+      {
+        "title": "How to Take Smart Notes: One Simple Technique to Boost Writing, Learning and Thinking – for Students, Academics and Nonfiction Book Writers",
+        "author": "Ahrens, Sönke",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2024",
+        "link": "https://www.goodreads.com/book/show/34507927-how-to-take-smart-notes"
+      },
+      {
+        "title": "Digital Zettelkasten: Principles, Methods, & Examples",
+        "author": "Kadavy, David",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2024",
+        "link": "https://www.goodreads.com/book/show/58165477-digital-zettelkasten"
+      },
+      {
+        "title": "The Maniac",
+        "author": "Labatut, Benjamín",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 2024",
+        "link": "https://www.goodreads.com/book/show/75665931-the-maniac"
+      },
+      {
+        "title": "Building a Second Brain: A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential",
+        "author": "Forte, Tiago",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 2023",
+        "link": "https://www.goodreads.com/book/show/59616977-building-a-second-brain"
+      },
+      {
+        "title": "Fairy Tale",
+        "author": "King, Stephen",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 2023",
+        "link": "https://www.goodreads.com/book/show/60177373-fairy-tale"
+      },
+      {
+        "title": "Friends, Lovers, and the Big Terrible Thing",
+        "author": "Perry, Matthew",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Oct 2023",
+        "link": "https://www.goodreads.com/book/show/59641216-friends-lovers-and-the-big-terrible-thing"
+      },
+      {
+        "title": "The Unicorn Project",
+        "author": "Kim, Gene",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2023",
+        "link": "https://www.goodreads.com/book/show/44333183-the-unicorn-project"
+      },
+      {
+        "title": "Tomorrow, and Tomorrow, and Tomorrow",
+        "author": "Zevin, Gabrielle",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2023",
+        "link": "https://www.goodreads.com/book/show/58784475-tomorrow-and-tomorrow-and-tomorrow"
+      },
+      {
+        "title": "Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets",
+        "author": "Taleb, Nassim Nicholas",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 10, 2023",
+        "link": "https://www.goodreads.com/book/show/38315.Fooled_by_Randomness"
+      },
+      {
+        "title": "Our Mathematical Universe: My Quest for the Ultimate Nature of Reality",
+        "author": "Tegmark, Max",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 15, 2023",
+        "link": "https://www.goodreads.com/book/show/19705607-our-mathematical-universe"
+      },
+      {
+        "title": "Tales of Muffled Oars",
+        "author": "Mills, Magnus",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Feb 2023",
+        "link": "https://www.goodreads.com/book/show/52991429-tales-of-muffled-oars"
+      },
+      {
+        "title": "Existential Physics: A Scientist's Guide to Life's Biggest Questions",
+        "author": "Hossenfelder, Sabine",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jan 31, 2023",
+        "link": "https://www.goodreads.com/book/show/59695048-existential-physics"
+      },
+      {
+        "title": "You should write a book",
+        "author": "LeDû, Katel",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jan 20, 2023",
+        "link": "https://www.goodreads.com/book/show/60312531-you-should-write-a-book"
+      },
+      {
+        "title": "From Strength to Strength: Finding Success, Happiness, and Deep Purpose in the Second Half of Life",
+        "author": "Brooks, Arthur C.",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 14, 2022",
+        "link": "https://www.goodreads.com/book/show/58100575-from-strength-to-strength"
+      },
+      {
+        "title": "The Nineties",
+        "author": "Klosterman, Chuck",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Feb 20, 2022",
+        "link": "https://www.goodreads.com/book/show/58082714-the-nineties"
+      },
+      {
+        "title": "Collected Essays on Evolution, Nature, and the Cosmos, Vol. 2: The Invisible Pyramid / The Night Country / Essays from The Star Thrower",
+        "author": "Eiseley, Loren",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 29, 2020",
+        "link": "https://www.goodreads.com/book/show/28953576-collected-essays-on-evolution-nature-and-the-cosmos-vol-2"
+      },
+      {
+        "title": "American Creation: Triumphs and Tragedies in the Founding of the Republic",
+        "author": "Ellis, Joseph J.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 22, 2020",
+        "link": "https://www.goodreads.com/book/show/3329556-american-creation"
+      },
+      {
+        "title": "Four Novels of the 1960s: The Man in the High Castle / The Three Stigmata of Palmer Eldritch / Do Androids Dream of Electric Sheep? / Ubik",
+        "author": "Dick, Philip K.",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 08, 2020",
+        "link": "https://www.goodreads.com/book/show/14182.Four_Novels_of_the_1960s"
+      },
+      {
+        "title": "History of Bourbon",
+        "author": "Albala, Ken",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 21, 2020",
+        "link": "https://www.goodreads.com/book/show/50529838-history-of-bourbon"
+      },
+      {
+        "title": "Medallion Status: True Stories from Secret Rooms",
+        "author": "Hodgman, John",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Dec 15, 2019",
+        "link": "https://www.goodreads.com/book/show/52945401-medallion-status"
+      },
+      {
+        "title": "Hard to Handle: The Life and Death of the Black Crowes",
+        "author": "Gorman, Steve",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 15, 2019",
+        "link": "https://www.goodreads.com/book/show/51339268-hard-to-handle"
+      },
+      {
+        "title": "Fresh Off the Boat",
+        "author": "Huang, Eddie",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 18, 2019",
+        "link": "https://www.goodreads.com/book/show/15792558-fresh-off-the-boat"
+      },
+      {
+        "title": "Fantasyland: How America Went Haywire: A 500-Year History",
+        "author": "Andersen, Kurt",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 10, 2019",
+        "link": "https://www.goodreads.com/book/show/36362051-fantasyland"
+      },
+      {
+        "title": "Stuff Matters: Exploring the Marvelous Materials That Shape Our Man-Made World",
+        "author": "Miodownik, Mark",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 18, 2019",
+        "link": "https://www.goodreads.com/book/show/18222843-stuff-matters"
+      },
+      {
+        "title": "Even This I Get to Experience",
+        "author": "Lear, Norman",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 05, 2019",
+        "link": "https://www.goodreads.com/book/show/20821213-even-this-i-get-to-experience"
+      },
+      {
+        "title": "Theft by Finding: Diaries\n        (1977-2002)",
+        "author": "Sedaris, David",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 02, 2019",
+        "link": "https://www.goodreads.com/book/show/34402092-theft-by-finding"
+      },
+      {
+        "title": "I Want My MTV: The Uncensored Story of the Music Video Revolution",
+        "author": "Marks, Craig",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 12, 2019",
+        "link": "https://www.goodreads.com/book/show/10411930-i-want-my-mtv"
+      },
+      {
+        "title": "Beastie Boys Book",
+        "author": "Diamond, Michael",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 02, 2019",
+        "link": "https://www.goodreads.com/book/show/38799788-beastie-boys-book"
+      },
+      {
+        "title": "The Fifties",
+        "author": "Halberstam, David",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Dec 19, 2018",
+        "link": "https://www.goodreads.com/book/show/75402.The_Fifties"
+      },
+      {
+        "title": "A Walk in the Woods: Rediscovering America on the Appalachian Trail",
+        "author": "Bryson, Bill",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 27, 2018",
+        "link": "https://www.goodreads.com/book/show/9791.A_Walk_in_the_Woods"
+      },
+      {
+        "title": "Chronic City",
+        "author": "Lethem, Jonathan",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 20, 2018",
+        "link": "https://www.goodreads.com/book/show/7349571-chronic-city"
+      },
+      {
+        "title": "Calypso",
+        "author": "Sedaris, David",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 18, 2018",
+        "link": "https://www.goodreads.com/book/show/38477986-calypso"
+      },
+      {
+        "title": "Although of Course You End Up Becoming Yourself: A Road Trip with David Foster Wallace",
+        "author": "Lipsky, David",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Sep 07, 2018",
+        "link": "https://www.goodreads.com/book/show/6916961-although-of-course-you-end-up-becoming-yourself"
+      },
+      {
+        "title": "The Broom of the System",
+        "author": "Wallace, David Foster",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 26, 2018",
+        "link": "https://www.goodreads.com/book/show/7120945-the-broom-of-the-system"
+      },
+      {
+        "title": "The Forensic Records Society",
+        "author": "Mills, Magnus",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 26, 2018",
+        "link": "https://www.goodreads.com/book/show/31450762-the-forensic-records-society"
+      },
+      {
+        "title": "Origin Story: A Big History of Everything [May 14, 2018] Christian, David",
+        "author": "Christian, David",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 15, 2018",
+        "link": "https://www.goodreads.com/book/show/38205466-origin-story"
+      },
+      {
+        "title": "Robin",
+        "author": "Itzkoff, Dave",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 23, 2018",
+        "link": "https://www.goodreads.com/book/show/36609155-robin"
+      },
+      {
+        "title": "Lincoln in the Bardo",
+        "author": "Saunders, George",
+        "coverImage": "",
+        "rating": "amazing",
+        "dateRead": "Jun 23, 2018",
+        "link": "https://www.goodreads.com/book/show/29906980-lincoln-in-the-bardo"
+      },
+      {
+        "title": "The Soul of America: The Battle for Our Better Angels",
+        "author": "Meacham, Jon",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 15, 2018",
+        "link": "https://www.goodreads.com/book/show/38385947-the-soul-of-america"
+      },
+      {
+        "title": "Meet Me in the Bathroom: Rebirth and Rock and Roll in New York City 2001-2011",
+        "author": "Goodman, Lizzy",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Apr 23, 2018",
+        "link": "https://www.goodreads.com/book/show/25816741-meet-me-in-the-bathroom"
+      },
+      {
+        "title": "Play It Loud: An Epic History of the Style, Sound, and Revolution of the Electric Guitar",
+        "author": "Tolinski, Brad",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Apr 09, 2018",
+        "link": "https://www.goodreads.com/book/show/28961752-play-it-loud"
+      },
+      {
+        "title": "The Ultimate History of Video Games: From Pong to Pokemon - The Story Behind the Craze That Touched Our Lives and Changed the World",
+        "author": "Kent, Steven L.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 11, 2018",
+        "link": "https://www.goodreads.com/book/show/68571.The_Ultimate_History_of_Video_Games"
+      },
+      {
+        "title": "Fire and Fury: Inside the Trump White House",
+        "author": "Wolff, Michael",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Feb 10, 2018",
+        "link": "https://www.goodreads.com/book/show/36595101-fire-and-fury"
+      },
+      {
+        "title": "Vacationland: True Stories from Painful Beaches",
+        "author": "Hodgman, John",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 29, 2018",
+        "link": "https://www.goodreads.com/book/show/34347433-vacationland"
+      },
+      {
+        "title": "A Mind at Play: How Claude Shannon Invented the Information Age",
+        "author": "Soni, Jimmy",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 23, 2017",
+        "link": "https://www.goodreads.com/book/show/32919530-a-mind-at-play"
+      },
+      {
+        "title": "Herbie Hancock: Possibilities",
+        "author": "Hancock, Herbie",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 2017",
+        "link": "https://www.goodreads.com/book/show/20821012-herbie-hancock"
+      },
+      {
+        "title": "A Love Supreme: The Story of John Coltrane's Signature Album",
+        "author": "Kahn, Ashley",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 2017",
+        "link": "https://www.goodreads.com/book/show/164085.A_Love_Supreme"
+      },
+      {
+        "title": "Blue Note Records: The Biography",
+        "author": "Cook, Richard",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 2017",
+        "link": "https://www.goodreads.com/book/show/942373.Blue_Note_Records"
+      },
+      {
+        "title": "A Beautiful Question: Finding Nature's Deep Design",
+        "author": "Wilczek, Frank",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2017",
+        "link": "https://www.goodreads.com/book/show/23453106-a-beautiful-question"
+      },
+      {
+        "title": "Letterman",
+        "author": "Zinoman, Jason",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2017",
+        "link": "https://www.goodreads.com/book/show/31214812-letterman"
+      },
+      {
+        "title": "Nine Algorithms That Changed the Future: The Ingenious Ideas That Drive Today's Computers",
+        "author": "MacCormick, John",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2017",
+        "link": "https://www.goodreads.com/book/show/12413727-nine-algorithms-that-changed-the-future"
+      },
+      {
+        "title": "Mathematics for the Nonmathematician",
+        "author": "Kline, Morris",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2017",
+        "link": "https://www.goodreads.com/book/show/281821.Mathematics_for_the_Nonmathematician"
+      },
+      {
+        "title": "Creative Confidence: Unleashing the Creative Potential Within Us All",
+        "author": "Kelley, Tom",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 2017",
+        "link": "https://www.goodreads.com/book/show/17288649-creative-confidence"
+      },
+      {
+        "title": "How Not to Be Wrong: The Power of Mathematical Thinking",
+        "author": "Ellenberg, Jordan",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2017",
+        "link": "https://www.goodreads.com/book/show/23281872-how-not-to-be-wrong"
+      },
+      {
+        "title": "Tribes: We Need You to Lead Us",
+        "author": "Godin, Seth",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Feb 2017",
+        "link": "https://www.goodreads.com/book/show/15996540-tribes"
+      },
+      {
+        "title": "The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life",
+        "author": "Manson, Mark",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jan 2017",
+        "link": "https://www.goodreads.com/book/show/33406322-the-subtle-art-of-not-giving-a-f-ck"
+      },
+      {
+        "title": "Driven: Inside BMW, the Most Admired Car Company in the World",
+        "author": "Kiley, David",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2016",
+        "link": "https://www.goodreads.com/book/show/625614.Driven"
+      },
+      {
+        "title": "Attempting Normal",
+        "author": "Maron, Marc",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2016",
+        "link": "https://www.goodreads.com/book/show/15798477-attempting-normal"
+      },
+      {
+        "title": "I Invented the Modern Age: The Rise of Henry Ford and the Most Important Car Ever Made",
+        "author": "Snow, Richard",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Sep 2015",
+        "link": "https://www.goodreads.com/book/show/26201349-i-invented-the-modern-age"
+      },
+      {
+        "title": "The Big Roads: The Untold Story of the Engineers, Visionaries, and Trailblazers Who Created the American Superhighways",
+        "author": "Swift, Earl",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 2015",
+        "link": "https://www.goodreads.com/book/show/13343724-the-big-roads"
+      },
+      {
+        "title": "Quiet: The Power of Introverts in a World That Can't Stop Talking",
+        "author": "Cain, Susan",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jul 2015",
+        "link": "https://www.goodreads.com/book/show/13134285-quiet"
+      },
+      {
+        "title": "Mere Christianity",
+        "author": "Lewis, C.S.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2015",
+        "link": "https://www.goodreads.com/book/show/11144.Mere_Christianity"
+      },
+      {
+        "title": "Buckminster Fuller's Universe: His Life and Work",
+        "author": "Sieden, Lloyd Steven",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2015",
+        "link": "https://www.goodreads.com/book/show/190039.Buckminster_Fuller_s_Universe"
+      },
+      {
+        "title": "Dead Wake: The Last Crossing of the Lusitania",
+        "author": "Larson, Erik",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2015",
+        "link": "https://www.goodreads.com/book/show/25168245-dead-wake"
+      },
+      {
+        "title": "The Crying of Lot 49",
+        "author": "Pynchon, Thomas",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2015",
+        "link": "https://www.goodreads.com/book/show/2794.The_Crying_of_Lot_49"
+      },
+      {
+        "title": "Inherent Vice",
+        "author": "Pynchon, Thomas",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Feb 2015",
+        "link": "https://www.goodreads.com/book/show/6578834-inherent-vice"
+      },
+      {
+        "title": "The Innovators: How a Group of Hackers, Geniuses and Geeks Created the Digital Revolution",
+        "author": "Isaacson, Walter",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 2015",
+        "link": "https://www.goodreads.com/book/show/21856367-the-innovators"
+      },
+      {
+        "title": "The Baseball Codes: Beanballs, Sign Stealing, and Bench-Clearing Brawls: The Unwritten Rules of America's Pastime",
+        "author": "Turbow, Jason",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 2014",
+        "link": "https://www.goodreads.com/book/show/6817054-the-baseball-codes"
+      },
+      {
+        "title": "President Me: The America That's In My Head",
+        "author": "Carolla, Adam",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 2014",
+        "link": "https://www.goodreads.com/book/show/18655917-president-me"
+      },
+      {
+        "title": "Lush Life",
+        "author": "Price, Richard",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2014",
+        "link": "https://www.goodreads.com/book/show/1862313.Lush_Life"
+      },
+      {
+        "title": "Full Dark, No Stars",
+        "author": "King, Stephen",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jun 2014",
+        "link": "https://www.goodreads.com/book/show/10201495-full-dark-no-stars"
+      },
+      {
+        "title": "Thomas Jefferson: The Art of Power",
+        "author": "Meacham, Jon",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 2014",
+        "link": "https://www.goodreads.com/book/show/16368734-thomas-jefferson"
+      },
+      {
+        "title": "Think Bigger: Developing a Successful Big Data Strategy for Your Business",
+        "author": "Rijmenam, Mark Van",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "May 2014",
+        "link": "https://www.goodreads.com/book/show/18970328-think-bigger"
+      },
+      {
+        "title": "The Cricket in Times Square\n        (Chester Cricket and His Friends, #1)",
+        "author": "Selden, George",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Apr 2014",
+        "link": "https://www.goodreads.com/book/show/24384.The_Cricket_in_Times_Square"
+      },
+      {
+        "title": "Things a Little Bird Told Me: Confessions of the Creative Mind",
+        "author": "Stone, Biz",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 2014",
+        "link": "https://www.goodreads.com/book/show/18679577-things-a-little-bird-told-me"
+      },
+      {
+        "title": "The Idea Factory: Bell Labs and the Great Age of American Innovation",
+        "author": "Gertner, Jon",
+        "coverImage": "",
+        "rating": "amazing",
+        "dateRead": "Mar 2014",
+        "link": "https://www.goodreads.com/book/show/11797471-the-idea-factory"
+      },
+      {
+        "title": "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration",
+        "author": "Catmull, Ed",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 2014",
+        "link": "https://www.goodreads.com/book/show/18077991-creativity-inc"
+      },
+      {
+        "title": "Around the World in 80 Days",
+        "author": "Verne, Jules",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2014",
+        "link": "https://www.goodreads.com/book/show/17281478-around-the-world-in-80-days"
+      },
+      {
+        "title": "Jim Henson: The Biography",
+        "author": "Jones, Brian Jay",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 2013",
+        "link": "https://www.goodreads.com/book/show/17288885-jim-henson"
+      },
+      {
+        "title": "The Clockwork Universe: Isaac Newton, the Royal Society, and the Birth of the Modern World",
+        "author": "Dolnick, Edward",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2013",
+        "link": "https://www.goodreads.com/book/show/12445316-the-clockwork-universe"
+      },
+      {
+        "title": "Dreaming in Code: Two Dozen Programmers, Three Years, 4,732 Bugs, and One Quest for Transcendent Software",
+        "author": "Rosenberg, Scott",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 2013",
+        "link": "https://www.goodreads.com/book/show/32475.Dreaming_in_Code"
+      },
+      {
+        "title": "Atonement",
+        "author": "McEwan, Ian",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2013",
+        "link": "https://www.goodreads.com/book/show/6867.Atonement"
+      },
+      {
+        "title": "The Colorado Kid",
+        "author": "King, Stephen",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2013",
+        "link": "https://www.goodreads.com/book/show/10574.The_Colorado_Kid"
+      },
+      {
+        "title": "The Time Machine",
+        "author": "Wells, H.G.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2013",
+        "link": "https://www.goodreads.com/book/show/8097821-the-time-machine"
+      },
+      {
+        "title": "Pearl Jam Twenty",
+        "author": "Pearl Jam",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 2012",
+        "link": "https://www.goodreads.com/book/show/10648050-pearl-jam-twenty"
+      },
+      {
+        "title": "The Nerdist Way: How to Reach the Next Level",
+        "author": "Hardwick, Chris",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Nov 2012",
+        "link": "https://www.goodreads.com/book/show/14586677-the-nerdist-way"
+      },
+      {
+        "title": "The Crystal Cave",
+        "author": "Stewart, Mary",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2012",
+        "link": "https://www.goodreads.com/book/show/16134144-the-crystal-cave"
+      },
+      {
+        "title": "The Age of Miracles",
+        "author": "Walker, Karen Thompson",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2012",
+        "link": "https://www.goodreads.com/book/show/12401556-the-age-of-miracles"
+      },
+      {
+        "title": "The Hobbit, or There and Back Again",
+        "author": "Tolkien, J.R.R.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 2012",
+        "link": "https://www.goodreads.com/book/show/5907.The_Hobbit_or_There_and_Back_Again"
+      },
+      {
+        "title": "Swamplandia!",
+        "author": "Russell, Karen",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 2012",
+        "link": "https://www.goodreads.com/book/show/8584686-swamplandia"
+      },
+      {
+        "title": "Rabbit, Run\n        (Rabbit Angstrom, #1)",
+        "author": "Updike, John",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2012",
+        "link": "https://www.goodreads.com/book/show/85386.Rabbit_Run"
+      },
+      {
+        "title": "Eating the Dinosaur",
+        "author": "Klosterman, Chuck",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2012",
+        "link": "https://www.goodreads.com/book/show/6386555-eating-the-dinosaur"
+      },
+      {
+        "title": "The Descendants",
+        "author": "Hemmings, Kaui Hart",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2012",
+        "link": "https://www.goodreads.com/book/show/968403.The_Descendants"
+      },
+      {
+        "title": "Zeitoun",
+        "author": "Eggers, Dave",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 2012",
+        "link": "https://www.goodreads.com/book/show/6512154-zeitoun"
+      },
+      {
+        "title": "The Information: A History, a Theory, a Flood",
+        "author": "Gleick, James",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 2012",
+        "link": "https://www.goodreads.com/book/show/8701960-the-information"
+      },
+      {
+        "title": "Let the Great World Spin",
+        "author": "McCann, Colum",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Apr 2012",
+        "link": "https://www.goodreads.com/book/show/9808995-let-the-great-world-spin"
+      },
+      {
+        "title": "Monkey Mind: A Memoir of Anxiety",
+        "author": "Smith, Daniel B.",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Apr 2012",
+        "link": "https://www.goodreads.com/book/show/14428887-monkey-mind"
+      },
+      {
+        "title": "Ready Player One\n        (Ready Player One, #1)",
+        "author": "Cline, Ernest",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2012",
+        "link": "https://www.goodreads.com/book/show/9969571-ready-player-one"
+      },
+      {
+        "title": "A Colossal Failure of Common Sense: The Inside Story of the Collapse of Lehman Brothers",
+        "author": "McDonald, Lawrence G.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2012",
+        "link": "https://www.goodreads.com/book/show/6817697-a-colossal-failure-of-common-sense"
+      },
+      {
+        "title": "A Visit from the Goon Squad",
+        "author": "Egan, Jennifer",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2012",
+        "link": "https://www.goodreads.com/book/show/11726563-a-visit-from-the-goon-squad"
+      },
+      {
+        "title": "11/22/63",
+        "author": "King, Stephen",
+        "coverImage": "",
+        "rating": "amazing",
+        "dateRead": "Feb 2012",
+        "link": "https://www.goodreads.com/book/show/10644930-11-22-63"
+      },
+      {
+        "title": "Everybody Loves Our Town: An Oral History of Grunge",
+        "author": "Yarm, Mark",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Feb 2012",
+        "link": "https://www.goodreads.com/book/show/10790499-everybody-loves-our-town"
+      },
+      {
+        "title": "The Marriage Plot",
+        "author": "Eugenides, Jeffrey",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jan 2012",
+        "link": "https://www.goodreads.com/book/show/10964693-the-marriage-plot"
+      },
+      {
+        "title": "Sex, Drugs, and Cocoa Puffs: A Low Culture Manifesto",
+        "author": "Klosterman, Chuck",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Dec 2011",
+        "link": "https://www.goodreads.com/book/show/599.Sex_Drugs_and_Cocoa_Puffs"
+      },
+      {
+        "title": "Steve Jobs",
+        "author": "Isaacson, Walter",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Dec 2011",
+        "link": "https://www.goodreads.com/book/show/11084145-steve-jobs"
+      },
+      {
+        "title": "The Wizard of Menlo Park: How Thomas Alva Edison Invented the Modern World",
+        "author": "Stross, Randall E.",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 2011",
+        "link": "https://www.goodreads.com/book/show/416422.The_Wizard_of_Menlo_Park"
+      },
+      {
+        "title": "iCon: Steve Jobs, the Greatest Second Act in the History of Business",
+        "author": "Young, Jeffrey S.",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Aug 2011",
+        "link": "https://www.goodreads.com/book/show/49312.iCon"
+      },
+      {
+        "title": "The Thousand Autumns of Jacob de Zoet",
+        "author": "Mitchell, David",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2011",
+        "link": "https://www.goodreads.com/book/show/7141642-the-thousand-autumns-of-jacob-de-zoet"
+      },
+      {
+        "title": "How to Live Safely in a Science Fictional Universe",
+        "author": "Yu, Charles",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 2011",
+        "link": "https://www.goodreads.com/book/show/7726420-how-to-live-safely-in-a-science-fictional-universe"
+      },
+      {
+        "title": "American Gods",
+        "author": "Gaiman, Neil",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jun 2011",
+        "link": "https://www.goodreads.com/book/show/11915069-american-gods"
+      },
+      {
+        "title": "The Wisdom of Insecurity: A Message for an Age of Anxiety",
+        "author": "Watts, Alan W.",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "May 2011",
+        "link": "https://www.goodreads.com/book/show/551520.The_Wisdom_of_Insecurity"
+      },
+      {
+        "title": "The Imperfectionists",
+        "author": "Rachman, Tom",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 2011",
+        "link": "https://www.goodreads.com/book/show/6834410-the-imperfectionists"
+      },
+      {
+        "title": "Bossypants",
+        "author": "Fey, Tina",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2011",
+        "link": "https://www.goodreads.com/book/show/13527888-bossypants"
+      },
+      {
+        "title": "In the Garden of Beasts: Love, Terror, and an American Family in Hitler's Berlin",
+        "author": "Larson, Erik",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 2011",
+        "link": "https://www.goodreads.com/book/show/9938498-in-the-garden-of-beasts"
+      },
+      {
+        "title": "Lost Japan",
+        "author": "Kerr, Alex",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2011",
+        "link": "https://www.goodreads.com/book/show/6379201-lost-japan"
+      },
+      {
+        "title": "Moneyball: The Art of Winning an Unfair Game",
+        "author": "Lewis, Michael",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Apr 2011",
+        "link": "https://www.goodreads.com/book/show/6585610-moneyball"
+      },
+      {
+        "title": "Water for Elephants",
+        "author": "Gruen, Sara",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Apr 2011",
+        "link": "https://www.goodreads.com/book/show/43641.Water_for_Elephants"
+      },
+      {
+        "title": "Zombie Spaceship Wasteland: A Book by Patton Oswalt",
+        "author": "Oswalt, Patton",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2011",
+        "link": "https://www.goodreads.com/book/show/10229625-zombie-spaceship-wasteland"
+      },
+      {
+        "title": "Netherland",
+        "author": "O'Neill, Joseph",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2011",
+        "link": "https://www.goodreads.com/book/show/2615008-netherland"
+      },
+      {
+        "title": "The Curious Incident of the Dog in the Night-Time",
+        "author": "Haddon, Mark",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2011",
+        "link": "https://www.goodreads.com/book/show/20453863-the-curious-incident-of-the-dog-in-the-night-time"
+      },
+      {
+        "title": "Eaarth: Making a Life on a Tough New Planet",
+        "author": "McKibben, Bill",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 2011",
+        "link": "https://www.goodreads.com/book/show/7099898-eaarth"
+      },
+      {
+        "title": "At Home: A Short History of Private Life",
+        "author": "Bryson, Bill",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 2011",
+        "link": "https://www.goodreads.com/book/show/13508908-at-home"
+      },
+      {
+        "title": "LEGO: A Love Story",
+        "author": "Bender, Jonathan",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Nov 2010",
+        "link": "https://www.goodreads.com/book/show/7344614-lego"
+      },
+      {
+        "title": "Gilead",
+        "author": "Robinson, Marilynne",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 2010",
+        "link": "https://www.goodreads.com/book/show/14204.Gilead"
+      },
+      {
+        "title": "The Picture of Dorian Gray",
+        "author": "Wilde, Oscar",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2010",
+        "link": "https://www.goodreads.com/book/show/49973.The_Picture_of_Dorian_Gray"
+      },
+      {
+        "title": "The Amazing Adventures of Kavalier & Clay",
+        "author": "Chabon, Michael",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 2010",
+        "link": "https://www.goodreads.com/book/show/3985.The_Amazing_Adventures_of_Kavalier_Clay"
+      },
+      {
+        "title": "The Corrections",
+        "author": "Franzen, Jonathan",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2010",
+        "link": "https://www.goodreads.com/book/show/9827290-the-corrections"
+      },
+      {
+        "title": "The Brief Wondrous Life of Oscar Wao",
+        "author": "Díaz, Junot",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 2010",
+        "link": "https://www.goodreads.com/book/show/9818628-the-brief-wondrous-life-of-oscar-wao"
+      },
+      {
+        "title": "Freedom",
+        "author": "Franzen, Jonathan",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 2010",
+        "link": "https://www.goodreads.com/book/show/14331915-freedom"
+      },
+      {
+        "title": "Cloak of Deception",
+        "author": "Luceno, James",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 2010",
+        "link": "https://www.goodreads.com/book/show/1030555.Cloak_of_Deception"
+      },
+      {
+        "title": "The Accidental Billionaires: The Founding of Facebook: A Tale of Sex, Money, Genius and Betrayal",
+        "author": "Mezrich, Ben",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2010",
+        "link": "https://www.goodreads.com/book/show/6541267-the-accidental-billionaires"
+      },
+      {
+        "title": "Manhood for Amateurs",
+        "author": "Chabon, Michael",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2010",
+        "link": "https://www.goodreads.com/book/show/6356399-manhood-for-amateurs"
+      },
+      {
+        "title": "Olive Kitteridge",
+        "author": "Strout, Elizabeth",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2010",
+        "link": "https://www.goodreads.com/book/show/18661448-olive-kitteridge"
+      },
+      {
+        "title": "The Learners",
+        "author": "Kidd, Chip",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2010",
+        "link": "https://www.goodreads.com/book/show/1806786.The_Learners"
+      },
+      {
+        "title": "The Big Burn: Teddy Roosevelt and the Fire that Saved America",
+        "author": "Egan, Timothy",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2010",
+        "link": "https://www.goodreads.com/book/show/7097729-the-big-burn"
+      },
+      {
+        "title": "Nurtureshock: New Thinking about Children",
+        "author": "Bronson, Po",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2010",
+        "link": "https://www.goodreads.com/book/show/6978833-nurtureshock"
+      },
+      {
+        "title": "The Ask: A Novel",
+        "author": "Lipsyte, Sam",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2010",
+        "link": "https://www.goodreads.com/book/show/21469182-the-ask"
+      },
+      {
+        "title": "The 4-Hour Workweek: Escape 95, Live Anywhere, and Join the New Rich",
+        "author": "Ferriss, Timothy",
+        "coverImage": "",
+        "rating": "1",
+        "dateRead": "Mar 2010",
+        "link": "https://www.goodreads.com/book/show/8302378-the-4-hour-workweek"
+      },
+      {
+        "title": "Collect All 21! Memoirs of a Star Wars Geek - The First 30 Years",
+        "author": "Booth, John",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2010",
+        "link": "https://www.goodreads.com/book/show/4415548-collect-all-21-memoirs-of-a-star-wars-geek---the-first-30-years"
+      },
+      {
+        "title": "Daemon\n        (Daemon, #1)",
+        "author": "Suarez, Daniel",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2010",
+        "link": "https://www.goodreads.com/book/show/21950850-daemon"
+      },
+      {
+        "title": "Steve Mather Of The National Parks",
+        "author": "Shankland, Robert",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Feb 2010",
+        "link": "https://www.goodreads.com/book/show/382124.Steve_Mather_Of_The_National_Parks"
+      },
+      {
+        "title": "Ragtime",
+        "author": "Doctorow, E.L.",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 2010",
+        "link": "https://www.goodreads.com/book/show/175675.Ragtime"
+      },
+      {
+        "title": "The Defining Moment: FDR's Hundred Days and the Triumph of Hope",
+        "author": "Alter, Jonathan",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Dec 2009",
+        "link": "https://www.goodreads.com/book/show/26042518-the-defining-moment"
+      },
+      {
+        "title": "The Creative Habit: Learn It and Use It for Life",
+        "author": "Tharp, Twyla",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 2009",
+        "link": "https://www.goodreads.com/book/show/254799.The_Creative_Habit"
+      },
+      {
+        "title": "The Expectant Father: Facts, Tips and Advice for Dads-to-Be",
+        "author": "Brott, Armin A.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2009",
+        "link": "https://www.goodreads.com/book/show/204567.The_Expectant_Father"
+      },
+      {
+        "title": "The Lost Symbol\n        (Robert Langdon #3)",
+        "author": "Brown, Dan",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2009",
+        "link": "https://www.goodreads.com/book/show/6880946-the-lost-symbol"
+      },
+      {
+        "title": "Star Wars:  The New Essential Chronology",
+        "author": "Wallace, Daniel",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Sep 2009",
+        "link": "https://www.goodreads.com/book/show/35409.Star_Wars"
+      },
+      {
+        "title": "A Whack on the Side of the Head: How You Can Be More Creative",
+        "author": "Oech, Roger Von",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Sep 2009",
+        "link": "https://www.goodreads.com/book/show/145947.A_Whack_on_the_Side_of_the_Head"
+      },
+      {
+        "title": "The Difference Maker: Making Your Attitude Your Greatest Asset",
+        "author": "Maxwell, John C.",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 2009",
+        "link": "https://www.goodreads.com/book/show/19842.The_Difference_Maker"
+      },
+      {
+        "title": "The Truce at Bakura",
+        "author": "Tyers, Kathy",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jul 2009",
+        "link": "https://www.goodreads.com/book/show/26908548-the-truce-at-bakura"
+      },
+      {
+        "title": "Star Wars: The Thrawn Trilogy: Heir to the Empire: Volume I",
+        "author": "Zahn, Timothy",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 2009",
+        "link": "https://www.goodreads.com/book/show/13134721-star-wars"
+      },
+      {
+        "title": "How to Pick a Peach",
+        "author": "Parsons, Russ",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2009",
+        "link": "https://www.goodreads.com/book/show/235610.How_to_Pick_a_Peach"
+      },
+      {
+        "title": "A Wrinkle in Time\n        (A Wrinkle in Time Quintet, #1)",
+        "author": "L'Engle, Madeleine",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2009",
+        "link": "https://www.goodreads.com/book/show/27396389-a-wrinkle-in-time"
+      },
+      {
+        "title": "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",
+        "author": "Greene, Brian",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2009",
+        "link": "https://www.goodreads.com/book/show/17906987-the-elegant-universe"
+      },
+      {
+        "title": "The Road",
+        "author": "McCarthy, Cormac",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2009",
+        "link": "https://www.goodreads.com/book/show/7199811-the-road"
+      },
+      {
+        "title": "World's Fair",
+        "author": "Doctorow, E.L.",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Apr 2009",
+        "link": "https://www.goodreads.com/book/show/1103683.World_s_Fair"
+      },
+      {
+        "title": "In Defense of Food: An Eater's Manifesto",
+        "author": "Pollan, Michael",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2009",
+        "link": "https://www.goodreads.com/book/show/11279159-in-defense-of-food"
+      },
+      {
+        "title": "Getting Things Done: The Art of Stress-Free Productivity",
+        "author": "Allen, David",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2009",
+        "link": "https://www.goodreads.com/book/show/1633.Getting_Things_Done"
+      },
+      {
+        "title": "The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change",
+        "author": "Covey, Stephen R.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2009",
+        "link": "https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People"
+      },
+      {
+        "title": "Revolutionary Road",
+        "author": "Yates, Richard",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2009",
+        "link": "https://www.goodreads.com/book/show/6066582-revolutionary-road"
+      },
+      {
+        "title": "The Black Girl Next Door: A Memoir",
+        "author": "Baszile, Jennifer",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2009",
+        "link": "https://www.goodreads.com/book/show/3137469-the-black-girl-next-door"
+      },
+      {
+        "title": "The Areas of My Expertise: An Almanac of Complete World Knowledge Compiled with Instructive Annotation and Arranged in Useful Order",
+        "author": "Hodgman, John",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Feb 2009",
+        "link": "https://www.goodreads.com/book/show/24807.The_Areas_of_My_Expertise"
+      },
+      {
+        "title": "The House That Trane Built: The Story of Impulse Records",
+        "author": "Kahn, Ashley",
+        "coverImage": "",
+        "rating": "amazing",
+        "dateRead": "Jan 2009",
+        "link": "https://www.goodreads.com/book/show/298222.The_House_That_Trane_Built"
+      },
+      {
+        "title": "Adland: A Global History of Advertising",
+        "author": "Tungate, Mark",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jan 2009",
+        "link": "https://www.goodreads.com/book/show/1694829.Adland"
+      },
+      {
+        "title": "The Last Lecture",
+        "author": "Pausch, Randy",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jan 2009",
+        "link": "https://www.goodreads.com/book/show/22453873-the-last-lecture"
+      },
+      {
+        "title": "Building Findable Websites: Web Standards, SEO, and Beyond",
+        "author": "Walter, Aaron",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Dec 2008",
+        "link": "https://www.goodreads.com/book/show/2255445.Building_Findable_Websites"
+      },
+      {
+        "title": "Ambient Findability: What We Find Changes Who We Become",
+        "author": "Morville, Peter",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 2008",
+        "link": "https://www.goodreads.com/book/show/160338.Ambient_Findability"
+      },
+      {
+        "title": "Options: The Secret Life of Steve Jobs",
+        "author": "Jobs, Fake Steve",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2008",
+        "link": "https://www.goodreads.com/book/show/1110713.Options"
+      },
+      {
+        "title": "The Lay of the Land",
+        "author": "Ford, Richard",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 2008",
+        "link": "https://www.goodreads.com/book/show/9939550-the-lay-of-the-land"
+      },
+      {
+        "title": "The Audacity of Hope: Thoughts on Reclaiming the American Dream",
+        "author": "Obama, Barack",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2008",
+        "link": "https://www.goodreads.com/book/show/1120650.The_Audacity_of_Hope"
+      },
+      {
+        "title": "Why We Hate Us: American Discontent in the New Millennium",
+        "author": "Meyer, Dick",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2008",
+        "link": "https://www.goodreads.com/book/show/3730730-why-we-hate-us"
+      },
+      {
+        "title": "Narrative of Arthur Gordon Pym",
+        "author": "Allen, Edgar Poe",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2008",
+        "link": "https://www.goodreads.com/book/show/6332973-narrative-of-arthur-gordon-pym"
+      },
+      {
+        "title": "World War Z: An Oral History of the Zombie War",
+        "author": "Brooks, Max",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2008",
+        "link": "https://www.goodreads.com/book/show/13133307-world-war-z"
+      },
+      {
+        "title": "Rock On: An Office Power Ballad",
+        "author": "Kennedy, Dan",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Sep 2008",
+        "link": "https://www.goodreads.com/book/show/1687351.Rock_On"
+      },
+      {
+        "title": "Down and Out in Paris and London",
+        "author": "Orwell, George",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2008",
+        "link": "https://www.goodreads.com/book/show/9757765-down-and-out-in-paris-and-london"
+      },
+      {
+        "title": "When You Are Engulfed In Flames",
+        "author": "Sedaris, David",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Sep 2008",
+        "link": "https://www.goodreads.com/book/show/2128697.When_You_Are_Engulfed_In_Flames"
+      },
+      {
+        "title": "A Crack in the Edge of the World",
+        "author": "Winchester, Simon",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2008",
+        "link": "https://www.goodreads.com/book/show/25013.A_Crack_in_the_Edge_of_the_World"
+      },
+      {
+        "title": "Undaunted Courage",
+        "author": "Ambrose, Stephen E.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 2008",
+        "link": "https://www.goodreads.com/book/show/45549.Undaunted_Courage"
+      },
+      {
+        "title": "Into Thin Air: A Personal Account of the Mt. Everest Disaster",
+        "author": "Krakauer, Jon",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 2008",
+        "link": "https://www.goodreads.com/book/show/9819621-into-thin-air"
+      },
+      {
+        "title": "Then We Came to the End",
+        "author": "Ferris, Joshua",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2008",
+        "link": "https://www.goodreads.com/book/show/97782.Then_We_Came_to_the_End"
+      },
+      {
+        "title": "Pafko at the Wall",
+        "author": "DeLillo, Don",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2008",
+        "link": "https://www.goodreads.com/book/show/162497.Pafko_at_the_Wall"
+      },
+      {
+        "title": "Tales of a Fourth Grade Nothing",
+        "author": "Blume, Judy",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Jul 2008",
+        "link": "https://www.goodreads.com/book/show/3548278-tales-of-a-fourth-grade-nothing"
+      },
+      {
+        "title": "Desire of the Everlasting Hills: The World Before & After Jesus\n        (Hinges of History, #3)",
+        "author": "Cahill, Thomas",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jul 2008",
+        "link": "https://www.goodreads.com/book/show/2703846-desire-of-the-everlasting-hills"
+      },
+      {
+        "title": "The Card: Collectors, Con Men, and the True Story of History’s Most Desired Baseball Card",
+        "author": "Keefe, Michael O'",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2008",
+        "link": "https://www.goodreads.com/book/show/36374775-the-card"
+      },
+      {
+        "title": "Microserfs",
+        "author": "Coupland, Douglas",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2008",
+        "link": "https://www.goodreads.com/book/show/2748.Microserfs"
+      },
+      {
+        "title": "Superfudge",
+        "author": "Blume, Judy",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jun 2008",
+        "link": "https://www.goodreads.com/book/show/1755944.Superfudge"
+      },
+      {
+        "title": "The Thinking Fan's Guide to Baseball",
+        "author": "Koppett, Leonard",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jun 2008",
+        "link": "https://www.goodreads.com/book/show/707324.The_Thinking_Fan_s_Guide_to_Baseball"
+      },
+      {
+        "title": "Out of the Silent Planet\n        (Space Trilogy, #1)",
+        "author": "Lewis, C.S.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2008",
+        "link": "https://www.goodreads.com/book/show/894423.Out_of_the_Silent_Planet"
+      },
+      {
+        "title": "God's Problem: How the Bible Fails to Answer Our Most Important Question - Why We Suffer",
+        "author": "Ehrman, Bart D.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2008",
+        "link": "https://www.goodreads.com/book/show/1976714.God_s_Problem"
+      },
+      {
+        "title": "Heavier Than Heaven: A Biography of Kurt Cobain",
+        "author": "Cross, Charles R.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 2008",
+        "link": "https://www.goodreads.com/book/show/1149440.Heavier_Than_Heaven"
+      },
+      {
+        "title": "A Farewell to Arms",
+        "author": "Hemingway, Ernest",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2008",
+        "link": "https://www.goodreads.com/book/show/10796.A_Farewell_to_Arms"
+      },
+      {
+        "title": "Lush Life",
+        "author": "Price, Richard",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Apr 2008",
+        "link": "https://www.goodreads.com/book/show/3121997-lush-life"
+      },
+      {
+        "title": "Star Wars: Dark Lord: The Rise of Darth Vader",
+        "author": "Luceno, James",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Apr 2008",
+        "link": "https://www.goodreads.com/book/show/13134532-star-wars"
+      },
+      {
+        "title": "Free Culture: The Nature and Future of Creativity",
+        "author": "Lessig, Lawrence",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 2008",
+        "link": "https://www.goodreads.com/book/show/22928236-free-culture"
+      },
+      {
+        "title": "Richistan: A Journey Through the American Wealth Boom and the Lives of the New Rich",
+        "author": "Frank, Robert",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2008",
+        "link": "https://www.goodreads.com/book/show/512029.Richistan"
+      },
+      {
+        "title": "Giving: How Each of Us Can Change the World",
+        "author": "Clinton, Bill",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 2008",
+        "link": "https://www.goodreads.com/book/show/1593813.Giving"
+      },
+      {
+        "title": "How Starbucks Saved My Life",
+        "author": "Gill, Michael Gates",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2008",
+        "link": "https://www.goodreads.com/book/show/7149473-how-starbucks-saved-my-life"
+      },
+      {
+        "title": "A Long Way Down",
+        "author": "Hornby, Nick",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2008",
+        "link": "https://www.goodreads.com/book/show/3666945-a-long-way-down"
+      },
+      {
+        "title": "Main Street",
+        "author": "Lewis, Sinclair",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2008",
+        "link": "https://www.goodreads.com/book/show/34833318-main-street"
+      },
+      {
+        "title": "The Search: How Google and Its Rivals Rewrote the Rules of Business and Transformed Our Culture",
+        "author": "Battelle, John",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2008",
+        "link": "https://www.goodreads.com/book/show/27827163-the-search"
+      },
+      {
+        "title": "Last Night at the Lobster",
+        "author": "O'Nan, Stewart",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 2008",
+        "link": "https://www.goodreads.com/book/show/673915.Last_Night_at_the_Lobster"
+      },
+      {
+        "title": "Team of Rivals: The Political Genius of Abraham Lincoln",
+        "author": "Goodwin, Doris Kearns",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 2008",
+        "link": "https://www.goodreads.com/book/show/20673624-team-of-rivals"
+      },
+      {
+        "title": "The Man in the Gray Flannel Suit",
+        "author": "Wilson, Sloan",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 2007",
+        "link": "https://www.goodreads.com/book/show/90886.The_Man_in_the_Gray_Flannel_Suit"
+      },
+      {
+        "title": "Five Days in London: May 1940",
+        "author": "Lukacs, John",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Nov 2007",
+        "link": "https://www.goodreads.com/book/show/5784597-five-days-in-london"
+      },
+      {
+        "title": "Boom!: Voices of the Sixties Personal Reflections on the '60s and Today",
+        "author": "Brokaw, Tom",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 2007",
+        "link": "https://www.goodreads.com/book/show/10428013-boom"
+      },
+      {
+        "title": "The Sportswriter",
+        "author": "Ford, Richard",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 2007",
+        "link": "https://www.goodreads.com/book/show/16371760-the-sportswriter"
+      },
+      {
+        "title": "Falling Man: A Novel (Center Point Platinum Fiction",
+        "author": "DeLillo, Don",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2007",
+        "link": "https://www.goodreads.com/book/show/1200732.Falling_Man"
+      },
+      {
+        "title": "The World Is Flat: A Brief History of the Twenty-first Century",
+        "author": "Friedman, Thomas L.",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Sep 2007",
+        "link": "https://www.goodreads.com/book/show/27415618-the-world-is-flat"
+      },
+      {
+        "title": "Einstein: His Life and Universe",
+        "author": "Isaacson, Walter",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2007",
+        "link": "https://www.goodreads.com/book/show/10884.Einstein"
+      },
+      {
+        "title": "The Kite Runner",
+        "author": "Hosseini, Khaled",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2007",
+        "link": "https://www.goodreads.com/book/show/28447653-the-kite-runner"
+      },
+      {
+        "title": "Gasping for Airtime: Two Years in the Trenches at Saturday Night Live",
+        "author": "Mohr, Jay",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 2007",
+        "link": "https://www.goodreads.com/book/show/1801100.Gasping_for_Airtime"
+      },
+      {
+        "title": "Andrew Jackson: His Life and Times",
+        "author": "Brands, H.W.",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 2007",
+        "link": "https://www.goodreads.com/book/show/450295.Andrew_Jackson"
+      },
+      {
+        "title": "Uncommon Carriers",
+        "author": "McPhee, John",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 2007",
+        "link": "https://www.goodreads.com/book/show/7891514-uncommon-carriers"
+      },
+      {
+        "title": "Star Wars: Labyrinth of Evil",
+        "author": "Luceno, James",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jun 2007",
+        "link": "https://www.goodreads.com/book/show/14978.Star_Wars"
+      },
+      {
+        "title": "Gone Tomorrow: The Hidden Life of Garbage",
+        "author": "Rogers, Heather",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2007",
+        "link": "https://www.goodreads.com/book/show/126620.Gone_Tomorrow"
+      },
+      {
+        "title": "Star Wars: Outbound Flight",
+        "author": "Zahn, Timothy",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2007",
+        "link": "https://www.goodreads.com/book/show/13134200-star-wars"
+      },
+      {
+        "title": "Thirteen Moons",
+        "author": "Frazier, Charles",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jun 2007",
+        "link": "https://www.goodreads.com/book/show/9854809-thirteen-moons"
+      },
+      {
+        "title": "The Tipping Point: How Little Things Can Make a Big Difference",
+        "author": "Gladwell, Malcolm",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "May 2007",
+        "link": "https://www.goodreads.com/book/show/2612.The_Tipping_Point"
+      },
+      {
+        "title": "Wise Blood",
+        "author": "O'Connor, Flannery",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "May 2007",
+        "link": "https://www.goodreads.com/book/show/337107.Wise_Blood"
+      },
+      {
+        "title": "The Meaning of Everything",
+        "author": "Winchester, Simon",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2007",
+        "link": "https://www.goodreads.com/book/show/13618743-the-meaning-of-everything"
+      },
+      {
+        "title": "The River of Doubt: Theodore Roosevelt's Darkest Journey",
+        "author": "Millard, Candice",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Apr 2007",
+        "link": "https://www.goodreads.com/book/show/78508.The_River_of_Doubt"
+      },
+      {
+        "title": "David Copperfield",
+        "author": "Dickens, Charles",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2007",
+        "link": "https://www.goodreads.com/book/show/15732375-david-copperfield"
+      },
+      {
+        "title": "Mornings on Horseback",
+        "author": "McCullough, David",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2007",
+        "link": "https://www.goodreads.com/book/show/17985478-mornings-on-horseback"
+      },
+      {
+        "title": "Walt Disney: The Triumph of the American Imagination",
+        "author": "Gabler, Neal",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2007",
+        "link": "https://www.goodreads.com/book/show/10064220-walt-disney"
+      },
+      {
+        "title": "Made to Stick: Why Some Ideas Survive and Others Die",
+        "author": "Heath, Chip",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2007",
+        "link": "https://www.goodreads.com/book/show/69242.Made_to_Stick"
+      },
+      {
+        "title": "Thunderstruck",
+        "author": "Larson, Erik",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2007",
+        "link": "https://www.goodreads.com/book/show/1237853.Thunderstruck"
+      },
+      {
+        "title": "The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America",
+        "author": "Larson, Erik",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Feb 2007",
+        "link": "https://www.goodreads.com/book/show/9822066-the-devil-in-the-white-city"
+      },
+      {
+        "title": "The Little Guide to Your Well-Read Life: How to Get More Books in Your Life and More Life from Your Books",
+        "author": "Leveen, Steve",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 2007",
+        "link": "https://www.goodreads.com/book/show/100253.The_Little_Guide_to_Your_Well_Read_Life"
+      },
+      {
+        "title": "1776",
+        "author": "McCullough, David",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jan 2007",
+        "link": "https://www.goodreads.com/book/show/1067.1776"
+      },
+      {
+        "title": "iWoz: Computer Geek to Cult Icon: How I Invented the Personal Computer, Co-Founded Apple, and Had Fun Doing It",
+        "author": "Wozniak, Steve",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Dec 2006",
+        "link": "https://www.goodreads.com/book/show/798635.iWoz"
+      },
+      {
+        "title": "Bait and Switch",
+        "author": "Ehrenreich, Barbara",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Dec 2006",
+        "link": "https://www.goodreads.com/book/show/7633736-bait-and-switch"
+      },
+      {
+        "title": "Jack: A Life Like No Other",
+        "author": "Perrett, Geoffrey",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 2006",
+        "link": "https://www.goodreads.com/book/show/532.Jack"
+      },
+      {
+        "title": "Slowness",
+        "author": "Kundera, Milan",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2006",
+        "link": "https://www.goodreads.com/book/show/36368836-slowness"
+      },
+      {
+        "title": "Chronicles Volume One",
+        "author": "Dylan, Bob",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 2006",
+        "link": "https://www.goodreads.com/book/show/1527330.Chronicles_Volume_One"
+      },
+      {
+        "title": "Men and Cartoons: Stories",
+        "author": "Lethem, Jonathan",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Sep 2006",
+        "link": "https://www.goodreads.com/book/show/41198.Men_and_Cartoons"
+      },
+      {
+        "title": "A Supposedly Fun Thing I'll Never Do Again: Essays and Arguments",
+        "author": "Wallace, David Foster",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 2006",
+        "link": "https://www.goodreads.com/book/show/6438.A_Supposedly_Fun_Thing_I_ll_Never_Do_Again"
+      },
+      {
+        "title": "A Heartbreaking Work of Staggering Genius",
+        "author": "Eggers, Dave",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jul 2006",
+        "link": "https://www.goodreads.com/book/show/4953.A_Heartbreaking_Work_of_Staggering_Genius"
+      },
+      {
+        "title": "Tortilla Flat",
+        "author": "Steinbeck, John",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2006",
+        "link": "https://www.goodreads.com/book/show/28567487-tortilla-flat"
+      },
+      {
+        "title": "The Disappointment Artist",
+        "author": "Lethem, Jonathan",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2006",
+        "link": "https://www.goodreads.com/book/show/16713.The_Disappointment_Artist"
+      },
+      {
+        "title": "The Memory Artists",
+        "author": "Moore, Jeffrey",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 2006",
+        "link": "https://www.goodreads.com/book/show/369439.The_Memory_Artists"
+      },
+      {
+        "title": "Gettysburg: Day Three",
+        "author": "Wert, Jeffry D.",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2006",
+        "link": "https://www.goodreads.com/book/show/2543947.Gettysburg"
+      },
+      {
+        "title": "Lust: Four Letters. Infinite Possibilities.",
+        "author": "Ryman, Geoff",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2006",
+        "link": "https://www.goodreads.com/book/show/909179.Lust"
+      },
+      {
+        "title": "Explorers Of The New Century",
+        "author": "Mills, Magnus",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Apr 2006",
+        "link": "https://www.goodreads.com/book/show/325599.Explorers_Of_The_New_Century"
+      },
+      {
+        "title": "Type: The Secret History of Letters",
+        "author": "Loxley, Simon",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Feb 2006",
+        "link": "https://www.goodreads.com/book/show/541136.Type"
+      },
+      {
+        "title": "Anatomy of a Typeface",
+        "author": "alexander-lawson",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 2006",
+        "link": "https://www.goodreads.com/book/show/925251.Anatomy_of_a_Typeface"
+      },
+      {
+        "title": "To Kill a Mockingbird",
+        "author": "Lee, Harper",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 2005",
+        "link": "https://www.goodreads.com/book/show/51762.To_Kill_a_Mockingbird"
+      },
+      {
+        "title": "Beyond the Hundredth Meridian: John Wesley Powell and the Second Opening of the West",
+        "author": "Stegner, Wallace",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2005",
+        "link": "https://www.goodreads.com/book/show/17559525-beyond-the-hundredth-meridian"
+      },
+      {
+        "title": "On Writing: A Memoir",
+        "author": "King, Stephen",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2005",
+        "link": "https://www.goodreads.com/book/show/9566782-on-writing"
+      },
+      {
+        "title": "Krakatoa: The Day the World Exploded: August 27, 1883",
+        "author": "Winchester, Simon",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 2004",
+        "link": "https://www.goodreads.com/book/show/25017.Krakatoa"
+      },
+      {
+        "title": "His Excellency: George Washington",
+        "author": "Ellis, Joseph J.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 2004",
+        "link": "https://www.goodreads.com/book/show/6462.His_Excellency"
+      },
+      {
+        "title": "American Ground: Unbuilding the World Trade Center",
+        "author": "Langewiesche, William",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2004",
+        "link": "https://www.goodreads.com/book/show/77279.American_Ground"
+      },
+      {
+        "title": "Grant and Twain: The Story of a Friendship That Changed America",
+        "author": "Perry, Mark",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jun 2004",
+        "link": "https://www.goodreads.com/book/show/99157.Grant_and_Twain"
+      },
+      {
+        "title": "My Life",
+        "author": "Clinton, Bill",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2004",
+        "link": "https://www.goodreads.com/book/show/49195.My_Life"
+      },
+      {
+        "title": "The Razor's Edge",
+        "author": "Maugham, W. Somerset",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jun 2004",
+        "link": "https://www.goodreads.com/book/show/6726926-the-razor-s-edge"
+      },
+      {
+        "title": "Life of Pi",
+        "author": "Martel, Yann",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2004",
+        "link": "https://www.goodreads.com/book/show/826373.Life_of_Pi"
+      },
+      {
+        "title": "Romanticism",
+        "author": "Brown, David Blayney",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2004",
+        "link": "https://www.goodreads.com/book/show/787751.Romanticism"
+      },
+      {
+        "title": "The Scheme for Full Employment",
+        "author": "Mills, Magnus",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Apr 2004",
+        "link": "https://www.goodreads.com/book/show/2478128.The_Scheme_for_Full_Employment"
+      },
+      {
+        "title": "Song of Solomon",
+        "author": "Morrison, Toni",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Apr 2004",
+        "link": "https://www.goodreads.com/book/show/1160978.Song_of_Solomon"
+      },
+      {
+        "title": "Kick Me: Adventures in Adolescence",
+        "author": "Feig, Paul",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2004",
+        "link": "https://www.goodreads.com/book/show/95532.Kick_Me"
+      },
+      {
+        "title": "Adventures of Huckleberry Finn",
+        "author": "Twain, Mark",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2004",
+        "link": "https://www.goodreads.com/book/show/954469.Adventures_of_Huckleberry_Finn"
+      },
+      {
+        "title": "The Four Horsemen of the Apoc",
+        "author": "Blasco Ibáñez, Vicente",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jan 2004",
+        "link": "https://www.goodreads.com/book/show/10177152-the-four-horsemen-of-the-apoc"
+      },
+      {
+        "title": "Living History",
+        "author": "Clinton, Hillary Rodham",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 2003",
+        "link": "https://www.goodreads.com/book/show/56073.Living_History"
+      },
+      {
+        "title": "Jarhead: A Marine's Chronicle of the Gulf War and Other Battles",
+        "author": "Swofford, Anthony",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 2003",
+        "link": "https://www.goodreads.com/book/show/907971.Jarhead"
+      },
+      {
+        "title": "Lullaby",
+        "author": "Palahniuk, Chuck",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 2003",
+        "link": "https://www.goodreads.com/book/show/540107.Lullaby"
+      },
+      {
+        "title": "Men of Tomorrow: Geeks, Gangsters, and the Birth of the Comic Book",
+        "author": "Jones, Gerard",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2003",
+        "link": "https://www.goodreads.com/book/show/105398.Men_of_Tomorrow"
+      },
+      {
+        "title": "Kill Two Birds & Get Stoned",
+        "author": "Friedman, Kinky",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Oct 2003",
+        "link": "https://www.goodreads.com/book/show/994275.Kill_Two_Birds_Get_Stoned"
+      },
+      {
+        "title": "The Fortress of Solitude: A Novel",
+        "author": "Lethem, Jonathan",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2003",
+        "link": "https://www.goodreads.com/book/show/262065.The_Fortress_of_Solitude"
+      },
+      {
+        "title": "I Bought Andy Warhol",
+        "author": "Polsky, Richard",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Sep 2003",
+        "link": "https://www.goodreads.com/book/show/1566339.I_Bought_Andy_Warhol"
+      },
+      {
+        "title": "A Short History of Nearly Everything",
+        "author": "Bryson, Bill",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Sep 2003",
+        "link": "https://www.goodreads.com/book/show/21.A_Short_History_of_Nearly_Everything"
+      },
+      {
+        "title": "The Perfect Store: Inside eBay",
+        "author": "Cohen, Adam",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Aug 2003",
+        "link": "https://www.goodreads.com/book/show/324739.The_Perfect_Store"
+      },
+      {
+        "title": "Color: A Natural History of the Palette",
+        "author": "Finlay, Victoria",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Aug 2003",
+        "link": "https://www.goodreads.com/book/show/19596.Color"
+      },
+      {
+        "title": "The Culture of Fear: Why Americans Are Afraid of the Wrong Things",
+        "author": "Glassner, Barry",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Aug 2003",
+        "link": "https://www.goodreads.com/book/show/41231.The_Culture_of_Fear"
+      },
+      {
+        "title": "Middlesex",
+        "author": "Eugenides, Jeffrey",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 2003",
+        "link": "https://www.goodreads.com/book/show/27500.Middlesex"
+      },
+      {
+        "title": "Benjamin Franklin: An American Life",
+        "author": "Isaacson, Walter",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2003",
+        "link": "https://www.goodreads.com/book/show/10883.Benjamin_Franklin"
+      },
+      {
+        "title": "Cosmopolis",
+        "author": "DeLillo, Don",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2003",
+        "link": "https://www.goodreads.com/book/show/936990.Cosmopolis"
+      },
+      {
+        "title": "Pearl Jam: Place/Date",
+        "author": "Peterson, Charles",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 2003",
+        "link": "https://www.goodreads.com/book/show/430353.Pearl_Jam"
+      },
+      {
+        "title": "Choke",
+        "author": "Palahniuk, Chuck",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "May 2003",
+        "link": "https://www.goodreads.com/book/show/87750.Choke"
+      },
+      {
+        "title": "Vanity of Duluoz: An Adventurous Education, 1935-46",
+        "author": "Kerouac, Jack",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 2003",
+        "link": "https://www.goodreads.com/book/show/57902.Vanity_of_Duluoz"
+      },
+      {
+        "title": "Them: Adventures with Extremists",
+        "author": "Ronson, Jon",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Apr 2003",
+        "link": "https://www.goodreads.com/book/show/1823.Them"
+      },
+      {
+        "title": "Faster: The Acceleration of Just About Everything",
+        "author": "Gleick, James",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2003",
+        "link": "https://www.goodreads.com/book/show/198308.Faster"
+      },
+      {
+        "title": "The Body Artist",
+        "author": "DeLillo, Don",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 2003",
+        "link": "https://www.goodreads.com/book/show/575020.The_Body_Artist"
+      },
+      {
+        "title": "Live from New York: An Uncensored History of Saturday Night Live",
+        "author": "Shales, Tom",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2003",
+        "link": "https://www.goodreads.com/book/show/55095.Live_from_New_York"
+      },
+      {
+        "title": "John Adams",
+        "author": "McCullough, David",
+        "coverImage": "",
+        "rating": "amazing",
+        "dateRead": "Mar 2003",
+        "link": "https://www.goodreads.com/book/show/2203.John_Adams"
+      },
+      {
+        "title": "City",
+        "author": "Baricco, Alessandro",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 2003",
+        "link": "https://www.goodreads.com/book/show/860291.City"
+      },
+      {
+        "title": "Tomorrow Now: Envisioning the Next 50 Years",
+        "author": "Sterling, Bruce",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2003",
+        "link": "https://www.goodreads.com/book/show/218567.Tomorrow_Now"
+      },
+      {
+        "title": "To America: Personal Reflections of an Historian",
+        "author": "Ambrose, Stephen E.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2003",
+        "link": "https://www.goodreads.com/book/show/103217.To_America"
+      },
+      {
+        "title": "Till We Have Faces",
+        "author": "Lewis, C.S.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2003",
+        "link": "https://www.goodreads.com/book/show/17343.Till_We_Have_Faces"
+      },
+      {
+        "title": "Worth the Fighting For",
+        "author": "McCain, John",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 2002",
+        "link": "https://www.goodreads.com/book/show/7941982-worth-the-fighting-for"
+      },
+      {
+        "title": "Design Literacy: Understanding Graphic Design",
+        "author": "Heller, Steven; Pomeroy",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Aug 2002",
+        "link": "https://www.goodreads.com/book/show/821009.Design_Literacy"
+      },
+      {
+        "title": "A People's History of the United States: 1492-Present",
+        "author": "Zinn, Howard",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 2002",
+        "link": "https://www.goodreads.com/book/show/637409.A_People_s_History_of_the_United_States"
+      },
+      {
+        "title": "Lincoln",
+        "author": "Vidal, Gore",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jun 2002",
+        "link": "https://www.goodreads.com/book/show/1149181.Lincoln"
+      },
+      {
+        "title": "Crashing the Party: Taking on the Corporate Government in an Age of Surrender",
+        "author": "Nader, Ralph",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2002",
+        "link": "https://www.goodreads.com/book/show/82667.Crashing_the_Party"
+      },
+      {
+        "title": "Three to See the King",
+        "author": "Mills, Magnus",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2002",
+        "link": "https://www.goodreads.com/book/show/325603.Three_to_See_the_King"
+      },
+      {
+        "title": "Courbet",
+        "author": "Rubin, James Henry",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Feb 2002",
+        "link": "https://www.goodreads.com/book/show/1455738.Courbet"
+      },
+      {
+        "title": "The Naked and the Dead",
+        "author": "Mailer, Norman",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2002",
+        "link": "https://www.goodreads.com/book/show/853460.The_Naked_and_the_Dead"
+      },
+      {
+        "title": "Memoirs of a Geisha",
+        "author": "Golden, Arthur",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2001",
+        "link": "https://www.goodreads.com/book/show/847085.Memoirs_of_a_Geisha"
+      },
+      {
+        "title": "Twin Towers:: The Life of New York City's Trade Center",
+        "author": "Gillespie, Angus Kress",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Sep 2001",
+        "link": "https://www.goodreads.com/book/show/386328.Twin_Towers"
+      },
+      {
+        "title": "Eisenhower",
+        "author": "Perrett, Geoffrey",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 2001",
+        "link": "https://www.goodreads.com/book/show/42538.Eisenhower"
+      },
+      {
+        "title": "The Count of Monte Cristo",
+        "author": "Dumas, Alexandre",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jun 2001",
+        "link": "https://www.goodreads.com/book/show/732063.The_Count_of_Monte_Cristo"
+      },
+      {
+        "title": "The Catcher in the Rye",
+        "author": "Salinger, J.D.",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Jun 2001",
+        "link": "https://www.goodreads.com/book/show/5107.The_Catcher_in_the_Rye"
+      },
+      {
+        "title": "Players",
+        "author": "DeLillo, Don",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "May 2001",
+        "link": "https://www.goodreads.com/book/show/6821329-players"
+      },
+      {
+        "title": "Bright lights, big city",
+        "author": "McInerney, Jay",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Nov 2000",
+        "link": "https://www.goodreads.com/book/show/20342830-bright-lights-big-city"
+      },
+      {
+        "title": "Roads : Driving America's Great Highways",
+        "author": "McMurtry, Larry",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 2000",
+        "link": "https://www.goodreads.com/book/show/2537332.Roads_"
+      },
+      {
+        "title": "Metamorphoses",
+        "author": "Ovid",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 2000",
+        "link": "https://www.goodreads.com/book/show/31817639-metamorphoses"
+      },
+      {
+        "title": "The Oregon Trail",
+        "author": "Weiser, Norman",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 2000",
+        "link": "https://www.goodreads.com/book/show/12005038-the-oregon-trail"
+      },
+      {
+        "title": "A Midsummer Nights Dream",
+        "author": "Shakespeare, William",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Sep 2000",
+        "link": "https://www.goodreads.com/book/show/4996951-a-midsummer-nights-dream"
+      },
+      {
+        "title": "Expansion of Everyday Life, 1860-1876",
+        "author": "Sutherland, Daniel E.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 2000",
+        "link": "https://www.goodreads.com/book/show/151251.Expansion_of_Everyday_Life_1860_1876"
+      },
+      {
+        "title": "The Pig War: Standoff at Griffin Bay",
+        "author": "Vouri, Michael",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 2000",
+        "link": "https://www.goodreads.com/book/show/1263951.The_Pig_War"
+      },
+      {
+        "title": "The Pinball Effect: How Renaissance Water Gardens Made The Carburetor Possible - and Other Journeys Through Knowledge",
+        "author": "Burke, James",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2000",
+        "link": "https://www.goodreads.com/book/show/55026.The_Pinball_Effect"
+      },
+      {
+        "title": "In the Beauty of the Lilies",
+        "author": "Updike, John",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jun 2000",
+        "link": "https://www.goodreads.com/book/show/492778.In_the_Beauty_of_the_Lilies"
+      },
+      {
+        "title": "Just Looking: Essays on Art",
+        "author": "Updike, John",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 2000",
+        "link": "https://www.goodreads.com/book/show/1047634.Just_Looking"
+      },
+      {
+        "title": "Come As You Are: The Story of Nirvana",
+        "author": "Azerrad, Michael",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Apr 2000",
+        "link": "https://www.goodreads.com/book/show/104961.Come_As_You_Are"
+      },
+      {
+        "title": "The Cinema of Stanley Kubrick",
+        "author": "Kagan, Norman",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 2000",
+        "link": "https://www.goodreads.com/book/show/486391.The_Cinema_of_Stanley_Kubrick"
+      },
+      {
+        "title": "Path of the Kabbalah",
+        "author": "Sheinkin, David",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Apr 2000",
+        "link": "https://www.goodreads.com/book/show/1241875.Path_of_the_Kabbalah"
+      },
+      {
+        "title": "The Fifth Child",
+        "author": "Lessing, Doris",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Apr 2000",
+        "link": "https://www.goodreads.com/book/show/546644.The_Fifth_Child"
+      },
+      {
+        "title": "Looking for Mo",
+        "author": "Duane, Daniel",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2000",
+        "link": "https://www.goodreads.com/book/show/6470409-looking-for-mo"
+      },
+      {
+        "title": "The Virgin Suicides",
+        "author": "Eugenides, Jeffrey",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 2000",
+        "link": "https://www.goodreads.com/book/show/851751.The_Virgin_Suicides"
+      },
+      {
+        "title": "Cold Mountain",
+        "author": "Frazier, Charles",
+        "coverImage": "",
+        "rating": "amazing",
+        "dateRead": "Mar 2000",
+        "link": "https://www.goodreads.com/book/show/10920.Cold_Mountain"
+      },
+      {
+        "title": "Still Life with Woodpecker",
+        "author": "Robbins, Tom",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 2000",
+        "link": "https://www.goodreads.com/book/show/9566.Still_Life_with_Woodpecker"
+      },
+      {
+        "title": "All Quiet On the Orient Express",
+        "author": "Mills, Magnus",
+        "coverImage": "",
+        "rating": "amazing",
+        "dateRead": "Feb 2000",
+        "link": "https://www.goodreads.com/book/show/1011670.All_Quiet_On_the_Orient_Express"
+      },
+      {
+        "title": "Ishmael",
+        "author": "Quinn, Daniel",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2000",
+        "link": "https://www.goodreads.com/book/show/19910622-ishmael"
+      },
+      {
+        "title": "Filth",
+        "author": "Welsh, Irvine",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 2000",
+        "link": "https://www.goodreads.com/book/show/23966.Filth"
+      },
+      {
+        "title": "Five Against One",
+        "author": "Neely, Kim",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Feb 2000",
+        "link": "https://www.goodreads.com/book/show/1243778.Five_Against_One"
+      },
+      {
+        "title": "The Restraint of Beasts",
+        "author": "Mills, Magnus",
+        "coverImage": "",
+        "rating": "amazing",
+        "dateRead": "Feb 2000",
+        "link": "https://www.goodreads.com/book/show/11798130-the-restraint-of-beasts"
+      },
+      {
+        "title": "Art Nouveau",
+        "author": "Escritt, Stephen",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Feb 2000",
+        "link": "https://www.goodreads.com/book/show/1813760.Art_Nouveau"
+      },
+      {
+        "title": "Social Studies",
+        "author": "Lebowitz, Fran",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jan 2000",
+        "link": "https://www.goodreads.com/book/show/55364.Social_Studies"
+      },
+      {
+        "title": "Anthem",
+        "author": "Rand, Ayn",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jan 2000",
+        "link": "https://www.goodreads.com/book/show/667.Anthem"
+      },
+      {
+        "title": "Calendar: Humanity's Epic Struggle to Determine a True and Accurate Year",
+        "author": "Duncan, David Ewing",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 2000",
+        "link": "https://www.goodreads.com/book/show/305458.Calendar"
+      },
+      {
+        "title": "The Magus",
+        "author": "Fowles, John",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 1999",
+        "link": "https://www.goodreads.com/book/show/939870.The_Magus"
+      },
+      {
+        "title": "Questioning the Millennium: A Rationalist's Guide to a Precisely Arbitrary Countdown",
+        "author": "Gould, Stephen Jay",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 1999",
+        "link": "https://www.goodreads.com/book/show/849908.Questioning_the_Millennium"
+      },
+      {
+        "title": "253",
+        "author": "Ryman, Geoff",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Oct 1999",
+        "link": "https://www.goodreads.com/book/show/87748.253"
+      },
+      {
+        "title": "The Story of Art",
+        "author": "Gombrich, E.H.",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 1999",
+        "link": "https://www.goodreads.com/book/show/222078.The_Story_of_Art"
+      },
+      {
+        "title": "Dutch: A Memoir of Ronald Reagan",
+        "author": "Morris, Edmund",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 1999",
+        "link": "https://www.goodreads.com/book/show/1000516.Dutch"
+      },
+      {
+        "title": "The Sea-Wolf",
+        "author": "London, Jack",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 1999",
+        "link": "https://www.goodreads.com/book/show/7479065-the-sea-wolf"
+      },
+      {
+        "title": "A Confederacy of Dunces",
+        "author": "Toole, John Kennedy",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Aug 1999",
+        "link": "https://www.goodreads.com/book/show/310612.A_Confederacy_of_Dunces"
+      },
+      {
+        "title": "The Neon Bible: A Novel",
+        "author": "Toole, John Kennedy",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Aug 1999",
+        "link": "https://www.goodreads.com/book/show/905534.The_Neon_Bible"
+      },
+      {
+        "title": "The Inferno of Dante: A New Verse Translation",
+        "author": "Dante Alighieri",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jul 1999",
+        "link": "https://www.goodreads.com/book/show/1082149.The_Inferno_of_Dante"
+      },
+      {
+        "title": "Toward the End of Time",
+        "author": "Updike, John",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 1999",
+        "link": "https://www.goodreads.com/book/show/760653.Toward_the_End_of_Time"
+      },
+      {
+        "title": "Star Wars Episode I: The Phantom Menace",
+        "author": "Brooks, Terry",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "May 1999",
+        "link": "https://www.goodreads.com/book/show/7718476-star-wars-episode-i"
+      },
+      {
+        "title": "Impressionism",
+        "author": "Rubin, James H",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 1999",
+        "link": "https://www.goodreads.com/book/show/185275.Impressionism"
+      },
+      {
+        "title": "A Piece of My Heart",
+        "author": "Ford, Richard",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 1999",
+        "link": "https://www.goodreads.com/book/show/19384144-a-piece-of-my-heart"
+      },
+      {
+        "title": "Europe: A History",
+        "author": "Davies, Norman",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 1999",
+        "link": "https://www.goodreads.com/book/show/2442386.Europe"
+      },
+      {
+        "title": "The Crystal World - Crash - Concrete Island",
+        "author": "Ballard, J.G.",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 1999",
+        "link": "https://www.goodreads.com/book/show/7061948-the-crystal-world---crash---concrete-island"
+      },
+      {
+        "title": "Vox",
+        "author": "Baker, Nicholson",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Feb 1999",
+        "link": "https://www.goodreads.com/book/show/21806087-vox"
+      },
+      {
+        "title": "Their Eyes Were Watching God",
+        "author": "Hurston, Zora Neale",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 1999",
+        "link": "https://www.goodreads.com/book/show/77212.Their_Eyes_Were_Watching_God"
+      },
+      {
+        "title": "Greek Art",
+        "author": "Spivey, Nigel",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jan 1999",
+        "link": "https://www.goodreads.com/book/show/1060488.Greek_Art"
+      },
+      {
+        "title": "Early Christian & Byzantine Art",
+        "author": "Lowden, John",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 1999",
+        "link": "https://www.goodreads.com/book/show/1277592.Early_Christian_Byzantine_Art"
+      },
+      {
+        "title": "Neoclassicism",
+        "author": "Irwin, David",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jan 1999",
+        "link": "https://www.goodreads.com/book/show/1465417.Neoclassicism"
+      },
+      {
+        "title": "About a Boy",
+        "author": "Hornby, Nick",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 1999",
+        "link": "https://www.goodreads.com/book/show/525672.About_a_Boy"
+      },
+      {
+        "title": "Conceptual Art",
+        "author": "Godfrey, Tony",
+        "coverImage": "",
+        "rating": "amazing",
+        "dateRead": "Dec 1998",
+        "link": "https://www.goodreads.com/book/show/110478.Conceptual_Art"
+      },
+      {
+        "title": "Dada & Surrealism",
+        "author": "Gale, Matthew",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Dec 1998",
+        "link": "https://www.goodreads.com/book/show/549660.Dada_Surrealism"
+      },
+      {
+        "title": "Moral Calculations: Game Theory, Logic, and Human Frailty\n        (Lecture Notes in Computer Sci.; 1402)",
+        "author": "László, Mérő",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Nov 1998",
+        "link": "https://www.goodreads.com/book/show/134231.Moral_Calculations"
+      },
+      {
+        "title": "Washington, D.C.",
+        "author": "Vidal, Gore",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 1998",
+        "link": "https://www.goodreads.com/book/show/25177578-washington-d-c"
+      },
+      {
+        "title": "Carnival Wolves",
+        "author": "Rock, Peter",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Oct 1998",
+        "link": "https://www.goodreads.com/book/show/373802.Carnival_Wolves"
+      },
+      {
+        "title": "Henderson the Rain King",
+        "author": "Bellow, Saul",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 1998",
+        "link": "https://www.goodreads.com/book/show/19430721-henderson-the-rain-king"
+      },
+      {
+        "title": "The Mystery Roast",
+        "author": "Gadol, Peter",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Sep 1998",
+        "link": "https://www.goodreads.com/book/show/343192.The_Mystery_Roast"
+      },
+      {
+        "title": "American Pastoral\n        (The American Trilogy, #1)",
+        "author": "Roth, Philip",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 1998",
+        "link": "https://www.goodreads.com/book/show/18905693-american-pastoral"
+      },
+      {
+        "title": "Grooming, Gossip, and the Evolution of Language",
+        "author": "Dunbar, Robin I.M.",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jul 1998",
+        "link": "https://www.goodreads.com/book/show/197921.Grooming_Gossip_and_the_Evolution_of_Language"
+      },
+      {
+        "title": "Galápagos",
+        "author": "Vonnegut, Kurt Jr.",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jul 1998",
+        "link": "https://www.goodreads.com/book/show/1018878.Gal_pagos"
+      },
+      {
+        "title": "Franklin: The Autobiography",
+        "author": "Franklin, Benjamin",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 1998",
+        "link": "https://www.goodreads.com/book/show/1499787.Franklin"
+      },
+      {
+        "title": "The Rufus Chronicles",
+        "author": "Gusewelle, C.W.",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 1998",
+        "link": "https://www.goodreads.com/book/show/1080591.The_Rufus_Chronicles"
+      },
+      {
+        "title": "The World According to Garp",
+        "author": "Irving, John",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 1998",
+        "link": "https://www.goodreads.com/book/show/2963835-the-world-according-to-garp"
+      },
+      {
+        "title": "End Zone",
+        "author": "DeLillo, Don",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Dec 1997",
+        "link": "https://www.goodreads.com/book/show/9335462-end-zone"
+      },
+      {
+        "title": "U.S.A.: The 42nd Parallel / 1919 / The Big Money",
+        "author": "Dos Passos, John",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Dec 1997",
+        "link": "https://www.goodreads.com/book/show/261441.U_S_A_"
+      },
+      {
+        "title": "Ecstasy",
+        "author": "Welsh, Irvine",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Oct 1997",
+        "link": "https://www.goodreads.com/book/show/774963.Ecstasy"
+      },
+      {
+        "title": "Underworld",
+        "author": "DeLillo, Don",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 1997",
+        "link": "https://www.goodreads.com/book/show/4266011-underworld"
+      },
+      {
+        "title": "The Underground Man",
+        "author": "Jackson, Mick",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 1997",
+        "link": "https://www.goodreads.com/book/show/3384785-the-underground-man"
+      },
+      {
+        "title": "Women with Men",
+        "author": "Ford, Richard",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 1997",
+        "link": "https://www.goodreads.com/book/show/383008.Women_with_Men"
+      },
+      {
+        "title": "The End of the World News: An Entertainment",
+        "author": "Burgess, Anthony",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 1997",
+        "link": "https://www.goodreads.com/book/show/96576.The_End_of_the_World_News"
+      },
+      {
+        "title": "Nexus\n        (The Rosy Crucifixion, #3)",
+        "author": "Miller, Henry",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jun 1997",
+        "link": "https://www.goodreads.com/book/show/251.Nexus"
+      },
+      {
+        "title": "Independence Day.",
+        "author": "Ford, Richard",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jun 1997",
+        "link": "https://www.goodreads.com/book/show/3162674-independence-day"
+      },
+      {
+        "title": "2001: A Space Odyssey",
+        "author": "Clarke, Arthur C.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 1997",
+        "link": "https://www.goodreads.com/book/show/11745716-2001"
+      },
+      {
+        "title": "2010: Odyssey Two\n        (Space Odyssey, #2)",
+        "author": "Clarke, Arthur C.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 1997",
+        "link": "https://www.goodreads.com/book/show/414967.2010"
+      },
+      {
+        "title": "Mysterious Skin",
+        "author": "Heim, Scott",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 1997",
+        "link": "https://www.goodreads.com/book/show/1256515.Mysterious_Skin"
+      },
+      {
+        "title": "Tarr",
+        "author": "Lewis, Wyndham",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 1997",
+        "link": "https://www.goodreads.com/book/show/256330.Tarr"
+      },
+      {
+        "title": "The Doctor is Sick",
+        "author": "Burgess, Anthony",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 1997",
+        "link": "https://www.goodreads.com/book/show/8820.The_Doctor_is_Sick"
+      },
+      {
+        "title": "The Art of the Novel",
+        "author": "Kundera, Milan",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Mar 1997",
+        "link": "https://www.goodreads.com/book/show/28637.The_Art_of_the_Novel"
+      },
+      {
+        "title": "The Executioner's Song",
+        "author": "Mailer, Norman",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 1997",
+        "link": "https://www.goodreads.com/book/show/1046967.The_Executioner_s_Song"
+      },
+      {
+        "title": "Zen and the Art of Motorcycle Maintenance: An Inquiry into Values",
+        "author": "Pirsig, Robert M.",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Dec 1996",
+        "link": "https://www.goodreads.com/book/show/24363285-zen-and-the-art-of-motorcycle-maintenance"
+      },
+      {
+        "title": "The Book of Laughter and Forgetting",
+        "author": "Kundera, Milan",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 1996",
+        "link": "https://www.goodreads.com/book/show/825330.The_Book_of_Laughter_and_Forgetting"
+      },
+      {
+        "title": "The Bell Jar",
+        "author": "Plath, Sylvia",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 1996",
+        "link": "https://www.goodreads.com/book/show/839103.The_Bell_Jar"
+      },
+      {
+        "title": "Marabou Stork Nightmares",
+        "author": "Welsh, Irvine",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "May 1996",
+        "link": "https://www.goodreads.com/book/show/14320695-marabou-stork-nightmares"
+      },
+      {
+        "title": "The Satanic Verses",
+        "author": "Rushdie, Salman",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Apr 1996",
+        "link": "https://www.goodreads.com/book/show/10376116-the-satanic-verses"
+      },
+      {
+        "title": "William Faulkner: The Man and the Artist: A Biography",
+        "author": "Oates, Stephen B.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 1996",
+        "link": "https://www.goodreads.com/book/show/1004137.William_Faulkner"
+      },
+      {
+        "title": "An American Tragedy",
+        "author": "Dreiser, Theodore",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Apr 1996",
+        "link": "https://www.goodreads.com/book/show/6545726-an-american-tragedy"
+      },
+      {
+        "title": "Go",
+        "author": "Holmes, John Clellon",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Feb 1996",
+        "link": "https://www.goodreads.com/book/show/4682476-go"
+      },
+      {
+        "title": "The Beautiful and Damned",
+        "author": "Fitzgerald, F. Scott",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 1996",
+        "link": "https://www.goodreads.com/book/show/46166.The_Beautiful_and_Damned"
+      },
+      {
+        "title": "Demon box",
+        "author": "Kesey, Ken",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Feb 1996",
+        "link": "https://www.goodreads.com/book/show/92320.Demon_box"
+      },
+      {
+        "title": "Son of the Wilderness: The Life of John Muir",
+        "author": "Wolfe, Linnie Marsh",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 1996",
+        "link": "https://www.goodreads.com/book/show/238731.Son_of_the_Wilderness"
+      },
+      {
+        "title": "Sometimes a Great Notion",
+        "author": "Kesey, Ken",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Sep 1995",
+        "link": "https://www.goodreads.com/book/show/7792861-sometimes-a-great-notion"
+      },
+      {
+        "title": "Plexus",
+        "author": "Miller, Henry",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Aug 1995",
+        "link": "https://www.goodreads.com/book/show/25285343-plexus"
+      },
+      {
+        "title": "Interview with the Vampire\n        (The Vampire Chronicles, #1)",
+        "author": "Rice, Anne",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Jul 1995",
+        "link": "https://www.goodreads.com/book/show/529895.Interview_with_the_Vampire"
+      },
+      {
+        "title": "Watership Down\n        (Watership Down, #1)",
+        "author": "Adams, Richard",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 1995",
+        "link": "https://www.goodreads.com/book/show/76620.Watership_Down"
+      },
+      {
+        "title": "Moby Dick",
+        "author": "Melville, Herman",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 1995",
+        "link": "https://www.goodreads.com/book/show/383808.Moby_Dick"
+      },
+      {
+        "title": "The Gap",
+        "author": "Lorber, Richard",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 1995",
+        "link": "https://www.goodreads.com/book/show/36255080-the-gap"
+      },
+      {
+        "title": "'Round About Midnight: A Portrait of Miles Davis",
+        "author": "Nisenson, Eric",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jun 1995",
+        "link": "https://www.goodreads.com/book/show/95167._Round_About_Midnight"
+      },
+      {
+        "title": "Kerouac: A biography",
+        "author": "Charters, Ann",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jun 1995",
+        "link": "https://www.goodreads.com/book/show/2223318.Kerouac"
+      },
+      {
+        "title": "The Celestine Prophecy\n        (Celestine Prophecy, #1)",
+        "author": "Redfield, James",
+        "coverImage": "",
+        "rating": "1",
+        "dateRead": "Jan 1995",
+        "link": "https://www.goodreads.com/book/show/13103.The_Celestine_Prophecy"
+      },
+      {
+        "title": "Elmer Gantry",
+        "author": "Lewis, Sinclair",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Nov 1994",
+        "link": "https://www.goodreads.com/book/show/9852569-elmer-gantry"
+      },
+      {
+        "title": "Keep the Aspidistra Flying",
+        "author": "Orwell, George",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Sep 1994",
+        "link": "https://www.goodreads.com/book/show/35240343-keep-the-aspidistra-flying"
+      },
+      {
+        "title": "The Physics of Immortality",
+        "author": "Tipler, Frank J.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jul 1994",
+        "link": "https://www.goodreads.com/book/show/1026649.The_Physics_of_Immortality"
+      },
+      {
+        "title": "Madame Bovary",
+        "author": "Flaubert, Gustave",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 1994",
+        "link": "https://www.goodreads.com/book/show/13457049-madame-bovary"
+      },
+      {
+        "title": "Crime and Punishment",
+        "author": "Dostoevsky, Fyodor",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "May 1994",
+        "link": "https://www.goodreads.com/book/show/7532828-crime-and-punishment"
+      },
+      {
+        "title": "The Joke",
+        "author": "Kundera, Milan",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 1994",
+        "link": "https://www.goodreads.com/book/show/678996.The_Joke"
+      },
+      {
+        "title": "The Tin Drum",
+        "author": "Grass, Günter",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Feb 1994",
+        "link": "https://www.goodreads.com/book/show/35743.The_Tin_Drum"
+      },
+      {
+        "title": "Pnin",
+        "author": "Nabokov, Vladimir",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jan 1994",
+        "link": "https://www.goodreads.com/book/show/1576662.Pnin"
+      },
+      {
+        "title": "Life Is Elsewhere",
+        "author": "Kundera, Milan",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 1993",
+        "link": "https://www.goodreads.com/book/show/920141.Life_Is_Elsewhere"
+      },
+      {
+        "title": "White Noise",
+        "author": "DeLillo, Don",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 1993",
+        "link": "https://www.goodreads.com/book/show/118008.White_Noise"
+      },
+      {
+        "title": "Nausea",
+        "author": "Sartre, Jean-Paul",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Oct 1993",
+        "link": "https://www.goodreads.com/book/show/285382.Nausea"
+      },
+      {
+        "title": "Lolita",
+        "author": "Nabokov, Vladimir",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 30, 1993",
+        "link": "https://www.goodreads.com/book/show/8599554-lolita"
+      },
+      {
+        "title": "Don Quixote",
+        "author": "Acker, Kathy",
+        "coverImage": "",
+        "rating": "1",
+        "dateRead": "Sep 1993",
+        "link": "https://www.goodreads.com/book/show/141358.Don_Quixote"
+      },
+      {
+        "title": "Sailor Song",
+        "author": "Kesey, Ken",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 31, 1993",
+        "link": "https://www.goodreads.com/book/show/32915.Sailor_Song"
+      },
+      {
+        "title": "The More Than Complete Hitchhiker's Guide\n        (Hitchhiker's Guide, #1-4 + short story)",
+        "author": "Adams, Douglas",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Jul 1993",
+        "link": "https://www.goodreads.com/book/show/33342.The_More_Than_Complete_Hitchhiker_s_Guide"
+      },
+      {
+        "title": "The Thief of Always",
+        "author": "Barker, Clive",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Jun 04, 1993",
+        "link": "https://www.goodreads.com/book/show/32638.The_Thief_of_Always"
+      },
+      {
+        "title": "Jurassic Park",
+        "author": "Crichton, Michael",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "May 26, 1993",
+        "link": "https://www.goodreads.com/book/show/37131.Jurassic_Park"
+      },
+      {
+        "title": "Holy Bible; New King James Version",
+        "author": "Anonymous",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "May 1993",
+        "link": "https://www.goodreads.com/book/show/2814590-holy-bible-new-king-james-version"
+      },
+      {
+        "title": "Tender Is the Night",
+        "author": "Fitzgerald, F. Scott",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 30, 1993",
+        "link": "https://www.goodreads.com/book/show/13453258-tender-is-the-night"
+      },
+      {
+        "title": "Brightness Falls",
+        "author": "McInerney, Jay",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Apr 20, 1993",
+        "link": "https://www.goodreads.com/book/show/86717.Brightness_Falls"
+      },
+      {
+        "title": "My Antonia",
+        "author": "Cather, Willa",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Mar 1993",
+        "link": "https://www.goodreads.com/book/show/632464.My_Antonia"
+      },
+      {
+        "title": "The Wild Palms",
+        "author": "Faulkner, William",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Mar 1993",
+        "link": "https://www.goodreads.com/book/show/12470732-the-wild-palms"
+      },
+      {
+        "title": "William Dean Howells: Novels 1875-1886",
+        "author": "Howells, William Dean",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Feb 1993",
+        "link": "https://www.goodreads.com/book/show/690981.William_Dean_Howells"
+      },
+      {
+        "title": "Women",
+        "author": "Bukowski, Charles",
+        "coverImage": "",
+        "rating": "Not rated",
+        "dateRead": "Jan 1993",
+        "link": "https://www.goodreads.com/book/show/644029.Women"
+      },
+      {
+        "title": "As I Lay Dying",
+        "author": "Faulkner, William",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Dec 1992",
+        "link": "https://www.goodreads.com/book/show/19075620-as-i-lay-dying"
+      },
+      {
+        "title": "Frankenstein",
+        "author": "Shelley, Mary",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Nov 1992",
+        "link": "https://www.goodreads.com/book/show/18490.Frankenstein"
+      },
+      {
+        "title": "On the Road",
+        "author": "Kerouac, Jack",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Nov 1992",
+        "link": "https://www.goodreads.com/book/show/315233.On_the_Road"
+      },
+      {
+        "title": "A Clockwork Orange",
+        "author": "Burgess, Anthony",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Oct 26, 1992",
+        "link": "https://www.goodreads.com/book/show/22015051-a-clockwork-orange"
+      },
+      {
+        "title": "Wide Sargasso Sea",
+        "author": "Rhys, Jean",
+        "coverImage": "",
+        "rating": "1",
+        "dateRead": "Oct 1992",
+        "link": "https://www.goodreads.com/book/show/889024.Wide_Sargasso_Sea"
+      },
+      {
+        "title": "Dubliners",
+        "author": "Joyce, James",
+        "coverImage": "",
+        "rating": "ok",
+        "dateRead": "Oct 1992",
+        "link": "https://www.goodreads.com/book/show/321594.Dubliners"
+      },
+      {
+        "title": "Blade Runner",
+        "author": "Dick, Philip K.",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Sep 16, 1992",
+        "link": "https://www.goodreads.com/book/show/894352.Blade_Runner"
+      },
+      {
+        "title": "Sexus",
+        "author": "Miller, Henry",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Sep 1992",
+        "link": "https://www.goodreads.com/book/show/304378.Sexus"
+      },
+      {
+        "title": "The Dharma Bums",
+        "author": "Kerouac, Jack",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "May 15, 1992",
+        "link": "https://www.goodreads.com/book/show/17853779-the-dharma-bums"
+      },
+      {
+        "title": "Dead Certainties: Unwarranted Speculations",
+        "author": "Schama, Simon",
+        "coverImage": "",
+        "rating": "3",
+        "dateRead": "Apr 05, 1992",
+        "link": "https://www.goodreads.com/book/show/929541.Dead_Certainties"
+      },
+      {
+        "title": "Look Homeward: A Life of Thomas Wolfe",
+        "author": "Donald, David Herbert",
+        "coverImage": "",
+        "rating": "4",
+        "dateRead": "Feb 14, 1992",
+        "link": "https://www.goodreads.com/book/show/482561.Look_Homeward"
+      }
+    ],
+    "stats": {
+      "totalBooks": 467,
+      "pagesProcessed": 24
+    }
+  },
+  "timestamp": 1749595661024
+}

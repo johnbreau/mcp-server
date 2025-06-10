@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { 
   Container, 
   Title, 
@@ -13,15 +13,21 @@ import {
   Box,
   Badge,
   TextInput,
-  useMantineTheme,
-  useMantineColorScheme,
-  Flex,
   Paper,
-  Anchor,
   Pagination,
-  Select
+  Select,
+  Flex,
+  Anchor
 } from '@mantine/core';
-import { IconBook, IconAlertCircle, IconRefresh, IconSearch, IconExternalLink, IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
+import { 
+  IconBook, 
+  IconAlertCircle, 
+  IconRefresh, 
+  IconSearch, 
+  IconExternalLink,
+  IconChevronLeft,
+  IconChevronRight 
+} from '@tabler/icons-react';
 
 interface Book {
   title: string;
@@ -47,8 +53,7 @@ interface ApiResponse {
 const ITEMS_PER_PAGE = 20;
 
 export default function BooksPage() {
-  const theme = useMantineTheme();
-  const { colorScheme } = useMantineColorScheme();
+  // State management
   const [books, setBooks] = useState<Book[]>([]);
   const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState(true);
@@ -57,32 +62,102 @@ export default function BooksPage() {
   const [sortBy, setSortBy] = useState<'dateRead' | 'title' | 'author' | 'rating'>('dateRead');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [activePage, setActivePage] = useState(1);
-
-  const fetchBooks = async () => {
+  
+  // Function to fetch books with optional cache busting
+  const fetchBooks = useCallback(async (bustCache: boolean = false): Promise<void> => {
     setLoading(true);
     setError(null);
     
     try {
-      const response = await fetch('/api/books/read');
+      // Use the full backend URL for development
+      const url = new URL('http://localhost:3000/api/books/read');
+      if (bustCache) {
+        url.searchParams.append('bustCache', 'true');
+      }
+      const response = await fetch(url.toString());
       const data: ApiResponse = await response.json();
       
       if (!response.ok) {
         throw new Error(data.error || 'Failed to load books');
       }
       
-      // The API now returns { success: true, books: Book[], stats: { totalBooks, pagesProcessed } }
-      const booksData = Array.isArray(data) ? data : (data.books || []);
-      console.log(`Loaded ${booksData.length} books from API`, data.fromCache ? '(from cache)' : '(fresh data)');
+      // Process the books data
+      const booksData = (data.books || []).map(book => {
+        // Clean up the rating - handle both string and number ratings
+        let ratingValue = 0;
+        const rating = book.rating as string | number; // Type assertion to handle union type
+        if (typeof rating === 'number') {
+          ratingValue = rating;
+        } else if (typeof rating === 'string') {
+          // Try to extract numeric rating from string
+          const numMatch = rating.match(/([0-9.]+)/);
+          if (numMatch) {
+            ratingValue = parseFloat(numMatch[1]);
+          }
+        }
+        
+        // Clean up the date
+        let cleanDate = book.dateRead;
+        if (typeof cleanDate === 'string') {
+          cleanDate = cleanDate.replace(/^date read\s*[\n\s]*/i, '').trim();
+        }
+        
+        return {
+          ...book,
+          rating: ratingValue,
+          dateRead: cleanDate
+        };
+      });
       
-      setBooks(booksData);
-      setFilteredBooks(booksData);
+      console.log(`Loaded ${booksData.length} books from API`, data.fromCache ? '(from cache)' : '(fresh data)');
+      console.log('Sample book:', booksData[0]);
+      
+      // Remove duplicates by title and author
+      const uniqueBooks = Array.from(new Map(
+        booksData.map(book => [`${book.title}-${book.author}`, book])
+      ).values());
+      
+      if (uniqueBooks.length !== booksData.length) {
+        console.log(`Removed ${booksData.length - uniqueBooks.length} duplicate books`);
+      }
+      
+      setBooks(uniqueBooks);
+      setFilteredBooks(uniqueBooks);
     } catch (err) {
       console.error('Error fetching books:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
+
+  // Wrapper function for the refresh button to handle the event properly
+  const handleRefreshClick = useCallback(() => {
+    fetchBooks(true).catch(console.error);
+  }, [fetchBooks]);
+  
+  // Alias for backward compatibility - using type assertion to satisfy TypeScript
+  const handleRefresh = handleRefreshClick as unknown as React.MouseEventHandler<HTMLButtonElement>;
+  
+  // Pagination styles with proper typing
+  const paginationStyles = {
+    root: {
+      justifyContent: 'center',
+    },
+    control: {
+      '&[data-active]': {
+        backgroundColor: 'var(--mantine-color-blue-6)',
+        color: 'white',
+        '&:hover': {
+          backgroundColor: 'var(--mantine-color-blue-7)'
+        }
+      },
+      '&:not([data-disabled]):hover': {
+        backgroundColor: 'var(--mantine-color-gray-1)',
+        color: 'black',
+      }
+    }
+  } as const;
 
   // Filter and sort books based on search query and sort options
   useEffect(() => {
@@ -124,16 +199,19 @@ export default function BooksPage() {
     setActivePage(1); // Reset to first page when filters change
   }, [searchQuery, books, sortBy, sortOrder]);
   
+  // Initial data fetch
+  useEffect(() => {
+    fetchBooks();
+  }, [fetchBooks]);
+  
   // Calculate pagination
   const totalPages = Math.ceil(filteredBooks.length / ITEMS_PER_PAGE);
   const paginatedBooks = filteredBooks.slice(
     (activePage - 1) * ITEMS_PER_PAGE,
     activePage * ITEMS_PER_PAGE
   );
+  
 
-  useEffect(() => {
-    fetchBooks();
-  }, []);
 
   if (loading && books.length === 0) {
     return (
@@ -156,7 +234,7 @@ export default function BooksPage() {
           </Group>
           <Button 
             leftSection={<IconRefresh size={16} />} 
-            onClick={fetchBooks}
+            onClick={handleRefresh}
             loading={loading}
             variant="outline"
           >
@@ -241,10 +319,10 @@ export default function BooksPage() {
           </Text>
           <Button 
             leftSection={<IconRefresh size={16} />} 
-            onClick={fetchBooks}
+            onClick={handleRefreshClick}
             loading={loading}
           >
-            Try again
+            Refresh Data
           </Button>
         </Box>
       ) : (
@@ -269,8 +347,8 @@ export default function BooksPage() {
                     flex: '0 0 80px',
                     width: '80px',
                     height: '120px',
-                    backgroundColor: colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1],
-                    borderRadius: theme.radius.sm,
+                    backgroundColor: 'var(--mantine-color-dark-6)',
+                    borderRadius: 'var(--mantine-radius-sm)',
                     overflow: 'hidden',
                     display: 'flex',
                     alignItems: 'center',
@@ -298,19 +376,68 @@ export default function BooksPage() {
                       </Text>
                     </div>
                     <Group gap="xs">
-                      <Rating value={book.rating} fractions={2} readOnly size="sm" />
-                      <Text size="sm" fw={500}>
-                        {book.rating.toFixed(1)}
-                      </Text>
+                      {(() => {
+                        try {
+                          const ratingValue = typeof book.rating === 'number' 
+                            ? book.rating 
+                            : parseFloat(book.rating as string) || 0;
+                            
+                          if (isNaN(ratingValue) || ratingValue === 0) {
+                            return <Text size="sm" c="dimmed">Not rated</Text>;
+                          }
+                          
+                          return (
+                            <>
+                              <Rating 
+                                value={ratingValue} 
+                                fractions={2} 
+                                readOnly 
+                                size="sm" 
+                              />
+                              <Text size="sm" fw={500}>
+                                {ratingValue.toFixed(1)}
+                              </Text>
+                            </>
+                          );
+                        } catch (error) {
+                          console.error('Error displaying rating:', error, 'for book:', book.title);
+                          return <Text size="sm" c="dimmed">Rating not available</Text>;
+                        }
+                      })()}
                     </Group>
                   </Group>
                   
                   <Text size="sm" c="dimmed">
-                    Read on {new Date(book.dateRead).toLocaleDateString(undefined, {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
+                    {(() => {
+                      if (!book.dateRead || book.dateRead === 'Not specified') {
+                        return 'Date not available';
+                      }
+                      
+                      try {
+                        // First try to parse as a date string
+                        const date = new Date(book.dateRead);
+                        if (!isNaN(date.getTime())) {
+                          return `Read on ${date.toLocaleDateString(undefined, {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}`;
+                        }
+                        
+                        // If that fails, try to extract a date from the string
+                        const dateMatch = book.dateRead.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{1,2},? \d{4}\b/i);
+                        if (dateMatch) {
+                          return `Read on ${dateMatch[0]}`;
+                        }
+                        
+                        // If we have any date-like string, return it as-is
+                        return `Read: ${book.dateRead}`;
+                        
+                      } catch (error) {
+                        console.error('Error formatting date:', error, 'for date:', book.dateRead);
+                        return `Read: ${book.dateRead}`;
+                      }
+                    })()}
                   </Text>
                   
                   <Group gap="xs" mt="auto" justify="space-between">
@@ -354,27 +481,7 @@ export default function BooksPage() {
                     borderRadius: '4px',
                   },
                 })}
-                styles={(theme) => {
-                  const isDark = colorScheme === 'dark';
-                  return {
-                    root: {
-                      justifyContent: 'center',
-                    },
-                    control: {
-                      '&[data-active]': {
-                        backgroundColor: theme.colors.blue[6],
-                        color: 'white',
-                        '&:hover': {
-                          backgroundColor: theme.colors.blue[7]
-                        }
-                      },
-                      '&:not([data-disabled]):hover': {
-                        backgroundColor: isDark ? theme.colors.dark[5] : theme.colors.gray[1],
-                        color: isDark ? 'white' : 'black',
-                      },
-                    },
-                  };
-                }}
+                styles={paginationStyles}
               />
             </Box>
           )}
