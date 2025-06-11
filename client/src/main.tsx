@@ -4,9 +4,13 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { MantineProvider, createTheme } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
+// Import Mantine styles first
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import './index.css';
+
+// Import global styles (SCSS)
+import './styles/global.scss';
 import App from './App';
 
 // Create a simple theme
