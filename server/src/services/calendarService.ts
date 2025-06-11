@@ -43,7 +43,11 @@ class CalendarService {
     const start = formatDateForAppleScript(startDate);
     const end = formatDateForAppleScript(endDate);
     
-    console.log('AppleScript date range:', { start, end });
+    console.log('AppleScript date range:', { 
+      start: startDate.toISOString(), 
+      end: endDate.toISOString(),
+      days: Math.round((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24))
+    });
 
     return `
     -- Helper function to replace text in a string
@@ -88,88 +92,112 @@ class CalendarService {
         tell application "Calendar"
           set output to ""
           set eventCount to 0
+          set maxEvents to 1000 -- Limit total events to prevent timeouts
           
-          -- Get all calendars
-          set allCals to every calendar
-          log "Found " & (count of allCals) & " calendars"
-          
-          -- Limit to main calendars to improve performance
+          -- Get only active calendars to improve performance
           set targetCals to {}
-          repeat with cal in allCals
-            set calName to name of cal
-            if calName is in {"Home", "Work", "Personal", "Family"} then
-              copy cal to end of targetCals
+          try
+            set activeCals to every calendar
+            repeat with cal in activeCals
+              try
+                set calName to name of cal
+                -- Only include calendars that are not hidden and have a name
+                if calName is not missing value and (not (calName starts with "-")) then
+                  copy cal to end of targetCals
+                end if
+              end try
+            end repeat
+            
+            log "Found " & (count of targetCals) & " active calendars"
+            if (count of targetCals) = 0 then
+              set targetCals to activeCals
+              log "Falling back to all calendars"
             end if
-          end repeat
+          on error
+            set targetCals to every calendar
+            log "Error getting active calendars, using all " & (count of targetCals) & " calendars"
+          end try
           
-          if (count of targetCals) is 0 then
-            set targetCals to allCals
-          end if
-          
-          log "Checking " & (count of targetCals) & " calendars..."
-          
-          -- Get events from each calendar
+          -- Process each calendar
           repeat with cal in targetCals
+            if eventCount ≥ maxEvents then exit repeat
+            
             set calName to name of cal
             log "Checking calendar: " & calName
             
             try
-              -- Get events in the specified date range
-              set calEvents to (every event of cal whose \
-                ((start date ≥ startDate and start date ≤ endDate) or \
-                 (end date ≥ startDate and end date ≤ endDate) or \
-                 (start date ≤ startDate and end date ≥ endDate)))
+              -- Get events in the specified date range with a limit
+              set calEvents to (every event of cal where \
+                (start date ≥ startDate and start date ≤ endDate) or \
+                (end date ≥ startDate and end date ≤ endDate) or \
+                (start date ≤ startDate and end date ≥ endDate))
               
-              set eventCountInCal to count of calEvents
+              -- Sort events by start date
+              set sortedEvents to calEvents
+              set eventCountInCal to count of sortedEvents
               log "Found " & eventCountInCal & " events in calendar: " & calName
               
               -- Process each event
-              if eventCountInCal > 0 then
-                repeat with evt in calEvents
+              repeat with evt in sortedEvents
+                if eventCount ≥ maxEvents then exit repeat
+                
+                try
+                  set eventId to id of evt
+                  set eventTitle to summary of evt
+                  set eventStart to start date of evt
+                  set eventEnd to end date of evt
+                  set eventLocation to ""
+                  set eventDescription to ""
+                  
+                  -- Get optional properties with error handling
                   try
-                    set eventId to id of evt
-                    set eventTitle to summary of evt
-                    set eventStart to start date of evt
-                    set eventEnd to end date of evt
-                    set eventLocation to ""
-                    set eventDescription to ""
-                    
-                    -- Safely get optional properties
-                    try
-                      set eventLocation to location of evt
-                    end try
-                    
-                    try
-                      set eventDescription to description of evt
-                    end try
-                    
-                    set isAllDay to allday event of evt
-                    
-                    -- Clean up the data
-                    if eventTitle is missing value then set eventTitle to "(No Title)"
-                    if eventLocation is missing value then set eventLocation to ""
-                    if eventDescription is missing value then set eventDescription to ""
-                    
-                    -- Replace any pipe characters in the data to avoid parsing issues
-                    set eventTitle to my replaceText(eventTitle as text, "|", " - ")
-                    set eventLocation to my replaceText(eventLocation as text, "|", " - ")
-                    set eventDescription to my replaceText(eventDescription as text, "|", " - ")
-                    
-                    -- Format the event data as a pipe-separated string
-                    set eventData to eventId & "|" & eventTitle & "|" & (eventStart as text) & "|" & (eventEnd as text) & "|" & isAllDay & "|" & calName & "|" & eventLocation & "|" & eventDescription
-                    
-                    -- Add to output with a unique delimiter
-                    if length of output > 0 then
-                      set output to output & eventDelimiter
-                    end if
-                    set output to output & eventData
-                    set eventCount to eventCount + 1
-                    
-                  on error errMsg
-                    log ("Error processing event: " & errMsg)
+                    set eventLocation to location of evt
                   end try
-                end repeat
+                  
+                  try
+                    set eventDescription to description of evt
+                  end try
+                  
+                  set isAllDay to allday event of evt
+                  
+                  -- Clean up the data
+                  if eventTitle is missing value then set eventTitle to "(No Title)"
+                  if eventLocation is missing value then set eventLocation to ""
+                  if eventDescription is missing value then set eventDescription to ""
+                  
+                  -- Truncate long text to prevent parsing issues
+                  if (count of eventTitle) > 500 then
+                    set eventTitle to (characters 1 thru 497 of eventTitle as text) & "..."
+                  end if
+                  
+                  if (count of eventLocation) > 100 then
+                    set eventLocation to (characters 1 thru 97 of eventLocation as text) & "..."
+                  end if
+                  
+                  if (count of eventDescription) > 1000 then
+                    set eventDescription to (characters 1 thru 997 of eventDescription as text) & "..."
+                  end if
+                  
+                  -- Format the event data as a pipe-separated string
+                  set eventData to eventId & "|" & eventTitle & "|" & (eventStart as text) & "|" & (eventEnd as text) & "|" & isAllDay & "|" & calName & "|" & eventLocation & "|" & eventDescription
+                  
+                  -- Add to output with a unique delimiter
+                  if length of output > 0 then
+                    set output to output & eventDelimiter
+                  end if
+                  set output to output & eventData
+                  set eventCount to eventCount + 1
+                  
+                on error errMsg
+                  log ("Error processing event: " & errMsg)
+                end try
+              end repeat
+              
+              if eventCount ≥ maxEvents then
+                log "Reached maximum number of events (" & maxEvents & ")"
+                exit repeat
               end if
+              
             on error errMsg
               log ("Error processing calendar " & calName & ": " & errMsg)
             end try
@@ -185,7 +213,7 @@ class CalendarService {
         end tell
         
       on error errMsg
-        set errorMsg to "ERROR: " & errMsg & " " & (get name of (info for (path to me)) as text)
+        set errorMsg to "ERROR: " & errMsg
         log errorMsg
         return errorMsg
       end try

@@ -5,8 +5,9 @@ import { parseISO, isValid } from 'date-fns';
 const router = Router();
 
 // Timeout constants
-const REQUEST_TIMEOUT = 120000; // 2 minutes for the entire request
-const CALENDAR_TIMEOUT = 90000; // 1.5 minutes for calendar operations
+const REQUEST_TIMEOUT = 30000; // 30 seconds for the entire request
+const CALENDAR_TIMEOUT = 25000; // 25 seconds for calendar operations
+const MAX_DAYS_RANGE = 30; // Maximum days to fetch in a single request
 
 // Helper function to safely parse and validate date
 const parseAndValidateDate = (dateStr: unknown, defaultValue: Date): Date => {
@@ -54,23 +55,27 @@ router.get('/events', async (req, res) => {
     res.on('close', cleanup);
     
     // Parse query parameters with defaults
-    const defaultStartDate = new Date();
-    const defaultEndDate = new Date();
+    const now = new Date();
+    const defaultStartDate = new Date(now);
+    const defaultEndDate = new Date(now);
     defaultEndDate.setDate(defaultEndDate.getDate() + 7); // Default to next 7 days
     
-    const startDate = parseAndValidateDate(req.query.start, defaultStartDate);
-    const endDate = parseAndValidateDate(req.query.end, defaultEndDate);
+    let startDate = parseAndValidateDate(req.query.start, defaultStartDate);
+    let endDate = parseAndValidateDate(req.query.end, defaultEndDate);
     
     // Ensure start date is before end date
     if (startDate > endDate) {
-      return sendResponse(400, {
-        success: false,
-        error: 'Invalid date range',
-        details: 'Start date must be before end date',
-        startDate: startDate.toISOString(),
-        endDate: endDate.toISOString(),
-        timestamp: new Date().toISOString()
-      });
+      // If dates are reversed, swap them
+      [startDate, endDate] = [endDate, startDate];
+    }
+    
+    // Limit date range to MAX_DAYS_RANGE days
+    const maxEndDate = new Date(startDate);
+    maxEndDate.setDate(startDate.getDate() + MAX_DAYS_RANGE);
+    
+    if (endDate > maxEndDate) {
+      console.log(`Limiting date range to ${MAX_DAYS_RANGE} days`);
+      endDate = new Date(maxEndDate);
     }
 
     console.log(`Fetching calendar events from ${startDate} to ${endDate}`);
