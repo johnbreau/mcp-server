@@ -223,7 +223,7 @@ export default function CalendarView() {
   return (
     <Container size="lg" py="xl">
       <Paper withBorder p="md" radius="md">
-        <Title order={2} mb="md">Calendar</Title>
+        <Title className="calendarTitleBar" order={2} mb="md">Calendar</Title>
         <Box mt="md">
           <MantineCalendar
             getDayProps={(date) => ({
