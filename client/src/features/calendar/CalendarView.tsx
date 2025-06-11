@@ -1,11 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
-import { format, isSameDay, subMonths, addMonths } from 'date-fns';
+import { format, isSameDay } from 'date-fns';
+import { api } from '../../api/obsidian';
 import { 
   Box, 
   Text, 
   Title, 
-  Button, 
-  Group, 
   Container, 
   Paper, 
   useMantineTheme,
@@ -33,10 +32,12 @@ export default function CalendarView() {
   const { colorScheme } = useMantineColorScheme();
 
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
-  const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
+  const [currentMonth] = useState<Date>(new Date());
   const [events, setEvents] = useState<TimelineItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [journalEntry, setJournalEntry] = useState<{content: string, title: string} | null>(null);
+  const [isJournalLoading, setIsJournalLoading] = useState(false);
 
   // Format time for display
   const formatEventTime = useCallback((date: Date | string): string => {
@@ -49,10 +50,34 @@ export default function CalendarView() {
     }
   }, []);
 
+  // Fetch journal entry for a specific date
+  const fetchJournalEntry = useCallback(async (date: Date) => {
+    setIsJournalLoading(true);
+    try {
+      // Format the date to match Obsidian's daily note format (e.g., 2025-06-11)
+      const dateStr = format(date, 'yyyy-MM-dd');
+      // Use the same API client as the SearchPage
+      const notePath = `04_Journals/${dateStr}.md`;
+      const noteContent = await api.getNote(notePath);
+      
+      setJournalEntry({
+        content: noteContent.content,
+        title: format(date, 'MMMM d, yyyy')
+      });
+    } catch (err) {
+      console.error('Error fetching journal entry:', err);
+      setError('Failed to load journal entry');
+      setJournalEntry(null);
+    } finally {
+      setIsJournalLoading(false);
+    }
+  }, []);
+
   // Handle date selection from the calendar
   const handleDateSelect = useCallback((date: Date) => {
     setSelectedDate(date);
-  }, []);
+    fetchJournalEntry(date);
+  }, [fetchJournalEntry]);
 
   // Handle calendar change event
   const handleCalendarChange = useCallback((date: string | Date | null) => {
@@ -62,14 +87,14 @@ export default function CalendarView() {
     }
   }, []);
 
-  // Navigation handlers
-  const handlePreviousMonth = useCallback(() => {
-    setCurrentMonth(current => subMonths(current, 1));
-  }, []);
+  // Navigation handlers (commented out as they're not currently used)
+  // const handlePreviousMonth = useCallback(() => {
+  //   setCurrentMonth(current => subMonths(current, 1));
+  // }, []);
 
-  const handleNextMonth = useCallback(() => {
-    setCurrentMonth(current => addMonths(current, 1));
-  }, []);
+  // const handleNextMonth = useCallback(() => {
+  //   setCurrentMonth(current => addMonths(current, 1));
+  // }, []);
 
   // Handle date selection
   // const handleDateChange = useCallback((date: Date | null) => {
@@ -200,8 +225,8 @@ export default function CalendarView() {
     });
   }, [events]);
 
-  // Format the month and year for display
-  const monthYear = format(currentMonth, 'MMMM yyyy');
+  // Format the month and year for display (commented out as it's not currently used)
+  // const monthYear = format(currentMonth, 'MMMM yyyy');
 
   // Fetch events when the month changes
   useEffect(() => {
@@ -215,7 +240,19 @@ export default function CalendarView() {
     lastDay.setDate(0);
 
     fetchEvents(firstDay, lastDay);
-  }, [currentMonth, fetchEvents]);
+    
+    // Fetch journal entry for the selected date when month changes
+    if (selectedDate) {
+      fetchJournalEntry(selectedDate);
+    }
+  }, [currentMonth, fetchEvents, selectedDate, fetchJournalEntry]);
+  
+  // Fetch journal entry when component mounts
+  useEffect(() => {
+    if (selectedDate) {
+      fetchJournalEntry(selectedDate);
+    }
+  }, [selectedDate, fetchJournalEntry]);
 
   // Get events for the selected date
   const selectedDateEvents = selectedDate ? getEventsForDate(selectedDate) : [];
@@ -224,7 +261,7 @@ export default function CalendarView() {
     <Container size="lg" py="xl">
       <Paper withBorder p="md" radius="md">
         <Title className="calendarTitleBar" order={2} mb="md">Calendar</Title>
-        <Box mt="md">
+        <Box mt="md" className='calendarBox'>
           <MantineCalendar
             getDayProps={(date) => ({
               onClick: () => handleCalendarChange(date),
@@ -271,6 +308,23 @@ export default function CalendarView() {
               );
             }}
           />
+          <div className="journalEntries" style={{ marginTop: '20px' }}>
+            <Title order={3} mb="md">
+              {selectedDate ? format(selectedDate, 'MMMM d, yyyy') : 'Journal Entry'}
+            </Title>
+            {isJournalLoading ? (
+              <Text>Loading journal entry...</Text>
+            ) : journalEntry ? (
+              <Paper p="md" style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace' }}>
+                <Title order={4} mb="sm">{journalEntry.title}</Title>
+                <div style={{ lineHeight: 1.6 }}>
+                  {journalEntry.content}
+                </div>
+              </Paper>
+            ) : (
+              <Text c="dimmed">No journal entry for this date</Text>
+            )}
+          </div>
         </Box>
 
         {selectedDate && (

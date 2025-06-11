@@ -47,8 +47,11 @@ export interface AnswerResult {
 }
 
 // Create axios instance with base URL
+const isDevelopment = import.meta.env.DEV;
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || '/api', // Use relative URL for Vite proxy
+  // In development, let Vite handle the /api prefix via proxy
+  // In production, use the full URL from environment variable
+  baseURL: isDevelopment ? '/api' : (import.meta.env.VITE_API_BASE_URL || ''),
   headers: {
     'Content-Type': 'application/json',
   },
@@ -216,9 +219,8 @@ export const api = {
 
   getNote: async (filePath: string): Promise<NoteContent> => {
     try {
-      const response = await apiClient.get('/api/tools/obsidian', {
+      const response = await apiClient.get('/tools/obsidian/note', {
         params: {
-          action: 'read',
           path: filePath
         }
       });
