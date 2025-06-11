@@ -1,8 +1,8 @@
 import { Request, Response, Router } from 'express';
-import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
-import { join } from 'path';
+// File system operations not needed with caching disabled
 import dotenv from 'dotenv';
 import { chromium, Browser, BrowserContext, Page } from 'playwright';
+import { join } from 'path';
 
 // Load environment variables
 dotenv.config({ path: join(process.cwd(), '.env') });
@@ -18,42 +18,6 @@ interface Book {
 }
 
 const router = Router();
-const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-const CACHE_DIR = join(process.cwd(), '.cache');
-const CACHE_FILE = join(CACHE_DIR, 'goodreads-cache.json');
-
-// Ensure cache directory exists
-if (!existsSync(CACHE_DIR)) {
-  mkdirSync(CACHE_DIR, { recursive: true });
-}
-
-// Helper function to read from cache
-function readFromCache(): { data: any; timestamp: number } | null {
-  try {
-    if (existsSync(CACHE_FILE)) {
-      return JSON.parse(readFileSync(CACHE_FILE, 'utf-8'));
-    }
-  } catch (error) {
-    console.error('Error reading cache:', error);
-  }
-  return null;
-}
-
-// Helper function to write to cache
-function writeToCache(data: any): void {
-  try {
-    writeFileSync(
-      CACHE_FILE,
-      JSON.stringify({
-        data,
-        timestamp: Date.now()
-      }, null, 2),
-      'utf-8'
-    );
-  } catch (error) {
-    console.error('Error writing to cache:', error);
-  }
-}
 
 // Helper function to create a delay with jitter
 const delay = (minMs: number, maxMs?: number): Promise<void> => {
@@ -71,16 +35,6 @@ async function logPageState(page: Page): Promise<void> {
   } catch (e) {
     console.log('Could not log page state:', e);
   }
-}
-
-// Helper function to create a new page with consistent settings
-async function createNewPage(context: BrowserContext): Promise<Page> {
-  const page = await context.newPage();
-  await page.setViewportSize({
-    width: 1280 + Math.floor(Math.random() * 200),
-    height: 800 + Math.floor(Math.random() * 200)
-  });
-  return page;
 }
 
 // Helper function to extract books from a page
@@ -136,15 +90,22 @@ async function extractBooksFromPage(page: Page): Promise<Book[]> {
               src = 'https://www.goodreads.com' + src;
             }
             
-            // Clean up the URL to get a larger image
-            coverImage = src
-              .replace(/\/s[0-9]+x[0-9]+\//, '/l')  // Replace size with '/l' for large
-              .replace(/\.[^.]*_SX[0-9]+_/, '_SX200_')  // Standardize width to 200px
-              .replace(/_SY[0-9]+_/, '_SY200_')  // Standardize height to 200px
-              .replace(/_SX[0-9]+_/, '_SX200_')  // Catch any remaining width variations
-              .replace('_SY75_', '_SY200_')  // Replace small heights
-              .replace('_SY100_', '_SY200_')
-              .replace('_SY150_', '_SY200_');
+            // Try to extract the book ID from the image URL
+            const bookIdMatch = src.match(/\/(\d+)_/);
+            if (bookIdMatch && bookIdMatch[1]) {
+              // Use the Goodreads image proxy with the book ID
+              coverImage = `https://images-na.ssl-images-amazon.com/images/P/${bookIdMatch[1]}.01._SX200_.jpg`;
+            } else {
+              // Fallback to the original URL with some cleaning
+              coverImage = src
+                .replace(/\/s[0-9]+x[0-9]+\//, '/l')
+                .replace(/\.[^.]*_SX[0-9]+_/, '_SX200_')
+                .replace(/_SY[0-9]+_/, '_SY200_')
+                .replace(/_SX[0-9]+_/, '_SX200_')
+                .replace('_SY75_', '_SY200_')
+                .replace('_SY100_', '_SY200_')
+                .replace('_SY150_', '_SY200_');
+            }
           }
         }
         
@@ -173,30 +134,6 @@ async function hasNextPage(page: Page): Promise<boolean> {
   });
 }
 
-// Helper function to navigate to next page
-async function goToNextPage(page: Page): Promise<boolean> {
-  try {
-    const clicked = await page.evaluate(() => {
-      const nextButton = document.querySelector('a.next_page:not(.disabled)') as HTMLAnchorElement;
-      if (nextButton) {
-        nextButton.click();
-        return true;
-      }
-      return false;
-    });
-    
-    if (clicked) {
-      await page.waitForLoadState('networkidle');
-      await delay(2000, 3000);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error('Error navigating to next page:', error);
-    return false;
-  }
-}
-
 // Extract books with retry logic
 async function extractBooksWithRetry(page: Page, retries = 3, delayMs = 2000): Promise<Book[]> {
   let lastError: Error | null = null;
@@ -220,197 +157,327 @@ async function extractBooksWithRetry(page: Page, retries = 3, delayMs = 2000): P
   throw lastError || new Error('Failed to extract books after multiple attempts');
 }
 
+// Launch browser with retry
+async function launchBrowserWithRetry(maxRetries = 3): Promise<{ browser: Browser; context: BrowserContext; page: Page }> {
+  // These will be properly initialized in the try block
+  let browser: Browser | null = null;
+  // These are only used for cleanup in case of errors
+  const cleanup: { browser?: Browser; context?: BrowserContext; page?: Page } = {};
+  let lastError: Error | null = null;
+  
+  try {
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        console.log(`Launching browser (attempt ${attempt}/${maxRetries})...`);
+        browser = await chromium.launch({
+          headless: true, // Run in headless mode (no browser window)
+          args: [
+            '--disable-blink-features=AutomationControlled',
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--headless=new' // Newer headless mode
+          ]
+        });
+        
+        const context = await browser.newContext({
+          viewport: { width: 1366, height: 768 },
+          userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+          locale: 'en-US',
+          timezoneId: 'America/Chicago'
+        });
+        
+        // Block images to speed up loading
+        await context.route('**/*.{png,jpg,jpeg,webp,svg}', route => route.abort());
+        
+        const page = await context.newPage();
+        
+        // Set extra headers to appear more like a regular browser
+        await page.setExtraHTTPHeaders({
+          'Accept-Language': 'en-US,en;q=0.9',
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+        });
+        
+        console.log('Browser launched successfully');
+        // Store resources for cleanup
+        // Store the browser for cleanup
+        cleanup.browser = browser;
+        
+        // Create a new context and page for this browser instance
+        const newContext = await browser.newContext({
+          viewport: { width: 1366, height: 768 },
+          userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+          locale: 'en-US',
+          timezoneId: 'America/Chicago'
+        });
+        
+        // Block images to speed up loading
+        await newContext.route('**/*.{png,jpg,jpeg,webp,svg}', route => route.abort());
+        
+        const newPage = await newContext.newPage();
+        
+        // Set extra headers to appear more like a regular browser
+        await newPage.setExtraHTTPHeaders({
+          'Accept-Language': 'en-US,en;q=0.9',
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+        });
+        
+        // Store for cleanup
+        cleanup.context = newContext;
+        cleanup.page = newPage;
+        
+        // Return the browser, context, and page
+        return { 
+          browser, 
+          context: newContext, 
+          page: newPage
+        };
+      } catch (error) {
+        const typedError = error as Error;
+        lastError = typedError;
+        console.error(`Browser launch attempt ${attempt} failed:`, typedError);
+        
+        // Close browser if it was created but something else failed
+        if (browser) {
+          try {
+            await browser.close();
+          } catch (closeError) {
+            console.error('Error closing browser:', closeError);
+          }
+          browser = null;
+        }
+        
+        await delay(2000); // Wait before retry
+      }
+    }
+    
+    throw lastError || new Error('Failed to launch browser after multiple attempts');
+  } catch (error) {
+    // Ensure resources are properly cleaned up
+    if (cleanup.context) {
+      try {
+        await cleanup.context.close();
+      } catch (closeError) {
+        console.error('Error closing browser context during cleanup:', closeError);
+      }
+    } else if (cleanup.browser) {
+      try {
+        await cleanup.browser.close();
+      } catch (closeError) {
+        console.error('Error closing browser during cleanup:', closeError);
+      }
+    }
+    throw error;
+  }
+}
+
+// Process a page and extract books
+async function processPage(page: Page, pageNum: number): Promise<{ books: Book[]; hasNext: boolean }> {
+  try {
+    console.log(`\n=== Processing Page ${pageNum} ===`);
+    const url = `https://www.goodreads.com/review/list/${process.env.GOODREADS_USER_ID}?shelf=read&per_page=100&page=${pageNum}`;
+    console.log(`Navigating to: ${url}`);
+    
+    // Use a more reliable navigation approach
+    const response = await page.goto(url, { 
+      waitUntil: 'domcontentloaded', 
+      timeout: 60000,
+      referer: 'https://www.goodreads.com/',
+    });
+    
+    // Check if the response is valid
+    if (!response) {
+      throw new Error('No response from page load');
+    }
+    
+    console.log(`Status: ${response.status()} ${response.statusText()}`);
+    
+    // Wait for the content to be fully loaded
+    await page.waitForSelector('body', { timeout: 30000 });
+    
+    // Check if we're on a login page or error page
+    const pageTitle = (await page.title()).toLowerCase();
+    console.log(`Page title: ${pageTitle}`);
+    
+    if (pageTitle.includes('sign in') || pageTitle.includes('access denied') || pageTitle.includes('oops')) {
+      console.error('Redirected to login, access denied, or error page');
+      // Take a screenshot for debugging
+      await page.screenshot({ path: `error-page-${Date.now()}.png` });
+      return { books: [], hasNext: false };
+    }
+    
+    // Wait for book elements to be present
+    await page.waitForSelector('tr[itemtype*="Book"], tr.shelfRow, .bookalike', { timeout: 10000 })
+      .catch(() => console.log('No book elements found immediately, continuing anyway...'));
+    
+    // Extract books with retry
+    const books = await extractBooksWithRetry(page);
+    
+    if (books.length === 0) {
+      console.log('No books found on page, taking screenshot...');
+      await page.screenshot({ path: `no-books-page-${pageNum}-${Date.now()}.png` });
+    }
+    
+    // Check for next page
+    const hasNext = await hasNextPage(page);
+    console.log(`Has next page: ${hasNext}`);
+    
+    return { books, hasNext };
+  } catch (error) {
+    console.error(`Error processing page ${pageNum}:`, error);
+    // Take a screenshot on error
+    try {
+      await page.screenshot({ path: `error-page-${pageNum}-${Date.now()}.png` });
+    } catch (screenshotError) {
+      console.error('Failed to take screenshot:', screenshotError);
+    }
+    return { books: [], hasNext: false };
+  }
+}
+
+// Enable CORS for all routes
+router.use((_req: Request, res: Response, next: () => void) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:5173');
+  res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Cache-Control, Pragma, Expires');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  
+  // Handle preflight
+  if (_req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+  
+  next();
+});
+
 // Main route handler
-router.get('/read', async (req: Request, res: Response) => {
+router.get('/read', async (_req: Request, res: Response) => {
   let browser: Browser | null = null;
   let context: BrowserContext | null = null;
   let page: Page | null = null;
   
   try {
-    // Check cache first if not busting
-    const bustCache = req.query.bustCache === 'true';
-    const cache = !bustCache ? readFromCache() : null;
+    console.log('Caching is disabled - fetching fresh data');
     
-    if (cache && (Date.now() - cache.timestamp < CACHE_TTL)) {
-      console.log('Returning cached data');
-      return res.json({
-        ...cache.data,
-        fromCache: true,
-        cachedAt: new Date(cache.timestamp).toISOString(),
-        cacheBusted: false
-      });
+    // Launch browser with retry
+    const browserResult = await launchBrowserWithRetry();
+    browser = browserResult.browser;
+    context = browserResult.context;
+    page = browserResult.page;
+    
+    if (!browser || !page) {
+      throw new Error('Failed to initialize browser or page');
     }
     
-    console.log(bustCache ? 'Cache bust requested' : 'Cache miss or expired');
-    
-    const GOODREADS_USER_ID = process.env.GOODREADS_USER_ID;
-    if (!GOODREADS_USER_ID) {
-      throw new Error('GOODREADS_USER_ID is not configured');
-    }
-    
-    // Launch browser with retry logic
-    const MAX_RETRIES = 3;
-    let browserLaunched = false;
-    
-    for (let i = 0; i < MAX_RETRIES && !browserLaunched; i++) {
-      try {
-        console.log(`Launching browser (attempt ${i + 1}/${MAX_RETRIES})...`);
-        browser = await chromium.launch({
-          headless: true,
-          args: [
-            '--disable-blink-features=AutomationControlled',
-            '--disable-dev-shm-usage',
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-gpu',
-            '--disable-software-rasterizer',
-            '--no-zygote',
-            '--single-process',
-            '--disable-web-security',
-            '--disable-features=IsolateOrigins,site-per-process',
-            '--disable-site-isolation-trials',
-            '--no-first-run',
-            '--no-default-browser-check'
-          ],
-          timeout: 120000,
-          ignoreDefaultArgs: ['--disable-extensions']
-        });
-        
-        browserLaunched = true;
-        console.log('Browser launched successfully');
-      } catch (error) {
-        console.error(`Browser launch attempt ${i + 1} failed:`, error);
-        if (i === MAX_RETRIES - 1) throw error;
-        await delay(2000 * (i + 1));
-      }
-    }
-    
-    if (!browser) {
-      throw new Error('Failed to launch browser after multiple attempts');
-    }
-    
-    // Create browser context
-    context = await browser.newContext({
-      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-      viewport: {
-        width: 1280 + Math.floor(Math.random() * 200),
-        height: 800 + Math.floor(Math.random() * 200)
-      },
-      locale: 'en-US',
-      timezoneId: 'America/New_York',
-      extraHTTPHeaders: {
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'DNT': '1',
-        'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1'
-      }
-    });
-    
-    // Create new page
-    page = await createNewPage(context);
-    
-    // Navigate to Goodreads
-    const GOODREADS_URL = `https://www.goodreads.com/review/list/${GOODREADS_USER_ID}?shelf=read&per_page=100`;
-    console.log(`Navigating to ${GOODREADS_URL}...`);
-    
-    await page.goto(GOODREADS_URL, {
-      waitUntil: 'domcontentloaded',
-      timeout: 60000
-    });
-    
-    // Wait for books to load
-    await page.waitForSelector('tr.bookalike', { timeout: 10000 });
-    
-    // Extract books from the first page
-    const allBooks = await extractBooksWithRetry(page);
-    console.log(`Extracted ${allBooks.length} books from first page`);
-    
-    // Handle pagination
+    const allBooks: Book[] = [];
     let pageNum = 1;
-    let hasMorePages = true;
+    const maxPages = 24; // Increased to ensure we get all books (24 pages × 20 books = 480 total)
+    let consecutiveErrors = 0;
+    const maxConsecutiveErrors = 3;
     
-    while (hasMorePages && page) {
-      console.log(`Processing page ${pageNum + 1}...`);
-      
-      const nextPageExists = await hasNextPage(page);
-      if (!nextPageExists) {
-        console.log('No more pages found');
-        break;
-      }
-      
-      const success = await goToNextPage(page);
-      if (!success) {
-        console.log('Failed to navigate to next page');
-        break;
-      }
-      
+    while (pageNum <= maxPages && consecutiveErrors < maxConsecutiveErrors) {
       try {
-        const pageBooks = await extractBooksWithRetry(page);
-        if (pageBooks.length > 0) {
-          allBooks.push(...pageBooks);
-          console.log(`Extracted ${pageBooks.length} books from page ${pageNum + 1}`);
-          pageNum++;
-          
-          // Random delay between page loads
-          await delay(3000, 7000);
-        } else {
-          console.log('No books found on page, stopping pagination');
-          hasMorePages = false;
+        console.log(`\nProcessing page ${pageNum}...`);
+        
+        // Create a new page for each request to avoid state issues
+        if (page) {
+          await page.close().catch(console.error);
         }
+        
+        if (!context) {
+          throw new Error('Browser context is not available');
+        }
+        
+        page = await context.newPage();
+        
+        const { books, hasNext } = await processPage(page, pageNum);
+        
+        if (books.length > 0) {
+          allBooks.push(...books);
+          console.log(`Added ${books.length} books from page ${pageNum}, total: ${allBooks.length}`);
+          consecutiveErrors = 0; // Reset error counter on success
+        } else {
+          console.log(`No books found on page ${pageNum}`);
+          consecutiveErrors++;
+        }
+        
+        if (!hasNext) {
+          console.log('No more pages to process');
+          break;
+        }
+        
+        pageNum++;
+        
+        // Add a random delay between pages to appear more human-like
+        const delayMs = Math.floor(Math.random() * 3000) + 1000; // 1-4 seconds
+        console.log(`Waiting ${delayMs}ms before next page...`);
+        await delay(delayMs);
+        
       } catch (error) {
-        console.error(`Error processing page ${pageNum + 1}:`, error instanceof Error ? error.message : 'Unknown error');
-        hasMorePages = false;
+        console.error(`Error processing page ${pageNum}:`, error);
+        consecutiveErrors++;
+        
+        // Take a screenshot of the error
+        try {
+          if (page) {
+            await page.screenshot({ path: `error-page-${pageNum}-${Date.now()}.png` });
+          }
+        } catch (screenshotError) {
+          console.error('Failed to take screenshot:', screenshotError);
+        }
+        
+        // If we've had too many consecutive errors, give up
+        if (consecutiveErrors >= maxConsecutiveErrors) {
+          console.error(`Too many consecutive errors (${consecutiveErrors}), stopping...`);
+          break;
+        }
+        
+        // Wait before retrying
+        const retryDelay = 3000 * consecutiveErrors; // Exponential backoff
+        console.log(`Retrying in ${retryDelay}ms...`);
+        await delay(retryDelay);
       }
     }
     
-    // Prepare and cache the response
+    // Prepare the response
     const responseData = {
       success: true,
       books: allBooks,
       stats: {
         totalBooks: allBooks.length,
-        pagesProcessed: pageNum
+        pagesProcessed: pageNum - 1,
+        completed: consecutiveErrors < maxConsecutiveErrors && pageNum <= maxPages
       },
       fromCache: false,
-      cachedAt: new Date().toISOString(),
-      cacheBusted: bustCache
+      cachedAt: new Date().toISOString()
     };
-    
-    // Write to cache
-    writeToCache({
-      books: allBooks,
-      stats: {
-        totalBooks: allBooks.length,
-        pagesProcessed: pageNum
-      }
-    });
     
     // Send response
     console.log(`Sending response with ${allBooks.length} books`);
     return res.json(responseData);
     
   } catch (error) {
-    console.error('Error in /api/books/read:', error);
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    
+    console.error('Error in /read endpoint:', error);
     return res.status(500).json({
       success: false,
-      error: 'Failed to fetch books',
-      details: errorMessage,
-      timestamp: new Date().toISOString()
+      error: error instanceof Error ? error.message : 'Unknown error',
+      stack: process.env.NODE_ENV === 'development' ? (error as Error).stack : undefined
     });
     
   } finally {
-    // Clean up resources
-    try {
-      if (page && !page.isClosed()) await page.close();
-      if (context) await context.close();
-      if (browser) await browser.close();
-    } catch (cleanupError) {
-      console.error('Error during cleanup:', cleanupError);
-    }
+    // Clean up with proper error handling
+    const cleanup = async () => {
+      try {
+        if (page) await page.close().catch(console.error);
+        if (context) await context.close().catch(console.error);
+        if (browser) await browser.close().catch(console.error);
+      } catch (error) {
+        console.error('Error during cleanup:', error);
+      }
+    };
+    
+    await cleanup();
   }
 });
 

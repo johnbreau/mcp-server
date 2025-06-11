@@ -4,7 +4,6 @@ import {
   Title, 
   Text, 
   Group, 
-  Image, 
   Rating, 
   Stack, 
   LoadingOverlay,
@@ -63,18 +62,62 @@ export default function BooksPage() {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [activePage, setActivePage] = useState(1);
   
-  // Function to fetch books with optional cache busting
-  const fetchBooks = useCallback(async (bustCache: boolean = false): Promise<void> => {
+  // Process book cover images to handle Goodreads hotlinking restrictions
+  const processBookCover = (url: string) => {
+    if (!url) return '';
+    
+    // If the URL is already a full URL, return it as is
+    if (url.startsWith('http')) {
+      return url;
+    }
+    
+    // Handle relative URLs
+    if (url.startsWith('//')) {
+      return `https:${url}`;
+    }
+    
+    // Handle book IDs (e.g., 12345_SX200_.jpg)
+    const bookIdMatch = url.match(/(\d+)[^\d]*\./);
+    if (bookIdMatch) {
+      const bookId = bookIdMatch[1];
+      return `https://covers.openlibrary.org/b/id/${bookId}-M.jpg?default=false`;
+    }
+    
+    return url;
+  };
+  
+  // Styles for pagination
+  const paginationStyles = {
+    control: {
+      '&[data-active]': {
+        backgroundColor: 'var(--mantine-color-blue-6)',
+        color: 'var(--mantine-color-white)',
+        '&:hover': {
+          backgroundColor: 'var(--mantine-color-blue-7)',
+        },
+      },
+      '&:not([data-disabled]):hover': {
+        backgroundColor: 'var(--mantine-color-gray-1)',
+      },
+    },
+  } as const;
+  
+  // Function to fetch books
+  const fetchBooks = useCallback(async () => {
     setLoading(true);
     setError(null);
     
     try {
       // Use the full backend URL for development
       const url = new URL('http://localhost:3000/api/books/read');
-      if (bustCache) {
-        url.searchParams.append('bustCache', 'true');
-      }
-      const response = await fetch(url.toString());
+      // Always bust cache by default and add timestamp
+      url.searchParams.append('bustCache', 'true');
+      url.searchParams.append('_t', Date.now().toString());
+      
+      console.log('Fetching books from:', url.toString());
+      const response = await fetch(url.toString(), {
+        cache: 'no-store'  // This prevents caching without triggering CORS preflight
+      });
       const data: ApiResponse = await response.json();
       
       if (!response.ok) {
@@ -133,32 +176,12 @@ export default function BooksPage() {
 
   // Wrapper function for the refresh button to handle the event properly
   const handleRefreshClick = useCallback(() => {
-    fetchBooks(true).catch(console.error);
+    fetchBooks().catch(console.error);
   }, [fetchBooks]);
   
   // Alias for backward compatibility - using type assertion to satisfy TypeScript
   const handleRefresh = handleRefreshClick as unknown as React.MouseEventHandler<HTMLButtonElement>;
   
-  // Pagination styles with proper typing
-  const paginationStyles = {
-    root: {
-      justifyContent: 'center',
-    },
-    control: {
-      '&[data-active]': {
-        backgroundColor: 'var(--mantine-color-blue-6)',
-        color: 'white',
-        '&:hover': {
-          backgroundColor: 'var(--mantine-color-blue-7)'
-        }
-      },
-      '&:not([data-disabled]):hover': {
-        backgroundColor: 'var(--mantine-color-gray-1)',
-        color: 'black',
-      }
-    }
-  } as const;
-
   // Filter and sort books based on search query and sort options
   useEffect(() => {
     let result = [...books];
@@ -356,13 +379,29 @@ export default function BooksPage() {
                     flexShrink: 0,
                   }}
                 >
-                  <Image
-                    src={book.coverImage}
-                    height={110}
-                    width={70}
-                    fit="contain"
-                    alt={`Cover of ${book.title}`}
-                  />
+                  <div style={{
+                    width: '70px',
+                    height: '110px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: 'var(--mantine-color-gray-1)',
+                    overflow: 'hidden'
+                  }}>
+                    <img
+                      src={processBookCover(book.coverImage)}
+                      alt={`Cover of ${book.title}`}
+                      onError={(e) => {
+                        // Fallback to a placeholder if the image fails to load
+                        e.currentTarget.src = 'https://placehold.co/70x110?text=No+Cover';
+                      }}
+                      style={{
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        objectFit: 'contain'
+                      }}
+                    />
+                  </div>
                 </Box>
                 
                 <Stack gap="xs" style={{ flex: 1, minWidth: 0 }}>
@@ -472,7 +511,7 @@ export default function BooksPage() {
                 withEdges
                 nextIcon={IconChevronRight}
                 previousIcon={IconChevronLeft}
-                getItemProps={() => ({
+                getItemProps={(page) => ({
                   component: 'button',
                   style: { 
                     border: 'none', 
@@ -480,6 +519,7 @@ export default function BooksPage() {
                     padding: '8px 12px',
                     borderRadius: '4px',
                   },
+                  'data-active': page === activePage,
                 })}
                 styles={paginationStyles}
               />
