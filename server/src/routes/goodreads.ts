@@ -109,8 +109,13 @@ async function extractBooksFromPage(page: Page): Promise<Book[]> {
       try {
         const titleElement = row.querySelector('.title a') as HTMLAnchorElement;
         const authorElement = row.querySelector('.author a') as HTMLAnchorElement;
-        const coverElement = row.querySelector('img.bookCover') as HTMLImageElement || 
-                          row.querySelector('.bookCover img') as HTMLImageElement;
+        // Try multiple selectors to find the cover image
+        const coverElement = row.querySelector('img.bookCover') || 
+                          row.querySelector('.bookCover img') ||
+                          row.querySelector('img[src*="i.gr-assets.com"]') ||
+                          row.querySelector('img[src*="s.gr-assets.com"]') ||
+                          row.querySelector('img[src*="images.gr-assets.com"]') ||
+                          row.querySelector('img[src*="nophoto"]');
         const ratingElement = row.querySelector('.rating .staticStars') as HTMLSpanElement;
         const dateElement = row.querySelector('.date_read_value') as HTMLSpanElement;
         
@@ -122,9 +127,25 @@ async function extractBooksFromPage(page: Page): Promise<Book[]> {
         
         let coverImage = '';
         if (coverElement) {
-          coverImage = coverElement.src
-            .replace(/\/s[0-9]+x[0-9]+\//, '/l')
-            .replace(/\.[^.]*_SX[0-9]+_/, '_SX200_');
+          let src = coverElement.getAttribute('src') || '';
+          if (src) {
+            // Convert relative URLs to absolute
+            if (src.startsWith('//')) {
+              src = 'https:' + src;
+            } else if (src.startsWith('/')) {
+              src = 'https://www.goodreads.com' + src;
+            }
+            
+            // Clean up the URL to get a larger image
+            coverImage = src
+              .replace(/\/s[0-9]+x[0-9]+\//, '/l')  // Replace size with '/l' for large
+              .replace(/\.[^.]*_SX[0-9]+_/, '_SX200_')  // Standardize width to 200px
+              .replace(/_SY[0-9]+_/, '_SY200_')  // Standardize height to 200px
+              .replace(/_SX[0-9]+_/, '_SX200_')  // Catch any remaining width variations
+              .replace('_SY75_', '_SY200_')  // Replace small heights
+              .replace('_SY100_', '_SY200_')
+              .replace('_SY150_', '_SY200_');
+          }
         }
         
         books.push({
