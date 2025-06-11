@@ -224,11 +224,6 @@ export default function CalendarView() {
     <Container size="lg" py="xl">
       <Paper withBorder p="md" radius="md">
         <Title order={2} mb="md">Calendar</Title>
-        <Group>
-          <Button variant="subtle" onClick={handlePreviousMonth}>&lt; Prev</Button>
-          <Text fw={500} style={{ fontWeight: 500 }}>{monthYear}</Text>
-          <Button variant="subtle" onClick={handleNextMonth}>Next &gt;</Button>
-        </Group>
         <Box mt="md">
           <MantineCalendar
             getDayProps={(date) => ({
