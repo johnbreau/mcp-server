@@ -116,19 +116,48 @@ export default function BooksPage() {
         throw new Error(data.error || 'Failed to load books');
       }
       
+      // Log raw data for debugging
+      console.log('Raw books data from server:', data.books);
+      
+      // Log the first few books with all their properties
+      console.log('First 5 books with all properties:', JSON.parse(JSON.stringify(data.books.slice(0, 5))));
+      
       // Process the books data
-      const processedBooks = (data.books || []).map(book => {
+      const processedBooks = (data.books || []).map((book, index) => {
+        // Log the raw rating for each book
+        console.group(`Book ${index + 1}`);
+        console.log('Title:', book.title);
+        console.log('All properties:', Object.entries(book).map(([key, value]) => `${key}: ${value} (${typeof value})`));
+        console.log('Raw rating:', book.rating, 'Type:', typeof book.rating);
+        console.groupEnd();
+        
         // Clean up the rating - handle both string and number ratings
         let ratingValue = 0;
-        const rating = book.rating as string | number;
-        if (typeof rating === 'number') {
+        const rating: string | number | null | undefined = book.rating as string | number | null | undefined;
+        
+        if (rating === null || rating === undefined) {
+          console.log('No rating found for book:', book.title);
+        } else if (typeof rating === 'number') {
+          console.log('Number rating found:', rating);
           ratingValue = rating;
         } else if (typeof rating === 'string') {
+          console.log('String rating found:', rating);
+          // Handle different string formats like '5.00', '5', '5 stars', etc.
           const numMatch = rating.match(/([0-9.]+)/);
           if (numMatch) {
             ratingValue = parseFloat(numMatch[1]);
+            console.log('Extracted rating from string:', ratingValue);
+          } else if (rating.includes('star')) {
+            // Handle star ratings like '5 stars'
+            const starMatch = rating.match(/([0-9.]+)/);
+            if (starMatch) {
+              ratingValue = parseFloat(starMatch[1]);
+              console.log('Extracted rating from stars:', ratingValue);
+            }
           }
         }
+        
+        console.log('Final processed rating:', ratingValue);
         
         // Clean up the date
         let cleanDate = book.dateRead;
@@ -422,30 +451,39 @@ export default function BooksPage() {
                     <Group gap="xs">
                       {(() => {
                         try {
-                          const ratingValue = typeof book.rating === 'number' 
+                          // Get the raw rating value
+                          const rawRating = typeof book.rating === 'number' 
                             ? book.rating 
                             : parseFloat(book.rating as string) || 0;
-                            
-                          if (isNaN(ratingValue) || ratingValue === 0) {
+                          
+                          // Convert from 0-10 scale to 0-5 scale for display
+                          const displayRating = rawRating / 2;
+                          
+                          // Handle unrated books
+                          if (rawRating === 0) {
                             return <Text size="sm" c="dimmed">Not rated</Text>;
                           }
                           
                           return (
-                            <>
+                            <Group gap="xs" align="center">
                               <Rating 
-                                value={ratingValue} 
+                                value={displayRating} 
                                 fractions={2} 
                                 readOnly 
-                                size="sm" 
+                                size="sm"
                               />
                               <Text size="sm" fw={500}>
-                                {ratingValue.toFixed(1)}
+                                {displayRating.toFixed(1)}
                               </Text>
-                            </>
+                            </Group>
                           );
                         } catch (error) {
                           console.error('Error displaying rating:', error, 'for book:', book.title);
-                          return <Text size="sm" c="dimmed">Rating not available</Text>;
+                          return (
+                            <Text size="sm" c="dimmed">
+                              Rating unavailable
+                            </Text>
+                          );
                         }
                       })()}
                     </Group>

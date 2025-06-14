@@ -70,7 +70,7 @@ async function extractBooksFromPage(page: Page): Promise<Book[]> {
                           row.querySelector('img[src*="s.gr-assets.com"]') ||
                           row.querySelector('img[src*="images.gr-assets.com"]') ||
                           row.querySelector('img[src*="nophoto"]');
-        const ratingElement = row.querySelector('.rating .staticStars') as HTMLSpanElement;
+        // We'll find the rating element later when processing the rating
         const dateElement = row.querySelector('.date_read_value') as HTMLSpanElement;
         
         if (!titleElement || !authorElement) return;
@@ -109,11 +109,80 @@ async function extractBooksFromPage(page: Page): Promise<Book[]> {
           }
         }
         
+        // Extract rating - try multiple selectors and methods
+        let rating = '0';
+        
+        // Log the entire row HTML for debugging
+        const rowHtml = row.outerHTML;
+        console.log('Row HTML:', rowHtml);
+        
+        // Try to find the rating element using various selectors
+        const ratingElement = row.querySelector('.rating .staticStars[title]') || 
+                           row.querySelector('.rating .staticStars span[aria-label]') ||
+                           row.querySelector('.rating .staticStars.notranslate') ||
+                           row.querySelector('.rating .staticStars') ||
+                           row.querySelector('.rating .staticStars span') ||
+                           row.querySelector('.rating .staticStars .p10');
+                           
+        console.log('Rating element found:', ratingElement);
+        if (ratingElement) {
+          console.log('Rating element HTML:', ratingElement.outerHTML);
+          console.log('Rating element classes:', ratingElement.className);
+          console.log('Rating element title:', ratingElement.getAttribute('title'));
+          console.log('Rating element aria-label:', ratingElement.getAttribute('aria-label'));
+          console.log('Rating element text content:', ratingElement.textContent);
+        }
+        
+        if (ratingElement) {
+          // Try to get from title attribute
+          const titleAttr = ratingElement.getAttribute('title');
+          if (titleAttr) {
+            const titleMatch = titleAttr.match(/(\d+(?:\.\d+)?)/);
+            if (titleMatch) rating = titleMatch[1];
+          }
+          
+          // Try to get from aria-label
+          const ariaLabel = ratingElement.getAttribute('aria-label');
+          if (ariaLabel) {
+            const ariaMatch = ariaLabel.match(/(\d+(?:\.\d+)?)/);
+            if (ariaMatch) rating = ariaMatch[1];
+          }
+          
+          // Try to get from class name (e.g., p10 for 5 stars, p8 for 4 stars, etc.)
+          for (let i = 0; i < ratingElement.classList.length; i++) {
+            const className = ratingElement.classList[i];
+            if (className.startsWith('p')) {
+              const ratingValue = parseFloat(className.substring(1)) / 2;
+              if (!isNaN(ratingValue)) {
+                rating = ratingValue.toString();
+                break;
+              }
+            }
+          }
+          
+          // Try to get from inner text as last resort
+          if (rating === '0') {
+            const textContent = ratingElement.textContent?.trim();
+            if (textContent) {
+              const textMatch = textContent.match(/(\d+(?:\.\d+)?)/);
+              if (textMatch) rating = textMatch[1];
+            }
+          }
+        }
+        
+        // If still no rating, try to find any star rating in the row
+        if (rating === '0') {
+          const starElements = row.querySelectorAll('.staticStar.p10, .staticStar.p8, .staticStar.p6, .staticStar.p4, .staticStar.p2');
+          if (starElements.length > 0) {
+            rating = (starElements.length * 2).toString();
+          }
+        }
+        
         books.push({
           title: titleElement.textContent?.trim() || 'Unknown Title',
           author: authorElement.textContent?.trim() || 'Unknown Author',
           coverImage,
-          rating: ratingElement?.title?.match(/\d+\.?\d*/)?.[0] || '0',
+          rating,
           dateRead: dateElement?.textContent?.trim() || '',
           link: titleElement.href
         });
