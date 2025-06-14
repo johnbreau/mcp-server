@@ -25,9 +25,9 @@ type TimelineItem = {
 };
 
 /**
- * Calendar view component
+ * Journals view component
  */
-export default function CalendarView() {
+export default function JournalsView() {
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
 
@@ -86,22 +86,6 @@ export default function CalendarView() {
       setSelectedDate(newDate);
     }
   }, []);
-
-  // Navigation handlers (commented out as they're not currently used)
-  // const handlePreviousMonth = useCallback(() => {
-  //   setCurrentMonth(current => subMonths(current, 1));
-  // }, []);
-
-  // const handleNextMonth = useCallback(() => {
-  //   setCurrentMonth(current => addMonths(current, 1));
-  // }, []);
-
-  // Handle date selection
-  // const handleDateChange = useCallback((date: Date | null) => {
-  //   if (date) {
-  //     setSelectedDate(date);
-  //   }
-  // }, []);
 
   // Fetch events when the month changes
   const fetchEvents = useCallback(async (start: Date, end: Date) => {
@@ -225,9 +209,6 @@ export default function CalendarView() {
     });
   }, [events]);
 
-  // Format the month and year for display (commented out as it's not currently used)
-  // const monthYear = format(currentMonth, 'MMMM yyyy');
-
   // Fetch events when the month changes
   useEffect(() => {
     if (!currentMonth) return;
@@ -260,9 +241,10 @@ export default function CalendarView() {
   return (
     <Container size="lg" py="xl">
       <Paper withBorder p="md" radius="md">
-        <Title className="calendarTitleBar" order={2} mb="md">Calendar</Title>
-        <Box mt="md" className='calendarBox'>
+        <Title className="journalsTitleBar" order={2} mb="md">Journals</Title>
+        <Box mt="md" className='journalsBox'>
           <MantineCalendar
+            className="journalsCalendar"
             getDayProps={(date) => ({
               onClick: () => handleCalendarChange(date),
             })}
@@ -308,7 +290,7 @@ export default function CalendarView() {
               );
             }}
           />
-          <div className="journalEntries" style={{ marginTop: '20px' }}>
+          <div className="journalEntries" style={{ flex: 2, marginTop: 0 }}>
             <Title className="journalEntryDate" order={3} mb="md">
               {selectedDate ? format(selectedDate, 'MMMM d, yyyy') : 'Journal Entry'}
             </Title>
@@ -316,7 +298,6 @@ export default function CalendarView() {
               <Text>Loading journal entry...</Text>
             ) : journalEntry ? (
               <Paper style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace' }}>
-                {/* <Title order={4} mb="sm">{journalEntry.title}</Title> */}
                 <div style={{ lineHeight: 1.6 }}>
                   {journalEntry.content}
                 </div>

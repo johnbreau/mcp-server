@@ -1,4 +1,5 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import { 
   Container, 
   Title, 
@@ -55,7 +56,6 @@ export default function BooksPage() {
   // State management
   const [books, setBooks] = useState<Book[]>([]);
   const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'dateRead' | 'title' | 'author' | 'rating'>('dateRead');
@@ -102,22 +102,14 @@ export default function BooksPage() {
     },
   } as const;
   
-  // Function to fetch books
-  const fetchBooks = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    
-    try {
-      // Use the full backend URL for development
+  // Function to fetch books with caching
+  const { data: booksData, isLoading, error: fetchError, refetch } = useQuery<Book[], Error>({
+    queryKey: ['books'],
+    queryFn: async (): Promise<Book[]> => {
       const url = new URL('http://localhost:3000/api/books/read');
-      // Always bust cache by default and add timestamp
-      url.searchParams.append('bustCache', 'true');
-      url.searchParams.append('_t', Date.now().toString());
       
       console.log('Fetching books from:', url.toString());
-      const response = await fetch(url.toString(), {
-        cache: 'no-store'  // This prevents caching without triggering CORS preflight
-      });
+      const response = await fetch(url.toString());
       const data: ApiResponse = await response.json();
       
       if (!response.ok) {
@@ -125,14 +117,13 @@ export default function BooksPage() {
       }
       
       // Process the books data
-      const booksData = (data.books || []).map(book => {
+      const processedBooks = (data.books || []).map(book => {
         // Clean up the rating - handle both string and number ratings
         let ratingValue = 0;
-        const rating = book.rating as string | number; // Type assertion to handle union type
+        const rating = book.rating as string | number;
         if (typeof rating === 'number') {
           ratingValue = rating;
         } else if (typeof rating === 'string') {
-          // Try to extract numeric rating from string
           const numMatch = rating.match(/([0-9.]+)/);
           if (numMatch) {
             ratingValue = parseFloat(numMatch[1]);
@@ -149,42 +140,55 @@ export default function BooksPage() {
           ...book,
           rating: ratingValue,
           dateRead: cleanDate
-        };
+        } as Book;
       });
-      
-      console.log(`Loaded ${booksData.length} books from API`, data.fromCache ? '(from cache)' : '(fresh data)');
-      console.log('Sample book:', booksData[0]);
       
       // Remove duplicates by title and author
       const uniqueBooks = Array.from(new Map(
-        booksData.map(book => [`${book.title}-${book.author}`, book])
+        processedBooks.map(book => [`${book.title}-${book.author}`, book])
       ).values());
       
-      if (uniqueBooks.length !== booksData.length) {
-        console.log(`Removed ${booksData.length - uniqueBooks.length} duplicate books`);
+      if (uniqueBooks.length !== processedBooks.length) {
+        console.log(`Removed ${processedBooks.length - uniqueBooks.length} duplicate books`);
       }
       
-      setBooks(uniqueBooks);
-      setFilteredBooks(uniqueBooks);
-    } catch (err) {
-      console.error('Error fetching books:', err);
-      setError(err instanceof Error ? err.message : 'An unknown error occurred');
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  // Wrapper function for the refresh button to handle the event properly
-  const handleRefreshClick = useCallback(() => {
-    fetchBooks().catch(console.error);
-  }, [fetchBooks]);
+      return uniqueBooks;
+    },
+    staleTime: 60 * 60 * 1000, // 1 hour before data is considered stale
+    gcTime: 24 * 60 * 60 * 1000, // Keep unused data in cache for 24 hours
+    refetchOnWindowFocus: false // Don't refetch when window regains focus
+  });
   
-  // Alias for backward compatibility - using type assertion to satisfy TypeScript
-  const handleRefresh = handleRefreshClick as unknown as React.MouseEventHandler<HTMLButtonElement>;
+  // Update local state when query data changes
+  useEffect(() => {
+    if (booksData && booksData.length > 0) {
+      setBooks(booksData);
+      setFilteredBooks(booksData);
+    } else {
+      setBooks([]);
+      setFilteredBooks([]);
+    }
+  }, [booksData]);
+  
+  // Update error state
+  useEffect(() => {
+    if (fetchError) {
+      setError(fetchError instanceof Error ? fetchError.message : 'An unknown error occurred');
+    } else {
+      setError(null);
+    }
+  }, [fetchError]);
+
+  // Handle refresh button click
+  const handleRefresh = useCallback<React.MouseEventHandler<HTMLButtonElement>>(() => {
+    refetch().catch(console.error);
+  }, [refetch]);
   
   // Filter and sort books based on search query and sort options
-  useEffect(() => {
-    let result = [...books];
+  const filteredAndSortedBooks = useMemo(() => {
+    if (!booksData) return [];
+    
+    let result = [...booksData];
     
     // Apply search filter
     if (searchQuery.trim() !== '') {
@@ -218,14 +222,15 @@ export default function BooksPage() {
       return sortOrder === 'asc' ? compareResult : -compareResult;
     });
     
-    setFilteredBooks(result);
-    setActivePage(1); // Reset to first page when filters change
-  }, [searchQuery, books, sortBy, sortOrder]);
+    return result;
+  }, [booksData, searchQuery, sortBy, sortOrder]);
   
-  // Initial data fetch
+  // Update filtered books when the filteredAndSortedBooks changes
   useEffect(() => {
-    fetchBooks();
-  }, [fetchBooks]);
+    setFilteredBooks(filteredAndSortedBooks);
+  }, [filteredAndSortedBooks]);
+  
+
   
   // Calculate pagination
   const totalPages = Math.ceil(filteredBooks.length / ITEMS_PER_PAGE);
@@ -236,10 +241,10 @@ export default function BooksPage() {
   
 
 
-  if (loading && books.length === 0) {
+  if (isLoading && books.length === 0) {
     return (
       <Container size="lg" py="xl" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <LoadingOverlay visible={loading} />
+        <LoadingOverlay visible={isLoading} />
       </Container>
     );
   }
@@ -258,7 +263,7 @@ export default function BooksPage() {
           <Button 
             leftSection={<IconRefresh size={16} />} 
             onClick={handleRefresh}
-            loading={loading}
+            loading={isLoading}
             variant="outline"
           >
             Refresh
@@ -272,7 +277,7 @@ export default function BooksPage() {
             onChange={(e) => setSearchQuery(e.currentTarget.value)}
             leftSection={<IconSearch size={16} />}
             style={{ flex: 1, maxWidth: 400 }}
-            disabled={loading}
+            disabled={isLoading}
           />
           
           <Select
@@ -290,7 +295,7 @@ export default function BooksPage() {
               { value: 'rating', label: 'Rating' },
             ]}
             style={{ width: 150 }}
-            disabled={loading}
+            disabled={isLoading}
           />
           
           <Select
@@ -306,7 +311,7 @@ export default function BooksPage() {
               { value: 'asc', label: 'Ascending' },
             ]}
             style={{ width: 140 }}
-            disabled={loading}
+            disabled={isLoading}
           />
         </Group>
         
@@ -326,7 +331,7 @@ export default function BooksPage() {
         </Alert>
       )}
 
-      {!loading && filteredBooks.length === 0 ? (
+      {!isLoading && filteredBooks.length === 0 ? (
         <Box style={{
           display: 'flex',
           flexDirection: 'column',
@@ -342,8 +347,8 @@ export default function BooksPage() {
           </Text>
           <Button 
             leftSection={<IconRefresh size={16} />} 
-            onClick={handleRefreshClick}
-            loading={loading}
+            onClick={handleRefresh}
+            loading={isLoading}
           >
             Refresh Data
           </Button>
@@ -501,7 +506,16 @@ export default function BooksPage() {
           ))}
           
           {totalPages > 1 && (
-            <Box mt="xl" style={{ width: '100%' }}>
+            <Box 
+              mt="xl" 
+              mb="xl"
+              style={{ 
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                padding: '20px 0 40px 0' // Add more bottom padding
+              }}
+            >
               <Pagination
                 total={totalPages}
                 value={activePage}
