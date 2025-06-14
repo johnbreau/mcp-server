@@ -506,7 +506,16 @@ export default function BooksPage() {
           ))}
           
           {totalPages > 1 && (
-            <Box mt="xl" style={{ width: '100%' }}>
+            <Box 
+              mt="xl" 
+              mb="xl"
+              style={{ 
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                padding: '20px 0 40px 0' // Add more bottom padding
+              }}
+            >
               <Pagination
                 total={totalPages}
                 value={activePage}

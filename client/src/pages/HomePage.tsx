@@ -1,5 +1,5 @@
 import { Title, Container, SimpleGrid, Space } from '@mantine/core';
-import CalendarView from '../features/calendar/CalendarView';
+import JournalsView from '../features/journals/JournalsView';
 import { RandomJournalEntry } from '../features/journal/RandomJournalEntry';
 
 export default function HomePage() {
@@ -8,7 +8,7 @@ export default function HomePage() {
       <Title order={1} mb="lg">Welcome to Breau Bot</Title>
       
       <SimpleGrid cols={2} spacing="lg">
-        <CalendarView />
+        <JournalsView />
         <RandomJournalEntry />
       </SimpleGrid>
       
