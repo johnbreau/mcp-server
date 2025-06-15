@@ -168,12 +168,12 @@ export default function SearchPage() {
   };
 
   return (
-    <Container size="lg" py="xl">
+    <Container size="lg" style={{ padding: "2rem 0 6rem", minHeight: "calc(100vh - 100px)" }}>
       <Title order={2} mb="xl">
         Search Notes
       </Title>
 
-      <Tabs value={activeTab} onChange={setActiveTab}>
+      <Tabs value={activeTab} onChange={setActiveTab} style={{ minHeight: '50vh' }}>
         <Tabs.List>
           <Tabs.Tab value="keywords" leftSection={<IconSearch size={14} />}>
             Keyword Search
