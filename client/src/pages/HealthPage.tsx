@@ -1,7 +1,14 @@
 import { Title, Container, Tabs, rem } from '@mantine/core';
-import { IconActivity, IconBed, IconWalk, IconHeart, IconMeat } from '@tabler/icons-react';
+import { IconActivity, IconBed, IconWalk, IconHeart, IconMeat, IconBrain } from '@tabler/icons-react';
 import { AppleHealthImport } from '../features/health/AppleHealthImport';
-import { ActivityChart, SleepChart, HeartRateChart, NutritionChart, StepsChart } from '../features/health/charts';
+import { 
+  ActivityChart, 
+  SleepChart, 
+  HeartRateChart, 
+  NutritionChart, 
+  StepsChart, 
+  StateOfMindTracker 
+} from '../features/health/charts';
 
 export const HealthPage = () => {
   const iconStyle = { width: rem(16), height: rem(16) };
@@ -42,6 +49,12 @@ export const HealthPage = () => {
           >
             Steps
           </Tabs.Tab>
+          <Tabs.Tab 
+            value="stateOfMind" 
+            leftSection={<IconBrain style={iconStyle} />}
+          >
+            State of Mind
+          </Tabs.Tab>
         </Tabs.List>
 
         <Tabs.Panel value="activity" pt="md">
@@ -61,6 +74,9 @@ export const HealthPage = () => {
         </Tabs.Panel>
         <Tabs.Panel value="steps" pt="md">
           <StepsChart />
+        </Tabs.Panel>
+        <Tabs.Panel value="stateOfMind" pt="md">
+          <StateOfMindTracker />
         </Tabs.Panel>
       </Tabs>
       

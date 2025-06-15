@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { 
-  Paper, 
   Title, 
   Text, 
   Button, 
@@ -8,14 +7,10 @@ import {
   Stack, 
   Box,
   SegmentedControl,
-  Divider,
   Badge,
   Tabs,
-  ThemeIcon,
-  SimpleGrid,
   Card,
   Center,
-  rem,
   Textarea,
   Modal,
   ActionIcon
@@ -95,8 +90,8 @@ export const StateOfMindTracker = () => {
   const [timeRange, setTimeRange] = useState<TimeRange>('1M');
   const [viewMode, setViewMode] = useState<ViewMode>('chart');
   const [entries, setEntries] = useState<StateOfMindEntry[]>(() => generateMockData(30));
-  const [selectedMood, setSelectedMood] = useState<string | null>(null);
-  const [selectedEnergy, setSelectedEnergy] = useState<string | null>(null);
+  const [selectedMood, setSelectedMood] = useState<StateOfMindEntry['mood'] | undefined>(undefined);
+  const [selectedEnergy, setSelectedEnergy] = useState<StateOfMindEntry['energy'] | undefined>(undefined);
   const [note, setNote] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -106,14 +101,15 @@ export const StateOfMindTracker = () => {
     const newEntry: StateOfMindEntry = {
       id: `entry-${Date.now()}`,
       date: new Date(),
-      mood: selectedMood as StateOfMindEntry['mood'],
-      energy: selectedEnergy as StateOfMindEntry['energy'],
-      note: note.trim() || undefined
+      mood: selectedMood,
+      energy: selectedEnergy,
+      note: note.trim() || undefined,
+      tags: []
     };
     
     setEntries([newEntry, ...entries]);
-    setSelectedMood(null);
-    setSelectedEnergy(null);
+    setSelectedMood(undefined);
+    setSelectedEnergy(undefined);
     setNote('');
     setIsModalOpen(false);
   };
@@ -140,11 +136,11 @@ export const StateOfMindTracker = () => {
   });
 
   return (
-    <Stack spacing="md">
-      <Group position="apart">
+    <Stack gap="md">
+      <Group justify="space-between">
         <Title order={3}>State of Mind</Title>
         <Button 
-          leftIcon={<IconPlus size={16} />} 
+          leftSection={<IconPlus size={16} />} 
           onClick={() => setIsModalOpen(true)}
         >
           Add Entry
@@ -153,7 +149,7 @@ export const StateOfMindTracker = () => {
       
       <SegmentedControl
         value={timeRange}
-        onChange={(value: TimeRange) => setTimeRange(value)}
+        onChange={(value) => setTimeRange(value as TimeRange)}
         data={[
           { value: '1W', label: '1W' },
           { value: '1M', label: '1M' },
@@ -166,18 +162,18 @@ export const StateOfMindTracker = () => {
       
       <Tabs 
         value={viewMode} 
-        onTabChange={(value) => setViewMode(value as ViewMode)}
+        onChange={(value) => setViewMode(value as ViewMode)}
       >
         <Tabs.List>
-          <Tabs.Tab value="chart" icon={<IconChartLine size={14} />}>Chart</Tabs.Tab>
-          <Tabs.Tab value="calendar" icon={<IconCalendar size={14} />}>Calendar</Tabs.Tab>
-          <Tabs.Tab value="list" icon={<IconList size={14} />}>List</Tabs.Tab>
+          <Tabs.Tab value="chart" leftSection={<IconChartLine size={14} />}>Chart</Tabs.Tab>
+          <Tabs.Tab value="calendar" leftSection={<IconCalendar size={14} />}>Calendar</Tabs.Tab>
+          <Tabs.Tab value="list" leftSection={<IconList size={14} />}>List</Tabs.Tab>
         </Tabs.List>
         
         <Tabs.Panel value="chart" pt="md">
           <Box style={{ height: 300, position: 'relative' }}>
             <Center style={{ height: '100%' }}>
-              <Text color="dimmed">Chart view coming soon</Text>
+              <Text c="dimmed">Chart view coming soon</Text>
             </Center>
           </Box>
         </Tabs.Panel>
@@ -185,22 +181,22 @@ export const StateOfMindTracker = () => {
         <Tabs.Panel value="calendar" pt="md">
           <Box style={{ minHeight: 300, position: 'relative' }}>
             <Center style={{ height: '100%' }}>
-              <Text color="dimmed">Calendar view coming soon</Text>
+              <Text c="dimmed">Calendar view coming soon</Text>
             </Center>
           </Box>
         </Tabs.Panel>
         
         <Tabs.Panel value="list" pt="md">
-          <Stack spacing="sm">
+          <Stack gap="sm">
             {filteredEntries.map((entry) => (
               <Card key={entry.id} withBorder p="md">
-                <Group position="apart">
+                <Group justify="space-between">
                   <Group>
                     {moodOptions.find(m => m.value === entry.mood)?.icon}
-                    <Text weight={500}>
+                    <Text fw={500}>
                       {moodOptions.find(m => m.value === entry.mood)?.label}
                     </Text>
-                    <Text size="sm" color="dimmed">
+                    <Text size="sm" c="dimmed">
                       {entry.date.toLocaleDateString()}
                     </Text>
                   </Group>
@@ -222,7 +218,7 @@ export const StateOfMindTracker = () => {
                   </Group>
                 </Group>
                 {entry.note && (
-                  <Text size="sm" mt="xs" color="dimmed">
+                  <Text size="sm" mt="xs" c="dimmed">
                     {entry.note}
                   </Text>
                 )}
@@ -236,43 +232,26 @@ export const StateOfMindTracker = () => {
         opened={isModalOpen} 
         onClose={() => setIsModalOpen(false)}
         title="Add State of Mind Entry"
-        size="lg"
+        size="md"
       >
-        <Stack spacing="lg">
+        <Stack gap="md">
           <div>
-            <Text size="sm" weight={500} mb="xs">How are you feeling?</Text>
+            <Text size="sm" fw={500} mb="xs">Mood</Text>
             <SegmentedControl
-              value={selectedMood || ''}
-              onChange={setSelectedMood}
-              data={moodOptions.map(option => ({
-                value: option.value,
-                label: (
-                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    {option.icon}
-                    <Text size="xs" mt={4}>{option.label}</Text>
-                  </div>
-                ),
-              }))}
               fullWidth
-              size="md"
+              value={selectedMood}
+              onChange={(value) => setSelectedMood(value as StateOfMindEntry['mood'])}
+              data={moodOptions}
             />
           </div>
           
           <div>
-            <Text size="sm" weight={500} mb="xs">Energy Level</Text>
+            <Text size="sm" fw={500} mb="xs">Energy Level</Text>
             <SegmentedControl
-              value={selectedEnergy || ''}
-              onChange={setSelectedEnergy}
-              data={energyOptions.map(option => ({
-                value: option.value,
-                label: (
-                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    {option.icon}
-                    <Text size="xs" mt={4}>{option.label}</Text>
-                  </div>
-                ),
-              }))}
               fullWidth
+              value={selectedEnergy}
+              onChange={(value) => setSelectedEnergy(value as StateOfMindEntry['energy'])}
+              data={energyOptions}
               size="md"
             />
           </div>
