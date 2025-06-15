@@ -1,0 +1,93 @@
+{
+  "id" : "eP6603lvKEAff.uoA6xAvng8Uta83Jybpp8YEwkK7ALRHs6IEg6KRdY30aNEDXUjbVJ-Y9P.zg-dZ-lboqpsZjA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Visit Encounter",
+    "reference" : "Encounter/ePTJCitQoO-HzgRQ0yhzKgQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1289967743"
+    }
+  },
+  "effectiveDateTime" : "2019-05-29T17:25:00Z",
+  "resourceType" : "Observation",
+  "note" : [
+    {
+      "text" : "The aPTT may be prolonged by Warfarin. Both unfractionated\r\nheparin and low molecular weight heparin prolong the aPTT.\r\nDirect thrombin inhibitors (Argatroban, Bivalarudin, and\r\nDabigatran) and Factor Xa inhibitors (Rivaroxaban, Apixaban)\r\nin therapeutic doses will result in prolonged aPTT.Patients\r\nwith abnormally elevated hematocrits (>55%) may show a falsely\r\nprolonged aPTT. In these cases call laboratory to send a tube\r\ncontaining less citrate based upon patient's hematocrit.\r\n"
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "APTT",
+      "reference" : "ServiceRequest/e9dXKP4RKNXQrc5NukpX6wgtkFrBLOOXsz.6sjYV3LiM3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen C52907964:98811064",
+    "reference" : "Specimen/ejYcCZQNYbBLpBl0xduIodq7X07Ni5LSRN2dvEs9-kS43"
+  },
+  "code" : {
+    "text" : "APTT",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "aPTT in Blood by Coagulation assay",
+        "code" : "3173-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.179",
+        "code" : "PTT"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "APTT",
+        "code" : "2000002238"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "value" : 22.9,
+        "unit" : "Seconds"
+      },
+      "high" : {
+        "value" : 30.6,
+        "unit" : "Seconds"
+      },
+      "text" : "22.9 - 30.6 Seconds"
+    }
+  ],
+  "valueQuantity" : {
+    "value" : 26.3,
+    "unit" : "Seconds"
+  },
+  "status" : "final",
+  "issued" : "2019-05-29T18:15:19Z"
+}

@@ -1,0 +1,279 @@
+{
+  "id" : "e3OQ9S-iJxuEv5CzPngxHtfzj.7ewSgAMTg2SvmZRZcg3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "reportedBoolean" : true,
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eZlWlyAfL0AKzeC6wXfmveQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1266124108"
+    }
+  },
+  "resourceType" : "MedicationRequest",
+  "status" : "stopped",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "cholecalciferol 25 mcg (1,000 unit) capsule",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "A11CC05"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "2173"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2418"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "245500"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "216438"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "876668"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "967916"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1098884"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1116508"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1303911"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1435912"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1788853"
+          }
+        ]
+      },
+      "id" : "ezNFP1hgUFaf63jkztrZIHn5M1SOHzn6X2NTgWFJ3srP39K3mBwlfN4.OK2E2f0JO-3Sh6nagXqqD422DXEpeYdEHc.XJ9uI8lttSuKhk4yI3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Capsule",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.698288.310",
+            "display" : "Capsule",
+            "code" : "Cap"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.698288",
+          "value" : "76920"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "cholecalciferol 25 mcg (1,000 unit) capsule",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "A11CC05"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "2173"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2418"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "245500"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "216438"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "876668"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "967916"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1098884"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1116508"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1303911"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1435912"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1788853"
+              }
+            ]
+          },
+          "strength" : {
+            "numerator" : {
+              "code" : "U",
+              "value" : 1000,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "(1,000 unit)"
+            },
+            "denominator" : {
+              "code" : "U",
+              "value" : 1000,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "(1,000 unit)"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.798268",
+      "value" : "273037766"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ehdJ2NU0BP92my1Kw-3K.8w3",
+    "display" : "Carlos Romo, MD"
+  },
+  "authoredOn" : "2018-06-22T20:10:22Z",
+  "dosageInstruction" : [
+    {
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "end" : "2019-05-28"
+          },
+          "timeOfDay" : [
+            "09:00:00"
+          ]
+        },
+        "code" : {
+          "text" : "daily"
+        }
+      },
+      "method" : {
+        "text" : "Take",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Take",
+            "code" : "419652001"
+          }
+        ]
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "U",
+            "value" : 1000,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "Units"
+          }
+        }
+      ],
+      "patientInstruction" : "Take 1,000 Units by mouth daily.",
+      "text" : "Take 1,000 Units by mouth daily., Until Tue 5/28/2019, Historical Med",
+      "asNeededBoolean" : false,
+      "route" : {
+        "text" : "Oral",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Oral route (qualifier value)",
+            "code" : "26643006"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.798268.7025",
+            "display" : "Oral",
+            "code" : "15"
+          }
+        ]
+      }
+    }
+  ],
+  "requester" : {
+    "extension" : [
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode" : "unknown"
+      }
+    ]
+  },
+  "intent" : "plan",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "medicationReference" : {
+    "display" : "cholecalciferol 25 mcg (1,000 unit) capsule",
+    "reference" : "Medication/ezNFP1hgUFaf63jkztrZIHn5M1SOHzn6X2NTgWFJ3srP39K3mBwlfN4.OK2E2f0JO-3Sh6nagXqqD422DXEpeYdEHc.XJ9uI8lttSuKhk4yI3"
+  }
+}

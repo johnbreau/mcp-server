@@ -1,0 +1,292 @@
+{
+  "id" : "enHzloiiqDxGtCybprsRE0CfygxFRtjgjhJzFqMK8S7o3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "reportedBoolean" : true,
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/etlnUqcmGXqEs2YhB29842Q3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1086215141"
+    }
+  },
+  "resourceType" : "MedicationRequest",
+  "status" : "stopped",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "famotidine 40 mg tablet",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "A02BA03"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "11678"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "4278"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "284245"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "196458"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "667133"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1091396"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2607010"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "104095"
+          }
+        ]
+      },
+      "id" : "eWl-ukiWSPeZviCXARfeIEGD6AiS6xZnEumqxNzuN9ORbJlY66s7zztKxCrMOHI2zUx.pAFvmvNoIUQpPEEGTVwoLkxAjI1LLQAUttFm4Gng3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "tablet",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.698288.310",
+            "display" : "tablet",
+            "code" : "tab"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.698288",
+          "value" : "10012"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "famotidine 40 mg tablet",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "A02BA03"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "11678"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "4278"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "284245"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "196458"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "667133"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1091396"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2607010"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "104095"
+              }
+            ]
+          },
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 40,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 40,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798268",
+      "value" : "1358819276"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ewGe4tFkdcWSlGTB-snKupQ3",
+    "display" : "Nora W"
+  },
+  "authoredOn" : "2023-01-12T16:08:55Z",
+  "dosageInstruction" : [
+    {
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2022-12-29",
+            "end" : "2023-11-21"
+          },
+          "timeOfDay" : [
+            "21:00:00"
+          ]
+        },
+        "code" : {
+          "text" : "at bedtime daily"
+        }
+      },
+      "method" : {
+        "text" : "Take",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Take",
+            "code" : "419652001"
+          }
+        ]
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "calculated",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "calculated",
+                "code" : "calculated"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 40,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        },
+        {
+          "type" : {
+            "text" : "admin-amount",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "admin-amount",
+                "code" : "admin-amount"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "{tbl}",
+            "value" : 1,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "tablet"
+          }
+        },
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 40,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        }
+      ],
+      "patientInstruction" : "Take one tablet by mouth at bedtime daily.",
+      "text" : "Take one tablet by mouth at bedtime daily., Historical Med",
+      "asNeededBoolean" : false,
+      "route" : {
+        "text" : "Oral",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Oral route (qualifier value)",
+            "code" : "26643006"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.798268.7025",
+            "display" : "Oral",
+            "code" : "15"
+          }
+        ]
+      }
+    }
+  ],
+  "requester" : {
+    "extension" : [
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode" : "unknown"
+      }
+    ]
+  },
+  "intent" : "plan",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "medicationReference" : {
+    "display" : "famotidine 40 mg tablet",
+    "reference" : "Medication/eWl-ukiWSPeZviCXARfeIEGD6AiS6xZnEumqxNzuN9ORbJlY66s7zztKxCrMOHI2zUx.pAFvmvNoIUQpPEEGTVwoLkxAjI1LLQAUttFm4Gng3"
+  }
+}

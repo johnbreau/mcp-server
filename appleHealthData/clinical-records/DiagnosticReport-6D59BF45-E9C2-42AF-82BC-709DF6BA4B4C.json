@@ -1,0 +1,195 @@
+{
+  "id" : "e7dQB3fVD5GkHeVV0Sv0s.18S3mZmzztmbJIxy3H-T3c3",
+  "category" : [
+    {
+      "text" : "Pathology and Cytology",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "code" : "Path,Cyt"
+        }
+      ]
+    },
+    {
+      "text" : "Pathology",
+      "coding" : [
+        {
+          "system" : "http://loinc.org",
+          "display" : "Pathology",
+          "code" : "LP7839-6"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Encounter",
+    "reference" : "Encounter/eQrMEJoYDrWwrlvodgmqSjg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1287119909"
+    }
+  },
+  "effectiveDateTime" : "2019-06-21T18:53:00Z",
+  "resourceType" : "DiagnosticReport",
+  "basedOn" : [
+    {
+      "display" : "SURGICAL PATHOLOGY: ROUTINE SPECIMEN",
+      "reference" : "ServiceRequest/eOm57Z3DODONvT.MplxUAHH3ajO9luhuoJBvtzDon00U3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "official",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.798268",
+      "value" : "496961018",
+      "type" : {
+        "text" : "Placer Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Placer Identifier",
+            "code" : "PLAC"
+          }
+        ]
+      }
+    },
+    {
+      "use" : "official",
+      "system" : "https://open.epic.com/FHIR/331/order-accession-number/Beaker",
+      "value" : "S19-25769",
+      "type" : {
+        "text" : "Filler Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Filler Identifier",
+            "code" : "FILL"
+          }
+        ]
+      }
+    }
+  ],
+  "code" : {
+    "text" : "Surgical pathology exam: Routine",
+    "coding" : [
+      {
+        "system" : "urn:oid:2.16.840.1.113883.6.12",
+        "display" : "CHG SURG PATH,LEVEL V",
+        "code" : "88307"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.112",
+        "code" : "SPGEN"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.133",
+        "code" : "T9816"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.227",
+        "code" : "PATHOLOGY"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.25",
+        "code" : "3542"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.23",
+        "code" : "599999"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.187",
+        "code" : "PS"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.225",
+        "code" : "SURGPATH"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.314",
+        "code" : "SP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.477",
+        "code" : "SPGEN"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.328",
+        "code" : "LAB1750"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.345",
+        "code" : "LAB1750"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.470",
+        "code" : "109"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.470",
+        "code" : "110"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.470",
+        "code" : "111"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.470",
+        "code" : "1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.470",
+        "code" : "125"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.470",
+        "code" : "122"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.21010000",
+        "code" : "EXTPATHEAP"
+      }
+    ]
+  },
+  "performer" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eHaZivUPwqYjGMxbOVgCnPQ3",
+      "display" : "Chad Gordon, DO"
+    },
+    {
+      "type" : "Organization",
+      "reference" : "Organization/e0v7A5dBs76ErbWAdFQuVbtYogCtQQq0L1GbjlJf-y9VoE4gan9FleXHyV1Y5Jym73",
+      "display" : "JOHNS HOPKINS MEDICAL LABS (J.H.M.L.)"
+    }
+  ],
+  "result" : [
+    {
+      "display" : "Component (1): LAB AP CASE REPORT",
+      "reference" : "Observation/eIgMEsW-1qS3tH9ds8Em6RZ5UJ03d3IugDiaqqhLrxAzIvqkSjALLULQA3E1R2Xvy3"
+    },
+    {
+      "display" : "Component (1): LAB AP DIVISION HEADER",
+      "reference" : "Observation/eIgMEsW-1qS3tH9ds8Em6RZ5UJ03d3IugDiaqqhLrxAxvZ-g2DzoxWC5yPlGdRW2zCq6hWyMbXg-dcJ9WApqtGQ3"
+    },
+    {
+      "display" : "Component (1): LAB AP DIAGNOSIS",
+      "reference" : "Observation/eIgMEsW-1qS3tH9ds8Em6RZ5UJ03d3IugDiaqqhLrxAw8Y-uZtSTLSfCGgi1vO3QoYzdDfbFA6OuX-42SMFoOrA3"
+    },
+    {
+      "display" : "Component (1): LAB AP ATTESTATION STATEMENT",
+      "reference" : "Observation/eIgMEsW-1qS3tH9ds8Em6RZ5UJ03d3IugDiaqqhLrxAxCbX9I8vgIKbEoaTUf7MSdPhV2JOj1U1SERlG70n9ACg3"
+    },
+    {
+      "display" : "Component (1): LAB AP GROSS DESCRIPTION",
+      "reference" : "Observation/eIgMEsW-1qS3tH9ds8Em6RZ5UJ03d3IugDiaqqhLrxAxkeYAG2jEequk1hIRjxvFd3"
+    }
+  ],
+  "status" : "final",
+  "issued" : "2019-06-26T22:05:00Z"
+}

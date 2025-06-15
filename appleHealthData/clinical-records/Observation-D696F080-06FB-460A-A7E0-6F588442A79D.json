@@ -1,0 +1,88 @@
+{
+  "id" : "ebXNS4fcTrKADr99psjzIKr3sGiJkRtxk1BkdTRxc0qi1jiKs258c6ZnCTgs.PSLaEMtuq5Dfa6ZkIi0RdWPEUQ3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Microbiology",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Microbiology",
+          "code" : "Microbiology"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eWbJtH04GoduR8etwHPhFB6ZOVsC-SHXt8DhUWj4mJ.c3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100137200604"
+    }
+  },
+  "effectiveDateTime" : "2019-07-05T22:40:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CULTURE, WOUND WITH GRAM STAIN (AEROBIC)",
+      "reference" : "ServiceRequest/eZd48TYE.NSPqH07IGiVBNhX-xTmw-QezHd8jpJH2ohI3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 191864073004",
+    "reference" : "Specimen/evLZipuhoqcrYjvlH2jH1SmG-45N0vCmhsO3RScxuo5s3"
+  },
+  "code" : {
+    "text" : "Gram Stain",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Microscopic observation [Identifier] in Unspecified specimen by Gram stain",
+        "code" : "664-3"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "664-3"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "GS"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "M5999790"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "75400033"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "GS"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Gram Stain",
+        "code" : "1810286"
+      }
+    ]
+  },
+  "valueString" : "No organisms seen",
+  "status" : "final",
+  "issued" : "2019-07-09T13:32:24Z"
+}

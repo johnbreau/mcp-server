@@ -1,0 +1,170 @@
+{
+  "id" : "e-rDxgvCzMuo68GK95Jpof4GpOxdPC.4bwmNr7GY-8Ns3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eH5YRSPHKbJl40NFxVtPmrg3",
+      "display" : "Maura Mahar, CNP"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eH5YRSPHKbJl40NFxVtPmrg3",
+    "display" : "Maura Mahar, CNP",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2024-12-05T18:02:42Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Nurse Practitioner",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.4.836982.1040",
+              "display" : "Nurse Practitioner",
+              "code" : "9"
+            },
+            {
+              "system" : "urn:oid:2.16.840.1.113883.6.101",
+              "display" : "NURSE PRACTITIONER NURSE PRACTITIONER",
+              "code" : "363L00000X"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2024-12-05T15:00:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Office Visit",
+        "reference" : "Encounter/ePpTVKWsQLe7aHyCvQEL4SA3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+          "value" : "3637819440"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Progress Notes",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.4.737880.5010",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "code" : "11506-3",
+        "system" : "http://loinc.org",
+        "display" : "Progress note",
+        "userSelected" : true
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.727879",
+      "value" : "13215689746"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.362.2.7.2.727879_13215689746"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2024-12-05T17:59:20Z",
+  "custodian" : {
+    "display" : "Mass General Brigham",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:Partners:deployment.CE-PRD"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2024-12-05T18:02:42Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Maura Mahar, CNP",
+            "reference" : "Practitioner/eH5YRSPHKbJl40NFxVtPmrg3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/e2N-85ve4-4XJ-q8IoOC9rcdIfy.vcSbgPFqgyNYwSlc3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fhoJM4sNBtr1ArrV.-NwNoSKsTSUffOKyNJTXojDsBr44"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

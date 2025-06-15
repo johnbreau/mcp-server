@@ -1,0 +1,82 @@
+{
+  "id" : "eIT360.OMuCNJmMlfWG6fJo5kBapVYEdMlfKzLQId9diSuM-VHtrTZtQIDqO2D-cRDOCiJ7M9OPw7UfO5zpO6TQ3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Visit Encounter",
+    "reference" : "Encounter/e4DeINedlOB3K2rP8h4yksg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1163880264"
+    }
+  },
+  "effectiveDateTime" : "2016-04-29T21:12:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CBC W/ AUTO DIFFERENTIAL",
+      "reference" : "ServiceRequest/eyKoR4yfrXFEsnsJHaOibwOWDPirRhr8HxuIqh83NaI03"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 882912459:54851896",
+    "reference" : "Specimen/eSbo0fgVhNKqpalVphIsf5aXM55uWuOpp45-XYTTr3P83"
+  },
+  "code" : {
+    "text" : "RBC Distribution Width",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Erythrocyte distribution width [Ratio] by Automated count",
+        "code" : "788-0"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.179",
+        "code" : "RDWCV"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "RBC Distribution Width",
+        "code" : "2000000007"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "text" : "11.5 - 14.5"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "%",
+    "value" : 13,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "%"
+  },
+  "status" : "final",
+  "issued" : "2016-04-29T21:59:39Z"
+}

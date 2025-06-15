@@ -1,0 +1,204 @@
+{
+  "id" : "en3VWxXQoL1qhsO2SfUev2uvj1gQEMs6MfgUnroSnLgw3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/ewTKyvmtz6B3QQHU4ZWpcTw3",
+      "display" : "J May, MD"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/ewTKyvmtz6B3QQHU4ZWpcTw3",
+    "display" : "J May, MD",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2023-07-13T15:58:12Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Physician",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.836982.1040",
+              "display" : "Physician",
+              "code" : "1"
+            },
+            {
+              "system" : "urn:oid:2.16.840.1.113883.6.101",
+              "display" : "Physician Internal Medicine",
+              "code" : "207R00000X"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2023-07-13T14:40:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Office Visit",
+        "reference" : "Encounter/ekAZyCMCC8gumyL2EDL3omQ3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+          "value" : "1094714623"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Patient Instructions",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.737880.5010",
+        "display" : "Patient Instructions",
+        "code" : "37"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Patient Instructions",
+        "code" : "37"
+      },
+      {
+        "code" : "69730-0",
+        "system" : "http://loinc.org",
+        "display" : "Instructions",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Note",
+        "code" : "34109-9"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.727879",
+      "value" : "1640718030"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.177.2.7.2.727879_1640718030"
+    }
+  ],
+  "docStatus" : "amended",
+  "date" : "2023-07-13T15:57:48Z",
+  "custodian" : {
+    "display" : "University of Kansas Health System",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:TheUniversityofKansasHospital:PRD.CE"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2023-07-13T15:57:48Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "J May, MD",
+            "reference" : "Practitioner/ewTKyvmtz6B3QQHU4ZWpcTw3"
+          }
+        }
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Addendum/Transcription Authenticator",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Addendum/Transcription Authenticator",
+                "code" : "4"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2023-07-13T15:58:12Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "J May, MD",
+            "reference" : "Practitioner/ewTKyvmtz6B3QQHU4ZWpcTw3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/egCiTqbiTlaOTCMX-X.CBlZO1qhKn-ShLxgcBwDsj7k43"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fKls4eB.Kwqr4vkA.Z9yZDgZaShYWZ4FDnPqCiSwYdvg4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

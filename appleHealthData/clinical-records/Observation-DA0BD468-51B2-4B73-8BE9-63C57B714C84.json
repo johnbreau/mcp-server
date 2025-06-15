@@ -1,0 +1,72 @@
+{
+  "id" : "eRqUCDELmjY-b2GV0xw33Mg2pSILVFOMV5cIQJVUn4ftIemJJLAJNDUqY-2Wu4mTI4AFGdnxXc5.O1sG9oBxtGQ3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "ECG",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "ECG",
+          "code" : "ECG"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Visit Encounter",
+    "reference" : "Encounter/ePTJCitQoO-HzgRQ0yhzKgQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1289967743"
+    }
+  },
+  "effectiveDateTime" : "2019-05-29T17:36:05Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "ECG 12-LEAD",
+      "reference" : "ServiceRequest/ese6FQp2HRokxJnTK8Ocx6gyOpDF.amnAdr9sweFNY.Y3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen MUSE4027766",
+    "reference" : "Specimen/eTRmmTBZOI9YIRYgOKjWYS8f0Xpbo5359irwTv7MdTw83"
+  },
+  "code" : {
+    "text" : "Q-T  INTERVAL",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.48",
+        "code" : "556"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "Q-T  INTERVAL",
+        "code" : "9800000007"
+      }
+    ]
+  },
+  "valueQuantity" : {
+    "code" : "ms",
+    "value" : 340,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "ms"
+  },
+  "status" : "final",
+  "issued" : "2019-05-29T18:28:58Z"
+}

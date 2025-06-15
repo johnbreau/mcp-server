@@ -1,0 +1,194 @@
+{
+  "id" : "eAAQZRIM36.SnHzt.KN3ohce5jw.WaH2NuW2bix1za.g3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eKxrwHWpjwOZKIpamHxShk.UstxPA.LN0hc0WMti2k3M3",
+      "display" : "Thapat Wannarong, M.D."
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eLaKeIPDgnS-DvHCf64euxQ3",
+    "display" : "Michelle Mauermann, M.D.",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2024-06-27T17:38:23Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Fellow",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.836982.1040",
+              "display" : "Fellow",
+              "code" : "116"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2024-06-27T14:30:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Telemedicine",
+        "reference" : "Encounter/eOz.KBUpjwAOIh6bfLmN4yt1wc33y0IXOc7RgqIZPMZo3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+          "value" : "2000613060964"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Progress Notes",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.737880.5010",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "code" : "11506-3",
+        "system" : "http://loinc.org",
+        "display" : "Progress note",
+        "userSelected" : true
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.727879",
+      "value" : "6765524821"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.451.2.7.2.727879_6765524821"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2024-06-26T21:51:21Z",
+  "custodian" : {
+    "display" : "Mayo Clinic",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:CEProd:MayoClinic"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2024-06-27T17:37:46Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Thapat Wannarong, M.D.",
+            "reference" : "Practitioner/eKxrwHWpjwOZKIpamHxShk.UstxPA.LN0hc0WMti2k3M3"
+          }
+        }
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Attesting Cosigner",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Attesting Cosigner",
+                "code" : "3"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2024-06-27T17:38:23Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Michelle Mauermann, M.D.",
+            "reference" : "Practitioner/eLaKeIPDgnS-DvHCf64euxQ3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eZFkOV8FQxU4ixe25cPedNEABxduIesuF3ZN7LK6DeLU3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fTdF0BxdLZ5reMIFcM4.mf5o8PD8P8Gyweho9pD81QfI4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

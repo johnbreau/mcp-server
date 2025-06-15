@@ -1,0 +1,94 @@
+{
+  "id" : "eQOWJhK7Vu6bH-6Xs2v87jw1kC6f5qChf.rdskqtL8cLnuC6n9yRT0BTdsL3pGcfwj8M2yTn5ce9DUmDttzuSgw3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Visit Encounter",
+    "reference" : "Encounter/ePTJCitQoO-HzgRQ0yhzKgQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1289967743"
+    }
+  },
+  "effectiveDateTime" : "2019-05-29T17:25:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "BASIC METABOLIC PANEL",
+      "reference" : "ServiceRequest/ese6FQp2HRokxJnTK8Ocx6p2cNH8QdoWJU-.X-2u1myg3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen C52907964:98811065",
+    "reference" : "Specimen/esx6FY-RoLfGPUVuoI8C.-UQZcSZyfduVEghxxKJBfxM3"
+  },
+  "code" : {
+    "text" : "Potassium",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Potassium [Moles/volume] in Serum or Plasma",
+        "code" : "2823-3"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.179",
+        "code" : "K"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "Potassium",
+        "code" : "2000000096"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "mmol/L",
+        "value" : 3.5,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mmol/L"
+      },
+      "high" : {
+        "code" : "mmol/L",
+        "value" : 5.1,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mmol/L"
+      },
+      "text" : "3.5 - 5.1 mmol/L"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "mmol/L",
+    "value" : 4.4,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "mmol/L"
+  },
+  "status" : "final",
+  "issued" : "2019-05-29T18:45:02Z"
+}

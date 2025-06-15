@@ -1,0 +1,85 @@
+{
+  "id" : "eGANR2lUAm6S5pLMj4hQTJv.91S22b4WZ-e8JfSflVlJPWOPapO3dqqdCwfH9V4QbydeiWdIk51rMZwdse2Igew3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eC.ZREe5XAejBzQz5vZv.-ZIDaONl5pGAhEQKSgzhUFw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+      "value" : "2000644839421"
+    }
+  },
+  "effectiveDateTime" : "2024-12-09T06:00:00Z",
+  "resourceType" : "Observation",
+  "note" : [
+    {
+      "text" : "For final report, select \"Lab-Send Out Lab Results\" \r\nhyperlink below.\r\n"
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "Misc GeneDx, Inc",
+      "reference" : "ServiceRequest/ea6.-xKk7JXyY5E5012e3A-PBDX6t7lD8tbwbZcCkzDM3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen L625000381:3",
+    "reference" : "Specimen/eyEtmL8lKPGFPatNltqLX23oAYDtVRcCXvaNE6zxWp6s3"
+  },
+  "code" : {
+    "text" : "Result",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Referral lab test results",
+        "code" : "19146-0"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.129",
+        "code" : "ZR168"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.328",
+        "code" : "21846"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.201",
+        "code" : "630715337"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.768282",
+        "display" : "Result",
+        "code" : "21846"
+      }
+    ]
+  },
+  "valueString" : "SEE COMMENT",
+  "status" : "final",
+  "issued" : "2024-12-20T14:55:52Z"
+}

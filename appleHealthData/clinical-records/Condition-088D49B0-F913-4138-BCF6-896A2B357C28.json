@@ -1,0 +1,84 @@
+{
+  "category" : [
+    {
+      "text" : "Problem List Item",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "display" : "Problem List Item",
+          "code" : "problem-list-item"
+        }
+      ]
+    },
+    {
+      "text" : "Health Concern",
+      "coding" : [
+        {
+          "system" : "http://loinc.org",
+          "display" : "Health concerns Document",
+          "code" : "75310-3"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
+          "display" : "Health Concern",
+          "code" : "health-concern"
+        }
+      ]
+    }
+  ],
+  "clinicalStatus" : {
+    "text" : "Active",
+    "coding" : [
+      {
+        "code" : "active",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "display" : "Active",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "id" : "ehSvRK38c7fXxLcGHeCYfFXExcu0D-mtz1cRoshCznMY3",
+  "code" : {
+    "text" : "Fatigue",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+        "display" : "Other fatigue",
+        "code" : "R53.83"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Fatigue",
+        "code" : "84229001"
+      },
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+        "display" : "Fatigue",
+        "code" : "780.79"
+      },
+      {
+        "system" : "urn:oid:2.16.840.1.113883.3.247.1.1",
+        "display" : "Fatigue",
+        "code" : "27337"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "verificationStatus" : {
+    "text" : "Confirmed",
+    "coding" : [
+      {
+        "code" : "confirmed",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "display" : "Confirmed",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "onsetDateTime" : "2016-05-04",
+  "resourceType" : "Condition",
+  "recordedDate" : "2016-05-04"
+}

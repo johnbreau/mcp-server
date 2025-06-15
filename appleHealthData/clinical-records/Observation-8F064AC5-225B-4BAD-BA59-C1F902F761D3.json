@@ -1,0 +1,57 @@
+{
+  "status" : "amended",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Neurology",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.10.798268.30",
+          "display" : "Neurology",
+          "code" : "Neurology"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "EMG",
+      "reference" : "ServiceRequest/eZapKWZMTJJGRWic41iF5jd5Jw.H-WgXeGZGNf1CMj-k3"
+    }
+  ],
+  "id" : "e4dlROebkzZwsNGsupl1AyF91SpIGlviS2NepvfmLIBU3",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/elumw1SXNlfJYudGvykNzhNmDFeu0wd.rtR0ev3fcc6c3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+      "value" : "2000609696586"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "performer" : [
+    {
+      "display" : "Nathan Staff, M.D., Ph.D.",
+      "reference" : "Practitioner/eIISRzm-0kP6yl0X4vwN8Xw3"
+    }
+  ],
+  "effectiveDateTime" : "2024-04-23T18:12:50Z",
+  "valueString" : "Table formatting from the original result was not included.\r\n23-Apr-2024             Electromyography             Final Report\r\nStudy Number: 1\r\n\r\n\r\nEMG Consultant: Staff, Nathan P. 127 or (77)4-6421\r\nReferred by: MAUERMANN, MICHELLE L (127 or (77)4-6689)\r\nReferred for: Left arm pain/weakness\r\nReferral Code:      240  310\r\nRX: 240  310\r\n\r\n\r\nSUMMARY: Prior to starting the procedure, the patient's identity was verified, pertinent available records were reviewed, the nature of the procedure was explained, the appropriate sites of the exam were confirmed directly with the patient, and a \r\npre-procedure pause was performed for final verification of all of the above.  \r\n\r\n\r\nAt nerve conduction studies demonstrated low amplitude median and ulnar compound muscle action potentials.  The left ulnar sensory nerve action potential was low amplitude.  Bilateral medial antebrachial cutaneous sensory responses were absent the left \r\nlateral antebrachial cutaneous response was nearly half the size of that on the right.  Needle electromyography demonstrated reduced recruitment of long duration motor unit potentials most severe in upper trunk and lower trunk innervated muscles.  With \r\nfibrillation potentials throughout.  The triceps was relatively spared.  Cervical paraspinals did not exhibit fibrillation potentials although neurogenic motor unit potentials were seen.\r\n\r\n\r\nCLINICAL INTERPRETATION: This is a complex EMG.  There is electrodiagnostic evidence of a chronic active neurogenic process involving the left upper extremity.  Neurologic localization for hand weakness appears most prominent in the lower trunk of the \r\nbrachial plexus, where as the proximal weakness appears more localized to a mix of the root and upper trunk regions.\r\n\r\n\r\nN. Staff (127 or (77)4-6421)/SMB\r\n\r\n\r\nNERVE CONDUCTIONS\r\n  Record Rep   Normal  Normal Distal Normal F-Wave F-Wave Temp \r\nNerve Type Site Stim Side Amp Amp CV CV Lat Lat Lat Est (°C) \r\nLateral antebrachial cutaneous Sensory Lat forearm  L 11    2.5    24.9 \r\nLateral antebrachial cutaneous Sensory Lat forearm  R 21    2.5    24.5 \r\nMedial antebrachial cutaneous Sensory Med forearm  L NR    NR    25.0 \r\nMedial antebrachial cutaneous Sensory Med forearm  R NR    NR    24.5 \r\nMedian Motor APB  L 0.7 (> 4.0) 46 (> 48) 5.8 (< 4.5)   30.8 \r\nUlnar Motor ADM  L 3.3 (> 6.0) 58 (> 51) 2.6 (< 3.6) 31.3 25.9 31.8 \r\nMedian Sensory Dig II  L 20 (> 15.0) 57 (> 56) 3.0 (< 3.6)   32.3 \r\nUlnar Sensory Dig V  L 7 (> 10.0) 56 (> 54) 2.6 (< 3.1)   32.1 \r\n\r\n\r\n\r\n\r\nNEEDLE EMG\r\n  Ins Spont  MUP  Recruitment  Duration  Amplitude  Phases  \r\nMuscle Side Act Fib Fasc Normal Activ Reduced Rapid Long Short High Low % Turns \r\nCervical paraspinal (mid) L NL 0 0   +  ++    50%  \r\nFirst dorsal interosseous L NL ++ 0   +++  ++  +++  25%  \r\nFlexor carpi ulnaris L NL + 0   ++  +  ++  25%  \r\nFlexor Pollicis Longus L DEC 0 0   +++  ++  ++    \r\nPronator teres L NL 0 0   ++  +  +   + \r\nBiceps brachii L NL +/- 0   ++  ++  +++  25%  \r\nDeltoid L NL ++ 0   ++  +++  +++  25%  \r\nTriceps brachii L NL 0 0 NL      +/-   + \r\nInfraspinatus L NL ++ 0   ++  ++  ++  25%  \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n** This interpretation has been electronically signed: Staff, Nathan P., M.D., Ph.D. at 4/23/2024 2:44:46 PM CDT **\r\n\r\n",
+  "resourceType" : "Observation"
+}

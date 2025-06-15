@@ -1,0 +1,313 @@
+{
+  "id" : "ev223ZdfHnctW6aKVT1PnlkbRNXT0rpuVNCjO9n.CtaI3",
+  "category" : [
+    {
+      "text" : "Outpatient",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Outpatient",
+          "code" : "outpatient"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Anesthesia",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/ce-encounter-id",
+        "valueIdentifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+          "value" : "100167987627"
+        }
+      }
+    ],
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100167987628"
+    }
+  },
+  "medicationReference" : {
+    "display" : "propofoL (DIPRIVAN) injection",
+    "reference" : "Medication/eRy7NRCRunwqlsidUAf-CTtfJG7HLl5viQi4srKzzcLdVoXZkKCjONbieK57LfTqtp9PQAj4tj.JK4WFIn--hofsI4pUrmXR6R7dhiduz9jI3"
+  },
+  "resourceType" : "MedicationRequest",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "propofoL (DIPRIVAN) injection",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N01AX10"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "16796"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "8782"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2559907"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1808217"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1808220"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1808222"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1808224"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1808234"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "196459"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "884672"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1188474"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1598995"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1862106"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2050121"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1808219"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1808221"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1808223"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1808225"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1808235"
+          }
+        ]
+      },
+      "id" : "eRy7NRCRunwqlsidUAf-CTtfJG7HLl5viQi4srKzzcLdVoXZkKCjONbieK57LfTqtp9PQAj4tj.JK4WFIn--hofsI4pUrmXR6R7dhiduz9jI3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Emulsion",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.698288.310",
+            "display" : "Emulsion",
+            "code" : "Emul"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.698288",
+          "value" : "11150"
+        }
+      ],
+      "ingredient" : [
+        {
+          "strength" : {
+            "numerator" : {
+              "code" : "mg/mL",
+              "value" : 10,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg/mL"
+            },
+            "denominator" : {
+              "code" : "mg/mL",
+              "value" : 10,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg/mL"
+            }
+          },
+          "itemCodeableConcept" : {
+            "text" : "propofoL (DIPRIVAN) injection",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "N01AX10"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "16796"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "8782"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2559907"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1808217"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1808220"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1808222"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1808224"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1808234"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "196459"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "884672"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1188474"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1598995"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1862106"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2050121"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1808219"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1808221"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1808223"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1808225"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1808235"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "368202893"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eYR59aSgcEvY38nNlA4NhXw3",
+    "display" : "Kaitlyn Hill"
+  },
+  "authoredOn" : "2022-03-28T20:39:01Z",
+  "dosageInstruction" : [
+    {
+      "asNeededBoolean" : true,
+      "timing" : {
+        "code" : {
+          "text" : "as needed"
+        },
+        "repeat" : {
+          "periodUnit" : "d",
+          "frequency" : 1,
+          "period" : 1,
+          "boundsPeriod" : {
+            "start" : "2022-03-28T20:35:00Z",
+            "end" : "2022-03-28T20:51:15Z"
+          }
+        }
+      },
+      "route" : {
+        "text" : "Intravenous",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.798268.7025",
+            "display" : "Intravenous",
+            "code" : "11"
+          }
+        ]
+      },
+      "text" : "Intravenous, As needed, Starting on Mon 3/28/22 at 1535, Anesthesia Intra-op"
+    }
+  ],
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eYR59aSgcEvY38nNlA4NhXw3",
+    "display" : "Kaitlyn Hill"
+  },
+  "intent" : "order",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "status" : "stopped"
+}

@@ -1,0 +1,57 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MRI BRAIN W/WO CONTRAST",
+      "reference" : "ServiceRequest/eSwkCRXIGgaM9JY9yQygWKZRCr2kdnwzWC6d1XqyvFk03"
+    }
+  ],
+  "id" : "eYMp5DLzyBjoTP99xyr7DnOh257wzX7FI-Q6sryshBqs3",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Results Only",
+    "reference" : "Encounter/ezbHPdiT4yplg8hRTNF5Sdw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1048655154"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "performer" : [
+    {
+      "display" : "Haris Sair, MD",
+      "reference" : "Practitioner/eQcxBO5ljPX.rZSbUOGWqww3"
+    }
+  ],
+  "effectiveDateTime" : "2013-11-22T21:39:00Z",
+  "valueString" : "RESULT: \r\n\r\n\r\nIndication: \r\n\r\n\r\nNeurofibromatosis\r\n\r\n\r\nTechnique:\r\n\r\n\r\n1. MR images of the brain from outside institution dated 7/6/2009: \r\nSagittal T1, axial DWI with ADC maps, axial GRE, axial FLAIR, axial T1, \r\naxial T2, and postcontrast axial and coronal T1-weighted images of the \r\nbrain.\r\n2. CT neck dated 7/7/2011: Axial CT images of the neck were obtained with \r\nintravenous contrast.\r\n3. MRI images of the brain, cervical spine, thoracic spine, and lumbar \r\nspine dated 9/22/2011: Sagittal T1, axial DTI with calculated trace, FA, \r\nand color FA maps, axial T2 Star, axial FLAIR, axial T1, axial T2, and \r\npostcontrast axial, coronal, and sagittal T1-weighted images of the \r\nbrain, as well as sagittal T2, T1, STIR, and postcontrast axial and \r\nsagittal T1-weighted images of the cervical, thoracic, and lumbar spine.\r\n\r\n\r\nComparison:\r\nNone.\r\n\r\n\r\nFindings:\r\nMRI brain 7/6/2009: There are few foci of nonspecific white matter T2 \r\nhyperintensity. There is no evidence of acute infarct, intracranial \r\nhemorrhage, or extra-axial collection. Ventricles and sulci are \r\nage-appropriate. There is no mass effect or midline shift. Post contrast \r\nimages demonstrate no abnormal enhancement within the brain or the \r\nmeninges. Specifically, the cerebellopontine angle cisterns are normal in \r\nappearance as are the internal auditory canals. \r\n\r\n\r\nA multilobulated T2 hyperintense, enhancing lesion is seen within the \r\nleft occipital scalp, measuring 1.5 x 3.9 x 2.8 cm in total conglomerate. \r\nThere is also a multilobulated lesion with similar characteristics \r\ninvolving the left retromolar trigone, measuring 2.0 x 1.1 cm in maximum \r\naxial oblique dimensions, and approximately 1.7 cm in craniocaudal \r\ndimension.\r\n\r\n\r\nGlobes and orbits are normal in appearance. There is a retention cyst \r\nwithin the alveolar recess of the left maxillary sinus. Remainder of the \r\nparanasal sinuses are clear. The mastoid air cells are clear.\r\n\r\n\r\nCT neck 7/7/2011: A multilobulated left occipital scalp lesion is again \r\ndemonstrated, with portable lobules appearing to demonstrate a focal area \r\nof calcification. The left retromolar trigone lesion is also visualized \r\nhowever is less well demarcated compared to the prior MRI of the brain \r\nsecondary to streak artifact. Visualized portions of the intracranial \r\nstructures are unremarkable. There are multiple mildly centrally \r\nhypoattenuating lesions throughout the neck, extending from the \r\nneuroforamina outward. The largest lesion is seen in on the left, which \r\nextends from the C3-C4 neural foramen, and on coronal images measures \r\napproximately 5.9 x 2.2 cm in oblique dimensions. There is expansion of \r\nthe neuroforamina. Smaller scattered scalp nodules are also seen.  \r\nAdditional mass lesions is seen associated with the intercostal nerves, \r\nthe largest at the right lung apex which measures 2.7 x 4.3 cm between \r\nthe second and third ribs.\r\n\r\n\r\nVessels of the neck demonstrate normal enhancement. The pharyngeal mucosa \r\nis normal in appearance. There is enlargement of the left laryngeal \r\nventricle. A lesion is seen posterior to the left hypopharynx, indenting \r\nthe piriform sinus. Submandibular and parotid glands are normal in \r\nappearance. The lung parenchyma is unremarkable. No osseous lesions are \r\nseen.\r\n\r\n\r\nMRI brain and spine dated 9/22/2011: There is no evidence of acute \r\ninfarct, intracranial hemorrhage, or extra-axial collection. Previously \r\ndemonstrated tiny foci of white matter T2 hyperintensity are less well \r\nappreciated. There is no mass effect or midline shift. Postcontrast \r\nimages demonstrate no abnormal enhancement within the brain or the \r\nmeninges. Again noted are lobulated lesions within the left occipital \r\nscalp, as well as the left retromolar trigone, without change compared to \r\nthe prior study. Extra-axial structures are likewise stable with \r\npersistent retention cyst within the left maxillary sinus.\r\n\r\n\r\nAnd imaging the cervical spine demonstrates reversal of the usual \r\ncervical lordosis. Mild disc bulges are seen at C4-C5, C5-C6, and C6-C7 \r\nhowever without significant spinal canal narrowing. There is no \r\ndegenerative neuroforaminal narrowing. The spinal cord is normal in \r\nsignal and morphology.\r\n\r\n\r\nAgain noted are multiple enhancing lesion extending from the \r\nneuroforamina bilaterally, the largest at the C3-4 level on the left, \r\nappearing to be without significant change compared to the CT neck of \r\n7/7/2011 allowing for intermodality differences.\r\n\r\n\r\nImaging of the thoracic spine is limited secondary to motion artifact. \r\nMultiple intercostal lesions are again seen, largest on the right between \r\nthe second and third ribs. Otherwise soft tissue lesions appear to be \r\nless prominent compared to the cervical spine. A lesion is seen anterior \r\nto the T4 vertebral body. No significant degenerative changes are seen \r\nwithin the thoracic spine, and the thoracic cord is normal in signal and \r\nmorphology.\r\n\r\n\r\nNo definite lesions are seen within the lumbar spine. There are minor \r\ndegenerative changes within the lumbar spine, without high-grade spinal \r\ncanal or neuroforaminal narrowing.\r\n\r\n",
+  "resourceType" : "Observation"
+}

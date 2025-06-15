@@ -1,0 +1,581 @@
+{
+  "id" : "eq5yXVd0Lq9Vuh9x1PYAPfdLM3gcjDOFJCwPKpxksYKU3",
+  "category" : [
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.798268.30",
+          "code" : "Lab"
+        }
+      ]
+    },
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "display" : "Laboratory",
+          "code" : "LAB"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Blood Draw",
+    "reference" : "Encounter/eWUtC9y.qoSXa6GwjQ6CN3g3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3634337005"
+    }
+  },
+  "effectiveDateTime" : "2025-01-13T12:54:00Z",
+  "resourceType" : "DiagnosticReport",
+  "basedOn" : [
+    {
+      "type" : "ServiceRequest",
+      "reference" : "ServiceRequest/e7lHvRNMcCZg3VAuV3cPp5qlz2JHQ1EKltyuux6w-zvA3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "official",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.798268",
+      "value" : "1521759106",
+      "type" : {
+        "text" : "Placer Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Placer Identifier",
+            "code" : "PLAC"
+          }
+        ]
+      }
+    },
+    {
+      "use" : "official",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.798268.800",
+      "value" : "M7394591",
+      "type" : {
+        "text" : "Filler Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Filler Identifier",
+            "code" : "FILL"
+          }
+        ]
+      }
+    },
+    {
+      "use" : "official",
+      "type" : {
+        "text" : "Filler Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Filler Identifier",
+            "code" : "FILL"
+          }
+        ]
+      },
+      "value" : "SQ_M7394591_385L432329_"
+    }
+  ],
+  "code" : {
+    "text" : "Comprehensive metabolic panel",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "code" : "24323-8"
+      },
+      {
+        "system" : "urn:oid:2.16.840.1.113883.6.12",
+        "display" : "COMPREHENSIVE METABOLIC PANEL",
+        "code" : "LAB4054"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.90",
+        "code" : "CMPA"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.482",
+        "code" : "CMPA"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.482",
+        "code" : "COMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.484",
+        "code" : "325.99621"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.484",
+        "code" : "326.2080"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.483",
+        "code" : "500.0100"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.483",
+        "code" : "500.0150"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.683",
+        "code" : "CMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.507",
+        "code" : "CMET"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.507",
+        "code" : "LLCMET"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.497",
+        "code" : "COMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.499",
+        "code" : "CMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.499",
+        "code" : "1121"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.487",
+        "code" : "CMPNL"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.487",
+        "code" : "CMPNLG"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.504",
+        "code" : "CHP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.489",
+        "code" : "CMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.506",
+        "code" : "100.0481"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.506",
+        "code" : "100.0490"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.490",
+        "code" : "80053A"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.490",
+        "code" : "80053AX"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.500",
+        "code" : "800"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.493",
+        "code" : "101060"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.488",
+        "code" : "10231"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.488",
+        "code" : "37015"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.488",
+        "code" : "35555"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.488",
+        "code" : "19110"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.488",
+        "code" : "91340"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.488",
+        "code" : "90839"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.488",
+        "code" : "90283"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.488",
+        "code" : "34389"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.488",
+        "code" : "19114"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.501",
+        "code" : "10231"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.501",
+        "code" : "37015"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.501",
+        "code" : "35555"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.501",
+        "code" : "19110"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.501",
+        "code" : "91340"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.501",
+        "code" : "90839"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.501",
+        "code" : "90283"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.501",
+        "code" : "34389"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.501",
+        "code" : "19114"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.505",
+        "code" : "200.0105"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.505",
+        "code" : "200.0100"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.505",
+        "code" : "200.0125"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.505",
+        "code" : "200.0106"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.505",
+        "code" : "200.0101"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.503",
+        "code" : "400.00000"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.684",
+        "code" : "SST"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.490",
+        "code" : "19110X"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.490",
+        "code" : "210.014"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.484",
+        "code" : "325.9962"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.489",
+        "code" : "CMP*"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.481",
+        "code" : "ACC-CMPNL"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.481",
+        "code" : "ACC-CMPNLG"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.481",
+        "code" : "QCMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.481",
+        "code" : "CMPC"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.481",
+        "code" : "CMPB"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.481",
+        "code" : "CMPA"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.481",
+        "code" : "CMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.481",
+        "code" : "CMETB1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.481",
+        "code" : "CMETA1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.481",
+        "code" : "CMET1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.685",
+        "code" : "CMPC"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.686",
+        "code" : "GN3 + GY2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.689",
+        "code" : "LAB"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.481",
+        "code" : "QCMET1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.809",
+        "code" : "CMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.817",
+        "code" : "174816"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.25",
+        "code" : "10231"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.861",
+        "code" : "1121"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.852",
+        "code" : "LAB17"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.504",
+        "code" : "400.0250"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.861",
+        "code" : "10231"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.489",
+        "code" : "10231"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.973",
+        "code" : "L400.0020"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.973",
+        "code" : "L950.0705"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.992",
+        "code" : "CMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.497",
+        "code" : "600.0018"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.990",
+        "code" : "L-600.0018"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.1069",
+        "code" : "CMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.506",
+        "code" : "100.0482"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.488",
+        "code" : "444"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.489",
+        "code" : "15116"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.489",
+        "code" : "92469"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.489",
+        "code" : "15561"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.23",
+        "code" : "322000"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.1552",
+        "code" : "CMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.508",
+        "code" : "20"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.1708",
+        "code" : "LAB1378"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.508",
+        "code" : "21"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.634",
+        "code" : "800"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.755",
+        "code" : "CMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.1018",
+        "code" : "COMMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.1027",
+        "code" : "CMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.1018",
+        "code" : "DTCOMMP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.23",
+        "code" : "372906"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.2010",
+        "code" : "LAB4054"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.755",
+        "code" : "CMPONC"
+      }
+    ]
+  },
+  "performer" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/ej1zxM0eOK91G7-VuLyLPIg3",
+      "display" : "Scott Plotkin, MD, PhD"
+    },
+    {
+      "type" : "Organization",
+      "reference" : "Organization/eRsgrFd7PxMVIA1pMo0YgJOGxbD0hMJ1shTPI5wHC6IE3",
+      "display" : "MASSACHUSETTS GENERAL HOSPITAL"
+    }
+  ],
+  "result" : [
+    {
+      "display" : "Component (1): SODIUM",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4tinlFfmNy2SjMS3U11TfGKUaNOZyPWRGl4-w7Vk1q75v.Q3"
+    },
+    {
+      "display" : "Component (1): POTASSIUM",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4tikQE-onp0OaFZRrtax3URKqy5fyj9b4kqojF6LbolugbA3"
+    },
+    {
+      "display" : "Component (1): CHLORIDE",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4timzZFHQXyR7Vm0R9a-xZ5DSAof9P3tf07D6pFebURhrPQ3"
+    },
+    {
+      "display" : "Component (1): CO2",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4tim4h56yLdr6PWGW3XKpl0NoxakgZjyqy09YI5-t-WA8ZA3"
+    },
+    {
+      "display" : "Component (1): BUN",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4tim8kCWKjL3yKLwrkPhqOh2mIcM7VbtgOFOjqPx4trQVww3"
+    },
+    {
+      "display" : "Component (1): CREATININE",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4tin4MSq-pxwx-E0WbRCVAaXAMARnh6YZxROqJF80lOPPfA3"
+    },
+    {
+      "display" : "Component (1): GLUCOSE",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4tinUAgzJJZSR1eCDFzqdDZz3FwvWXG4L0iDABoONq3m5Zg3"
+    },
+    {
+      "display" : "Component (1): ALBUMIN",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4timn6nOEydnG0qlCrUnDBLPlEx4P2YdXH3mzF3Zjvdz9oA3"
+    },
+    {
+      "display" : "Component (1): TOTAL PROTEIN",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4tinLUlANn-TJcVR6n5enZPmKZjGSrC-bs.P08nKYbYDhZg3"
+    },
+    {
+      "display" : "Component (1): CALCIUM",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4til.BVRNPObcwq8rLmX4oyZfHq4AWjkcTol54mS65ukICQ3"
+    },
+    {
+      "display" : "Component (1): ALKALINE PHOSPHATASE",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4tilq6Bt-aGN1ZBfXLpztqyr.adFbmsCkAh6kPzMQ679BTw3"
+    },
+    {
+      "display" : "Component (1): TOTAL BILIRUBIN",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4tin-q.N5eJBR5OC08nQRxQy24VkI4H-h7s-41qUj0TnGEg3"
+    },
+    {
+      "display" : "Component (1): AST",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4timECQDx0zTC7GNNaLkAvPVZpmKvP-66j.uQ67a1Hf-20g3"
+    },
+    {
+      "display" : "Component (1): ALT",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4tinxvulXEojveXh0BRK0VPdkjNijYameioREJzHnUZxVoA3"
+    },
+    {
+      "display" : "Component (1): GLOBULIN",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4til6VE43Ph0v.QFzSHkVDvbGjIrs1--8McQuiJZ8GhWhVw3"
+    },
+    {
+      "display" : "Component (1): EGFR",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4tikV0NBfBUYAQHtzmQ2hX9COq88bMSF8sPI4M0e6iqG4Iw3"
+    },
+    {
+      "display" : "Component (1): ANION GAP",
+      "reference" : "Observation/eDttiPApaDb7A.ttFoSdhjHcQiSrS3sXJpabdDLw4til8LcSKxPBau81Z1-yWuzO8RD5ycshot7bvZA.gHDsCbA3"
+    }
+  ],
+  "status" : "final",
+  "issued" : "2025-01-13T13:28:52Z"
+}

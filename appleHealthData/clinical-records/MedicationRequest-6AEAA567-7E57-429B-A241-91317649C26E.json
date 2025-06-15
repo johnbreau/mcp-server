@@ -1,0 +1,334 @@
+{
+  "id" : "eXVdpgFyS.LZBWeUMkHTsEU8U.6SCYcaKybSLgrmbN8k3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "reportedBoolean" : true,
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/epPorXElBsKqaoqGXrCaX.A3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1043819937"
+    }
+  },
+  "resourceType" : "MedicationRequest",
+  "status" : "active",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "meloxicam 15 MG tablet",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "M01AC06"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "29157"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "41493"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "152695"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "152699"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1086708"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1364057"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1439977"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1482670"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1495051"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1788847"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2118582"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2267587"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2281107"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2621702"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "152698"
+          }
+        ]
+      },
+      "id" : "eo6Z.Umns5dDmsHPcN3bMuje0FTkvTasxSMsvgkg111gf-3uIX5X96mVLYY9Rj8I7I9laVfRS76LMw7IzcvrcNrcci5HrV7BepXknr9Pp72M3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Tablet",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.698288.310",
+            "display" : "Tablet",
+            "code" : "Tab"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.698288",
+          "value" : "20580"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "meloxicam 15 MG tablet",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "M01AC06"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "29157"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "41493"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "152695"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "152699"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1086708"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1364057"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1439977"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1482670"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1495051"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1788847"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2118582"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2267587"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2281107"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2621702"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "152698"
+              }
+            ]
+          },
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 15,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 15,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.798268",
+      "value" : "25405566"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ec9fj3Ww4T8WkBeOAwtw2wg3",
+    "display" : "Tiffany B"
+  },
+  "authoredOn" : "2013-11-08T13:48:39Z",
+  "dosageInstruction" : [
+    {
+      "asNeededBoolean" : false,
+      "timing" : {
+        "repeat" : {
+          "timeOfDay" : [
+            "09:00:00"
+          ]
+        },
+        "code" : {
+          "text" : "daily"
+        }
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "calculated",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "calculated",
+                "code" : "calculated"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 15,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        },
+        {
+          "type" : {
+            "text" : "admin-amount",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "admin-amount",
+                "code" : "admin-amount"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "{tbl}",
+            "value" : 1,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "tablet"
+          }
+        },
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 15,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        }
+      ],
+      "text" : "Take 1 tablet (15 mg total) by mouth daily., Historical Med",
+      "route" : {
+        "text" : "Oral",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Oral route (qualifier value)",
+            "code" : "26643006"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.798268.7025",
+            "display" : "Oral",
+            "code" : "15"
+          }
+        ]
+      },
+      "patientInstruction" : "Take 1 tablet (15 mg total) by mouth daily."
+    }
+  ],
+  "requester" : {
+    "extension" : [
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode" : "unknown"
+      }
+    ]
+  },
+  "intent" : "plan",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "medicationReference" : {
+    "display" : "meloxicam 15 MG tablet",
+    "reference" : "Medication/eo6Z.Umns5dDmsHPcN3bMuje0FTkvTasxSMsvgkg111gf-3uIX5X96mVLYY9Rj8I7I9laVfRS76LMw7IzcvrcNrcci5HrV7BepXknr9Pp72M3"
+  }
+}

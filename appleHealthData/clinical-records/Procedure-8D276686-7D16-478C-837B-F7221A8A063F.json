@@ -1,0 +1,97 @@
+{
+  "id" : "eaGVHAjGbgD2-BCX3H4dZqM8lQHihaf9hcju1HPtBokc3",
+  "category" : {
+    "text" : "Ordered Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Diagnostic procedure",
+        "code" : "103693007"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eqXukc8u2W8dYBORX-jvkSA3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1414896605"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Schwannomatosis",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Schwannomatosis",
+          "code" : "237.73"
+        }
+      ]
+    },
+    {
+      "text" : "Muscle weakness of left upper extremity",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Muscle weakness of left upper extremity",
+          "code" : "728.87"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "Procedure",
+  "basedOn" : [
+    {
+      "display" : "EMG W/NERVE CONDUCTION STUDY",
+      "reference" : "ServiceRequest/erWvJg9y97AvOfRtpeP7QzqxCcrcDky3oIffq-mNtv-I3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.798268",
+      "value" : "691508396",
+      "type" : {
+        "text" : "ORD"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.696580",
+      "value" : "105057",
+      "type" : {
+        "text" : "EAP"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "EMG W/NERVE CONDUCTION STUDY",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "EMG W/NERVE CONDUCTION STUDY",
+        "code" : "18749-2"
+      }
+    ]
+  },
+  "performedDateTime" : "2023-11-08T14:01:43Z",
+  "report" : [
+    {
+      "type" : "DiagnosticReport",
+      "reference" : "DiagnosticReport/e0D4GjXx8D4SBpkO8NKTZKg1AK03wfn7iJmKqQM5VY3Y3",
+      "display" : "EMG W/NERVE CONDUCTION STUDY"
+    }
+  ],
+  "status" : "completed",
+  "asserter" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/e2YZeTvP8p6cQIdFcd7gtgQ3",
+    "display" : "Bronwyn Slobogean, PA-C"
+  }
+}

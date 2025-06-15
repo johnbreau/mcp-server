@@ -1,0 +1,170 @@
+{
+  "id" : "ev.4Drynh2kCYITP4DE7D0aCHfLJMBOk0MNwUpcjBEbA3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eoTbs48aue0Ekk9dft5cOTw3",
+      "display" : "Alexis B"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eoTbs48aue0Ekk9dft5cOTw3",
+    "display" : "Alexis B",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2024-10-09T19:28:10Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Medical Assistant Uncertified",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.836982.1040",
+              "display" : "Medical Assistant Uncertified",
+              "code" : "10100"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2024-10-09T19:27:39Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Clinical Communication",
+        "reference" : "Encounter/ey9IDJMqwId29h3Npd3KuqJ49WyhvSRPV7BEbSNHgns83",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+          "value" : "2000644836987"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Telephone Encounter",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.737880.5010",
+        "display" : "Telephone Encounter",
+        "code" : "36"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Telephone Encounter",
+        "code" : "36"
+      },
+      {
+        "code" : "34748-4",
+        "system" : "http://loinc.org",
+        "display" : "Telephone encounter Note",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Note",
+        "code" : "34109-9"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.727879",
+      "value" : "7148222990"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.451.2.7.2.727879_7148222990"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2024-10-09T19:27:39Z",
+  "custodian" : {
+    "display" : "Mayo Clinic",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:CEProd:MayoClinic"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2024-10-09T19:28:10Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Alexis B",
+            "reference" : "Practitioner/eoTbs48aue0Ekk9dft5cOTw3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eHTQg8ALqDG-UyVf2Jn0SH5rQp5k3ai5f2N07KLKn8QA3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fmTxZYgnd8Cptn9AeJ4OTZQLEMlw8Q-iUnERwhjgICEI4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

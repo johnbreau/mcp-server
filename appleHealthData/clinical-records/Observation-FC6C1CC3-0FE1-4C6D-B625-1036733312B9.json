@@ -1,0 +1,61 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MRA Head without Contrast",
+      "reference" : "ServiceRequest/ekN0m351lmMWCA1yRSFadbjOkSEQRsO1GoKaphdvVRI03"
+    }
+  ],
+  "id" : "eV1c4YOFyti.KgfGPvZ-xFDvawa7eRxQjw7iA3tJ8vIE3",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Imaging Appointment",
+    "reference" : "Encounter/eoxbb9HfS9ceNPMnEuadHhRKdLHOfHb6CrCOn2zucvSk3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100162660891"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "performer" : [
+    {
+      "display" : "N Akhtar, MD",
+      "reference" : "Practitioner/eG4yKs.3B76DypgUlzeVvOQ3"
+    },
+    {
+      "display" : "J. Oliver Letham",
+      "reference" : "Practitioner/eozsHVaJogt3bw-vdBsTLHQ3"
+    }
+  ],
+  "effectiveDateTime" : "2021-10-13T17:05:00Z",
+  "valueString" : " \r\nPatient:   BREAU, JOHN   \r\n\r\n\r\nSex#: M                             \r\nDOB#: 12/20/1971             Corp#: 01447998\r\nLocation: MPI MRI    Accession#: 11211105\r\n \r\nOrdering Provider:   MAY, JOHN \r\nProcedure Requested:  IMG5011 MRA HEAD WO CONTRAST\r\nReason for Exam:  right pulsatile tinnitus\r\nExam Ordered:        10/13/2021  1054\r\nBegin exam date/time:  10/13/2021  1152\r\nExam Date/Time:      10/13/2021  1205\r\n \r\n \r\nMRA HEAD WO CONTRAST \r\n\r\n\r\nDATE: 10/13/2021 12:12 PM\r\n\r\n\r\nINDICATION: right pulsatile tinnitus   initial encounter\r\n\r\n\r\nTECHNIQUE: Axial 3-D time-of-flight images of the intracranial vessels\r\nwithout contrast. 3D reformatted images were performed on a separate\r\nworkstation and reviewed. \r\n\r\n\r\nCOMPARISON: MRI head 7/6/2000.\r\n\r\n\r\nFINDINGS: \r\n\r\n\r\nAnterior Circulation: The visualized distal internal carotid arteries\r\nare patent with no stenosis or aneurysm. The visualized anterior\r\ncerebral and middle cerebral arteries show no significant stenosis or\r\naneurysm. \r\n\r\n\r\nPosterior Circulation: The visualized vertebral arteries, basilar\r\nartery, and posterior cerebral arteries show no significant stenosis or\r\naneurysm. Fetal left PCA.\r\n\r\n\r\nNo arterial venous malformation is seen.\r\n\r\n\r\nMRA is not sensitive for aneurysms 4mm or less in size, for small\r\narteriovenous malformations, or for the detection of dural fistulae.\r\n\r\n",
+  "resourceType" : "Observation"
+}

@@ -1,0 +1,170 @@
+{
+  "id" : "e0dgdvC7Hx0FtJMU.fjv2xzEdnqVhcsXp2xiCVVPz4dg3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/e4gtPWxS0qTTzfHkQY-bIl12O3gjEQ7zr6VXoD0eNRkM3",
+      "display" : "J Brubacher, MD"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/e4gtPWxS0qTTzfHkQY-bIl12O3gjEQ7zr6VXoD0eNRkM3",
+    "display" : "J Brubacher, MD",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2023-01-12T18:58:42Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Physician",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.836982.1040",
+              "display" : "Physician",
+              "code" : "1"
+            },
+            {
+              "system" : "urn:oid:2.16.840.1.113883.6.101",
+              "display" : "Physician Hand Surgery, Orthopedic Surgery",
+              "code" : "207XS0106X"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2023-01-12T16:00:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Office Visit",
+        "reference" : "Encounter/etlnUqcmGXqEs2YhB29842Q3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+          "value" : "1086215141"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Progress Notes",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.737880.5010",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "code" : "11506-3",
+        "system" : "http://loinc.org",
+        "display" : "Progress note",
+        "userSelected" : true
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.727879",
+      "value" : "1461728117"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.177.2.7.2.727879_1461728117"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2023-01-12T16:09:30Z",
+  "custodian" : {
+    "display" : "University of Kansas Health System",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:TheUniversityofKansasHospital:PRD.CE"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2023-01-12T18:58:42Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "J Brubacher, MD",
+            "reference" : "Practitioner/e4gtPWxS0qTTzfHkQY-bIl12O3gjEQ7zr6VXoD0eNRkM3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/egTB14qlxMhhCGUsi8ZtX4iHXgZFPcPP9Yqt30KiywtI3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fPfoyrkLANZ9PhXGJkgdAuM51-tk8XwkYX4Ny1KrM9Cc4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "id" : "eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3",
+  "generalPractitioner" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eaAEtcRSrxXbHWYo4ws9m6w3",
+      "display" : "John May, MD"
+    }
+  ],
+  "birthDate" : "1971-12-20",
+  "resourceType" : "Patient",
+  "active" : true,
+  "telecom" : [
+    {
+      "use" : "home",
+      "system" : "phone",
+      "value" : "816-810-5685",
+      "rank" : 2
+    },
+    {
+      "use" : "work",
+      "system" : "phone",
+      "value" : "816-810-5685",
+      "rank" : 3
+    },
+    {
+      "use" : "mobile",
+      "system" : "phone",
+      "value" : "816-810-5685",
+      "rank" : 1
+    },
+    {
+      "system" : "phone",
+      "value" : "816-522-3100",
+      "use" : "temp"
+    },
+    {
+      "system" : "email",
+      "value" : "johnbreau@gmail.com",
+      "rank" : 1
+    }
+  ],
+  "contact" : [
+    {
+      "telecom" : [
+        {
+          "system" : "phone",
+          "value" : "(816)522-3100",
+          "use" : "work"
+        },
+        {
+          "system" : "phone",
+          "value" : "816-522-3100",
+          "use" : "mobile"
+        }
+      ],
+      "relationship" : [
+        {
+          "text" : "Spouse",
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+              "display" : "Emergency Contact",
+              "code" : "C"
+            },
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+              "display" : "Next-of-Kin",
+              "code" : "N"
+            },
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.4.827665.1000",
+              "display" : "Spouse",
+              "code" : "17"
+            }
+          ]
+        }
+      ],
+      "name" : {
+        "use" : "usual",
+        "text" : "SINGELTON,CATHERINE"
+      },
+      "period" : {
+        "start" : "2024-08-05"
+      },
+      "address" : {
+        "use" : "home",
+        "city" : "OVERLAND PARK",
+        "district" : "JOHNSON",
+        "postalCode" : "66221",
+        "country" : "USA",
+        "line" : [
+          "17225 Nieman Rd"
+        ],
+        "state" : "KS"
+      }
+    },
+    {
+      "organization" : {
+        "display" : "VML"
+      },
+      "relationship" : [
+        {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+              "display" : "Employer",
+              "code" : "E"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deceasedBoolean" : false,
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.69",
+      "value" : "53456521",
+      "type" : {
+        "text" : "BWH"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.25041",
+      "value" : "6047273",
+      "type" : {
+        "text" : "BWI"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.688884.100",
+      "value" : "PXS3V6M0MDCBGC4",
+      "type" : {
+        "text" : "CEID"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.3.6.1.4.1.16517.1",
+      "value" : "106539111",
+      "type" : {
+        "text" : "EMPI"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.698084",
+      "value" : "Z8576127",
+      "type" : {
+        "text" : "EXTERNAL"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "http://open.epic.com/FHIR/StructureDefinition/patient-dstu2-fhir-id",
+      "value" : "TnzLTwfILUMT0BkB3rsssvTBASKYzS7GD8Po--.PMIocB",
+      "type" : {
+        "text" : "FHIR"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "http://open.epic.com/FHIR/StructureDefinition/patient-fhir-id",
+      "value" : "eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3",
+      "type" : {
+        "text" : "FHIR STU3"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.698084",
+      "value" : "  Z8576127",
+      "type" : {
+        "text" : "INTERNAL"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.126",
+      "value" : "8830239",
+      "type" : {
+        "text" : "MEEI"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.67",
+      "value" : "5063308",
+      "type" : {
+        "text" : "MGH"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.878082.110",
+      "value" : "JOHNBREAU@GMAIL.COM",
+      "type" : {
+        "text" : "MYCHARTLOGIN"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.3.7.3.737384.0",
+      "value" : "10090873737",
+      "type" : {
+        "text" : "EPIC"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.878082",
+      "value" : "5406613",
+      "type" : {
+        "text" : "WPRINTERNAL"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "https://open.epic.com/FHIR/StructureDefinition/PayerMemberId",
+      "value" : "BVM16K276483"
+    },
+    {
+      "use" : "usual",
+      "system" : "https://open.epic.com/FHIR/StructureDefinition/PayerMemberId",
+      "value" : "U2992092701"
+    }
+  ],
+  "address" : [
+    {
+      "use" : "home",
+      "city" : "OVERLAND PARK",
+      "district" : "JOHNSON",
+      "postalCode" : "66221",
+      "country" : "USA",
+      "line" : [
+        "17225 NIEMAN RD"
+      ],
+      "state" : "KS"
+    },
+    {
+      "use" : "old",
+      "city" : "OVERLAND PARK",
+      "district" : "JOHNSON",
+      "postalCode" : "66221",
+      "country" : "USA",
+      "line" : [
+        "17225 Nieman Rd"
+      ],
+      "state" : "KS"
+    }
+  ],
+  "maritalStatus" : {
+    "text" : "Married/Civil Union",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "display" : "Married",
+        "code" : "M"
+      }
+    ]
+  },
+  "communication" : [
+    {
+      "preferred" : true,
+      "language" : {
+        "text" : "English",
+        "coding" : [
+          {
+            "system" : "urn:ietf:bcp:47",
+            "display" : "English",
+            "code" : "en"
+          }
+        ]
+      }
+    }
+  ],
+  "extension" : [
+    {
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.698084.130.768080.39128",
+            "display" : "male",
+            "code" : "male"
+          }
+        ]
+      },
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/legal-sex"
+    },
+    {
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.698084.131.657370.1135",
+            "display" : "male",
+            "code" : "male"
+          }
+        ]
+      },
+      "url" : "http://hl7.org/fhir/StructureDefinition/patient-genderIdentity"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+      "valueCode" : "M"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+      "extension" : [
+        {
+          "valueCoding" : {
+            "system" : "urn:oid:2.16.840.1.113883.6.238",
+            "display" : "White",
+            "code" : "2106-3"
+          },
+          "url" : "ombCategory"
+        },
+        {
+          "valueString" : "White",
+          "url" : "text"
+        }
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+      "extension" : [
+        {
+          "valueCoding" : {
+            "system" : "urn:oid:2.16.840.1.113883.6.238",
+            "display" : "Not Hispanic or Latino",
+            "code" : "2186-5"
+          },
+          "url" : "ombCategory"
+        },
+        {
+          "valueString" : "Not Hispanic or Latino",
+          "url" : "text"
+        }
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+      "valueCode" : "184115007"
+    }
+  ],
+  "managingOrganization" : {
+    "display" : "Mass General Brigham",
+    "reference" : "Organization/edaus464ObA9xkcC5ErRA3g3"
+  },
+  "gender" : "male",
+  "name" : [
+    {
+      "use" : "official",
+      "text" : "John A Breau",
+      "family" : "Breau",
+      "given" : [
+        "John",
+        "A"
+      ]
+    },
+    {
+      "use" : "usual",
+      "text" : "John A Breau",
+      "family" : "Breau",
+      "given" : [
+        "John",
+        "A"
+      ]
+    }
+  ]
+}

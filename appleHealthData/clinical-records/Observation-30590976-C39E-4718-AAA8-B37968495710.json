@@ -1,0 +1,96 @@
+{
+  "id" : "e.V14sWinyllBkGZVDVA.MEveFv0MaGfaG8PF.k4hWmmYYhNa6MOQ-pXtslW9RFWG5824.CjSZzGSe4P1HCeyBQ3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Point of Care Testing",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Point of Care Testing",
+          "code" : "POCT"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100100624535"
+    }
+  },
+  "effectiveDateTime" : "2016-02-06T17:44:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "POCT RAPID STREP A",
+      "reference" : "ServiceRequest/e-MbqJIEJ.y1kw40-Sq8sW.zsJwDpP4g2Fx1Y0hMHX383"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen",
+    "reference" : "Specimen/eIkQicGU0CzkbD4SbqWfaVzK3Uh1oGkvYicJ.jGZzNUo3"
+  },
+  "code" : {
+    "text" : "Strep Screen for Group A Strep",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Streptococcus pyogenes [Presence] in Throat by Organism specific culture",
+        "code" : "11268-0"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "M8000185"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "18481-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "STREPSCREEN"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "008169"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "STREPSCREEN"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.147",
+        "code" : "STREP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Strep Screen for Group A Strep",
+        "code" : "1511198"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "text" : "Negative, Small, Moderate, Large, Trace"
+    }
+  ],
+  "valueString" : "Negative",
+  "status" : "final",
+  "issued" : "2016-02-06T17:45:02Z"
+}

@@ -1,0 +1,138 @@
+{
+  "id" : "ebKoitq1I4QPxC6TWFOV7tILdb1GMSFEgsLYx6rJEGqCTGILkVmYqqTlKmFO9-LyuCvON7tAbNkWZ4rVPlhYWHg3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eepgJlPiHA4wxeLHGXWHb5g3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "13196486"
+    }
+  },
+  "effectiveDateTime" : "2015-02-17T16:52:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "COMPREHENSIVE METABOLIC",
+      "reference" : "ServiceRequest/eY-3zWcOs7D7afZAKWGlXshASfGExm5l20z8a0A6WmNQ3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 150484511248",
+    "reference" : "Specimen/eldAqwyPtc68z0gVf2H.kdJQ7Wmm4MfpFqeE1pm76EzM3"
+  },
+  "code" : {
+    "text" : "Protein Total Serum",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Protein [Mass/volume] in Serum or Plasma",
+        "code" : "2885-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10082230"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "2885-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "TP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "001073"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3104000"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L1534075"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20002735"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20001235"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "25001300"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "TP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.184",
+        "code" : "1534075"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.681",
+        "code" : "000140"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Protein Total Serum",
+        "code" : "1534075"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "g/dL",
+        "value" : 6,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "g/dL"
+      },
+      "high" : {
+        "code" : "g/dL",
+        "value" : 8.2,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "g/dL"
+      },
+      "text" : "6.0 - 8.2 g/dL"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "g/dL",
+    "value" : 7.7,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "g/dL"
+  },
+  "status" : "final",
+  "issued" : "2015-02-17T22:41:03Z"
+}

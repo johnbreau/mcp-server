@@ -1,0 +1,81 @@
+{
+  "id" : "e-l2ppe2VcidlSC7NEk6SMM786xqG5GJx90DcwsdcDzbAvS2xzmBN7dw6S5mlLNj13",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/e8CxhGYpfRMT3AOz.AkTqZx.fE.CoJRbS8mlN91.q-G43",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100167877911"
+    }
+  },
+  "effectiveDateTime" : "2022-03-26T14:54:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "SARS-COV-2 (COVID-19)",
+      "reference" : "ServiceRequest/eKX-i2rhLvGopziz.P6Rs9QtCvLo.9bcmqY4BbRT2JU83"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 22L-085D0102",
+    "reference" : "Specimen/etxNCKCgc2Xf4oK4w4CXLpvx8e9fLjiP5FNDIJlozFV43"
+  },
+  "code" : {
+    "text" : "SARS-COV-2 PCR",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "SARS-CoV-2 (COVID-19) RNA [Presence] in Specimen by NAA with probe detection",
+        "code" : "94309-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.184",
+        "code" : "11835"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "11835"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "SARS-COV-2 PCR",
+        "code" : "11835"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "text" : "Negative"
+    }
+  ],
+  "valueString" : "Negative",
+  "status" : "final",
+  "issued" : "2022-03-27T01:10:12Z"
+}

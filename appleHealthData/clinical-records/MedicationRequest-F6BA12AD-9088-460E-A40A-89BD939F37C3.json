@@ -1,0 +1,212 @@
+{
+  "id" : "e2S3rNk3LatZoF67wkGiU7a8QZc-N1wUO9KhnffKttDE3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "reportedBoolean" : true,
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eKfxlQ53xciEX8Y-d5TE.Uw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1276408835"
+    }
+  },
+  "resourceType" : "MedicationRequest",
+  "medicationReference" : {
+    "display" : "pantoprazole 40 mg EC tablet",
+    "reference" : "Medication/el8YOQeaWErA.z.nr.YZug.-7GmmNqtPuFbNcmpm3SmeS55GZMO1JzB-xZDrxZ5ebJlOQNjbgNzdIKtUplWMi1wSdwnI0hgXQT6vnDbYjRRs3"
+  },
+  "contained" : [
+    {
+      "code" : {
+        "text" : "pantoprazole 40 mg EC tablet",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "A02BC02"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "27462"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "40790"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "236632"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "253191"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "314200"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "153045"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "261624"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "153044"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "284400"
+          }
+        ]
+      },
+      "id" : "el8YOQeaWErA.z.nr.YZug.-7GmmNqtPuFbNcmpm3SmeS55GZMO1JzB-xZDrxZ5ebJlOQNjbgNzdIKtUplWMi1wSdwnI0hgXQT6vnDbYjRRs3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Tablet, Delayed Release (E.C.)",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.698288.310",
+            "display" : "Tablet, Delayed Release (E.C.)",
+            "code" : "TbEC"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.698288",
+          "value" : "26225"
+        }
+      ],
+      "ingredient" : [
+        {
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 40,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 40,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            }
+          },
+          "itemCodeableConcept" : {
+            "text" : "pantoprazole 40 mg EC tablet",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "A02BC02"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "27462"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "40790"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "236632"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "253191"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "314200"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "153045"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "261624"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "153044"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "284400"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.798268",
+      "value" : "423655552"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/e6Rlhnz6brZmtPT1LQETvWg3",
+    "display" : "Deborah K"
+  },
+  "authoredOn" : "2018-10-03T18:51:57Z",
+  "dosageInstruction" : [
+    {
+      "patientInstruction" : "TAKE 1 TABLET BY MOUTH EVERY MORNING BEFORE BREAKFAST",
+      "text" : "TAKE 1 TABLET BY MOUTH EVERY MORNING BEFORE BREAKFAST, Historical Med",
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2017-11-10",
+            "end" : "2025-01-05"
+          }
+        }
+      }
+    }
+  ],
+  "requester" : {
+    "extension" : [
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode" : "unknown"
+      }
+    ]
+  },
+  "intent" : "plan",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "status" : "stopped"
+}

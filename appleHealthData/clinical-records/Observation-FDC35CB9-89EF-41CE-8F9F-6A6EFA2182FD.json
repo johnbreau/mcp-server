@@ -1,0 +1,98 @@
+{
+  "id" : "eOT1NAc5Ejx.1EmDvJdOn5eeZVAQCEKxbJsaWjIwPzBo5YpLrgCGM5ogRFsQjXzc77olhRmxTsmGmwDAXQcAzLQ3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Blood Draw",
+    "reference" : "Encounter/e7ENTT1ridWQH0qLcr9A-lQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3638556914"
+    }
+  },
+  "effectiveDateTime" : "2024-10-22T15:46:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CBC and differential",
+      "reference" : "ServiceRequest/ecJcWwoLiyVreQC.5N7Pnb4.JQ1oP7O75DEM-6vVcNXg3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen SQ_T7474748_382L774895_",
+    "reference" : "Specimen/e1glsQ4OWwO-QrIn9xrkEt18dMMG.Us7xP7FDgi.Kvpc3"
+  },
+  "code" : {
+    "text" : "HGB",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Hemoglobin [Mass/volume] in Blood",
+        "code" : "718-7"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.91",
+        "code" : "HGB"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.818",
+        "code" : "5200006739"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.768282",
+        "display" : "HGB",
+        "code" : "5200006739"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "g/dL",
+        "value" : 13.5,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "g/dL"
+      },
+      "high" : {
+        "code" : "g/dL",
+        "value" : 17.5,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "g/dL"
+      },
+      "text" : "13.5 - 17.5 g/dL"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "g/dL",
+    "value" : 13.5,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "g/dL"
+  },
+  "status" : "final",
+  "issued" : "2024-10-22T15:58:33Z"
+}

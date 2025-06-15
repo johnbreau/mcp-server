@@ -1,0 +1,165 @@
+{
+  "id" : "exNEHxapOJf2yEy7v3RupAC99Vf27illmzgpNrHyMAYU3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eg5QK2tTi3nfOTCLG0sMeLw3",
+      "display" : "Lori C"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eg5QK2tTi3nfOTCLG0sMeLw3",
+    "display" : "Lori C",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2023-09-01T13:52:32Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "RN",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.836982.1040",
+              "display" : "RN",
+              "code" : "3"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2023-09-01T13:51:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Documentation",
+        "reference" : "Encounter/e8uANnxj6hSANFJL-hY2LdA3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+          "value" : "1097357808"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Progress Notes",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.737880.5010",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "code" : "11506-3",
+        "system" : "http://loinc.org",
+        "display" : "Progress note",
+        "userSelected" : true
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.727879",
+      "value" : "1692391434"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.177.2.7.2.727879_1692391434"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2023-09-01T13:51:50Z",
+  "custodian" : {
+    "display" : "University of Kansas Health System",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:TheUniversityofKansasHospital:PRD.CE"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2023-09-01T13:52:32Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Lori C",
+            "reference" : "Practitioner/eg5QK2tTi3nfOTCLG0sMeLw3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/ey7HqHAR7FNE5.GU6BYoKj6WtJ.phndVjkR-btzTQUiw3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fKbJ.Yr7EJBL7WLvPlI5eY0fEvJJ0C7oZqK.Ou8PEEDM4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

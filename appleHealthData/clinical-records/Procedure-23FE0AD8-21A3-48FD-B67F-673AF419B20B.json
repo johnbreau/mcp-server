@@ -1,0 +1,120 @@
+{
+  "id" : "ezM89R..Jgxv2CZZDqzmj-rcMUjenuaKdJe5.jkDEtjhiWS0myoM9DIk3Qvvz-UsvWYD1Kv5rfCAvBA4ZBEo4eQ3",
+  "category" : {
+    "text" : "Ordered Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Diagnostic procedure",
+        "code" : "103693007"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eDQYEe8ZwLcgFNCXJAbELlQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1099710815"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Muscle weakness of left upper extremity",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Muscle weakness of left upper extremity",
+          "code" : "728.87"
+        }
+      ]
+    },
+    {
+      "text" : "Schwannomatosis (CMS-HCC)",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Schwannomatosis (CMS-HCC)",
+          "code" : "237.73"
+        }
+      ]
+    },
+    {
+      "text" : "Carpal tunnel syndrome of left wrist",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Carpal tunnel syndrome of left wrist",
+          "code" : "354.0"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "Procedure",
+  "basedOn" : [
+    {
+      "display" : "EMG PROCEDURE",
+      "reference" : "ServiceRequest/eu13dES5vI00AAVKHZ7a8Grprxl9Y.imPCmaCjZAK0hM3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798268",
+      "value" : "1403005372",
+      "type" : {
+        "text" : "ORD"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.696580",
+      "value" : "10222160",
+      "type" : {
+        "text" : "EAP"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798069",
+      "value" : "2266853",
+      "type" : {
+        "text" : "OPE"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "EMG PROCEDURE",
+    "coding" : [
+      {
+        "system" : "http://www.ama-assn.org/go/cpt",
+        "display" : "PR NEEDLE EMG EA EXTREMTY W/PARASPINL AREA COMPLETE",
+        "code" : "95886"
+      }
+    ]
+  },
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/etVxgMyuiwAh81Ay0NRgUGw3",
+    "display" : "J May, MD"
+  },
+  "performedDateTime" : "2024-02-15T21:00:00Z",
+  "report" : [
+    {
+      "type" : "DiagnosticReport",
+      "reference" : "DiagnosticReport/ezLw0xdt5rssNG0dWBtIafUOSu.-AKtq9sW62qj1R-ps3",
+      "display" : "EMG PROCEDURE"
+    }
+  ],
+  "status" : "completed",
+  "asserter" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/etVxgMyuiwAh81Ay0NRgUGw3",
+    "display" : "J May, MD"
+  }
+}

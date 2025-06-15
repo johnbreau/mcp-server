@@ -1,0 +1,61 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MRI UPPER EXTREM WO/W CONT LT",
+      "reference" : "ServiceRequest/e1YucsylnuwJl3429hTQbX391z5.4JlWsWg6fsYccJ983"
+    }
+  ],
+  "id" : "eJ75RdU9sQUTmXGkBYEDlw6Etpg0Gg5nLJU.Ru.eMK3c3",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/e.QDnRPtkhNLpTRzFt1Jqkw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1041879886"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "performer" : [
+    {
+      "display" : "K Brown, MD",
+      "reference" : "Practitioner/e6IX35rp7-UhnrPIrDnt9VA3"
+    },
+    {
+      "display" : "S Hund, MD",
+      "reference" : "Practitioner/eXehYmqtYUD5sRrcJcHzPzw3"
+    }
+  ],
+  "effectiveDateTime" : "2019-10-28T20:19:27Z",
+  "valueString" : "MRI of the left upper extremity, left arm and left forearm\r\n\r\n\r\nHistory: Male, 47 years old. Schwannomatosis. Neuropathic pain syndrome. Tumor of soft tissues. Left shoulder pain.\r\n\r\n\r\nComparison: None.\r\n\r\n\r\nTechnique: Multiple multiplanar images were obtained of the left upper extremity with and without the use of intravenous MultiHance contrast.\r\n\r\n\r\nFINDINGS:\r\n\r\n\r\nBones and Joints: Normal alignment. No acute fracture. The joint spaces are maintained. Normal bone marrow signal without focal osseous lesion.\r\n\r\n\r\nLigaments: Unremarkable.\r\n\r\n\r\nTendons: Intact without evidence of tear, tendinosis, or tenosynovitis.\r\n\r\n\r\nMuscles and Soft tissues: No muscular edema or fatty atrophy partial visualization of several T2 hyperintense masses along the upper thoracic left neural foramina and intercostal regions only seen on coronal images, incompletely evaluated.\r\n\r\n",
+  "resourceType" : "Observation"
+}

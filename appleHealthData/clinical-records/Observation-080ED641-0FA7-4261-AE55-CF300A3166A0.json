@@ -1,0 +1,82 @@
+{
+  "id" : "eS3xfU5F2RZKdXMSdnosNAMvi-UWDHCCA.1cIvE3jVf8gFcLJUgTlbZ.42XlQtkOoHscpaNWvbjRcTypTB-ggVQ3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Visit Encounter",
+    "reference" : "Encounter/e4DeINedlOB3K2rP8h4yksg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1163880264"
+    }
+  },
+  "effectiveDateTime" : "2016-04-29T21:12:00Z",
+  "resourceType" : "Observation",
+  "note" : [
+    {
+      "text" : "Adult Male:   20-49 yrs          160.0-726.0 ng/dL\r\n                >49 yrs          129.0-767.0 ng/dL\r\nAdult Female: Ovulating          None Detected - 73.0 ng/dL\r\n              Post Menopausal    None Detected - 43.0 ng/dL\r\n"
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "TESTOSTERONE, TOTAL (IMMUNOASSAY)",
+      "reference" : "ServiceRequest/e27.ZEkDGVfcvgTw8sPTd4FUMMGaarRZcJZK3OvyXBzg3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 882912459:54851901",
+    "reference" : "Specimen/eqZLQN87-u3m1I7QqjdWWyHynSVGi5iw4MK1ut5P9g4U3"
+  },
+  "code" : {
+    "text" : "Testosterone, Serum",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Testosterone.free+weakly bound [Mass/volume] in Serum or Plasma",
+        "code" : "2990-0"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.179",
+        "code" : "TESTO"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "Testosterone, Serum",
+        "code" : "2000000890"
+      }
+    ]
+  },
+  "valueQuantity" : {
+    "code" : "ng/dL",
+    "value" : 104,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "ng/dL"
+  },
+  "status" : "final",
+  "issued" : "2016-05-02T16:19:11Z"
+}

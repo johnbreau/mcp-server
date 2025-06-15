@@ -1,0 +1,170 @@
+{
+  "id" : "easVKk0pYy9kPrz7BrrjkkJj4HsCJbe0yCmFMKn9PoXo3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/e7Yxv1ln5oFtUx0kv2TLIDw3",
+      "display" : "Ralitza Gavrilova, M.D."
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/e7Yxv1ln5oFtUx0kv2TLIDw3",
+    "display" : "Ralitza Gavrilova, M.D.",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2024-12-20T18:10:02Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Physician",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.836982.1040",
+              "display" : "Physician",
+              "code" : "1"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2024-12-20T18:10:02Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Hospital Outpatient Visit",
+        "reference" : "Encounter/eC.ZREe5XAejBzQz5vZv.-ZIDaONl5pGAhEQKSgzhUFw3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+          "value" : "2000644839421"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Result Encounter Note",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.737880.5010",
+        "display" : "Result Encounter Note",
+        "code" : "77"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Result Encounter Note",
+        "code" : "77"
+      },
+      {
+        "code" : "11506-3",
+        "system" : "http://loinc.org",
+        "display" : "Progress note",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Note",
+        "code" : "34109-9"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.727879",
+      "value" : "7421598717"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.451.2.7.2.727879_7421598717"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2024-12-20T18:10:02Z",
+  "custodian" : {
+    "display" : "Mayo Clinic",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:CEProd:MayoClinic"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2024-12-20T18:10:02Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Ralitza Gavrilova, M.D.",
+            "reference" : "Practitioner/e7Yxv1ln5oFtUx0kv2TLIDw3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eZVLSdGfTuzCa.QInOQxM6mGjb4lrZ10Q8VhoCx2UhTM3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/flqlrtNe83HcwVbA6ndfCLj6jhbugjozlpjM7JeBFbP04"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

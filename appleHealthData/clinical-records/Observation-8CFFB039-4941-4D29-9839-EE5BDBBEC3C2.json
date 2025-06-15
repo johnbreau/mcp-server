@@ -1,0 +1,78 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Vital Signs",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Vital Signs",
+          "code" : "vital-signs"
+        }
+      ]
+    }
+  ],
+  "issued" : "2018-04-16T17:23:14Z",
+  "id" : "eFx2KZ8li0Vba-Oy1-HIlQcoIssSsmI5NYp9XJXuK7ApqF0nWb1rU77ff67QsRFQAVFAc5elnNefwKWGKh6QQZA3",
+  "code" : {
+    "text" : "Weight",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.707679",
+        "display" : "Weight",
+        "code" : "14"
+      },
+      {
+        "system" : "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+        "display" : "Weight",
+        "code" : "tDLi6sBtK6Dg2oTBVKn423A0"
+      },
+      {
+        "system" : "urn:oid:1.2.246.537.6.96",
+        "code" : "29463-7"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Body weight",
+        "code" : "29463-7"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Body weight Measured",
+        "code" : "3141-9"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Vital signs",
+        "code" : "8716-3"
+      }
+    ]
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eZp2FyskqIV3lfRuwg8ZDBDcnZARNK7X6Pv1PQBuj1J83",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100120732229"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "performer" : [
+    {
+      "display" : "Medical Assistant Latonya",
+      "reference" : "Practitioner/e7-zyepmSpiNoWmyYMImsCA3"
+    }
+  ],
+  "effectiveDateTime" : "2018-04-16T17:23:00Z",
+  "valueQuantity" : {
+    "code" : "kg",
+    "value" : 93,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "kg"
+  },
+  "resourceType" : "Observation"
+}

@@ -1,0 +1,228 @@
+{
+  "id" : "eEW8k0KpWxnSedpuDUjaH9Pji83vWrlMpylWz3rzwlPo3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/exSBw.nW7rhBHeJFbqgqcdw3",
+      "display" : "Susan N"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/exSBw.nW7rhBHeJFbqgqcdw3",
+    "display" : "Susan N",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2024-05-21T20:21:31Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "RN",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.836982.1040",
+              "display" : "RN",
+              "code" : "3"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2024-05-21T20:00:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Office Visit Telehealth",
+        "reference" : "Encounter/eOFiZM9DXzEsQ1fs7DUN44A3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+          "value" : "1106430688"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Patient Instructions",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.737880.5010",
+        "display" : "Patient Instructions",
+        "code" : "37"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Patient Instructions",
+        "code" : "37"
+      },
+      {
+        "code" : "69730-0",
+        "system" : "http://loinc.org",
+        "display" : "Instructions",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Note",
+        "code" : "34109-9"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.727879",
+      "value" : "1974177219"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.177.2.7.2.727879_1974177219"
+    }
+  ],
+  "docStatus" : "amended",
+  "date" : "2024-05-21T20:19:34Z",
+  "custodian" : {
+    "display" : "University of Kansas Health System",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:TheUniversityofKansasHospital:PRD.CE"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2024-05-21T20:19:34Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Susan N",
+            "reference" : "Practitioner/exSBw.nW7rhBHeJFbqgqcdw3"
+          }
+        }
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Addendum/Transcription Authenticator",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Addendum/Transcription Authenticator",
+                "code" : "4"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2024-05-21T20:21:04Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Susan N",
+            "reference" : "Practitioner/exSBw.nW7rhBHeJFbqgqcdw3"
+          }
+        }
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Addendum/Transcription Authenticator",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Addendum/Transcription Authenticator",
+                "code" : "4"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2024-05-21T20:21:31Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Susan N",
+            "reference" : "Practitioner/exSBw.nW7rhBHeJFbqgqcdw3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eDPXL-BD.2HwhTfmnZBFeHZtyuhCNRFmV2bfUSfk1oOQ3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/f8C35gs0EIRpEVqMwkWb1QNXjTj9G9alfiafXwEeRCGA4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

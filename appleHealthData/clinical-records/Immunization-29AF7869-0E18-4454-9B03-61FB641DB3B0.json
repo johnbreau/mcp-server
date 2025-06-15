@@ -1,0 +1,110 @@
+{
+  "id" : "eCLuoNqK6oNe2fKUOcSuxu1h.P90783CuQbuY92hrCVE3",
+  "primarySource" : true,
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eG11EwkR9u7qLKAPyHRHbI9d5yIDbhSxC7FhIzi.VOh43",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100105260794"
+    }
+  },
+  "resourceType" : "Immunization",
+  "occurrenceDateTime" : "2016-10-17T22:16:00Z",
+  "expirationDate" : "2017-06-25",
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768076",
+      "value" : "9574186"
+    }
+  ],
+  "location" : {
+    "display" : "Saint Luke's Health System"
+  },
+  "lotNumber" : "4Z27T",
+  "manufacturer" : {
+    "display" : "GlaxoSmithKline"
+  },
+  "route" : {
+    "text" : "Intramuscular",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.768076.4030",
+        "display" : "Intramuscular",
+        "code" : "2"
+      }
+    ]
+  },
+  "vaccineCode" : {
+    "text" : "Influenza QIV (IM)",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "150"
+      },
+      {
+        "system" : "http://hl7.org/fhir/sid/ndc",
+        "code" : "58160-905-41"
+      }
+    ]
+  },
+  "site" : {
+    "text" : "Right deltoid",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.768076.4040",
+        "display" : "Right deltoid",
+        "code" : "6"
+      }
+    ]
+  },
+  "doseQuantity" : {
+    "code" : "1",
+    "value" : 0.5,
+    "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.768076.4019",
+    "unit" : "mL"
+  },
+  "performer" : [
+    {
+      "actor" : {
+        "type" : "Practitioner",
+        "reference" : "Practitioner/e7-zyepmSpiNoWmyYMImsCA3",
+        "display" : "Medical Assistant Latonya"
+      },
+      "function" : {
+        "text" : "Administering Provider",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+            "display" : "Administering Provider",
+            "code" : "AP"
+          }
+        ]
+      }
+    },
+    {
+      "actor" : {
+        "type" : "Practitioner",
+        "reference" : "Practitioner/ex.ogNv0OHMmKrxfrIA8Jkg3",
+        "display" : "J May, MD"
+      },
+      "function" : {
+        "text" : "Ordering Provider",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+            "display" : "Ordering Provider",
+            "code" : "OP"
+          }
+        ]
+      }
+    }
+  ],
+  "status" : "completed",
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  }
+}

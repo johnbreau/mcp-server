@@ -1,0 +1,140 @@
+{
+  "id" : "ehUGqtyzLSsLpmyxri3mkcHXdV29hf4QvbYf2yzLGII9pcRc1c1A-x9iSa52EOEPwyWyHBJSZwl4d4g0zIqDPkg3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/eox5wdgoi1IfYfUbfA0ohTqRk1YGK49yTgRKEFVhf6cQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100102443200"
+    }
+  },
+  "effectiveDateTime" : "2016-05-19T13:56:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "COMPREHENSIVE METABOLIC PANEL",
+      "reference" : "ServiceRequest/eSjMuckYsIrw0JvaCGA-qtWX2BENNXmebnC.nXXu59cg3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 161400975333",
+    "reference" : "Specimen/e4Xd2K9y.5x8BgKo-SQSOikhxI9qMGijeiyqzQaHCRbE3"
+  },
+  "code" : {
+    "text" : "Alkaline Phosphatase",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma",
+        "code" : "6768-6"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L8028181"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10082270"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "6768-6"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "ALP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3106200"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20001260"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "25002000"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10092450"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "900427600"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "900604000"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "ALP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3004150"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.184",
+        "code" : "1525848"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.681",
+        "code" : "000018"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Alkaline Phosphatase",
+        "code" : "1525848"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "value" : 42,
+        "unit" : "IU/L"
+      },
+      "high" : {
+        "value" : 140,
+        "unit" : "IU/L"
+      },
+      "text" : "42 - 140 IU/L"
+    }
+  ],
+  "valueQuantity" : {
+    "value" : 74,
+    "unit" : "IU/L"
+  },
+  "status" : "final",
+  "issued" : "2016-05-19T17:21:36Z"
+}

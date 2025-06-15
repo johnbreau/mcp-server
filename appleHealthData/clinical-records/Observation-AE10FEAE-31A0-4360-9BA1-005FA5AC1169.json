@@ -1,0 +1,82 @@
+{
+  "id" : "ejl7TPK9sgNT6zn6Du6K.g5KIuI7SROPQHJ37PR9C-JdKliqSQn1a1ukwB35N4RyYmIwO6xBnBtv7Sf58KLZwHA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Visit Encounter",
+    "reference" : "Encounter/e4DeINedlOB3K2rP8h4yksg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1163880264"
+    }
+  },
+  "effectiveDateTime" : "2016-04-29T21:12:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "COMPREHENSIVE METABOLIC PANEL",
+      "reference" : "ServiceRequest/eyKoR4yfrXFEsnsJHaOibwGOmAJJALIGKvJvv3cdyRCQ3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 882912459:54851897",
+    "reference" : "Specimen/eTYsdWPSnnWST6CSQXWFdChqkdXjnrvjVKCcBuDkmYMQ3"
+  },
+  "code" : {
+    "text" : "Aspartate Amino Trans",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+        "code" : "1920-8"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.179",
+        "code" : "AST"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "Aspartate Amino Trans",
+        "code" : "2000000109"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "text" : "0 - 37"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "U/L",
+    "value" : 23,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "U/L"
+  },
+  "status" : "final",
+  "issued" : "2016-04-29T22:27:44Z"
+}

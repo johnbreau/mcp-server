@@ -1,0 +1,75 @@
+{
+  "id" : "eoLrHLfay5EeWH2DMFrIkPKAWrFkm2Evwm5iDCc7SiS43",
+  "category" : {
+    "text" : "Ordered Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Diagnostic procedure",
+        "code" : "103693007"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Orders Only",
+    "reference" : "Encounter/eaV1xYFH0ttkJAFaANRI.OXVADDx6qPJvdZ1XtkzLdv83",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100137113592"
+    }
+  },
+  "resourceType" : "Procedure",
+  "basedOn" : [
+    {
+      "display" : "EKG OUTSIDE RECORD",
+      "reference" : "ServiceRequest/eGxIqroIi1jP6r42CFFSydMRkh43-3sIuOt8B3FArqfs3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "248498317",
+      "type" : {
+        "text" : "ORD"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.696580",
+      "value" : "243911",
+      "type" : {
+        "text" : "EAP"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "EKG OUTSIDE RECORD",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.696580",
+        "display" : "EKG OUTSIDE RECORD",
+        "code" : "243911"
+      }
+    ]
+  },
+  "performedDateTime" : "2019-05-29",
+  "report" : [
+    {
+      "type" : "DiagnosticReport",
+      "reference" : "DiagnosticReport/emHpvmoDxZuem7Ot3d0HntaFL015KI5WtDkrgtWwZpeY3",
+      "display" : "EKG OUTSIDE RECORD"
+    }
+  ],
+  "status" : "completed",
+  "asserter" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ex.ogNv0OHMmKrxfrIA8Jkg3",
+    "display" : "J May, MD"
+  }
+}

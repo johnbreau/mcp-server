@@ -1,0 +1,84 @@
+{
+  "category" : [
+    {
+      "text" : "Problem List Item",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "display" : "Problem List Item",
+          "code" : "problem-list-item"
+        }
+      ]
+    },
+    {
+      "text" : "Health Concern",
+      "coding" : [
+        {
+          "system" : "http://loinc.org",
+          "display" : "Health concerns Document",
+          "code" : "75310-3"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
+          "display" : "Health Concern",
+          "code" : "health-concern"
+        }
+      ]
+    }
+  ],
+  "clinicalStatus" : {
+    "text" : "Active",
+    "coding" : [
+      {
+        "code" : "active",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "display" : "Active",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "id" : "ehvvxUSw04f8sh9U..Q9bV5SqG-..Oqcu4pFx5L0nj6g3",
+  "code" : {
+    "text" : "Skin lesion",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+        "display" : "Disorder of the skin and subcutaneous tissue, unspecified",
+        "code" : "L98.9"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Skin Lesion",
+        "code" : "95324001"
+      },
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+        "display" : "Skin lesion",
+        "code" : "709.9"
+      },
+      {
+        "system" : "urn:oid:2.16.840.1.113883.3.247.1.1",
+        "display" : "Skin lesion",
+        "code" : "54598"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "verificationStatus" : {
+    "text" : "Confirmed",
+    "coding" : [
+      {
+        "code" : "confirmed",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "display" : "Confirmed",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "onsetDateTime" : "2019-06-21",
+  "resourceType" : "Condition",
+  "recordedDate" : "2019-06-21"
+}

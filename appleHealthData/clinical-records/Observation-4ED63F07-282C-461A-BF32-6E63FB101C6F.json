@@ -1,0 +1,84 @@
+{
+  "id" : "eD.er6PQE.479DC0TNTKXY1-te4yQhgy2.y3N5p3JGp8X86b8GCKlCEzWEtD14Un7h8equNsuN6vM.hQ6rbyB2g3",
+  "category" : [
+    {
+      "text" : "Vital Signs",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Vital Signs",
+          "code" : "vital-signs"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eE2Vuzm-aItbBDTGNJEuhjg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1348135836"
+    }
+  },
+  "effectiveDateTime" : "2021-10-28T15:23:00Z",
+  "resourceType" : "Observation",
+  "code" : {
+    "text" : "Temperature",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.707679",
+        "display" : "Temperature",
+        "code" : "6"
+      },
+      {
+        "system" : "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+        "display" : "Temperature",
+        "code" : "tiZAYIy2XRNlUgzQ7urokcw0"
+      },
+      {
+        "system" : "urn:oid:1.2.246.537.6.96",
+        "code" : "8310-5"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Body temperature",
+        "code" : "8310-5"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Vital signs",
+        "code" : "8716-3"
+      }
+    ]
+  },
+  "performer" : [
+    {
+      "display" : "Kendra B",
+      "reference" : "Practitioner/eVS8geN00JxiD6YO0ybaCJAzfcyHqMBzq1m8ljAqeRpk3"
+    }
+  ],
+  "extension" : [
+    {
+      "url" : "http://open.epic.com/FHIR/STU3/StructureDefinition/temperature-in-fahrenheit",
+      "valueQuantity" : {
+        "code" : "[degF]",
+        "value" : 97.9,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "[degF]"
+      }
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "Cel",
+    "value" : 36.6,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "Cel"
+  },
+  "status" : "final",
+  "issued" : "2021-10-28T15:27:41Z"
+}

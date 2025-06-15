@@ -1,0 +1,55 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "SARS-COV-2 (COVID-19)",
+      "reference" : "ServiceRequest/eKX-i2rhLvGopziz.P6Rs9QtCvLo.9bcmqY4BbRT2JU83"
+    }
+  ],
+  "id" : "e-l2ppe2VcidlSC7NEk6SMHwoSbV4wGWMqvU-1S9CTS83",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/e8CxhGYpfRMT3AOz.AkTqZx.fE.CoJRbS8mlN91.q-G43",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100167877911"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "valueString" : "This RT-PCR test was performed on the Hologic Aptima SARS-CoV-2 assay, which utilizes Transcription Mediated Amplification (TMA) technology, and has been authorized by the FDA under an Emergency Use Authorization (EUA) for use by authorized laboratories.",
+  "effectiveDateTime" : "2022-03-26T14:54:00Z",
+  "specimen" : {
+    "display" : "Specimen 22L-085D0102",
+    "reference" : "Specimen/etxNCKCgc2Xf4oK4w4CXLpvx8e9fLjiP5FNDIJlozFV43"
+  },
+  "resourceType" : "Observation"
+}

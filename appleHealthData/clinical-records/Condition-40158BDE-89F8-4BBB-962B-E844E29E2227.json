@@ -1,0 +1,85 @@
+{
+  "category" : [
+    {
+      "text" : "Problem List Item",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "display" : "Problem List Item",
+          "code" : "problem-list-item"
+        }
+      ]
+    },
+    {
+      "text" : "Health Concern",
+      "coding" : [
+        {
+          "system" : "http://loinc.org",
+          "display" : "Health concerns Document",
+          "code" : "75310-3"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
+          "display" : "Health Concern",
+          "code" : "health-concern"
+        }
+      ]
+    }
+  ],
+  "clinicalStatus" : {
+    "text" : "Resolved",
+    "coding" : [
+      {
+        "code" : "resolved",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "display" : "Resolved",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "id" : "eOLsjzyu-s20nsvkDdRBW2IFiJnUyg6nWt1e1yzurd-I3",
+  "code" : {
+    "text" : "Pustule",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+        "display" : "Local infection of the skin and subcutaneous tissue, unspecified",
+        "code" : "L08.9"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Pustule",
+        "code" : "271760008"
+      },
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+        "display" : "Pustule",
+        "code" : "686.9"
+      },
+      {
+        "system" : "urn:oid:2.16.840.1.113883.3.247.1.1",
+        "display" : "Pustule",
+        "code" : "47167"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "verificationStatus" : {
+    "text" : "Confirmed",
+    "coding" : [
+      {
+        "code" : "confirmed",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "display" : "Confirmed",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "abatementDateTime" : "2021-04-16",
+  "onsetDateTime" : "2019-07-05",
+  "resourceType" : "Condition",
+  "recordedDate" : "2019-07-05"
+}

@@ -1,0 +1,333 @@
+{
+  "id" : "eEH8zYTksl1dTaMPZ5qt0zB2oh1nusOednWLdCfHeQX83",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.10.798268.30",
+          "code" : "Imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Radiology",
+      "coding" : [
+        {
+          "system" : "http://loinc.org",
+          "display" : "Radiology",
+          "code" : "LP29684-5"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/ea6AaGptsARYkrjFRWEES9vPUBmsuTHwxpdIzfDbeEtU3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+      "value" : "2000609738990"
+    }
+  },
+  "effectiveDateTime" : "2024-04-23T17:37:29Z",
+  "resourceType" : "DiagnosticReport",
+  "issued" : "2024-04-24T16:04:16Z",
+  "identifier" : [
+    {
+      "use" : "official",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.798268",
+      "value" : "2223402730517",
+      "type" : {
+        "text" : "Placer Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Placer Identifier",
+            "code" : "PLAC"
+          }
+        ]
+      }
+    },
+    {
+      "use" : "official",
+      "type" : {
+        "text" : "Filler Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Filler Identifier",
+            "code" : "FILL"
+          }
+        ]
+      },
+      "value" : "51005838"
+    }
+  ],
+  "code" : {
+    "text" : "MR Brachial Plexus Left without and with IV Contrast",
+    "coding" : [
+      {
+        "system" : "urn:oid:2.16.840.1.113883.6.12",
+        "display" : "PR MRI UPR EXT NOJNT WO/W CNTRST",
+        "code" : "73220"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.67",
+        "code" : "73220F"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.72",
+        "code" : "IMG3693"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.1051252000",
+        "code" : "111202146"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.238",
+        "code" : "IMG3693"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.67",
+        "code" : "73220G"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.52000",
+        "code" : "IMG3693"
+      }
+    ]
+  },
+  "performer" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eKbU4lneSUV0xQcH-c-QRgA3",
+      "display" : "Matthew Frick, M.D."
+    },
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/er87YnyZm.Y7b7fDjD.I0Mg3",
+      "display" : "Michelle Mauermann, M.D."
+    },
+    {
+      "type" : "Organization",
+      "reference" : "Organization/e5KHNid1hWBkqIs2A9BFgpsIqNVi6TuSQwTd6BPL3sdI3",
+      "display" : "POWERSCRIBE360"
+    }
+  ],
+  "conclusionCode" : [
+    {
+      "text" : "Pain Arm Left",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Pain in left arm (finding)",
+          "code" : "287045000"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Pain in limb",
+          "code" : "729.5"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Pain In Left Arm",
+          "code" : "M79.602"
+        }
+      ]
+    },
+    {
+      "text" : "Weakness Arm Left",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Pain in left arm (finding)",
+          "code" : "287045000"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Pain in limb",
+          "code" : "729.5"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Pain In Left Arm",
+          "code" : "M79.602"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Monoparesis - arm (disorder)",
+          "code" : "249944006"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Other disorder of muscle, ligament, and fascia",
+          "code" : "728.89"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Muscle weakness (generalized)",
+          "code" : "M62.81"
+        }
+      ]
+    },
+    {
+      "text" : "Schwannomatosis",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Pain in left arm (finding)",
+          "code" : "287045000"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Pain in limb",
+          "code" : "729.5"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Pain In Left Arm",
+          "code" : "M79.602"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Monoparesis - arm (disorder)",
+          "code" : "249944006"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Other disorder of muscle, ligament, and fascia",
+          "code" : "728.89"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Muscle weakness (generalized)",
+          "code" : "M62.81"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Schwannoma (disorder)",
+          "code" : "189948006"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Schwannomatosis (HCC)",
+          "code" : "Q85.03"
+        }
+      ]
+    }
+  ],
+  "extension" : [
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "WORKFLOW - PROCEDURAL - IMAGING PROTOCOL - CT PROTOCOL - CT W/WO CONTRAST",
+        "reference" : "Observation/fHqYHahvMFJfT3kD4-x2OyA4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "PROTOCOL TRAVEL INSTRUCTIONS",
+        "reference" : "Observation/fMTt6IxtQoywyjH-W3CuT-A4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "CONVERGED PROTOCOL",
+        "reference" : "Observation/fUCvsKJGs5gjHOY57K.bbXA4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "RAD DIVISION",
+        "reference" : "Observation/fu8aGvHYbMrR6BmZqh-0B9A4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "NACL 1-100 ML IV FOR NON-UROGRAMS",
+        "reference" : "Observation/fDKvGuMrkB4CJDEliZyalpg4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "SEDATION MEDICATION LIST",
+        "reference" : "Observation/fEWeLi0UcQQPKYKYUbbcCEw4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "ON HOLD",
+        "reference" : "Observation/fMCfEivVW1mnVsW9M4UbG6Q4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "ADDITIONAL IMAGINE INSTRUCTIONS",
+        "reference" : "Observation/f780EiD-hZKJg5bkANi-QEA4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "MR IV CONTRASTS",
+        "reference" : "Observation/fWuGYZS8fjhbzHWrOy39RHw4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "GADAVIST",
+        "reference" : "Observation/fDUVUNAE.StZP4knTNaRpgg4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "ATIVAN 0.5 - 2MG PO",
+        "reference" : "Observation/f0LyANzRF5s0Y7wc2gBTZsQ4"
+      }
+    }
+  ],
+  "presentedForm" : [
+    {
+      "contentType" : "text/html",
+      "url" : "Binary/ezBO3PickhmUPAjfcy-GswDpki8aE-FTTWir9i2Hcj7kS8gN-IHLWtaUj09Fp2TGY3",
+      "title" : "Narrative"
+    },
+    {
+      "contentType" : "text/html",
+      "url" : "Binary/ezBO3PickhmUPAjfcy-GswAlc4YFRI2lqt5gorEDWqdNPu4VUhJD2tO1m8eR.W8093",
+      "title" : "Impression"
+    }
+  ],
+  "result" : [
+    {
+      "display" : "Narrative",
+      "reference" : "Observation/e9XeUYV6s1YUBe2JalrRpil6Ao6STZDh8rC-c2xmoJ-03"
+    },
+    {
+      "display" : "Impression",
+      "reference" : "Observation/e9XeUYV6s1YUBe2JalrRpil3pVl.5yulZLyHGj4nZuQ03"
+    }
+  ],
+  "resultsInterpreter" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eKbU4lneSUV0xQcH-c-QRgA3",
+      "display" : "Matthew Frick, M.D."
+    }
+  ],
+  "status" : "final"
+}

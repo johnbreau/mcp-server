@@ -1,0 +1,165 @@
+{
+  "id" : "eYNc8s1bEXXo28.SdZywf3VOAL0GQlI-cQseiKmgHJQM3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eM4e-l16B2l-hDVjXkiZe2g3",
+      "display" : "Lauren Hibyan, RN"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eM4e-l16B2l-hDVjXkiZe2g3",
+    "display" : "Lauren Hibyan, RN",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2025-04-16T20:37:52Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Registered Nurse",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.4.836982.1040",
+              "display" : "Registered Nurse",
+              "code" : "3"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2025-03-06T20:09:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Documentation",
+        "reference" : "Encounter/eAmfenOdeY7KywO0KbeYh4g3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+          "value" : "3676202768"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Progress Notes",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.4.737880.5010",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "code" : "11506-3",
+        "system" : "http://loinc.org",
+        "display" : "Progress note",
+        "userSelected" : true
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.727879",
+      "value" : "13807398749"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.362.2.7.2.727879_13807398749"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2025-03-06T20:10:01Z",
+  "custodian" : {
+    "display" : "Mass General Brigham",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:Partners:deployment.CE-PRD"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2025-04-16T20:37:52Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Lauren Hibyan, RN",
+            "reference" : "Practitioner/eM4e-l16B2l-hDVjXkiZe2g3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/ePWly1jQsAyYmPPuwGPnx.6LadiqgZxYq51v5l2suFsE3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/f92iACVbYwAqtwE2BbxAENedNhl4yvmUosgrSWX4O72g4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

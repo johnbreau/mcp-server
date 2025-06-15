@@ -1,0 +1,175 @@
+{
+  "id" : "eUzmCJTKln1fMpk-0Zyc-OFkJ78gsM5HkYF4AKxa5ZTU3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eOeCYbcvjktVqMv0.uH9eLhpcZP9whkbf88jRptj-bUg3",
+      "display" : "Jill B"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eOeCYbcvjktVqMv0.uH9eLhpcZP9whkbf88jRptj-bUg3",
+    "display" : "Jill B",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2019-06-23T15:53:07Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Registered Nurse",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.836982.1040",
+              "display" : "Registered Nurse",
+              "code" : "3"
+            },
+            {
+              "system" : "urn:oid:2.16.840.1.113883.11.19465",
+              "display" : "Registered Nurse",
+              "code" : "163W00000X"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2019-06-23T15:20:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Hospital Encounter",
+        "reference" : "Encounter/eQrMEJoYDrWwrlvodgmqSjg3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+          "value" : "1287119909"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Plan of Care",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.737880.5010",
+        "display" : "Plan of Care",
+        "code" : "1000001"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Care Plan",
+        "code" : "30"
+      },
+      {
+        "code" : "18776-5",
+        "system" : "http://loinc.org",
+        "display" : "Plan of care note",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Note",
+        "code" : "34109-9"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.727879",
+      "value" : "960172267"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.331.2.7.2.727879_960172267"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2019-06-23T15:52:45Z",
+  "custodian" : {
+    "display" : "Johns Hopkins Medicine",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:Hopkins:Interconnect-CareEverywhere_PRD"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2019-06-23T15:53:07Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Jill B",
+            "reference" : "Practitioner/eOeCYbcvjktVqMv0.uH9eLhpcZP9whkbf88jRptj-bUg3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/e8nUOM8W2DOUuqfDwc6COM8iGedGU3GHSD5pB3nT2Ew43"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fePDGFLWezgYwNk43sHhveiG7D9d1QytbjObyncu1ah04"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

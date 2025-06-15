@@ -1,0 +1,146 @@
+{
+  "id" : "ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntI2BrM2eAeLWWZ6u5M77aA2GB-N.CAERz79zo0ym5HiyQ3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eDQYEe8ZwLcgFNCXJAbELlQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1099710815"
+    }
+  },
+  "effectiveDateTime" : "2023-11-21T19:12:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CBC AND DIFF",
+      "reference" : "ServiceRequest/eYRuF7z3OhXVip2gS3h9aBXfZte1W8Oi78t4DITmjxMo3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen T60965",
+    "reference" : "Specimen/enSqaJfHFR6fPTYL09cHgNtVmLTbTJPTXeFta.32eoxI3"
+  },
+  "code" : {
+    "text" : "Hemoglobin",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Hemoglobin [Mass/volume] in Blood",
+        "code" : "718-7"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.36",
+        "code" : "HGB"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "30000200"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "85997994"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900213300"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.259",
+        "code" : "TST49"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.259",
+        "code" : "TST394"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.259",
+        "code" : "TST791"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.259",
+        "code" : "TST896"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "86003070"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "85995785"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900432819"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900442915"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900436106"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900444967"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.768282",
+        "display" : "Hemoglobin",
+        "code" : "3000"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "GM/DL",
+        "value" : 13.5,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "GM/DL"
+      },
+      "high" : {
+        "code" : "GM/DL",
+        "value" : 16.5,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "GM/DL"
+      },
+      "text" : "13.5 - 16.5 GM/DL"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "GM/DL",
+    "value" : 14.1,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "GM/DL"
+  },
+  "status" : "final",
+  "issued" : "2023-11-21T21:49:40Z"
+}

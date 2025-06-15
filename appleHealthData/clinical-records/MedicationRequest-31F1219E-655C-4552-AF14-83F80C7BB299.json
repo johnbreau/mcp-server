@@ -1,0 +1,253 @@
+{
+  "id" : "ecZORE8kBEJrGT-ZL1Py3MDGL80evuPfNsETwRfYarWI3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "reportedBoolean" : true,
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Documentation",
+    "reference" : "Encounter/ePp--lxyFzxJ74Dh.UUfTQg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3627271353"
+    }
+  },
+  "resourceType" : "MedicationRequest",
+  "status" : "active",
+  "priority" : "routine",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "famotidine 40 MG tablet",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "A02BA03"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "11678"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "4278"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "284245"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "196458"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "667133"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1091396"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2607010"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "104095"
+          }
+        ]
+      },
+      "id" : "exN7hoVTpsd6zQkkEZFzBrYTIifXjfpWza5RFZ4cWNgpRWhEHpeGryQlbye.E5I.5rvNaE7xKQOpOo7RvZWw4hCDI4XrFVaTt4WqYH3TV.qQ3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Tablet",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.4.698288.310",
+            "display" : "Tablet",
+            "code" : "Tab"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.698288",
+          "value" : "10012"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "famotidine 40 MG tablet",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "A02BA03"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "11678"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "4278"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "284245"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "196458"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "667133"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1091396"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2607010"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "104095"
+              }
+            ]
+          },
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 40,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 40,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.798268",
+      "value" : "1437838838"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eWGcc2u3SnYq6-3quCHhA0w3",
+    "display" : "Lauren Hibyan, RN"
+  },
+  "authoredOn" : "2024-08-15T17:37:40Z",
+  "dosageInstruction" : [
+    {
+      "timing" : {
+        "repeat" : {
+          "periodUnit" : "d",
+          "period" : 1,
+          "frequency" : 1
+        },
+        "code" : {
+          "text" : "nightly at bedtime as needed"
+        }
+      },
+      "method" : {
+        "text" : "Take",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Take",
+            "code" : "419652001"
+          }
+        ]
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 80,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        }
+      ],
+      "patientInstruction" : "Take 80 mg by mouth nightly at bedtime as needed for heartburn.",
+      "text" : "Take 80 mg by mouth nightly at bedtime as needed for heartburn., Historical Med",
+      "asNeededBoolean" : true,
+      "route" : {
+        "text" : "Oral",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Oral route (qualifier value)",
+            "code" : "26643006"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.4.798268.7025",
+            "display" : "Oral",
+            "code" : "15"
+          }
+        ]
+      }
+    }
+  ],
+  "requester" : {
+    "extension" : [
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode" : "unknown"
+      }
+    ]
+  },
+  "intent" : "plan",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "medicationReference" : {
+    "display" : "famotidine 40 MG tablet",
+    "reference" : "Medication/exN7hoVTpsd6zQkkEZFzBrYTIifXjfpWza5RFZ4cWNgpRWhEHpeGryQlbye.E5I.5rvNaE7xKQOpOo7RvZWw4hCDI4XrFVaTt4WqYH3TV.qQ3"
+  }
+}

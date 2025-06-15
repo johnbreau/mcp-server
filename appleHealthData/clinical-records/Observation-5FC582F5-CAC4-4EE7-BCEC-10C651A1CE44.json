@@ -1,0 +1,98 @@
+{
+  "id" : "egq9QYQY-nfOOHnsDhR4EIHjdZWNDdK0g75.98IU3e0iv8HsQtn8HtGtf6U.G9NqFd.F0UtRriNblcFJSXN70Kg3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Blood Draw",
+    "reference" : "Encounter/eWUtC9y.qoSXa6GwjQ6CN3g3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3634337005"
+    }
+  },
+  "effectiveDateTime" : "2025-01-13T12:54:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CBC and differential",
+      "reference" : "ServiceRequest/e7lHvRNMcCZg3VAuV3cPp5gvU3OkSso2hTK4yLuPLLLA3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen SQ_M7394590_385L432328_",
+    "reference" : "Specimen/ewDJrJSvUbwP2VfeUOtbDXiR.t2.AavFdwHQ22i4DKfM3"
+  },
+  "code" : {
+    "text" : "ABSOLUTE BASOS",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Basophils [#/volume] in Blood",
+        "code" : "26444-0"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.91",
+        "code" : "ABASO"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.818",
+        "code" : "5200000504"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.768282",
+        "display" : "ABSOLUTE BASOS",
+        "code" : "5200000504"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "K/uL",
+        "value" : 0,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "K/uL"
+      },
+      "high" : {
+        "code" : "K/uL",
+        "value" : 0.15,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "K/uL"
+      },
+      "text" : "0.00 - 0.15 K/uL"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "K/uL",
+    "value" : 0.05,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "K/uL"
+  },
+  "status" : "final",
+  "issued" : "2025-01-13T13:06:16Z"
+}

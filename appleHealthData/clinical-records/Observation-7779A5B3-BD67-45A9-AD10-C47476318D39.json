@@ -1,0 +1,76 @@
+{
+  "id" : "e4dlROebkzZwsNGsupl1AyHZUb7XbxZRIoao495kC077AOgtmPjBQTvOjTcyZS3kP76sAP94mAwCIdUHK8BmY6w3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Pathology and Cytology",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.10.798268.30",
+          "display" : "Pathology and Cytology",
+          "code" : "Path,Cyt"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/eoVxFjDCs2g8F0-kHfzMq1e4yA6dVntDlQnP9jstXPR03",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+      "value" : "2000612954763"
+    }
+  },
+  "effectiveDateTime" : "2019-06-21T05:00:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "Pathology Review of Outside Material",
+      "reference" : "ServiceRequest/eZapKWZMTJJGRWic41iF5jWcBw5zVNZ2OoYk0uIqX3ac3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen J923019399:1",
+    "reference" : "Specimen/e6DEXb6TizQU9wgiGYOSmARFUXF5IuROtAQ2b1yRa6B03"
+  },
+  "code" : {
+    "text" : "Interpretation",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Pathology Consult note",
+        "code" : "60570-9"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.129",
+        "code" : "71060"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.328",
+        "code" : "11308"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.768282",
+        "display" : "Interpretation",
+        "code" : "11308"
+      }
+    ]
+  },
+  "valueString" : "FINAL DIAGNOSIS\r\nSkin and soft tissue, posterior scalp mass, excision\r\n(S19-25769, 6/21/2019):  Hybrid schwannoma/neurofibroma.\r\nSee comment.\r\n\r\nComment:  The histologic sections reveal the presence of a\r\nbenign peripheral nerve sheath tumor composed of\r\nschwannomatoid nodules in a background of diffuse\r\nneurofibroma. In addition, there are scattered foci of\r\nossification. Hybrid schwannoma/neurofibromas are\r\noverrepresented in patients with neurofibromatosis type 1,\r\nneurofibromatosis type 2 and schwannomatosis.  Clinical\r\ncorrelation is recommended.\r\n",
+  "status" : "final",
+  "issued" : "2024-05-03T16:35:58Z"
+}

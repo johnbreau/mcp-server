@@ -1,0 +1,134 @@
+{
+  "id" : "eJvjjCSVr4quo8aY045vRmDMoffS2A5ClVyfrHBoDqy4DBLjHx3ySJ.ij33svwl7zOabA.f7Dmu2GhAnhZx.g9w3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/exCPdYr9ldO0K5CCcsNgpYpqoqsCGP7fY6FmU570zvQ43",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100159160883"
+    }
+  },
+  "effectiveDateTime" : "2021-06-29T16:35:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "HEPATIC FUNCTION PANEL",
+      "reference" : "ServiceRequest/e3WbQvfiCm-cdieiRLGu1mcPPJWm5WVsd7h8IaKlriJA3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 211800129805",
+    "reference" : "Specimen/eIc06OmyviJTFB.QIMBx5BgupRdhHYA1OYEQMeEHsVrI3"
+  },
+  "code" : {
+    "text" : "Bilirubin Direct",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Bilirubin.conjugated [Mass/volume] in Serum or Plasma",
+        "code" : "15152-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3103601"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "15152-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "BILI D"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "001222"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "25001800"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10092490"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "900427670"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "BILI D"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3002725"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "25034200"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.681",
+        "code" : "000054"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Bilirubin Direct",
+        "code" : "1558221"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "mg/dL",
+        "value" : 0,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mg/dL"
+      },
+      "high" : {
+        "code" : "mg/dL",
+        "value" : 0.4,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mg/dL"
+      },
+      "text" : "0.0 - 0.4 mg/dL"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "mg/dL",
+    "value" : 0,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "mg/dL"
+  },
+  "status" : "final",
+  "issued" : "2021-06-30T00:39:37Z"
+}

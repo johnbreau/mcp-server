@@ -1,0 +1,130 @@
+{
+  "id" : "ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntKqsvsjw-Wta8DS29mqGENdkFc7T77lb6YquUGW2J4QlA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eDQYEe8ZwLcgFNCXJAbELlQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1099710815"
+    }
+  },
+  "effectiveDateTime" : "2023-11-21T19:12:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CBC AND DIFF",
+      "reference" : "ServiceRequest/eYRuF7z3OhXVip2gS3h9aBXfZte1W8Oi78t4DITmjxMo3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen T60965",
+    "reference" : "Specimen/enSqaJfHFR6fPTYL09cHgNtVmLTbTJPTXeFta.32eoxI3"
+  },
+  "code" : {
+    "text" : "Eosinophils",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Eosinophils/100 leukocytes in Blood by Automated count",
+        "code" : "713-8"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.36",
+        "code" : "EOSA"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.69",
+        "code" : "EOSA"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "30002500"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900214300"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.259",
+        "code" : "TST409"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "30083713"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900427823"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900432811"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900442926"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900436116"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.768282",
+        "display" : "Eosinophils",
+        "code" : "3020"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "%",
+        "value" : 0,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "%"
+      },
+      "high" : {
+        "code" : "%",
+        "value" : 5,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "%"
+      },
+      "text" : "0 - 5 %"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "%",
+    "value" : 3,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "%"
+  },
+  "status" : "final",
+  "issued" : "2023-11-21T21:49:40Z"
+}

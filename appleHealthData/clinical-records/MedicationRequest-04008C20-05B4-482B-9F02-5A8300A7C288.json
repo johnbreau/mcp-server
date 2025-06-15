@@ -1,0 +1,510 @@
+{
+  "id" : "eDBmf81ivXCHc5QjHjM7wHG4ZT7OH.o5fqimbWakSCcM3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/e7Gsm0-L45.5xsuyIB5GxOc7dHMFkRDLAhxlz07pBSg83",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100106630470"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Schwannomatosis",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Full schwannomatosis (disorder)",
+          "code" : "1332358007"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Schwannomatosis",
+          "code" : "Q85.03"
+        }
+      ]
+    },
+    {
+      "text" : "Neuropathic pain",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Neuropathic pain (finding)",
+          "code" : "247398009"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Neuralgia and neuritis, unspecified",
+          "code" : "M79.2"
+        }
+      ]
+    },
+    {
+      "text" : "Chronic pain syndrome",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Chronic pain syndrome (disorder)",
+          "code" : "373621006"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Chronic pain syndrome",
+          "code" : "G89.4"
+        }
+      ]
+    },
+    {
+      "text" : "Continuous use of opioids",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Continuous opioid dependence (disorder)",
+          "code" : "191819002"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Opioid use, unspecified, uncomplicated",
+          "code" : "F11.90"
+        }
+      ]
+    },
+    {
+      "text" : "Encounter for therapeutic drug monitoring",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Patient encounter status (finding)",
+          "code" : "305058001"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Encounter for therapeutic drug level monitoring",
+          "code" : "Z51.81"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "MedicationRequest",
+  "medicationReference" : {
+    "display" : "oxyCODONE-acetaminophen 5-325 mg per tablet",
+    "reference" : "Medication/exv6.KkMM70TDRugPguusf-w8.TxmbOB4JlSgQw6AS6lbsOO9rrZhAVknJd00Xd1NqjoHb9CizH57S8qfol43XmlHrfXtDMRNh4ywkeIpI5A3"
+  },
+  "contained" : [
+    {
+      "code" : {
+        "text" : "oxyCODONE-acetaminophen 5-325 mg per tablet",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N02AJ17"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "4222"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "161"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "7804"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "82063"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "159821"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "214183"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1049221"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "42844"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "197105"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "216903"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "219739"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "219741"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "539772"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "644995"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "647097"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "692748"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "832700"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1372683"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1372701"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1491784"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1537111"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2045495"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2279505"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1049223"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1049640"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1050490"
+          }
+        ]
+      },
+      "id" : "exv6.KkMM70TDRugPguusf-w8.TxmbOB4JlSgQw6AS6lbsOO9rrZhAVknJd00Xd1NqjoHb9CizH57S8qfol43XmlHrfXtDMRNh4ywkeIpI5A3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "tablet",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.698288.310",
+            "display" : "tablet",
+            "code" : "Tab"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.698288",
+          "value" : "5940"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "oxyCODONE-acetaminophen 5-325 mg per tablet",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "N02AJ17"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "4222"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "161"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "7804"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "82063"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "159821"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "214183"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1049221"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "42844"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "197105"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "216903"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "219739"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "219741"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "539772"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "644995"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "647097"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "692748"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "832700"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1372683"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1372701"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1491784"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1537111"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2045495"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2279505"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1049223"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1049640"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1050490"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "187497763"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eV7V96VC68Yz3vouWuMiPNw3",
+    "display" : "Brenna Winn"
+  },
+  "authoredOn" : "2017-02-03",
+  "dosageInstruction" : [
+    {
+      "timing" : {
+        "code" : {
+          "text" : "every 8 (eight) hours as needed"
+        },
+        "repeat" : {
+          "periodUnit" : "h",
+          "frequency" : 1,
+          "period" : 8,
+          "boundsPeriod" : {
+            "start" : "2017-04-04"
+          }
+        }
+      },
+      "method" : {
+        "text" : "Take",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Take",
+            "code" : "419652001"
+          }
+        ]
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "calculated",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "calculated",
+                "code" : "calculated"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "{tbl}",
+            "value" : 1,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "tablet"
+          }
+        },
+        {
+          "type" : {
+            "text" : "admin-amount",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "admin-amount",
+                "code" : "admin-amount"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "{tbl}",
+            "value" : 1,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "tablet"
+          }
+        },
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "{tbl}",
+            "value" : 1,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "tablet"
+          }
+        }
+      ],
+      "patientInstruction" : "Take 1 tablet by mouth every 8 (eight) hours as needed for pain.",
+      "text" : "Take 1 tablet by mouth every 8 (eight) hours as needed for pain., Starting 4/4/2017, Until Thu 5/4/17, Print",
+      "asNeededBoolean" : true,
+      "route" : {
+        "text" : "Oral",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Oral route (qualifier value)",
+            "code" : "26643006"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.798268.7025",
+            "display" : "Oral",
+            "code" : "15"
+          }
+        ]
+      }
+    }
+  ],
+  "dispenseRequest" : {
+    "quantity" : {
+      "value" : 90,
+      "unit" : "tablet"
+    },
+    "expectedSupplyDuration" : {
+      "code" : "d",
+      "value" : 30,
+      "system" : "http://unitsofmeasure.org",
+      "unit" : "Day"
+    },
+    "validityPeriod" : {
+      "start" : "2017-04-04"
+    },
+    "numberOfRepeatsAllowed" : 0
+  },
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eQ1QtsuF3W-vZK6ISJOwWzg3",
+    "display" : "Susan E Opper"
+  },
+  "intent" : "order",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "status" : "completed"
+}

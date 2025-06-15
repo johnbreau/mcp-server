@@ -1,0 +1,451 @@
+{
+  "id" : "eaA8e9uKK7ECmj4FwRvUvFxglf8JKtud5uyUZaWv2iGM3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Refill",
+    "reference" : "Encounter/e6Cl.b9rHjWQxobXrK6XSPA3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1122366670"
+    }
+  },
+  "status" : "stopped",
+  "resourceType" : "MedicationRequest",
+  "medicationReference" : {
+    "display" : "propranolol LA 60 mg capsule",
+    "reference" : "Medication/ek5-w4M.3D6A4Se1ZBCWG1B.IQW0n-vG90HDxr3ld0n1vn6u-ng3SKaBLIASQWJpMOVS6vAXsmaBsoP.omRayNiuNbK3Gjmpr4S.tX2dMlNA3"
+  },
+  "contained" : [
+    {
+      "code" : {
+        "text" : "propranolol LA 60 mg capsule",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "C07AA05"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "5115"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "8787"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "82084"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "856535"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "151355"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "151367"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "151393"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "151426"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "151431"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "151492"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "151841"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "151890"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "151990"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "152253"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "152258"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "152362"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "153819"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "153820"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "225652"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "226250"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "381209"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "381221"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "381223"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "541545"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "856468"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1495059"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "856537"
+          }
+        ]
+      },
+      "id" : "ek5-w4M.3D6A4Se1ZBCWG1B.IQW0n-vG90HDxr3ld0n1vn6u-ng3SKaBLIASQWJpMOVS6vAXsmaBsoP.omRayNiuNbK3Gjmpr4S.tX2dMlNA3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "capsule,extended release 24 hr",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.698288.310",
+            "display" : "capsule,extended release 24 hr",
+            "code" : "Cs24"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.698288",
+          "value" : "38224"
+        }
+      ],
+      "ingredient" : [
+        {
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 60,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 60,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg"
+            }
+          },
+          "itemCodeableConcept" : {
+            "text" : "propranolol LA 60 mg capsule",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "C07AA05"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "5115"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "8787"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "82084"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "856535"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "151355"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "151367"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "151393"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "151426"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "151431"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "151492"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "151841"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "151890"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "151990"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "152253"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "152258"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "152362"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "153819"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "153820"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "225652"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "226250"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "381209"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "381221"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "381223"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "541545"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "856468"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1495059"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "856537"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798268",
+      "value" : "1459970394"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/e3rgsoC4ZpiJVV94wPGCE9Q3",
+    "display" : "Mindy P"
+  },
+  "authoredOn" : "2024-12-12",
+  "dosageInstruction" : [
+    {
+      "asNeededBoolean" : false,
+      "timing" : {
+        "code" : {
+          "text" : "daily"
+        },
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2024-12-12",
+            "end" : "2025-02-27"
+          },
+          "timeOfDay" : [
+            "09:00:00"
+          ]
+        }
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "calculated",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "calculated",
+                "code" : "calculated"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 60,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        },
+        {
+          "type" : {
+            "text" : "admin-amount",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "admin-amount",
+                "code" : "admin-amount"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "{capsule}",
+            "value" : 1,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "capsule"
+          }
+        },
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 60,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        }
+      ],
+      "patientInstruction" : "TAKE ONE CAPSULE BY MOUTH DAILY",
+      "route" : {
+        "text" : "Oral",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Oral route (qualifier value)",
+            "code" : "26643006"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.798268.7025",
+            "display" : "Oral",
+            "code" : "15"
+          }
+        ]
+      },
+      "text" : "TAKE ONE CAPSULE BY MOUTH DAILY, Disp-90 capsule, R-0, Normal"
+    }
+  ],
+  "dispenseRequest" : {
+    "quantity" : {
+      "value" : 90,
+      "unit" : "capsule"
+    },
+    "expectedSupplyDuration" : {
+      "code" : "d",
+      "value" : 90,
+      "system" : "http://unitsofmeasure.org",
+      "unit" : "Day"
+    },
+    "validityPeriod" : {
+      "start" : "2024-12-12",
+      "end" : "2025-02-27"
+    },
+    "numberOfRepeatsAllowed" : 0
+  },
+  "priorPrescription" : {
+    "display" : "propranolol LA 60 mg capsule",
+    "reference" : "MedicationRequest/eHjHUila437S6ok9S0lX8b5qPmtLIlp3-HP6c3h.Pjpg3"
+  },
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/etVxgMyuiwAh81Ay0NRgUGw3",
+    "display" : "J May, MD"
+  },
+  "intent" : "order"
+}

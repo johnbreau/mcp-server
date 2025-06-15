@@ -1,0 +1,139 @@
+{
+  "id" : "eQ.8FX9Tjag8mAaWgemZVPDwRRSgCpvVvnQKPin.ptVA3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/evfPtih6MCqrABJdxDkbRFg3",
+      "display" : "Freddy K"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/evfPtih6MCqrABJdxDkbRFg3",
+    "display" : "Freddy K",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2023-07-26T14:15:47Z"
+      }
+    ]
+  },
+  "context" : {
+    "period" : {
+      "start" : "2023-07-26T14:15:47Z"
+    },
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "RN",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.836982.1040",
+              "display" : "RN",
+              "code" : "3"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "encounter" : [
+      {
+        "display" : "Patient Message",
+        "reference" : "Encounter/e.q3.Nhdl0Vw3H7HIu3j7qw3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+          "value" : "1095346256"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Telephone Encounter",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.737880.5010",
+        "display" : "Telephone Encounter",
+        "code" : "36"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Telephone Encounter",
+        "code" : "36"
+      },
+      {
+        "code" : "34748-4",
+        "system" : "http://loinc.org",
+        "display" : "Telephone encounter Note",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Note",
+        "code" : "34109-9"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.727879",
+      "value" : "1653184153"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.177.2.7.2.727879_1653184153"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2023-07-26T14:15:47Z",
+  "custodian" : {
+    "display" : "University of Kansas Health System",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:TheUniversityofKansasHospital:PRD.CE"
+    }
+  },
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/e28LZ2KYpmJkA0IbFjfkIhr0lM6M0rWjGxgFSDKh482s3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fduWer4dokOoJp--AFZhZABmX3wDKe1kSoU.b7WoBBBs4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

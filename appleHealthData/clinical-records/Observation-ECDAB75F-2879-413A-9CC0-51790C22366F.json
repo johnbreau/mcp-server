@@ -1,0 +1,61 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MRI BRAIN W/WO CONTRAST",
+      "reference" : "ServiceRequest/equzDI3K.V5ZLho.9AZ5JU-O6oKqKaCcUobkmHjA2goA3"
+    }
+  ],
+  "id" : "eLIYUrYveqgN7dvkBVvXwokjv27BqTv1KHhGnZJDZHoI3",
+  "code" : {
+    "text" : "Impression"
+  },
+  "encounter" : {
+    "display" : "Ancillary Procedure",
+    "reference" : "Encounter/ej2gWsqHjq.rJzkTe80PCSg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1337009137"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "performer" : [
+    {
+      "display" : "Bradford Bennett, MD",
+      "reference" : "Practitioner/eEasuVR7zJxyuDnflAkXUow3"
+    },
+    {
+      "display" : "Sanaz Ghaderi Niri, MD",
+      "reference" : "Practitioner/eq7Rgm7dXQJ1IlgOXgFbc8A3"
+    }
+  ],
+  "effectiveDateTime" : "2021-06-27T21:18:00Z",
+  "valueString" : "IMPRESSION:\r\n1.  No intracranial findings to explain a new cranial neuropathy. Specifically, no intracranial mass in either internal auditory canal, cerebellopontine angle or Meckel's cave.\r\n2.  Slightly enlarged presumably nerve sheath tumors in the left masticator and parotid spaces as well as a small new posterior auricular schwannoma. The previously seen left occipital lobulated mass is minimally included on the coronal postcontrast \r\nsequence and not completely evaluated on this exam. Further evaluation with MRI neck without and with contrast can be performed.\r\n\r\n\r\n\r\n\r\nImages and interpretation personally reviewed by: Bradford Bennett, MD\r\n\r\n\r\nImages and interpretation personally reviewed by: Sanaz Ghaderi Niri, MD",
+  "resourceType" : "Observation"
+}

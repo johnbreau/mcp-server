@@ -1,0 +1,134 @@
+{
+  "id" : "egj46a4DiNgb1A8z8pJGttV7HMvz.iBcN9SRxGKivUJapjyFlV5zAnbl3a-oEt9i1CGaeO1NnVDjx08xfX2twKA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/ej5vdC6.m0IwYnvToZlxml-4l6mnMfPpZ2rlYlrUhD9U3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100104376927"
+    }
+  },
+  "effectiveDateTime" : "2016-08-23T16:51:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "T4 FREE",
+      "reference" : "ServiceRequest/e6bnwaHfhJ6m17ZQkmpiuWnl22vmF6SwMd5kOfBH.zNw3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 162362621791",
+    "reference" : "Specimen/eFMcHETxywsw16zmVILHflWjYkGjG87mlII7ZjKS8qKw3"
+  },
+  "code" : {
+    "text" : "T4 Free",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Thyroxine (T4) free [Mass/volume] in Serum or Plasma",
+        "code" : "3024-7"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "3024-7"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "T4 FREE"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "019745"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3251200"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3251802"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20000865"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "55070600"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "900427721"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "T4 FREE"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3005250"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.681",
+        "code" : "000062"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "T4 Free",
+        "code" : "1558050"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "ng/dL",
+        "value" : 0.8,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "ng/dL"
+      },
+      "high" : {
+        "code" : "ng/dL",
+        "value" : 2.2,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "ng/dL"
+      },
+      "text" : "0.8 - 2.2 ng/dL"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "ng/dL",
+    "value" : 0.8,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "ng/dL"
+  },
+  "status" : "final",
+  "issued" : "2016-08-23T23:38:09Z"
+}

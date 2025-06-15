@@ -1,0 +1,89 @@
+{
+  "id" : "eSvQnLQXkJniJF9w2kOcY6GbNXRjPJT9hvGLUm86NsZFPXUGKvJqhzjwd3ZBWAGA7N9zhB6Uzw2be3MmIOUtq9A3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Blood Draw",
+    "reference" : "Encounter/ejrRQit3Adv0UxdO7jBuGBw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3632893921"
+    }
+  },
+  "effectiveDateTime" : "2024-09-10T14:59:00Z",
+  "resourceType" : "Observation",
+  "note" : [
+    {
+      "text" : "Estimated glomerular filtration rate calculated using the CKD-EPI refit equation."
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "Comprehensive metabolic panel",
+      "reference" : "ServiceRequest/eHa17De7BYCcuLT7qW6UBQuC2E720RtcWjZ-1auNkT403"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen SQ_T7198719_381L314605_",
+    "reference" : "Specimen/erRytmGTjo3D8KYVGu.5vRoSXcQ4Py7O0aY1PmjelPLs3"
+  },
+  "code" : {
+    "text" : "EGFR",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by based on 1.73 sq M",
+        "code" : "69405-9"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.91",
+        "code" : "PEGFR"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.818",
+        "code" : "5200010525"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.768282",
+        "display" : "EGFR",
+        "code" : "5200010525"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "text" : ">59"
+    }
+  ],
+  "valueQuantity" : {
+    "value" : 84,
+    "unit" : "mL/min/1.73m2"
+  },
+  "status" : "final",
+  "issued" : "2024-09-10T15:53:51Z"
+}

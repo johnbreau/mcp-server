@@ -1,0 +1,154 @@
+{
+  "id" : "e7VQ3erIOTknIprsYm.mbaf-uFfTsfYo3k6Lw-yH-eVduAf71oJGRH3rAA2ES1954oDqQfYTY.cVR-LIJVSBizw3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eepgJlPiHA4wxeLHGXWHb5g3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "13196486"
+    }
+  },
+  "effectiveDateTime" : "2015-02-17T16:52:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CBC and Diff (manual diff if neces",
+      "reference" : "ServiceRequest/eoveI3-JJid9iTtLtTvgMsrfQLSM1eycQ9IbCA0jF-g03"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 150484511246",
+    "reference" : "Specimen/eIyB1kezS9ZSkyEp5NltgEIyoTanfWPicpM3N-eFtT5U3"
+  },
+  "code" : {
+    "text" : "%Basophils",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Basophils/100 leukocytes in Blood by Automated count",
+        "code" : "706-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L1001450"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "30180-4"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "% BASOS"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "015156"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10061250"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20001875"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "30002800"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10081240"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10071245"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10092850"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L1002200"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "% BASOS"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L1000900"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.184",
+        "code" : "1539363"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "115253"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.681",
+        "code" : "000468"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "%Basophils",
+        "code" : "1539363"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "%",
+        "value" : 0,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "%"
+      },
+      "high" : {
+        "code" : "%",
+        "value" : 2,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "%"
+      },
+      "text" : "0 - 2 %"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "%",
+    "value" : 0,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "%"
+  },
+  "status" : "final",
+  "issued" : "2015-02-17T21:51:43Z"
+}

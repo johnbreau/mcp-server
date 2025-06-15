@@ -1,0 +1,237 @@
+{
+  "id" : "eqtkXSggiNvTV07eWxj1L.xh2RGNDveLip48yxnK9mow3",
+  "category" : [
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "code" : "Lab"
+        }
+      ]
+    },
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "display" : "Laboratory",
+          "code" : "LAB"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eepgJlPiHA4wxeLHGXWHb5g3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "13196486"
+    }
+  },
+  "effectiveDateTime" : "2015-02-17T16:52:00Z",
+  "resourceType" : "DiagnosticReport",
+  "identifier" : [
+    {
+      "use" : "official",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "107018426",
+      "type" : {
+        "text" : "Placer Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Placer Identifier",
+            "code" : "PLAC"
+          }
+        ]
+      }
+    },
+    {
+      "use" : "official",
+      "system" : "https://open.epic.com/FHIR/368/order-accession-number/LA01",
+      "value" : "150484511252",
+      "type" : {
+        "text" : "Filler Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Filler Identifier",
+            "code" : "FILL"
+          }
+        ]
+      }
+    }
+  ],
+  "code" : {
+    "text" : "Lipid Panel",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.696580",
+        "display" : "LIPID PANEL",
+        "code" : "107936"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.680",
+        "code" : "000180"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.41",
+        "code" : "LIPID PF"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.23",
+        "code" : "343925"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.185",
+        "code" : "L3120995"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.185",
+        "code" : "L3120997"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.185",
+        "code" : "L10073920"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.185",
+        "code" : "L10080141"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.185",
+        "code" : "L20003405"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.25",
+        "code" : "7600"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.185",
+        "code" : "L10092050"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.185",
+        "code" : "L3004275"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.285",
+        "code" : "LIPID PF"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.25",
+        "code" : "33145"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.208",
+        "code" : "LIPID"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.122",
+        "code" : "LIPID"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.310",
+        "code" : "684"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.428",
+        "code" : "684"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.314",
+        "code" : "684"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.23",
+        "code" : "303756"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.320",
+        "code" : "684"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.318",
+        "code" : "10201847"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.311",
+        "code" : "112738"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.311",
+        "code" : "684"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.313",
+        "code" : "684"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.312",
+        "code" : "684"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.963",
+        "code" : "118486"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.311",
+        "code" : "217692"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.317",
+        "code" : "684"
+      }
+    ]
+  },
+  "performer" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/ex.ogNv0OHMmKrxfrIA8Jkg3",
+      "display" : "J May, MD"
+    },
+    {
+      "type" : "Organization",
+      "reference" : "Organization/efIs99xFdBYbbXb.uB4.1TaafZ5c3fLazdJfsl.IV6Sk3",
+      "display" : "SAINT LUKE'S REGIONAL LABORATORIES"
+    }
+  ],
+  "result" : [
+    {
+      "display" : "Component (1): CHOLESTEROL",
+      "reference" : "Observation/eZoe9rm7m5oAX3tGtlnsBpqfjnd.60D23rDHEEjtCQFJDSKmSB4o-NXjNghSOYAQvXtgF3zqh1-FY5AhplqJWFg3"
+    },
+    {
+      "display" : "Component (1): HDL CHOLESTEROL",
+      "reference" : "Observation/eZoe9rm7m5oAX3tGtlnsBpqfjnd.60D23rDHEEjtCQFJkuDh9YG1CAga6ku-I3oi4P72LPY4ZY2QY-wiRqYNdiA3"
+    },
+    {
+      "display" : "Component (1): NON-HDL CHOLESTEROL",
+      "reference" : "Observation/eZoe9rm7m5oAX3tGtlnsBpqfjnd.60D23rDHEEjtCQFKXWH8oWpd0p1a.V7OZAudb9cdJIUkWcrdU-m4ZsXfqvg3"
+    },
+    {
+      "display" : "Component (1): TRIGLYCERIDES",
+      "reference" : "Observation/eZoe9rm7m5oAX3tGtlnsBpqfjnd.60D23rDHEEjtCQFJQDnRxDxxysxBYc.xRH8NrTxJyaltGSbK4jX0dgujW-g3"
+    },
+    {
+      "display" : "Component (1): LDL CHOLESTEROL",
+      "reference" : "Observation/eZoe9rm7m5oAX3tGtlnsBpqfjnd.60D23rDHEEjtCQFJflohg6MkEtQgsImFcEHot1RRurNOnt1P-U-8LI1X2lg3"
+    },
+    {
+      "display" : "Component (1): CHOLESTEROL/HDL RATIO",
+      "reference" : "Observation/eZoe9rm7m5oAX3tGtlnsBpqfjnd.60D23rDHEEjtCQFLbtyfe71TGnlpr9m5jIVYOqPd5-nwU.qBtOaE7nGF5Cg3"
+    },
+    {
+      "display" : "Component (1): HOURS POSTPRANDIAL",
+      "reference" : "Observation/eZoe9rm7m5oAX3tGtlnsBpqfjnd.60D23rDHEEjtCQFIJmdiYC564Gpls2IrRkXB7Ri066Ui2ylNMoAiaOj5HAQ3"
+    }
+  ],
+  "status" : "final",
+  "issued" : "2015-02-17T22:41:00Z"
+}

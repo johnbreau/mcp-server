@@ -1,0 +1,92 @@
+{
+  "id" : "eLOW5ZFgNarrK76Do0sZpntClwd-aWeQYS0LoPLacm4TvHLtbQpk4yLXT0myHs8eVkqUBW7zSYWNlyTq9fxSqrA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Blood Draw",
+    "reference" : "Encounter/eWUtC9y.qoSXa6GwjQ6CN3g3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3634337005"
+    }
+  },
+  "effectiveDateTime" : "2025-01-13T12:54:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "PT-INR",
+      "reference" : "ServiceRequest/e7lHvRNMcCZg3VAuV3cPp5qx64olBseom9lCRRdDQ.eg3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen SQ_M7394592_385L432330_",
+    "reference" : "Specimen/ewDJrJSvUbwP2VfeUOtbDXifmOk2PtRnIVNDjOn.JGSk3"
+  },
+  "code" : {
+    "text" : "PT",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Prothrombin time (PT)",
+        "code" : "5902-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.91",
+        "code" : "PT"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.818",
+        "code" : "5200011201"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.768282",
+        "display" : "PT",
+        "code" : "5200011201"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "value" : 10,
+        "unit" : "sec"
+      },
+      "high" : {
+        "value" : 13,
+        "unit" : "sec"
+      },
+      "text" : "10.0 - 13.0 sec"
+    }
+  ],
+  "valueQuantity" : {
+    "value" : 11.1,
+    "unit" : "sec"
+  },
+  "status" : "final",
+  "issued" : "2025-01-13T13:24:02Z"
+}

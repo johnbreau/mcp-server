@@ -1,0 +1,216 @@
+{
+  "id" : "ecCqwHVlai9AS8UbVOVpyo.17xz8r0b0WQG5hfZG5bDg3",
+  "category" : [
+    {
+      "text" : "Outpatient",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Outpatient",
+          "code" : "outpatient"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eqJrJSflvPV19ac3zrGSvNg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1041879885"
+    }
+  },
+  "medicationReference" : {
+    "display" : "gadobenate dimeglumine",
+    "reference" : "Medication/e1wSaaOB89Q7e1vu8xBFmJSG5YTVoMwCy7OdUvb85EpOOn12D9l-Xvsg7CkW-soT.884fo12LRJ.IMVSW.TScTtWzl8O6uBls8XMMum7RjAY3"
+  },
+  "resourceType" : "MedicationRequest",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "gadobenate dimeglumine",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "V08CA08"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "46527"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "692620"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "68173"
+          }
+        ]
+      },
+      "id" : "e1wSaaOB89Q7e1vu8xBFmJSG5YTVoMwCy7OdUvb85EpOOn12D9l-Xvsg7CkW-soT.884fo12LRJ.IMVSW.TScTtWzl8O6uBls8XMMum7RjAY3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "solution",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.698288.310",
+            "display" : "solution",
+            "code" : "soln"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.698288",
+          "value" : "135881"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "gadobenate dimeglumine",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "V08CA08"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "46527"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "692620"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "68173"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798268",
+      "value" : "1237424899"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eKmcDmy.AKP5KnL50P.tpag3",
+    "display" : "Hope W"
+  },
+  "authoredOn" : "2019-10-28T20:18:50Z",
+  "dosageInstruction" : [
+    {
+      "asNeededBoolean" : false,
+      "timing" : {
+        "code" : {
+          "text" : "once"
+        },
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2019-10-28T19:15:00Z",
+            "end" : "2019-10-28T19:15:00Z"
+          },
+          "count" : 1
+        }
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "calculated",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "calculated",
+                "code" : "calculated"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mL",
+            "value" : 17,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mL"
+          }
+        },
+        {
+          "type" : {
+            "text" : "admin-amount",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "admin-amount",
+                "code" : "admin-amount"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mL",
+            "value" : 17,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mL"
+          }
+        },
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mL",
+            "value" : 17,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mL"
+          }
+        }
+      ],
+      "route" : {
+        "text" : "Intravenous",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Intravenous route (qualifier value)",
+            "code" : "47625008"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.798268.7025",
+            "display" : "Intravenous",
+            "code" : "11"
+          }
+        ]
+      },
+      "text" : "17 mL, Intravenous, ONCE, 1 dose, On Mon 10/28/19 at 1530\nNOTE: This is a HIGH ALERT Medication.\n"
+    }
+  ],
+  "intent" : "order",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "status" : "completed"
+}

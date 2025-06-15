@@ -1,0 +1,253 @@
+{
+  "id" : "eIPon0QdiZcIid8Cim25OQXrvbIWNq7pNbgy.ZBIRak03",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Refill",
+    "reference" : "Encounter/ewHdYvDw68igo1UGDoyamgb7F0BulxMHYmxL6HNvhpiQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100138843941"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Schwannomatosis",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Full schwannomatosis (disorder)",
+          "code" : "1332358007"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Schwannomatosis",
+          "code" : "Q85.03"
+        }
+      ]
+    },
+    {
+      "text" : "Neuropathic pain",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Neuropathic pain (finding)",
+          "code" : "247398009"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Neuralgia and neuritis, unspecified",
+          "code" : "M79.2"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "MedicationRequest",
+  "status" : "stopped",
+  "medicationReference" : {
+    "display" : "gabapentin 400 MG capsule",
+    "reference" : "Medication/egPBiE7qXB.1ztjpaP1X5Z3HRDxeMMR-DXHA3ze1a5wjFQJvKE3Gb3LYT-T0I3IqqI.5rOyxyfQiW-EDdv69yrgrUAOPTJni-pypCM0JIXmI3"
+  },
+  "contained" : [
+    {
+      "code" : {
+        "text" : "gabapentin 400 MG capsule",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N02BF01"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "21415"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "25480"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1101333"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "310432"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "196498"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "602396"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1087976"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "105030"
+          }
+        ]
+      },
+      "id" : "egPBiE7qXB.1ztjpaP1X5Z3HRDxeMMR-DXHA3ze1a5wjFQJvKE3Gb3LYT-T0I3IqqI.5rOyxyfQiW-EDdv69yrgrUAOPTJni-pypCM0JIXmI3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "capsule",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.698288.310",
+            "display" : "capsule",
+            "code" : "cap"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.698288",
+          "value" : "18307"
+        }
+      ],
+      "ingredient" : [
+        {
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 400,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 400,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            }
+          },
+          "itemCodeableConcept" : {
+            "text" : "gabapentin 400 MG capsule",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "N02BF01"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "21415"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "25480"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1101333"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "310432"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "196498"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "602396"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1087976"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "105030"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "273970703"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eQxn0XWj5AuiAgT-cKVqBTw3",
+    "display" : "M Bilezikjian, MD"
+  },
+  "authoredOn" : "2019-08-27",
+  "dosageInstruction" : [
+    {
+      "patientInstruction" : "TAKE ONE CAPSULE BY MOUTH EVERY MORNING THEN TAKE 2 CAPS AT 5 PM THEN TAKE 2 CAPS AT BEDTIME",
+      "text" : "TAKE ONE CAPSULE BY MOUTH EVERY MORNING THEN TAKE 2 CAPS AT 5 PM THEN TAKE 2 CAPS AT BEDTIME, Normal",
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2019-08-27",
+            "end" : "2019-10-18"
+          }
+        }
+      }
+    }
+  ],
+  "dispenseRequest" : {
+    "quantity" : {
+      "value" : 150,
+      "unit" : "capsule"
+    },
+    "expectedSupplyDuration" : {
+      "code" : "d",
+      "value" : 52,
+      "system" : "http://unitsofmeasure.org",
+      "unit" : "Day"
+    },
+    "validityPeriod" : {
+      "start" : "2019-08-27",
+      "end" : "2019-10-18"
+    },
+    "numberOfRepeatsAllowed" : 2
+  },
+  "priorPrescription" : {
+    "display" : "gabapentin 400 MG capsule",
+    "reference" : "MedicationRequest/eIh610WhsUa3VVjFQO2p8WtU2nK5MVGKmW8lXoKYqWIc3"
+  },
+  "courseOfTherapyType" : {
+    "text" : "Continuous long term therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Continuous long term therapy",
+        "code" : "continuous"
+      }
+    ]
+  },
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eQxn0XWj5AuiAgT-cKVqBTw3",
+    "display" : "M Bilezikjian, MD"
+  },
+  "intent" : "order"
+}

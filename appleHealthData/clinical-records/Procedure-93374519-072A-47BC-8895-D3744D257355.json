@@ -1,0 +1,87 @@
+{
+  "id" : "eHIY3jusc-rKtVDqbBApKDVcl0N-HUl-o9qw29ynIn9-aFeP-BZiv5QCs6ecOOSFc3",
+  "category" : {
+    "text" : "Ordered Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Diagnostic procedure",
+        "code" : "103693007"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eh8bZElT4h9enFNWqgNUedg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1443038529"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Weakness of left upper extremity",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Weakness of left upper extremity",
+          "code" : "729.89"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "Procedure",
+  "basedOn" : [
+    {
+      "display" : "EMG W/NERVE CONDUCTION STUDY (EMG W/NERVE CONDUCTION STUDY - EXCLUDES LARYNX AND SINGLE FIBER)",
+      "reference" : "ServiceRequest/eAnskWjf9JdXgpUcuO.5RsQu5aKC1Tle8hV-0QjPnQAQ3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.798268",
+      "value" : "1018978042",
+      "type" : {
+        "text" : "ORD"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.696580",
+      "value" : "219731",
+      "type" : {
+        "text" : "EAP"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "EMG W/NERVE CONDUCTION STUDY (EMG W/NERVE CONDUCTION STUDY - EXCLUDES LARYNX AND SINGLE FIBER)",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "EMG W/NERVE CONDUCTION STUDY - EXCLUDES LARYNX AND SINGLE FIBER",
+        "code" : "18749-2"
+      }
+    ]
+  },
+  "performedDateTime" : "2024-10-21T18:05:58Z",
+  "report" : [
+    {
+      "type" : "DiagnosticReport",
+      "reference" : "DiagnosticReport/eHEL7KV-XV5c4-jxIVnotdUG3WId9MMr48wx3XglY9i43",
+      "display" : "EMG W/NERVE CONDUCTION STUDY"
+    }
+  ],
+  "status" : "completed",
+  "asserter" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/e2YZeTvP8p6cQIdFcd7gtgQ3",
+    "display" : "Bronwyn Slobogean, PA-C"
+  }
+}

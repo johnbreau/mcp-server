@@ -1,0 +1,55 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "VITAMIN B12",
+      "reference" : "ServiceRequest/e27.ZEkDGVfcvgTw8sPTd4HRtP4T.oXlxs7Gq3ai.CB83"
+    }
+  ],
+  "id" : "eVnebz0ww.gCdAcvD.jvnterJ1mnsdgtiD-CdWX8GE6s3",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Visit Encounter",
+    "reference" : "Encounter/e4DeINedlOB3K2rP8h4yksg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1163880264"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "valueString" : "Has the patient fasted?  (LabCorp)->No",
+  "effectiveDateTime" : "2016-04-29T21:12:00Z",
+  "specimen" : {
+    "display" : "Specimen 882912459:54851900",
+    "reference" : "Specimen/eMexNc0rFyQWzSm-VK3P9EKALcXWxVqCrkE1G98t9LqE3"
+  },
+  "resourceType" : "Observation"
+}

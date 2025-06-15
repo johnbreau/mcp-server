@@ -1,0 +1,83 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Vital Signs",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Vital Signs",
+          "code" : "vital-signs"
+        }
+      ]
+    }
+  ],
+  "issued" : "2021-10-29T19:53:26Z",
+  "id" : "eD.er6PQE.479DC0TNTKXY9PZlNwxJUK2VuitnwPNCMAdU8KWDyfHlpyTRQi6-UUXJSYPRRBsWv493m4H-570-A3",
+  "code" : {
+    "text" : "SpO2",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.707679",
+        "display" : "SpO2",
+        "code" : "10"
+      },
+      {
+        "system" : "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+        "display" : "SpO2",
+        "code" : "tuFh7maKMX4X28wrvzU7aFA0"
+      },
+      {
+        "system" : "urn:oid:1.2.246.537.6.96",
+        "code" : "59417-6"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Oxygen saturation in Arterial blood",
+        "code" : "2708-6"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Oxygen saturation in Capillary blood by Oximetry",
+        "code" : "2710-2"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Oxygen saturation in Arterial blood by Pulse oximetry",
+        "code" : "59408-5"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Vital signs",
+        "code" : "8716-3"
+      }
+    ]
+  },
+  "encounter" : {
+    "display" : "Hospital Encounter",
+    "reference" : "Encounter/e.vaDn31bP7f7jj2dE-o1sQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1345809478"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "performer" : [
+    {
+      "display" : "Tanya B",
+      "reference" : "Practitioner/eUJcWlgIa9IlPU.R66ihN8wRO-jqttdtfNiyURkZajMU3"
+    }
+  ],
+  "effectiveDateTime" : "2021-10-29T19:50:00Z",
+  "valueQuantity" : {
+    "code" : "%",
+    "value" : 99,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "%"
+  },
+  "resourceType" : "Observation"
+}

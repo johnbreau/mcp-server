@@ -1,0 +1,84 @@
+{
+  "id" : "eFx2KZ8li0Vba-Oy1-HIlQXHf1-KW0N0Zdpv3Z.Rrqroj9Quf-EBrv.f3MJXiCtNCoDDgZkxIqSaZbSJd-0J0nw3",
+  "category" : [
+    {
+      "text" : "Vital Signs",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Vital Signs",
+          "code" : "vital-signs"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/enrIYfSFppEcd1EXJ-j6lZ83v1kV8ozji1.Yk5qIzOmA3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100137515630"
+    }
+  },
+  "effectiveDateTime" : "2019-07-22T14:06:00Z",
+  "resourceType" : "Observation",
+  "code" : {
+    "text" : "Temperature",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.707679",
+        "display" : "Temperature",
+        "code" : "6"
+      },
+      {
+        "system" : "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+        "display" : "Temperature",
+        "code" : "tKLXyLO0CnFp1pqLK1qWBIw0"
+      },
+      {
+        "system" : "urn:oid:1.2.246.537.6.96",
+        "code" : "8310-5"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Body temperature",
+        "code" : "8310-5"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Vital signs",
+        "code" : "8716-3"
+      }
+    ]
+  },
+  "performer" : [
+    {
+      "display" : "Medical Assistant Patricia",
+      "reference" : "Practitioner/eDzBnO0Xwk5De3gCsReQS9Q3"
+    }
+  ],
+  "extension" : [
+    {
+      "url" : "http://open.epic.com/FHIR/STU3/StructureDefinition/temperature-in-fahrenheit",
+      "valueQuantity" : {
+        "code" : "[degF]",
+        "value" : 98.9,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "[degF]"
+      }
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "Cel",
+    "value" : 37.2,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "Cel"
+  },
+  "status" : "final",
+  "issued" : "2019-07-22T14:06:41Z"
+}

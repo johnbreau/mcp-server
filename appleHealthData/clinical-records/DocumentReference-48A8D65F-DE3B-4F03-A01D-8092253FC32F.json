@@ -1,0 +1,169 @@
+{
+  "id" : "e3M1wfpf2Ldd8v0GriHUa3gned2NUS0V3XeFKvAkRyTI3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eMAnwZNQwhqZp-3ZiZdNn8A3",
+      "display" : "Elizabeth Ellinwood"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eMAnwZNQwhqZp-3ZiZdNn8A3",
+    "display" : "Elizabeth Ellinwood",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2022-03-28T21:44:33Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Physician, Dept of Anesthesiology",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.836982.1040",
+              "display" : "Physician, Dept of Anesthesiology",
+              "code" : "4"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2022-03-28T21:44:24Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Anesthesia Event",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+          "value" : "100167987627"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Anesthesia Postprocedure Evaluation",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.737880.5010",
+        "display" : "Anesthesia Postprocedure Evaluation",
+        "code" : "25"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Anesthesia Postprocedure Evaluation",
+        "code" : "25"
+      },
+      {
+        "code" : "84061-1",
+        "system" : "http://loinc.org",
+        "display" : "Anesthesia Postprocedure Evaluation",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Provider-unspecified Operation note",
+        "code" : "11504-8"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.727879",
+      "value" : "727845838"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.368.2.7.2.727879_727845838"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2022-03-28T21:44:24Z",
+  "custodian" : {
+    "display" : "Saint Luke's Health System",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:SaintLukes:PRD.CE-PRD"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2022-03-28T21:44:33Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Elizabeth Ellinwood",
+            "reference" : "Practitioner/eMAnwZNQwhqZp-3ZiZdNn8A3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eoAgn7ZPzIKqWl0UN1XQnd8FSMuGNToHmuzRQ1kddaCM3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/f0g7o4BA1XEzzqopeMG.Utw9xbMS23tMXmxUkHsSmAtQ4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

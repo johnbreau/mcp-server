@@ -1,0 +1,92 @@
+{
+  "id" : "ebXNS4fcTrKADr99psjzIKv5vn7OpZ89DM84pl.HTTFqv5.JEDNPX5DPbmcH8oyIkQ1XOa7ZikCs8Fr0vZUhSXA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Microbiology",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Microbiology",
+          "code" : "Microbiology"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eWbJtH04GoduR8etwHPhFB6ZOVsC-SHXt8DhUWj4mJ.c3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100137200604"
+    }
+  },
+  "effectiveDateTime" : "2019-07-05T22:40:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CULTURE, WOUND WITH GRAM STAIN (AEROBIC)",
+      "reference" : "ServiceRequest/eZd48TYE.NSPqH07IGiVBNhX-xTmw-QezHd8jpJH2ohI3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 191864073004",
+    "reference" : "Specimen/evLZipuhoqcrYjvlH2jH1SmG-45N0vCmhsO3RScxuo5s3"
+  },
+  "code" : {
+    "text" : "Isolate 1",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Bacteria identified in Unspecified specimen by Aerobe culture",
+        "code" : "634-6"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "ISO1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "ISO1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "ORGANISM"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Isolate 1",
+        "code" : "763"
+      }
+    ]
+  },
+  "interpretation" : [
+    {
+      "text" : "Abnormal",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display" : "Abnormal",
+          "code" : "A"
+        }
+      ]
+    }
+  ],
+  "valueString" : "Few",
+  "status" : "final",
+  "issued" : "2019-07-09T13:32:24Z"
+}

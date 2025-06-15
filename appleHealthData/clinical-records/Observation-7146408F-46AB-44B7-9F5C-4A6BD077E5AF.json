@@ -1,0 +1,57 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MRI Cervical Spine with/without Contrast",
+      "reference" : "ServiceRequest/epNwYn3cJ4tcxr.zLADYIT7T1nGpSKcCSlW3ts8fx8243"
+    }
+  ],
+  "id" : "eTQytvvl8RksZJquK8T3LW-mKnQ.7cFWSdySLSNZ5ecM3",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eI9tYZX2dM8ZyDybr8KZZETmEniem8clUfFLIW2MO05I3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100127713726"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "performer" : [
+    {
+      "display" : "M Sigley, MD",
+      "reference" : "Practitioner/ejnm44Sg9t0AjHLz9S1G7kA3"
+    }
+  ],
+  "effectiveDateTime" : "2018-09-27T17:52:00Z",
+  "valueString" : " \r\nPatient:   BREAU, JOHN  A\r\n\r\n\r\nSex#:      M                             \r\nDOB#       12/20/1971                       Corp#:    01447998\r\nLocation:  SLN MRI                     Accession#: 8861206\r\n \r\nProcedure Requested:  IMG5065 MRI CERVICAL SPINE W WO CONTRAST\r\nReason for Exam:  Schwannomatosis (HCC)\r\nExam Ordered:        9/27/2018  1152\r\nExam Date/Time:      9/27/2018  1252\r\nBegin exam date/time:  9/27/2018  1156\r\n \r\n \r\n MRI CERVICAL SPINE W WO CONTRAST \r\n\r\n\r\nDate:  September 27, 2018 \r\n\r\n\r\nReason for exam: Radiculopathy. History of schwannomatosis\r\n\r\n\r\nTechnique:  Multiplanar, multipulse sequence images of the cervical\r\nspine were obtained before and after the administration of 17 mL\r\nMultiHance IV gadolinium contrast.\r\n\r\n\r\nComparison: No direct comparison available. July 7, 2011 neck.\r\n\r\n\r\nFindings: The brainstem and cerebellum are normal signal and\r\nconfiguration. Spinal cord shows normal caliber and signal intensity.\r\nSpinal cord shows no enhancing mass or lesion.\r\n\r\n\r\nCervical vertebral bodies show normal height and alignment. There is no\r\nfocal marrow edema to suggest acute osseous abnormality. There is no\r\nsuspicious or worrisome marrow signal. There is no suspicious osseous\r\nenhancement.\r\n\r\n\r\nThere is mild generalized disc desiccation and intervertebral disc space\r\nnarrowing. No suspicious intradiscal enhancement is seen.\r\n\r\n\r\nC2-C3: There is no disc bulge or herniation. There is no spinal canal\r\nstenosis. Mild bilateral facet hypertrophy. There is no neural foraminal\r\nstenosis.\r\n\r\n\r\nC3-C4: There is no disc bulge or herniation. There is no spinal canal\r\nstenosis. There is mild right uncinate hypertrophy. Mild bilateral facet\r\nhypertrophy. Mild right neural foraminal stenosis.\r\n\r\n\r\nC4-C5: Minimal Central disc bulge. No spinal canal stenosis. Mild\r\nbilateral uncinate hypertrophy. No neural foraminal stenosis.\r\n\r\n\r\nC5-C6: Minimal Central disc bulge. No spinal canal stenosis. Mild\r\nbilateral uncinate hypertrophy. Mild bilateral facet hypertrophy. Mild\r\nleft neural foraminal stenosis.\r\n\r\n\r\nC6-C7: Central disc herniation. Mild spinal canal stenosis. Mild\r\nbilateral uncinate hypertrophy, left worse than right. Moderate\r\nbilateral neural foraminal stenosis.\r\n\r\n\r\nC7-T1: There is no disc bulge or herniation. There is no spinal canal\r\nstenosis. There is bilateral uncinate hypertrophy. Mild bilateral facet\r\narthrosis. Moderate bilateral neural foraminal stenosis.\r\n\r\n\r\nThere are numerous enhancing masses throughout the superficial and deep\r\nsoft tissues of the neck and in the paraspinal soft tissues. This\r\nincludes multiple bilobed T2 signal hyperintensity lesions with\r\nhomogeneous enhancement in the bilateral neural foramen. These are\r\nlarger within the left neural foramen at C2-3, C3-4, and C4-5. These\r\nappear to extend along multiple midline and peripheral nerve roots. No\r\nrim-enhancing or drainable soft tissue collection is identified.\r\n\r\n",
+  "resourceType" : "Observation"
+}

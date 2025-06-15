@@ -1,0 +1,90 @@
+{
+  "id" : "e.M4dv9m0xLqz157RtLcwqhL7HFgw4rErcRf6GynFyOxWlwu3n1-KgGrXXs7PFhBGA1FKKMA.nFsUs2Zoxk2GnA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Visit Encounter",
+    "reference" : "Encounter/ePTJCitQoO-HzgRQ0yhzKgQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1289967743"
+    }
+  },
+  "effectiveDateTime" : "2019-05-29T17:25:00Z",
+  "resourceType" : "Observation",
+  "note" : [
+    {
+      "text" : "     Recommended Therapeutic INR Ranges:\r\n        Mechanical Prosthetic Heart Valves:    2.5-3.5\r\n        Usual Therapeutic Range:               2.0-3.0\r\n"
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "PROTHROMBIN TIME + INR",
+      "reference" : "ServiceRequest/ese6FQp2HRokxJnTK8Ocx6oqC8F3t1-Rfc7WBjB7ejBw3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen C52907964:98811067",
+    "reference" : "Specimen/eso.CpdU5KfMLYITlV.ieVdIPXznO87PDbUtivtDBk7s3"
+  },
+  "code" : {
+    "text" : "INR, Protime",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "INR in Platelet poor plasma by Coagulation assay",
+        "code" : "6301-6"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.179",
+        "code" : "INR"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "INR, Protime",
+        "code" : "2000000433"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "value" : 0.9
+      },
+      "high" : {
+        "value" : 1.1
+      },
+      "text" : "0.9 - 1.1"
+    }
+  ],
+  "valueQuantity" : {
+    "value" : 1
+  },
+  "status" : "final",
+  "issued" : "2019-05-29T18:15:19Z"
+}

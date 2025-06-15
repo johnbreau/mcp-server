@@ -1,0 +1,73 @@
+{
+  "id" : "eHSo-pRbdUZrik-Y1gqvucjxBC-XVFWKOAnLymi0GTUAMs9G9f2eRkWwEkGQUzkT.3",
+  "category" : {
+    "text" : "Ordered Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Diagnostic procedure",
+        "code" : "103693007"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/etlnUqcmGXqEs2YhB29842Q3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1086215141"
+    }
+  },
+  "resourceType" : "Procedure",
+  "basedOn" : [
+    {
+      "display" : "EMG-SCAN",
+      "reference" : "ServiceRequest/esPr8GrjB57LfMV3ezPvUpjA7G38kSwUw2ipQY6YcUDQ3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798268",
+      "value" : "1359794678",
+      "type" : {
+        "text" : "ORD"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.696580",
+      "value" : "10236590",
+      "type" : {
+        "text" : "EAP"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "EMG-SCAN",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.696580",
+        "display" : "EMG-SCAN",
+        "code" : "10236590"
+      }
+    ]
+  },
+  "performedDateTime" : "2023-01-12T06:00:00Z",
+  "report" : [
+    {
+      "type" : "DiagnosticReport",
+      "reference" : "DiagnosticReport/e2kLrV6JJTZDYdtje9pdq1qJrbTFEq4YjfnSZ4YsH2ds3",
+      "display" : "EMG-SCAN"
+    }
+  ],
+  "status" : "completed",
+  "asserter" : {
+    "type" : "Practitioner"
+  }
+}

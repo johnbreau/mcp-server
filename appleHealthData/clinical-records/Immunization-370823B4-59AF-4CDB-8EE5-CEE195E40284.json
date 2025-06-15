@@ -1,0 +1,69 @@
+{
+  "id" : "e9SKUFrH9-j-MX.Cfg-YjUE5.uFYJ4vy.rsA9aCeHBnY3",
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eSZx7qofmTQDIIh0hoNEAttupxuIDOb4wrGdYTQJPe903",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100173634213"
+    }
+  },
+  "resourceType" : "Immunization",
+  "occurrenceDateTime" : "2022-11-03",
+  "doseQuantity" : {
+    "code" : "1",
+    "value" : 0.5,
+    "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.768076.4019",
+    "unit" : "mL"
+  },
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768076",
+      "value" : "31151752"
+    }
+  ],
+  "location" : {
+    "display" : "KS5003023"
+  },
+  "lotNumber" : "UJ943AA",
+  "manufacturer" : {
+    "display" : "Sanofi-Pasteur"
+  },
+  "route" : {
+    "text" : "Intramuscular",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.768076.4030",
+        "display" : "Intramuscular",
+        "code" : "2"
+      }
+    ]
+  },
+  "vaccineCode" : {
+    "text" : "Influenza QIV (IM)",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "150"
+      }
+    ]
+  },
+  "site" : {
+    "text" : "Left deltoid",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.768076.4040",
+        "display" : "Left deltoid",
+        "code" : "7"
+      }
+    ]
+  },
+  "status" : "completed",
+  "primarySource" : false
+}

@@ -1,0 +1,93 @@
+{
+  "id" : "eGR9QSvKD5hVfI2Tpb0FCAwUAYV1vdwPwjJCMFJYtCUU3",
+  "primarySource" : true,
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eSZx7qofmTQDIIh0hoNEAttupxuIDOb4wrGdYTQJPe903",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100173634213"
+    }
+  },
+  "resourceType" : "Immunization",
+  "occurrenceDateTime" : "2022-12-23T19:40:00Z",
+  "expirationDate" : "2023-10-06",
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768076",
+      "value" : "31153068"
+    }
+  ],
+  "location" : {
+    "display" : "Saint Luke's Health System"
+  },
+  "lotNumber" : "YA29D",
+  "manufacturer" : {
+    "display" : "GlaxoSmithKline"
+  },
+  "route" : {
+    "text" : "Intramuscular",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.768076.4030",
+        "display" : "Intramuscular",
+        "code" : "2"
+      }
+    ]
+  },
+  "vaccineCode" : {
+    "text" : "Varicella Zoster Recombinant, Adjuvanted (Shingrix)",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "187"
+      },
+      {
+        "system" : "http://hl7.org/fhir/sid/ndc",
+        "code" : "58160-828-03"
+      }
+    ]
+  },
+  "site" : {
+    "text" : "Right deltoid",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.768076.4040",
+        "display" : "Right deltoid",
+        "code" : "6"
+      }
+    ]
+  },
+  "doseQuantity" : {
+    "code" : "1",
+    "value" : 0.5,
+    "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.768076.4019",
+    "unit" : "mL"
+  },
+  "performer" : [
+    {
+      "actor" : {
+        "type" : "Practitioner",
+        "reference" : "Practitioner/eyNXnLo1qcmOOkdqRoitIhQ3",
+        "display" : "Nurse Freddy, RN"
+      },
+      "function" : {
+        "text" : "Administering Provider",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+            "display" : "Administering Provider",
+            "code" : "AP"
+          }
+        ]
+      }
+    }
+  ],
+  "status" : "completed",
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  }
+}

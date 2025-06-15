@@ -1,0 +1,67 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Vital Signs",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Vital Signs",
+          "code" : "vital-signs"
+        }
+      ]
+    }
+  ],
+  "issued" : "2024-09-11T19:17:44Z",
+  "id" : "elwmo2pLK0o6AEMgdbaaujIY5hRfbfE6iPW28M2CjEMuMFT4N-D89OqLCfEw41hIw8MixIP.G4uboXDxJIYUSOw3",
+  "code" : {
+    "text" : "BSA Dubois (Calculated - sq m)",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.707679",
+        "display" : "BSA Dubois (Calculated - sq m)",
+        "code" : "1123010601"
+      },
+      {
+        "system" : "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+        "display" : "BSA Dubois (Calculated - sq m)",
+        "code" : "tR3RBOgoROPYPAzFk9E8rAA0"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Body surface area Derived from formula",
+        "code" : "3140-1"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Vital signs",
+        "code" : "8716-3"
+      }
+    ]
+  },
+  "encounter" : {
+    "display" : "Infusion",
+    "reference" : "Encounter/eg0MDuz65RKYNsdUfSmGZTQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3631499644"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "performer" : [
+    {
+      "display" : "Nadaige Cherenfant",
+      "reference" : "Practitioner/e11x84ngL.E8kawh7ukDvmA3"
+    }
+  ],
+  "effectiveDateTime" : "2024-09-11T19:17:00Z",
+  "valueQuantity" : {
+    "value" : 2.04,
+    "unit" : "sq meters"
+  },
+  "resourceType" : "Observation"
+}

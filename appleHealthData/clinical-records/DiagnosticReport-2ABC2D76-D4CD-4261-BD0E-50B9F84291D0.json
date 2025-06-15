@@ -1,0 +1,339 @@
+{
+  "id" : "e2LYa4PsHh.bu6Y8vyhyFgzjQ5GS1mO9sOacyDcHTK0Y3",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.10.798268.30",
+          "code" : "Imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Radiology",
+      "coding" : [
+        {
+          "system" : "http://loinc.org",
+          "display" : "Radiology",
+          "code" : "LP29684-5"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eRgWIMhx1WY71vbJqU9EJVoPoNIrE41N9YdrwiwoirXw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+      "value" : "2000613053684"
+    }
+  },
+  "effectiveDateTime" : "2024-04-24T13:00:23Z",
+  "resourceType" : "DiagnosticReport",
+  "issued" : "2024-04-24T16:16:40Z",
+  "identifier" : [
+    {
+      "use" : "official",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.798268",
+      "value" : "2223402843966",
+      "type" : {
+        "text" : "Placer Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Placer Identifier",
+            "code" : "PLAC"
+          }
+        ]
+      }
+    },
+    {
+      "use" : "official",
+      "type" : {
+        "text" : "Filler Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Filler Identifier",
+            "code" : "FILL"
+          }
+        ]
+      },
+      "value" : "51548019"
+    }
+  ],
+  "code" : {
+    "text" : "MR Cervical Spine without and with IV Contrast",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "code" : "24937-5"
+      },
+      {
+        "system" : "urn:oid:2.16.840.1.113883.6.12",
+        "display" : "PR MRI CERV SPINE WO/W CNTRST",
+        "code" : "72156"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.52000",
+        "code" : "IMG285"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.72",
+        "code" : "IMG285"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.69",
+        "code" : "675705"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.69",
+        "code" : "675708"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.69",
+        "code" : "675750"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.126",
+        "code" : "CERSPW/CON"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.67",
+        "code" : "75705"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.47",
+        "code" : "07052"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.47",
+        "code" : "72156"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.47",
+        "code" : "MR923"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.127",
+        "code" : "28038040"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.127",
+        "code" : "26354694"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.127",
+        "code" : "30422127"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.127",
+        "code" : "26354703"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.1051252000",
+        "code" : "2000141"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.5.737384.238",
+        "code" : "IMG285"
+      }
+    ]
+  },
+  "performer" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eMH5jmIO.0t97mbN9FFjJ3A3",
+      "display" : "E. Lindell, M.D."
+    },
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/er87YnyZm.Y7b7fDjD.I0Mg3",
+      "display" : "Michelle Mauermann, M.D."
+    },
+    {
+      "type" : "Organization",
+      "reference" : "Organization/e5KHNid1hWBkqIs2A9BFgpsIqNVi6TuSQwTd6BPL3sdI3",
+      "display" : "POWERSCRIBE360"
+    }
+  ],
+  "conclusionCode" : [
+    {
+      "text" : "Schwannomatosis",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Schwannoma (disorder)",
+          "code" : "189948006"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Schwannomatosis (HCC)",
+          "code" : "Q85.03"
+        }
+      ]
+    }
+  ],
+  "extension" : [
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "WORKFLOW - ATTESTATION - RADIOLOGY RESIDENT ATTESTATION STATEMENT",
+        "reference" : "Observation/ffzgx0tDl9sCevNr8JhucUg4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "WORKFLOW - PROCEDURAL - IMAGING PROTOCOL - ORAL CONTRAST",
+        "reference" : "Observation/fvcnxhguHXgdoxCjJUOGnqg4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "WORKFLOW - PROCEDURAL - IMAGING PROTOCOL - CT PROTOCOL - CT W/WO CONTRAST",
+        "reference" : "Observation/frLGhw9dkyQ9RKbtAAYxY.A4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "3D  TECHNOLOGIST POST PROCESSING",
+        "reference" : "Observation/f79B7yWEDT57UgETlbOb8Sw4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "CHANGE EXAM",
+        "reference" : "Observation/fLHSHsvB.f8OTW7m-lFW-og4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "PROTOCOL TRAVEL INSTRUCTIONS",
+        "reference" : "Observation/ff0v0snI8RyToV8NvMTDrqg4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "CONVERGED PROTOCOL",
+        "reference" : "Observation/fM60DnH5Z5eVT3goNckbCEw4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "RAD DIVISION",
+        "reference" : "Observation/fXZYB5.lyRtitkoWY175oBA4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "OTHER MEDICATIONS",
+        "reference" : "Observation/fdLLdpu40KpiGudnC1179sQ4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "NACL 1-100 ML IV FOR NON-UROGRAMS",
+        "reference" : "Observation/fG-mQuXiK4NM4kJE2lmQwQQ4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "SEDATION MEDICATION LIST",
+        "reference" : "Observation/fWizABfDV.Pyx3drNh7.gng4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "ON HOLD",
+        "reference" : "Observation/fUYHGWWs8PeX-epliCh.s2w4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "MR CSPINE",
+        "reference" : "Observation/fe5GkCORmuyoUpDbtgTefyw4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "CSP INT WOW     SN010_CSPINE_INTRADURAL_WOW",
+        "reference" : "Observation/fcjAlA1mu47zj16AVw4-R0g4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "MR IV CONTRASTS",
+        "reference" : "Observation/f8wb4NOuanjkhsqdIz07giw4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "GADAVIST",
+        "reference" : "Observation/fVJURXBn.TIjRwG7jstZomw4"
+      }
+    },
+    {
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/smartdata",
+      "valueReference" : {
+        "display" : "ATIVAN 0.5 - 2MG PO",
+        "reference" : "Observation/fBfLUF37Yfy6BxQ3qRSRuIg4"
+      }
+    }
+  ],
+  "presentedForm" : [
+    {
+      "contentType" : "text/html",
+      "url" : "Binary/emu4dTsQblxn1gFQ4Pjr.jBC0B-tON387wPT6BwcIV8hyhPVLHumo60VfEVkQ3dAt3",
+      "title" : "Narrative"
+    },
+    {
+      "contentType" : "text/html",
+      "url" : "Binary/emu4dTsQblxn1gFQ4Pjr.jMHaAhUddiEwAWoHvKlgSxL9u360kxf.qbAH0.nVtWpu3",
+      "title" : "Impression"
+    }
+  ],
+  "result" : [
+    {
+      "display" : "Narrative",
+      "reference" : "Observation/e4dlROebkzZwsNGsupl1AyHrmT0ap7Tm2J9j9AaFbrkU3"
+    },
+    {
+      "display" : "Impression",
+      "reference" : "Observation/e4dlROebkzZwsNGsupl1AyIJNCsPggu04Xli6Ywc8Scc3"
+    }
+  ],
+  "resultsInterpreter" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eSEUekkdoIShnSSIoWpSPBg3",
+      "display" : "Crystal Kang, M.D."
+    },
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eMH5jmIO.0t97mbN9FFjJ3A3",
+      "display" : "E. Lindell, M.D."
+    }
+  ],
+  "status" : "final"
+}

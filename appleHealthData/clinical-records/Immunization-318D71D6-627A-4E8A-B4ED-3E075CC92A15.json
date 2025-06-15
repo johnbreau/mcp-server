@@ -1,0 +1,40 @@
+{
+  "status" : "completed",
+  "primarySource" : false,
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "id" : "era8TJygF90DUCij5-3k2RyVohkIRRHuQrlX9Sk9BTUY3",
+  "occurrenceDateTime" : "2021-03-15",
+  "vaccineCode" : {
+    "text" : "Pfizer SARS-COV-2 Adult Dose (purple top)",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "208"
+      }
+    ]
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/efqryQsnIeTZ994b91Z3rSXAIA6NkJsoJ3AI8RnFNVGc3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100155866735"
+    }
+  },
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768076",
+      "value" : "25025244"
+    }
+  ],
+  "manufacturer" : {
+    "display" : "Pfizer, Inc"
+  },
+  "lotNumber" : "EN6204",
+  "resourceType" : "Immunization"
+}

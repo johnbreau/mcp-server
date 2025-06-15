@@ -1,0 +1,55 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "COMPL DRUG ANL W/ETG+NICOTINE",
+      "reference" : "ServiceRequest/eHo0-BkDJa8uzWYq6nJPq-P8rBWyQ9OmSEPQ7dJGUOLM3"
+    }
+  ],
+  "id" : "eTasUIBxtEv7yjApnz9GtgI0NkJUbbNXm1XZEFCGSdO03",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eKFGRpswJIxr.OvM5xax2FoNQgU74kDpAZJoRwo5oLB43",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100140479239"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "valueString" : "Performed at:  01 - MedTox Laboratories Inc\r\n402 W County Road D, St Paul, MN  551123522\r\nLab Director: Karla Walker PhrmD, Phone:  8774745767",
+  "effectiveDateTime" : "2019-11-26T06:00:00Z",
+  "specimen" : {
+    "display" : "Specimen 33084903320",
+    "reference" : "Specimen/eJJ7iLO1psVTRYGccKwpoMfsON1GUoa8UrdDAJrLzLtw3"
+  },
+  "resourceType" : "Observation"
+}

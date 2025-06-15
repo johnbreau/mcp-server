@@ -1,0 +1,170 @@
+{
+  "id" : "eeWq6az1FY1A9nXPlaVQipg3tyqFJTAGLXGB4QYvPpfk3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/e1B51qcLoKBuHqX6I7DpnAw3",
+      "display" : "Tara Emde, APRN, C.N.P., M.S."
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/e1B51qcLoKBuHqX6I7DpnAw3",
+    "display" : "Tara Emde, APRN, C.N.P., M.S.",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2024-06-17T15:06:19Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Nurse Practitioner",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.836982.1040",
+              "display" : "Nurse Practitioner",
+              "code" : "9"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2024-06-17T14:15:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Comprehensive Visit",
+        "reference" : "Encounter/e57CgJdATYaAdJOG35qsF.0CYm2wEzsbmMpeWk7aJb7A3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+          "value" : "2000613059875"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Consults - Outpatient",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.737880.5010",
+        "display" : "Consults - Outpatient",
+        "code" : "100007"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Consults",
+        "code" : "2"
+      },
+      {
+        "code" : "11488-4",
+        "system" : "http://loinc.org",
+        "display" : "Consult note",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Note",
+        "code" : "34109-9"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.727879",
+      "value" : "6728104516"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.451.2.7.2.727879_6728104516"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2024-06-17T11:55:53Z",
+  "custodian" : {
+    "display" : "Mayo Clinic",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:CEProd:MayoClinic"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2024-06-17T15:06:19Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Tara Emde, APRN, C.N.P., M.S.",
+            "reference" : "Practitioner/e1B51qcLoKBuHqX6I7DpnAw3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eIp37AfZxQCoAeJM4Ja2RK6bGcpD-3bIuFHRLRajF5hE3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/f7yxMqFwFoPMybRa30V6hX7kqMbWPWQWkykTmRJTwks44"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

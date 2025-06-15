@@ -1,0 +1,63 @@
+{
+  "id" : "eHJ61mJBEUADSM6PMoZSFVamug7KMCK.Q5xlHvrSx5303",
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/ekAZyCMCC8gumyL2EDL3omQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1094714623"
+    }
+  },
+  "resourceType" : "Immunization",
+  "occurrenceDateTime" : "2020-09-19",
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.768076",
+      "value" : "25267656"
+    }
+  ],
+  "location" : {
+    "display" : "MO1413"
+  },
+  "lotNumber" : "276537",
+  "manufacturer" : {
+    "display" : "Seqirus"
+  },
+  "route" : {
+    "text" : "Intramuscular",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4030",
+        "display" : "Intramuscular",
+        "code" : "2"
+      }
+    ]
+  },
+  "vaccineCode" : {
+    "text" : "Flu Vaccine Cell Cult Quad 4+YO (PF)(Flucelvax)",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "171"
+      }
+    ]
+  },
+  "site" : {
+    "text" : "Left deltoid",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4040",
+        "display" : "Left deltoid",
+        "code" : "7"
+      }
+    ]
+  },
+  "status" : "completed",
+  "primarySource" : false
+}

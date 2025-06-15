@@ -1,0 +1,356 @@
+{
+  "id" : "eDlfjlrwbnWnweRfo7rsyJFgNWDJRBH0HfoII3G3A2T03",
+  "category" : [
+    {
+      "text" : "Outpatient",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Outpatient",
+          "code" : "outpatient"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Infusion",
+    "reference" : "Encounter/e1fqrkpB-CaDSGd5ABK3zWA3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3634111977"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Chronic pain due to neoplasm",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Pain due to neoplastic disease (finding)",
+          "code" : "98921000119102"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Chronic pain due to neoplasm",
+          "code" : "338.3"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Chronic pain due to neoplasm",
+          "code" : "G89.3"
+        }
+      ]
+    },
+    {
+      "text" : "Schwannomatosis",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Full schwannomatosis (disorder)",
+          "code" : "1332358007"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Schwannomatosis",
+          "code" : "237.73"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Schwannomatosis",
+          "code" : "Q85.03"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "MedicationRequest",
+  "status" : "stopped",
+  "medicationReference" : {
+    "display" : "meperidine (PF)",
+    "reference" : "Medication/e4eSuk61LRsCc4zBMYQNWFkw8Uw94J3rDsOpwiw9DkNesaPvHRJr9wgWHPAISWVb8-SLljW4PUCpir3TvHIB3o5B3bFMVmHi4apdNLIYJfIg3"
+  },
+  "priority" : "routine",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "meperidine (PF)",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N02AB02"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "59790"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "6754"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "103755"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1665692"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1665697"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "155922"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "282381"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1665693"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1665698"
+          }
+        ]
+      },
+      "id" : "e4eSuk61LRsCc4zBMYQNWFkw8Uw94J3rDsOpwiw9DkNesaPvHRJr9wgWHPAISWVb8-SLljW4PUCpir3TvHIB3o5B3bFMVmHi4apdNLIYJfIg3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Solution",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.4.698288.310",
+            "display" : "Solution",
+            "code" : "Soln"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.698288",
+          "value" : "4904"
+        }
+      ],
+      "ingredient" : [
+        {
+          "strength" : {
+            "numerator" : {
+              "code" : "mg/mL",
+              "value" : 50,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg/mL"
+            },
+            "denominator" : {
+              "code" : "mg/mL",
+              "value" : 50,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg/mL"
+            }
+          },
+          "itemCodeableConcept" : {
+            "text" : "meperidine (PF)",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "N02AB02"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "59790"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "6754"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "103755"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1665692"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1665697"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "155922"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "282381"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1665693"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1665698"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.798268",
+      "value" : "1463267572"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ej1zxM0eOK91G7-VuLyLPIg3",
+    "display" : "Scott Plotkin, MD, PhD"
+  },
+  "authoredOn" : "2024-09-30T14:08:04Z",
+  "dosageInstruction" : [
+    {
+      "asNeededBoolean" : true,
+      "timing" : {
+        "code" : {
+          "text" : "as needed"
+        },
+        "repeat" : {
+          "periodUnit" : "d",
+          "frequency" : 1,
+          "period" : 1,
+          "boundsPeriod" : {
+            "start" : "2024-09-30T14:08:04Z",
+            "end" : "2024-09-30T20:34:39Z"
+          }
+        }
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "calculated",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "calculated",
+                "code" : "calculated"
+              }
+            ]
+          },
+          "doseRange" : {
+            "low" : {
+              "code" : "mg",
+              "value" : 12.5,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg"
+            },
+            "high" : {
+              "code" : "mg",
+              "value" : 25,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg"
+            }
+          }
+        },
+        {
+          "type" : {
+            "text" : "admin-amount",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "admin-amount",
+                "code" : "admin-amount"
+              }
+            ]
+          },
+          "doseRange" : {
+            "low" : {
+              "code" : "mL",
+              "value" : 0.25,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mL"
+            },
+            "high" : {
+              "code" : "mL",
+              "value" : 0.5,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mL"
+            }
+          }
+        },
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseRange" : {
+            "low" : {
+              "code" : "mg",
+              "value" : 12.5,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg"
+            },
+            "high" : {
+              "code" : "mg",
+              "value" : 25,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg"
+            }
+          }
+        }
+      ],
+      "route" : {
+        "text" : "Intravenous",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Intravenous route (qualifier value)",
+            "code" : "47625008"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.4.798268.7025",
+            "display" : "Intravenous",
+            "code" : "11"
+          }
+        ]
+      },
+      "text" : "12.5-25 mg, Intravenous, As needed, Rigor, fever and/or chills during HYPERSENSITIVITY REACTION, Starting on Mon 9/30/24 at 1008, For 1 day\nBegin with 12.5 mg. If patient has continued reaction, administer additional 12.5 mg. Additional doses require contact with provider assisting in the management of the hypersensitivity reaction.\n"
+    }
+  ],
+  "priorPrescription" : {
+    "display" : "meperidine (PF)",
+    "reference" : "MedicationRequest/edAN6TycGtba5ZHc.kaHKvIgYgrGpBjaGPN56j3tWijY3"
+  },
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ej1zxM0eOK91G7-VuLyLPIg3",
+    "display" : "Scott Plotkin, MD, PhD"
+  },
+  "intent" : "order"
+}

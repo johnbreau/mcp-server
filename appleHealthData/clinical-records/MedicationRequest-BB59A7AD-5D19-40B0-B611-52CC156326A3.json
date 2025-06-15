@@ -1,0 +1,275 @@
+{
+  "id" : "eX489Mzzg.WOu0dKLhftoQy2qDlRaKHc30GYi6A1ld2Y3",
+  "category" : [
+    {
+      "text" : "Inpatient",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Inpatient",
+          "code" : "inpatient"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Encounter",
+    "reference" : "Encounter/e.vaDn31bP7f7jj2dE-o1sQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1345809478"
+    }
+  },
+  "status" : "stopped",
+  "resourceType" : "MedicationRequest",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "ondansetron",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "A04AA01"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "41562"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "26225"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "203148"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2119176"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "104894"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "66981"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "998029"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "876690"
+          }
+        ]
+      },
+      "id" : "eq66Iy868zR1ZBwIuj1L8S2ceeUFGAtxtXKGVe75iuhnTmo0c-TY.y7wFtm9cWh6CktiC0z70gZNY0ejFgqn2qfcGpVHsUqvOK1s4FrzDkaY3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Tablet, Rapid Dissolve",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.698288.310",
+            "display" : "Tablet, Rapid Dissolve",
+            "code" : "TbDL"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.698288",
+          "value" : "440795"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "ondansetron",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "A04AA01"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "41562"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "26225"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "203148"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2119176"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "104894"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "66981"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "998029"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "876690"
+              }
+            ]
+          },
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 4,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 4,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.798268",
+      "value" : "691508364"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eEqyTPSbJkxF1l0TWaNQz9g3",
+    "display" : "Colletta Richards, MD"
+  },
+  "authoredOn" : "2021-10-29T19:38:27Z",
+  "dosageInstruction" : [
+    {
+      "asNeededBoolean" : false,
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2021-10-29T20:30:00Z",
+            "end" : "2021-10-29T23:47:25Z"
+          },
+          "count" : 1
+        },
+        "code" : {
+          "text" : "once"
+        }
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "calculated",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "calculated",
+                "code" : "calculated"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 4,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        },
+        {
+          "type" : {
+            "text" : "admin-amount",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "admin-amount",
+                "code" : "admin-amount"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "{tbl}",
+            "value" : 1,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "tablet"
+          }
+        },
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 4,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        }
+      ],
+      "route" : {
+        "text" : "Sublingual",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Sublingual route (qualifier value)",
+            "code" : "37839007"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.798268.7025",
+            "display" : "Sublingual",
+            "code" : "19"
+          }
+        ]
+      },
+      "text" : "4 mg, Sublingual, Once, On Fri 10/29/21 at 1630, For 1 dose, PACU"
+    }
+  ],
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eEqyTPSbJkxF1l0TWaNQz9g3",
+    "display" : "Colletta Richards, MD"
+  },
+  "intent" : "order",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "medicationReference" : {
+    "display" : "ondansetron",
+    "reference" : "Medication/eq66Iy868zR1ZBwIuj1L8S2ceeUFGAtxtXKGVe75iuhnTmo0c-TY.y7wFtm9cWh6CktiC0z70gZNY0ejFgqn2qfcGpVHsUqvOK1s4FrzDkaY3"
+  }
+}

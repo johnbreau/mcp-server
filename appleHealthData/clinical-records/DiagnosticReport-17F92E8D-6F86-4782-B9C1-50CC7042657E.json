@@ -1,0 +1,324 @@
+{
+  "id" : "eYUemri.1d1kgA5XIBwKDDVQ761N0RcxPxglfVrt9xa43",
+  "category" : [
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.798268.30",
+          "code" : "Lab"
+        }
+      ]
+    },
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "display" : "Laboratory",
+          "code" : "LAB"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eDQYEe8ZwLcgFNCXJAbELlQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1099710815"
+    }
+  },
+  "effectiveDateTime" : "2023-11-21T19:12:00Z",
+  "resourceType" : "DiagnosticReport",
+  "identifier" : [
+    {
+      "use" : "official",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798268",
+      "value" : "1403020509",
+      "type" : {
+        "text" : "Placer Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Placer Identifier",
+            "code" : "PLAC"
+          }
+        ]
+      }
+    },
+    {
+      "use" : "official",
+      "type" : {
+        "text" : "Filler Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Filler Identifier",
+            "code" : "FILL"
+          }
+        ]
+      },
+      "value" : "T60965"
+    }
+  ],
+  "code" : {
+    "text" : "CBC AND DIFF",
+    "coding" : [
+      {
+        "system" : "urn:oid:2.16.840.1.113883.6.12",
+        "display" : "CBC AND DIFF",
+        "code" : "85025"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.19",
+        "code" : "HPD"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.18",
+        "code" : "HPDC"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.194",
+        "code" : "HPD"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.194",
+        "code" : "HPDC"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.194",
+        "code" : "CBCM"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.202",
+        "code" : "6399"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.201",
+        "code" : "6399"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.261",
+        "code" : "HPDF"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.257",
+        "code" : "ORD31"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.258",
+        "code" : "ORD31"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.194",
+        "code" : "HPDF"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.281",
+        "code" : "HPD7"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.194",
+        "code" : "HPD7"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.283",
+        "code" : "HPD8"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.194",
+        "code" : "HPD8"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.293",
+        "code" : "HPD3"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.194",
+        "code" : "HPD3"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.280",
+        "code" : "HPD5"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.194",
+        "code" : "HPD5"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.294",
+        "code" : "HPD6"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.194",
+        "code" : "HPD6"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.344",
+        "code" : "HPDG"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.194",
+        "code" : "HPDG"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.353",
+        "code" : "107536"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.381",
+        "code" : "1696"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.381",
+        "code" : "90001"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.383",
+        "code" : "10202176"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.384",
+        "code" : "1698"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.385",
+        "code" : "90001"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.358",
+        "code" : "90001"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.382",
+        "code" : "10203880"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.354",
+        "code" : "10201905"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.355",
+        "code" : "10201905"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.386",
+        "code" : "1696"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.387",
+        "code" : "1696"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.352",
+        "code" : "90001"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.478",
+        "code" : "LAB2135"
+      }
+    ]
+  },
+  "performer" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/etVxgMyuiwAh81Ay0NRgUGw3",
+      "display" : "J May, MD"
+    },
+    {
+      "type" : "Organization",
+      "reference" : "Organization/ePxO.xnD3k8UQx3CMMh6pq1Et4NWHbwfLtj-SZrVzNlg3",
+      "display" : "TUKHS DEPT PATH AND LAB MEDICINE"
+    }
+  ],
+  "result" : [
+    {
+      "display" : "Component (1): WBC COUNT",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntKf5hTG39jmwY2DpfHxpBZYXNDJpqsXViW2wfRyu5aMwQ3"
+    },
+    {
+      "display" : "Component (1): RBC COUNT",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntLhtOIxYPQSUQ796eQwDg9EJ3uDqMwLl6R1gQNAYaZFvw3"
+    },
+    {
+      "display" : "Component (1): HEMOGLOBIN",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntI2BrM2eAeLWWZ6u5M77aA2GB-N.CAERz79zo0ym5HiyQ3"
+    },
+    {
+      "display" : "Component (1): HEMATOCRIT",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntJJXCZ9uLrWEYLLr1.U2bHSmVQUlApq9.w.FDKcFDrUmg3"
+    },
+    {
+      "display" : "Component (1): MCV",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntL4xIIUixbqoIJsQwpGpHzqFkXgOYYahAb1.ze-IMrCdw3"
+    },
+    {
+      "display" : "Component (1): MCH",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntLty5qsNFx5i9cKwnPOW3VGo70oHzXzFxY2s6wU2cUrqg3"
+    },
+    {
+      "display" : "Component (1): MCHC",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntIk3f1mDldAk4xlWFqh9-b6kPjv3O1yXVBm9yBJ-06VfA3"
+    },
+    {
+      "display" : "Component (1): RDW",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntI2xQ9X0ikbi.-1Gmibg4aoT2miEri3AU7Vi4SHR0O06w3"
+    },
+    {
+      "display" : "Component (1): PLATELET COUNT",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntKQW7GYUdJ-t-1OrwZ3GVAUQmxqsZKCE9k2-xU-Tit8DQ3"
+    },
+    {
+      "display" : "Component (1): MPV",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntI0ugM0jQpxqC5CACpJrvAcmScid9xWhaf7xdQZ.W7DnA3"
+    },
+    {
+      "display" : "Component (1): NEUTROPHILS %",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntK55L5UPWMJI4TU9HQL1khMiUgv7HMcDpySsilIKRs6lg3"
+    },
+    {
+      "display" : "Component (1): LYMPHOCYTES %",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntKMN-6zQz3ZDUfxunHHa1zGFv60ogoGsm3FQBFZzwMkLw3"
+    },
+    {
+      "display" : "Component (1): MONOCYTES %",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntJXRlOkVYGDzcgERAHxcf.TKG.cWMr5ESmCMcT-7m1SKA3"
+    },
+    {
+      "display" : "Component (1): EOSINOPHILS %",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntKqsvsjw-Wta8DS29mqGENdkFc7T77lb6YquUGW2J4QlA3"
+    },
+    {
+      "display" : "Component (1): BASOPHILS %",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntIJJknTtuGPUDPjRNYPRXKV8QJMDQdvFYO6bOxWIgoLMw3"
+    },
+    {
+      "display" : "Component (1): ABSOLUTE NEUTROPHIL",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntKwYrf9JmsexV0iU-.W2P9v.RQYzKYxJxMX-99CU8op0g3"
+    },
+    {
+      "display" : "Component (1): ABSOLUTE LYMPH COUNT",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntIoRRBqYHtdjcXEwcSuLVYFXzn0b5LmRTDgg5UbkdANmA3"
+    },
+    {
+      "display" : "Component (1): ABSOLUTE MONO COUNT",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntKgCqQdDhR2-TSMj5crOrhmsLj4invD2FQBJXIhh8ROnw3"
+    },
+    {
+      "display" : "Component (1): ABSOLUTE EOS COUNT",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntIV.NrvoWUNbSWp0.VvfLbAjoKQAMIq9XRi4kI8cj9OWw3"
+    },
+    {
+      "display" : "Component (1): ABSOLUTE BASO COUNT",
+      "reference" : "Observation/ewtHCD3iWEAe2n2adqFctit3cgnBaOahpV46wgM3gntLO0RIJeRxi7i7I.P7GpP8Y0yictyTCfK01lWFPgbILOQ3"
+    }
+  ],
+  "status" : "final",
+  "issued" : "2023-11-21T21:49:00Z"
+}

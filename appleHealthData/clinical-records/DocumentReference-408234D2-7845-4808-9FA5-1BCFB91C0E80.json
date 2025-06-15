@@ -1,0 +1,175 @@
+{
+  "id" : "eOEqDajkpHV6-PtHkbYMa7suJVC-iC0Eucb5lLAi20uM3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/elbL3F2W3KQWwoDvW4eBgU2iUBtVLhdOUUhs7bnRfaBI3",
+      "display" : "Sharon P"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/elbL3F2W3KQWwoDvW4eBgU2iUBtVLhdOUUhs7bnRfaBI3",
+    "display" : "Sharon P",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2021-06-28T16:45:55Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Registered Nurse",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.836982.1040",
+              "display" : "Registered Nurse",
+              "code" : "3"
+            },
+            {
+              "system" : "urn:oid:2.16.840.1.113883.11.19465",
+              "display" : "Registered Nurse",
+              "code" : "163W00000X"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2021-06-28T16:40:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Office Visit",
+        "reference" : "Encounter/eBoCM.G7nmyRe2eULSvFBmg3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+          "value" : "1336565996"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Patient Instructions",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.737880.5010",
+        "display" : "Patient Instructions",
+        "code" : "37"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Patient Instructions",
+        "code" : "37"
+      },
+      {
+        "code" : "69730-0",
+        "system" : "http://loinc.org",
+        "display" : "Instructions",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Discharge instructions",
+        "code" : "74213-0"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.727879",
+      "value" : "1950162219"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.331.2.7.2.727879_1950162219"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2021-06-28T16:41:36Z",
+  "custodian" : {
+    "display" : "Johns Hopkins Medicine",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:Hopkins:Interconnect-CareEverywhere_PRD"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2021-06-28T16:45:55Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Sharon P",
+            "reference" : "Practitioner/elbL3F2W3KQWwoDvW4eBgU2iUBtVLhdOUUhs7bnRfaBI3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/e7zecylem6IUcNc-FRoBbKrvw6sfXrQOCdREl5Cw8V4M3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fEcXtuXe1Z-DgQqmFxxyG.J.jy7KdUqRl9OOj7fiYT044"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

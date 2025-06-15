@@ -1,0 +1,98 @@
+{
+  "id" : "eSvQnLQXkJniJF9w2kOcY6GbNXRjPJT9hvGLUm86NsZHtM9ycNPBXh7r0hCjT.x6ac-iWu0KaXkmgC7BKz9deCA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Blood Draw",
+    "reference" : "Encounter/ejrRQit3Adv0UxdO7jBuGBw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3632893921"
+    }
+  },
+  "effectiveDateTime" : "2024-09-10T14:59:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "Comprehensive metabolic panel",
+      "reference" : "ServiceRequest/eHa17De7BYCcuLT7qW6UBQuC2E720RtcWjZ-1auNkT403"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen SQ_T7198719_381L314605_",
+    "reference" : "Specimen/erRytmGTjo3D8KYVGu.5vRoSXcQ4Py7O0aY1PmjelPLs3"
+  },
+  "code" : {
+    "text" : "ANION GAP",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Anion gap in Serum or Plasma by Calculated.3Ions",
+        "code" : "10466-1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.91",
+        "code" : "PANION"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.818",
+        "code" : "5200010248"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.768282",
+        "display" : "ANION GAP",
+        "code" : "5200010248"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "mmol/L",
+        "value" : 3,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mmol/L"
+      },
+      "high" : {
+        "code" : "mmol/L",
+        "value" : 17,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mmol/L"
+      },
+      "text" : "3 - 17 mmol/L"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "mmol/L",
+    "value" : 11,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "mmol/L"
+  },
+  "status" : "final",
+  "issued" : "2024-09-10T15:53:51Z"
+}

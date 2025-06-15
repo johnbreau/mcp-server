@@ -1,0 +1,125 @@
+{
+  "id" : "eFx2KZ8li0Vba-Oy1-HIlQdoQjlAdklwQ519GN-pJaYnDndQS8-YmdwfXY-sF4PzyVqDGfGXosfVwhvlxG6MFaw3",
+  "category" : [
+    {
+      "text" : "Vital Signs",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Vital Signs",
+          "code" : "vital-signs"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Hospital Encounter",
+    "reference" : "Encounter/ey.s9nEbKt8qPki8SOkEMjhovLiLkDsRNKO4fh1-EKSU3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100165698327"
+    }
+  },
+  "effectiveDateTime" : "2022-03-28T20:13:00Z",
+  "resourceType" : "Observation",
+  "component" : [
+    {
+      "valueQuantity" : {
+        "code" : "mm[Hg]",
+        "value" : 148,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mm[Hg]"
+      },
+      "code" : {
+        "text" : "Systolic blood pressure",
+        "coding" : [
+          {
+            "system" : "http://loinc.org",
+            "display" : "Systolic blood pressure",
+            "code" : "8480-6"
+          }
+        ]
+      }
+    },
+    {
+      "valueQuantity" : {
+        "code" : "mm[Hg]",
+        "value" : 89,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mm[Hg]"
+      },
+      "code" : {
+        "text" : "Diastolic blood pressure",
+        "coding" : [
+          {
+            "system" : "http://loinc.org",
+            "display" : "Diastolic blood pressure",
+            "code" : "8462-4"
+          }
+        ]
+      }
+    }
+  ],
+  "code" : {
+    "text" : "Blood Pressure",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.707679",
+        "display" : "Blood Pressure",
+        "code" : "5"
+      },
+      {
+        "system" : "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+        "display" : "Blood Pressure",
+        "code" : "tXOqRsMFsopXrbajmlOj1bw0"
+      },
+      {
+        "system" : "urn:oid:1.2.246.537.6.96",
+        "code" : "8462-4"
+      },
+      {
+        "system" : "urn:oid:1.2.246.537.6.96",
+        "code" : "8480-6"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Blood pressure systolic and diastolic",
+        "code" : "55284-4"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Blood pressure panel with all children optional",
+        "code" : "85354-9"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Vital signs",
+        "code" : "8716-3"
+      }
+    ]
+  },
+  "performer" : [
+    {
+      "display" : "Nurse Kylee, RN",
+      "reference" : "Practitioner/evDDPrFGrM7dCiDAfMEeCrg3"
+    }
+  ],
+  "interpretation" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display" : "Abnormal",
+          "code" : "A"
+        }
+      ]
+    }
+  ],
+  "status" : "final",
+  "issued" : "2022-03-28T20:13:32Z"
+}

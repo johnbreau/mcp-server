@@ -1,0 +1,61 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MRI C-SPINE W/WO CONTRAST",
+      "reference" : "ServiceRequest/eBmB6aRiwbPLlLH25TQKPnkp.KqsSZwNg.XzCi-iEzTM3"
+    }
+  ],
+  "id" : "eZ839rE5X4PmYVNJICdTvulVhTzegG.1UAx4GyTgYwCc3",
+  "code" : {
+    "text" : "Impression"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eLZU8lpL9X39rKK2AndXsoQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1276536966"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "performer" : [
+    {
+      "display" : "Gary Gong, MD PhD",
+      "reference" : "Practitioner/eWGO00xWPclVbcViHEIh7og3"
+    },
+    {
+      "display" : "Louis Bonacorsi, MD",
+      "reference" : "Practitioner/epwt2XcG9KAsqqzQ0uglXoA3"
+    }
+  ],
+  "effectiveDateTime" : "2018-10-03T21:50:31Z",
+  "valueString" : "IMPRESSION: \r\n\r\n\r\n1. Multiple enhancing lesions in the cervical and paraspinal soft tissues with T2 hyperintensity originating in the neural foramina, as above, some with extension into the paraspinal soft tissues, likely representing schwannomas, compatible with clinical\r\n diagnosis of schwannomatosis.\r\n2. Mild spinal canal stenosis at C6-C7, as above.\r\n3. Multilevel degenerative changes of cervical spine as above with mild to moderate neural foraminal stenosis.\r\n\r\n\r\n\r\n\r\nImages and interpretation personally reviewed by: Louis Bonacorsi, MD\r\n\r\n\r\nImages and interpretation personally reviewed by: Gary X. Gong, MD",
+  "resourceType" : "Observation"
+}

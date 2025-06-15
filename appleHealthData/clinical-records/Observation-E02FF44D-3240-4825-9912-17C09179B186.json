@@ -1,0 +1,57 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MRI Whole Body MSK W/WO Contrast Prot",
+      "reference" : "ServiceRequest/eQt8LcnXNs9eXmQID8f7BJhsl1aIk8ovuL7SU4PWqCUM3"
+    }
+  ],
+  "id" : "er3c.fcUBxnDtC2EPKlY2u8ieuJkazNfon5KQYg.XLtU3",
+  "code" : {
+    "text" : "Impression"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/evdl3SjRmVLEmKJZqUn9tTw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1266044037"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "performer" : [
+    {
+      "display" : "Laura Fayad, MD",
+      "reference" : "Practitioner/epoYYYPEff7rPhgKuMCOm3Q3"
+    }
+  ],
+  "effectiveDateTime" : "2018-06-22T17:55:00Z",
+  "valueString" : "IMPRESSION:   \r\n\r\n\r\n(WHOLE BODY MRI)\r\n\r\n\r\n1. Multiple head and neck and chest lesions as described, unchanged except for slight interval increase in size of a left paraspinal lesion in the neck. Artifact on the ADC map at this level precludes measurement of ADC values.\r\n\r\n\r\n \r\n\r\n\r\nImages and interpretation personally reviewed by: Laura Fayad, MD",
+  "resourceType" : "Observation"
+}

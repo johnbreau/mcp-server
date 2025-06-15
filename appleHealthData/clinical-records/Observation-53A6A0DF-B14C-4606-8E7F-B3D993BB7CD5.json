@@ -1,0 +1,78 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Vital Signs",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Vital Signs",
+          "code" : "vital-signs"
+        }
+      ]
+    }
+  ],
+  "issued" : "2023-01-12T16:07:08Z",
+  "id" : "exkcfxWvW3Ia1rjqxfiHTsK0PE3jIK7qWNbAHxxTkiq1ldYiJRtTIIdKpFmhfyu3WuS24M4koxW-GyEQWPxOOiA3",
+  "code" : {
+    "text" : "Weight",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.707679",
+        "display" : "Weight",
+        "code" : "14"
+      },
+      {
+        "system" : "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+        "display" : "Weight",
+        "code" : "tpcvp1KN8K6ADI9tjE25WdQ0"
+      },
+      {
+        "system" : "urn:oid:1.2.246.537.6.96",
+        "code" : "29463-7"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Body weight",
+        "code" : "29463-7"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Body weight Measured",
+        "code" : "3141-9"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Vital signs",
+        "code" : "8716-3"
+      }
+    ]
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/etlnUqcmGXqEs2YhB29842Q3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1086215141"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "performer" : [
+    {
+      "display" : "Nora W",
+      "reference" : "Practitioner/e9op2e-0InWYYdDmaT1pG3g3"
+    }
+  ],
+  "effectiveDateTime" : "2023-01-12T16:06:00Z",
+  "valueQuantity" : {
+    "code" : "kg",
+    "value" : 81.6,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "kg"
+  },
+  "resourceType" : "Observation"
+}

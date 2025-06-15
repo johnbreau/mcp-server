@@ -1,0 +1,170 @@
+{
+  "id" : "eTlVjmcuJAA8XJNFNMkzGWQm7zLskO5tHBndnruPWqiQ3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eJYriljTkPazyiHb0pb6uAqFJCyt2qOC94Ob9.D4wcaM3",
+      "display" : "Alanna C"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eJYriljTkPazyiHb0pb6uAqFJCyt2qOC94Ob9.D4wcaM3",
+    "display" : "Alanna C",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2024-07-09T16:33:38Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Counselor",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.836982.1040",
+              "display" : "Counselor",
+              "code" : "110"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2024-07-09T15:00:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Telemedicine",
+        "reference" : "Encounter/eJ3xu4aE7Yg6bPfeXXnv3T9AIVlCD45ETpLGtveo2itA3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+          "value" : "2000612928209"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Consults - Outpatient",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.737880.5010",
+        "display" : "Consults - Outpatient",
+        "code" : "100007"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Consults",
+        "code" : "2"
+      },
+      {
+        "code" : "11488-4",
+        "system" : "http://loinc.org",
+        "display" : "Consult note",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Note",
+        "code" : "34109-9"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.727879",
+      "value" : "6805418599"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.451.2.7.2.727879_6805418599"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2024-07-09T14:56:29Z",
+  "custodian" : {
+    "display" : "Mayo Clinic",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:CEProd:MayoClinic"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2024-07-09T16:33:38Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Alanna C",
+            "reference" : "Practitioner/eJYriljTkPazyiHb0pb6uAqFJCyt2qOC94Ob9.D4wcaM3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eedXlzg5bEDk2mgMhmNcA7oYgBEuixve0y5Q2AcfZZtA3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fwqR348mAUjR7pz.NhVfxIA-ztsKsaVUit6WsoBW4vl44"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

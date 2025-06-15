@@ -1,0 +1,57 @@
+{
+  "id" : "e-PlAXHWjZWD4M.v6f60kku7GmBVtNS1.M.q.EXKg05w3",
+  "primarySource" : false,
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eDQYEe8ZwLcgFNCXJAbELlQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1099710815"
+    }
+  },
+  "resourceType" : "Immunization",
+  "occurrenceDateTime" : "2023-10-20",
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.768076",
+      "value" : "26984994"
+    }
+  ],
+  "location" : {
+    "display" : "KS5004054"
+  },
+  "lotNumber" : "3030338",
+  "manufacturer" : {
+    "display" : "Moderna"
+  },
+  "route" : {
+    "text" : "Intramuscular",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4030",
+        "display" : "Intramuscular",
+        "code" : "2"
+      }
+    ]
+  },
+  "vaccineCode" : {
+    "text" : "Covid-19 mRNA Vaccine >=12yo (Moderna)(Spikevax)"
+  },
+  "site" : {
+    "text" : "Right deltoid",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4040",
+        "display" : "Right deltoid",
+        "code" : "6"
+      }
+    ]
+  },
+  "status" : "completed",
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  }
+}

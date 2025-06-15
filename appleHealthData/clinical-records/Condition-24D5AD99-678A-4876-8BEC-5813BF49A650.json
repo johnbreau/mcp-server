@@ -1,0 +1,85 @@
+{
+  "category" : [
+    {
+      "text" : "Problem List Item",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "display" : "Problem List Item",
+          "code" : "problem-list-item"
+        }
+      ]
+    }
+  ],
+  "clinicalStatus" : {
+    "text" : "Active",
+    "coding" : [
+      {
+        "code" : "active",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "display" : "Active",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "id" : "e.RQoeOVEkOTPyLyYWw4uGeduacjoXVx7MMGXLSsNWp43",
+  "code" : {
+    "text" : "Chronic left shoulder pain",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+        "display" : "Pain in left shoulder",
+        "code" : "M25.512"
+      },
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+        "display" : "Other chronic pain",
+        "code" : "G89.29"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Chronic Pain Of Left Upper Limb",
+        "code" : "15743561000119103"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Pain Of Shoulder Region",
+        "code" : "45326000"
+      },
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+        "display" : "Chronic left shoulder pain",
+        "code" : "719.41"
+      },
+      {
+        "system" : "urn:oid:2.16.840.1.113883.3.247.1.1",
+        "display" : "Chronic left shoulder pain",
+        "code" : "711291"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "verificationStatus" : {
+    "text" : "Confirmed",
+    "coding" : [
+      {
+        "code" : "confirmed",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "display" : "Confirmed",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime" : "2023-07-13"
+    }
+  ],
+  "resourceType" : "Condition",
+  "onsetDateTime" : "2018-01-23",
+  "recordedDate" : "2023-07-13"
+}

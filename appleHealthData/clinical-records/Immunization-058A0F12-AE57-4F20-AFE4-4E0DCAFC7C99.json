@@ -1,0 +1,27 @@
+{
+  "status" : "completed",
+  "primarySource" : false,
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "id" : "eS03a0x3lRWngH.8LEhSqfw3",
+  "occurrenceDateTime" : "2013-10-09T15:59:00Z",
+  "vaccineCode" : {
+    "text" : "Influenza TIV (IM)",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "141"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768076",
+      "value" : "600505"
+    }
+  ],
+  "resourceType" : "Immunization"
+}

@@ -1,0 +1,104 @@
+{
+  "id" : "eGGQ44f7R-BCkMyB7tuku9BL0tvrdtixILhp8l2Q2WGu5YdQzdN611eDsJvSFawkALUY-fPpwej5lyOyr4y7vkw3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Microbiology",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Microbiology",
+          "code" : "Microbiology"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Hist-Appointment",
+    "reference" : "Encounter/en2QZONcIbHpp4t6O2swgBg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "22472673"
+    }
+  },
+  "effectiveDateTime" : "2015-02-07T14:56:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CULTURE, THROAT FOR RAPID STREP SCREEN",
+      "reference" : "ServiceRequest/e54oRsc.RzYLZy2H6ovQA3-BuLXmGkqQF.sWl.w9C2Vk3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 8566460500077",
+    "reference" : "Specimen/e.Uuulsm2zj5fA-r0-Sp4yYC3oKYuG759ARUpPl6S1sg3"
+  },
+  "code" : {
+    "text" : "Strep Screen for Group A Strep",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Streptococcus pyogenes [Presence] in Throat by Organism specific culture",
+        "code" : "11268-0"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "M8000185"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "18481-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "STREPSCREEN"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "008169"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "STREPSCREEN"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.147",
+        "code" : "STREP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Strep Screen for Group A Strep",
+        "code" : "1511198"
+      }
+    ]
+  },
+  "interpretation" : [
+    {
+      "text" : "Abnormal",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display" : "Abnormal",
+          "code" : "A"
+        }
+      ]
+    }
+  ],
+  "valueString" : "pos",
+  "status" : "final",
+  "issued" : "2015-10-02T17:56:27Z"
+}

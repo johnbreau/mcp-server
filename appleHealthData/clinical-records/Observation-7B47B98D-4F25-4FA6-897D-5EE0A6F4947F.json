@@ -1,0 +1,86 @@
+{
+  "id" : "etaAdxPrfuNcHPZmJH5O0fnGcLOorum4K-N7oIEa29d3Yy0f3oYYjYi5ROe3ZxOwWPmbWdj8zuLWNPW6Fib3iXA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/ej5vdC6.m0IwYnvToZlxml-4l6mnMfPpZ2rlYlrUhD9U3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100104376927"
+    }
+  },
+  "effectiveDateTime" : "2016-08-23T16:51:00Z",
+  "resourceType" : "Observation",
+  "note" : [
+    {
+      "text" : "Performed at:  ES - Esoterix Endocrinology4301 Lost Hills Road, Calabasas Hills, CA  913015358Lab Director: Samuel Pepkowitz MD, Phone:  8004449111"
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "TESTOSTERONE TOTAL+BIOAVAILABLE",
+      "reference" : "ServiceRequest/e6bbQJKyUhyrfxmIN1FE383WHm3GlGn5C6oe2fP5sQ5U3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 162362628206",
+    "reference" : "Specimen/e9ItEs0vXJYV8ky8nNqTJrbxcJIVRxzYte4eeLiVt0gA3"
+  },
+  "code" : {
+    "text" : "Testosterone Bioavailable %",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Testosterone.bioavailable/Testosterone.total in Serum or Plasma",
+        "code" : "6891-6"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "TESTBIOAVPCT"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "TESTBIOAVPCT"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Testosterone Bioavailable %",
+        "code" : "2489"
+      }
+    ]
+  },
+  "valueQuantity" : {
+    "code" : "%",
+    "value" : 45.3,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "%"
+  },
+  "status" : "final",
+  "issued" : "2016-08-28T03:06:24Z"
+}

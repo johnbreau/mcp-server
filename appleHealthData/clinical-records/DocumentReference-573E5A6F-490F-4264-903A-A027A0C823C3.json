@@ -1,0 +1,170 @@
+{
+  "id" : "eQhkqzaj9HyB6os3YkbGYHbawZprOnuRp.Gz.N7XGxz83",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eHPPLLO6dymYwAj1.YJf.7yobghT5BJTReKt4j8OF9C03",
+      "display" : "Shannon Langmead, CRNP"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eHPPLLO6dymYwAj1.YJf.7yobghT5BJTReKt4j8OF9C03",
+    "display" : "Shannon Langmead, CRNP",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2019-11-01T16:31:55Z"
+      }
+    ]
+  },
+  "context" : {
+    "encounter" : [
+      {
+        "display" : "Orders Only",
+        "reference" : "Encounter/ea.UCBYUAnFTNvWIr8UmfWQ3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+          "value" : "1298720781"
+        }
+      }
+    ],
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Nurse Practitioner",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.836982.1040",
+              "display" : "Nurse Practitioner",
+              "code" : "9"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2019-11-01T16:13:00Z"
+    }
+  },
+  "type" : {
+    "text" : "Note",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.737880.5010",
+        "display" : "Note",
+        "code" : "2100000001"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "code" : "11506-3",
+        "system" : "http://loinc.org",
+        "display" : "Progress note",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Note",
+        "code" : "34109-9"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.727879",
+      "value" : "1170539709"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.331.2.7.2.727879_1170539709"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2019-11-01T16:28:12Z",
+  "custodian" : {
+    "display" : "Johns Hopkins Medicine",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:Hopkins:Interconnect-CareEverywhere_PRD"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2019-11-01T16:31:55Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Shannon Langmead, CRNP",
+            "reference" : "Practitioner/eHPPLLO6dymYwAj1.YJf.7yobghT5BJTReKt4j8OF9C03"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eQbvi9Syr6jW0P.RkTaKKizD-CIFd5Zis-gk9jetT-iU3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fQJo02Zyci.gRgOnMbyknG0GVF1Xo71EItnjYyeqLT4E4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

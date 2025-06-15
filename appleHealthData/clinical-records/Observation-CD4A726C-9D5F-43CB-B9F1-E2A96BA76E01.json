@@ -1,0 +1,55 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Microbiology",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Microbiology",
+          "code" : "Microbiology"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "CULTURE, THROAT",
+      "reference" : "ServiceRequest/eY-3zWcOs7D7afZAKWGlXsmX.MGFq8svzI-CLJ2dv6qY3"
+    }
+  ],
+  "id" : "eHWJhO9W6DB0F.lsFKD4yDo.QVW6gsd5Czmky-5EIRFQ3",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/ezgoJaNCk8DH0OaBVB5H7cg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "13336786"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "valueString" : "Specimen/Source: Specimen/THROAT\r\nCollected: 03/10/2015 15:30\r\n \r\nStatus: Final      Last Updated: 03/12/2015 15:29      \r\n \r\n \r\n  Isolate 1 (Final)\r\n    Moderate\r\n    Beta Hemolytic Streptococcus Group A\r\n \r\n ",
+  "effectiveDateTime" : "2015-03-10T20:30:00Z",
+  "specimen" : {
+    "display" : "Specimen 150694827003",
+    "reference" : "Specimen/eV1dIn8XsWGUfA1m8WrRhj60Io8Jf3tRfR9RoYa7mDR03"
+  },
+  "resourceType" : "Observation"
+}

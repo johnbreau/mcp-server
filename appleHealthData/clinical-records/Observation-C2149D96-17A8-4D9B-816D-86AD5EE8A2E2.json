@@ -1,0 +1,146 @@
+{
+  "id" : "eMv.zbj3apvem.55o8TQ9go5wq63Gn-p-iAHnk14duqFGEX1rl5RPk-KQWjy5lHsPot4ieo-FBEpfTFHFIUZS-A3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/e5lzXmtlQy1YEbs8pBHVZ14KV.YR0tI7yFr4..Qy.uto3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100156884897"
+    }
+  },
+  "effectiveDateTime" : "2021-04-16T14:38:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "LIPID PANEL",
+      "reference" : "ServiceRequest/emtjQTGz9d2l67oxYPnjtdqfEA0ddArxijEKIIzGO85Y3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 211068434893",
+    "reference" : "Specimen/eNye5ttoOq.pnveONCjM68-iNRwdfiamDA.c8S20UyAo3"
+  },
+  "code" : {
+    "text" : "Non-HDL Cholesterol",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Cholesterol non HDL [Mass/volume] in Serum or Plasma",
+        "code" : "43396-1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3121550"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "804568"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "NON HDL"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "011976"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20003435"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "25017210"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "NON HDL"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3004725"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "86025201"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.184",
+        "code" : "1811467"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "900436250"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Non-HDL Cholesterol",
+        "code" : "1811467"
+      }
+    ]
+  },
+  "interpretation" : [
+    {
+      "text" : "High",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display" : "High",
+          "code" : "H"
+        }
+      ]
+    }
+  ],
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "mg/dL",
+        "value" : 0,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mg/dL"
+      },
+      "high" : {
+        "code" : "mg/dL",
+        "value" : 130,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mg/dL"
+      },
+      "text" : "0 - 130 mg/dL"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "mg/dL",
+    "value" : 196,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "mg/dL"
+  },
+  "status" : "final",
+  "issued" : "2021-04-16T20:56:44Z"
+}

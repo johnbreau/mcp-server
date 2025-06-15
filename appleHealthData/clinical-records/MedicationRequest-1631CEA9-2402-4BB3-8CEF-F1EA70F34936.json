@@ -1,0 +1,246 @@
+{
+  "id" : "epSwYs025li-o1dkZqDBbxQMsG5rSFeBrbOZQBymOwH83",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Refill",
+    "reference" : "Encounter/eFPag755VyeKnYr49hWl1c-8Slz3484dZ0HcCnK7Z20Q3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100175316780"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Major depressive disorder",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Mild major depression, single episode (disorder)",
+          "code" : "79298009"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Major depressive disorder, single episode, mild",
+          "code" : "F32.0"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "MedicationRequest",
+  "status" : "active",
+  "medicationReference" : {
+    "display" : "buPROPion 300 MG XL 24 hr tablet",
+    "reference" : "Medication/ewakGAEmfti8Kt848Bpjsv1y9wydn1E5MfIhW7u1jZAinZxhtUlFKJQW.zLNS5jJ1HGgKgdVe1JjFnlPpe0P7Mh7CZUAfTghMd-9ORpfiwsk3"
+  },
+  "contained" : [
+    {
+      "code" : {
+        "text" : "buPROPion 300 MG XL 24 hr tablet",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N06AX12"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "53007"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "42347"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "203204"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "993548"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "993557"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "42568"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "581646"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1232586"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "993559"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "993564"
+          }
+        ]
+      },
+      "id" : "ewakGAEmfti8Kt848Bpjsv1y9wydn1E5MfIhW7u1jZAinZxhtUlFKJQW.zLNS5jJ1HGgKgdVe1JjFnlPpe0P7Mh7CZUAfTghMd-9ORpfiwsk3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "tablet extended release 24 hr",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.698288.310",
+            "display" : "tablet extended release 24 hr",
+            "code" : "Tb24"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.698288",
+          "value" : "36776"
+        }
+      ],
+      "ingredient" : [
+        {
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 300,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 300,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            }
+          },
+          "itemCodeableConcept" : {
+            "text" : "buPROPion 300 MG XL 24 hr tablet",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "N06AX12"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "53007"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "42347"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "203204"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "993548"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "993557"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "42568"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "581646"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1232586"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "993559"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "993564"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "370843206"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ex.ogNv0OHMmKrxfrIA8Jkg3",
+    "display" : "J May, MD"
+  },
+  "authoredOn" : "2022-11-03",
+  "dosageInstruction" : [
+    {
+      "patientInstruction" : "TAKE ONE TABLET BY MOUTH EVERY MORNING",
+      "text" : "TAKE ONE TABLET BY MOUTH EVERY MORNING, Normal",
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2022-11-03"
+          }
+        }
+      }
+    }
+  ],
+  "dispenseRequest" : {
+    "numberOfRepeatsAllowed" : 3,
+    "quantity" : {
+      "value" : 60,
+      "unit" : "tablet"
+    },
+    "validityPeriod" : {
+      "start" : "2022-11-03"
+    }
+  },
+  "priorPrescription" : {
+    "display" : "buPROPion 300 MG XL 24 hr tablet",
+    "reference" : "MedicationRequest/eFL2maQ8CupuqeiLCnxe0Ig2ac8F4G.qeaOx9SlE-HDE3"
+  },
+  "courseOfTherapyType" : {
+    "text" : "Continuous long term therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Continuous long term therapy",
+        "code" : "continuous"
+      }
+    ]
+  },
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ex.ogNv0OHMmKrxfrIA8Jkg3",
+    "display" : "J May, MD"
+  },
+  "intent" : "order"
+}

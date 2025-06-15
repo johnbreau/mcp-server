@@ -1,0 +1,274 @@
+{
+  "id" : "e9.gAYNvegyOUWAgCzlkadNsWtThGWjkIbFlV4Px2tKE3",
+  "category" : [
+    {
+      "text" : "Inpatient",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Inpatient",
+          "code" : "inpatient"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Encounter",
+    "reference" : "Encounter/eQrMEJoYDrWwrlvodgmqSjg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1287119909"
+    }
+  },
+  "status" : "stopped",
+  "resourceType" : "MedicationRequest",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "lidocaine-EPINEPHrine",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N01BB52"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "3388"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "3992"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "6387"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "362"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "24255"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "142440"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "203180"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1249590"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1299236"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "107602"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1010751"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "542571"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "544043"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "544473"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "584329"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "746946"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1010755"
+          }
+        ]
+      },
+      "id" : "eTrpjcioM8EdclzFdSdOAhwL4qvSOE510XuVL7QMNwyqrcVCbDnHUVDc7-vRJoP2ZgGiNmO.F89-kCpJu9Z8kybYKqf.Es253Qb4ai3GqGDI3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Solution",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.698288.310",
+            "display" : "Solution",
+            "code" : "Soln"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.698288",
+          "value" : "10427"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "lidocaine-EPINEPHrine",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "N01BB52"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "3388"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "3992"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "6387"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "362"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "24255"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "142440"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "203180"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1249590"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1299236"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "107602"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1010751"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "542571"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "544043"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "544473"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "584329"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "746946"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1010755"
+              }
+            ]
+          },
+          "strength" : {
+            "numerator" : {
+              "value" : 1,
+              "unit" : "%-1:100,000"
+            },
+            "denominator" : {
+              "value" : 1,
+              "unit" : "%-1:100,000"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.798268",
+      "value" : "496961014"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ejSUqDB4mR.OtYwdhm99ZTQ3",
+    "display" : "Timothy S"
+  },
+  "authoredOn" : "2019-06-21T18:25:46Z",
+  "dosageInstruction" : [
+    {
+      "timing" : {
+        "repeat" : {
+          "periodUnit" : "d",
+          "frequency" : 24,
+          "period" : 1,
+          "boundsPeriod" : {
+            "start" : "2019-06-21T18:17:00Z",
+            "end" : "2019-06-22T00:22:17Z"
+          }
+        },
+        "code" : {
+          "text" : "as needed"
+        }
+      },
+      "text" : "Intra-op PRN, Starting Fri 6/21/19 at 1417, Intra-op",
+      "asNeededBoolean" : true
+    }
+  ],
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eHaZivUPwqYjGMxbOVgCnPQ3",
+    "display" : "Chad Gordon, DO"
+  },
+  "intent" : "order",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "medicationReference" : {
+    "display" : "lidocaine-EPINEPHrine",
+    "reference" : "Medication/eTrpjcioM8EdclzFdSdOAhwL4qvSOE510XuVL7QMNwyqrcVCbDnHUVDc7-vRJoP2ZgGiNmO.F89-kCpJu9Z8kybYKqf.Es253Qb4ai3GqGDI3"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "id" : "eC2qL.JoXhG18KZ8g98ZGeYEYVzrEz8w7p-F4B69k26A3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/e820u.-RF6bTPTCKAac0vRA3",
+      "display" : "Medical Assistant Angel"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/e820u.-RF6bTPTCKAac0vRA3",
+    "display" : "Medical Assistant Angel",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2019-02-21T21:53:05Z"
+      }
+    ]
+  },
+  "context" : {
+    "encounter" : [
+      {
+        "display" : "Office Visit",
+        "reference" : "Encounter/ecynYncwvCcvbOUS6Ip4D.m0vQtqLCyWXeMXr1dFv-hY3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+          "value" : "100132531206"
+        }
+      }
+    ],
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Medical Assistant",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.836982.1040",
+              "display" : "Medical Assistant",
+              "code" : "114"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2019-02-21T21:30:00Z"
+    }
+  },
+  "type" : {
+    "text" : "Patient Instructions",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.737880.5010",
+        "display" : "Patient Instructions",
+        "code" : "37"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Patient Instructions",
+        "code" : "37"
+      },
+      {
+        "code" : "69730-0",
+        "system" : "http://loinc.org",
+        "display" : "Instructions",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Discharge instructions",
+        "code" : "74213-0"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.727879",
+      "value" : "298424581"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.368.2.7.2.727879_298424581"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2019-02-21T21:52:48Z",
+  "custodian" : {
+    "display" : "Saint Luke's Health System",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:SaintLukes:PRD.CE-PRD"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2019-02-21T21:53:05Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Medical Assistant Angel",
+            "reference" : "Practitioner/e820u.-RF6bTPTCKAac0vRA3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eiN1f34OaC-MDAjkrTy4d1ggxH-LUHNC1YHhYdjf54T43"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fjF2ew6Hu9.nwV3s.gUREIAgsHJ2ewrE9sM18Fh6FM4Y4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

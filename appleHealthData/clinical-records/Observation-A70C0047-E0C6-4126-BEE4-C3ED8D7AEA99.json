@@ -1,0 +1,158 @@
+{
+  "id" : "etJypcOFkM6gaK0QydArcqyLAIFzd89pE3KUGoCEtZwwt.dRWQUagI7yDaYAUQ--eQ7M8rbHFIEA-OImOaAYLuQ3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/ej5vdC6.m0IwYnvToZlxml-4l6mnMfPpZ2rlYlrUhD9U3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100104376927"
+    }
+  },
+  "effectiveDateTime" : "2016-08-23T16:51:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "BASIC METABOLIC",
+      "reference" : "ServiceRequest/evnb9kRhXEy.ro3mwajKqonOduaAIR6DpXopJsCII8Og3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 162362621796",
+    "reference" : "Specimen/eJLyI9mFoQokGq0NkBIE6wGbzLxW3FimeuTq2GyeG37M3"
+  },
+  "code" : {
+    "text" : "Glucose",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Glucose [Mass/volume] in Serum or Plasma",
+        "code" : "2345-7"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10082120"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.52",
+        "code" : "51592"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "2345-7"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "GLU"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "001032"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3101005"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3101310"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20001180"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3101000"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "25000000"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20021110"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20001115"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10092300"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3000500"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "GLU"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.184",
+        "code" : "1510655"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.681",
+        "code" : "000065"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Glucose",
+        "code" : "1510655"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "mg/dL",
+        "value" : 70,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mg/dL"
+      },
+      "high" : {
+        "code" : "mg/dL",
+        "value" : 100,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mg/dL"
+      },
+      "text" : "70 - 100 mg/dL"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "mg/dL",
+    "value" : 100,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "mg/dL"
+  },
+  "status" : "final",
+  "issued" : "2016-08-23T23:13:22Z"
+}

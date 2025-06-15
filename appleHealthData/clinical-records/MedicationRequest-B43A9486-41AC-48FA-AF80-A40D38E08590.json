@@ -1,0 +1,210 @@
+{
+  "id" : "eq3-BZcHSpIKs0IO5sTo0LzH8B.Adilha4E9RjOEqIJ43",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Hist-Appointment",
+    "reference" : "Encounter/e4Adz-zleRbgp16mzbbbh5Q3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "14534507"
+    }
+  },
+  "status" : "stopped",
+  "resourceType" : "MedicationRequest",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "benzonatate 100 MG capsule",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "R05DB01"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "4641"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "18993"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "197397"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "220224"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "227783"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "904387"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "208365"
+          }
+        ]
+      },
+      "id" : "eOXXuTAskDdCPhntJv5.c052JKbl2khV.zAUR0TYf8RQYXyOTdEeYp9IEEFGr-Yz7AHhRnanlf3.POD0s4EG5iw3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "capsule",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.698288.310",
+            "display" : "capsule",
+            "code" : "cap"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.698288",
+          "value" : "988"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "benzonatate 100 MG capsule",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "R05DB01"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "4641"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "18993"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "197397"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "220224"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "227783"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "904387"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "208365"
+              }
+            ]
+          },
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 100,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 100,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "107018434"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "display" : "Encounter I"
+  },
+  "authoredOn" : "2014-05-23T20:01:00Z",
+  "dosageInstruction" : [
+    {
+      "text" : "Take  by mouth., Starting Fri 5/23/2014, Until Fri 5/23/2014, Normal",
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2014-05-23",
+            "end" : "2014-05-23"
+          }
+        }
+      },
+      "route" : {
+        "text" : "Oral",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Oral route (qualifier value)",
+            "code" : "26643006"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.798268.7025",
+            "display" : "Oral",
+            "code" : "15"
+          }
+        ]
+      },
+      "patientInstruction" : "Take  by mouth."
+    }
+  ],
+  "dispenseRequest" : {
+    "quantity" : {
+      "value" : 60
+    },
+    "validityPeriod" : {
+      "start" : "2014-05-23",
+      "end" : "2014-05-23"
+    }
+  },
+  "intent" : "order",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "medicationReference" : {
+    "display" : "benzonatate 100 MG capsule",
+    "reference" : "Medication/eOXXuTAskDdCPhntJv5.c052JKbl2khV.zAUR0TYf8RQYXyOTdEeYp9IEEFGr-Yz7AHhRnanlf3.POD0s4EG5iw3"
+  }
+}

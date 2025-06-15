@@ -1,0 +1,237 @@
+{
+  "id" : "eC4jWEqaYAkWP2q1uALh9Cm6jH1RQDD16CeWGdPUwVQU3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "reportedBoolean" : true,
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/epPorXElBsKqaoqGXrCaX.A3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1043819937"
+    }
+  },
+  "resourceType" : "MedicationRequest",
+  "status" : "stopped",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "lansoprazole 30 MG capsule",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "A02BC03"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "30107"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "17128"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "311277"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "83156"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "152534"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "201231"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "206206"
+          }
+        ]
+      },
+      "id" : "eBClAeyg8iKM06XFXFhlMoql68XDvPWJVN6a5RR7AJNLH9s1bG.MJukEHXVc8ttI40rrt6xugbT6UL2KiJtdmivSRi.A221AY9n0GcyPK-CA3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Capsule, Delayed Release(E.C.)",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.698288.310",
+            "display" : "Capsule, Delayed Release(E.C.)",
+            "code" : "CpDR"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.698288",
+          "value" : "27692"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "lansoprazole 30 MG capsule",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "A02BC03"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "30107"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "17128"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "311277"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "83156"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "152534"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "201231"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "206206"
+              }
+            ]
+          },
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 30,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 30,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.798268",
+      "value" : "25405565"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ec9fj3Ww4T8WkBeOAwtw2wg3",
+    "display" : "Tiffany B"
+  },
+  "authoredOn" : "2013-11-08T13:48:38Z",
+  "dosageInstruction" : [
+    {
+      "asNeededBoolean" : false,
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "end" : "2019-05-28"
+          },
+          "timeOfDay" : [
+            "07:30:00"
+          ]
+        },
+        "code" : {
+          "text" : "Every morning before breakfast"
+        }
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 30,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        }
+      ],
+      "text" : "Take 30 mg by mouth Every morning before breakfast., Until Tue 5/28/2019, Historical Med",
+      "route" : {
+        "text" : "Oral",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Oral route (qualifier value)",
+            "code" : "26643006"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.798268.7025",
+            "display" : "Oral",
+            "code" : "15"
+          }
+        ]
+      },
+      "patientInstruction" : "Take 30 mg by mouth Every morning before breakfast."
+    }
+  ],
+  "requester" : {
+    "extension" : [
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode" : "unknown"
+      }
+    ]
+  },
+  "intent" : "plan",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "medicationReference" : {
+    "display" : "lansoprazole 30 MG capsule",
+    "reference" : "Medication/eBClAeyg8iKM06XFXFhlMoql68XDvPWJVN6a5RR7AJNLH9s1bG.MJukEHXVc8ttI40rrt6xugbT6UL2KiJtdmivSRi.A221AY9n0GcyPK-CA3"
+  }
+}

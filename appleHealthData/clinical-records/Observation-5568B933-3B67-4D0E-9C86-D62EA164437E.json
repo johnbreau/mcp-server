@@ -1,0 +1,82 @@
+{
+  "id" : "eIT360.OMuCNJmMlfWG6fJo5kBapVYEdMlfKzLQId9dh.YKKOSrIQh-j239HQVlM92qy6NVEOCOZ5bLu-ipLPZg3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Visit Encounter",
+    "reference" : "Encounter/e4DeINedlOB3K2rP8h4yksg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1163880264"
+    }
+  },
+  "effectiveDateTime" : "2016-04-29T21:12:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CBC W/ AUTO DIFFERENTIAL",
+      "reference" : "ServiceRequest/eyKoR4yfrXFEsnsJHaOibwOWDPirRhr8HxuIqh83NaI03"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 882912459:54851896",
+    "reference" : "Specimen/eSbo0fgVhNKqpalVphIsf5aXM55uWuOpp45-XYTTr3P83"
+  },
+  "code" : {
+    "text" : "Mean Corpuscular Volume",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "MCV [Entitic volume] by Automated count",
+        "code" : "787-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.179",
+        "code" : "MCV"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "Mean Corpuscular Volume",
+        "code" : "2000000004"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "text" : "80.0 - 100.0"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "fL",
+    "value" : 88.7,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "fL"
+  },
+  "status" : "final",
+  "issued" : "2016-04-29T21:59:39Z"
+}

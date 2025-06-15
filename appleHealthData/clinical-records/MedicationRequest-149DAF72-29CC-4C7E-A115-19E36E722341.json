@@ -1,0 +1,178 @@
+{
+  "id" : "eMiRhfSn3ha7an1LKBWR0fPrkjDYzMB2.2sjsVuc1GIs3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "reportedBoolean" : true,
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eZlWlyAfL0AKzeC6wXfmveQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1266124108"
+    }
+  },
+  "resourceType" : "MedicationRequest",
+  "status" : "stopped",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "multivitamin capsule",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "A11BA"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "2524"
+          }
+        ]
+      },
+      "id" : "evZ1-3lXwPwHd0Yfn4cNWfNMlrOflp5rYamjyoffuuYNCUJzCdI7a1hPToT9JFZDUwm0Tv8A01425G2ekB98l5uhqAG7Zp64W2e6smabHcto3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Capsule",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.698288.310",
+            "display" : "Capsule",
+            "code" : "Cap"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.698288",
+          "value" : "5244"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "multivitamin capsule",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "A11BA"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "2524"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.798268",
+      "value" : "423655545"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ehdJ2NU0BP92my1Kw-3K.8w3",
+    "display" : "Carlos Romo, MD"
+  },
+  "authoredOn" : "2018-06-22T20:10:22Z",
+  "dosageInstruction" : [
+    {
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "{capsule}",
+            "value" : 1,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "capsule"
+          }
+        }
+      ],
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "end" : "2019-05-28"
+          }
+        }
+      },
+      "method" : {
+        "text" : "Take",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Take",
+            "code" : "419652001"
+          }
+        ]
+      },
+      "text" : "Take 1 capsule by mouth., Until Tue 5/28/2019, Historical Med",
+      "route" : {
+        "text" : "Oral",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Oral route (qualifier value)",
+            "code" : "26643006"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.798268.7025",
+            "display" : "Oral",
+            "code" : "15"
+          }
+        ]
+      },
+      "patientInstruction" : "Take 1 capsule by mouth."
+    }
+  ],
+  "requester" : {
+    "extension" : [
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode" : "unknown"
+      }
+    ]
+  },
+  "intent" : "plan",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "medicationReference" : {
+    "display" : "multivitamin capsule",
+    "reference" : "Medication/evZ1-3lXwPwHd0Yfn4cNWfNMlrOflp5rYamjyoffuuYNCUJzCdI7a1hPToT9JFZDUwm0Tv8A01425G2ekB98l5uhqAG7Zp64W2e6smabHcto3"
+  }
+}

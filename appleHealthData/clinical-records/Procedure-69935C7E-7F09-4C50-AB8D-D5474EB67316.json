@@ -1,0 +1,100 @@
+{
+  "id" : "evYFY30TvW6FZ2hPYPLQa-V9-zalt7UcZKrgYUV43q7e1J8KLmNadxDGpKb62kuQ0dqxO811KFWdsqQOlrZTPaA3",
+  "category" : {
+    "text" : "Ordered Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Diagnostic procedure",
+        "code" : "103693007"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Orders Only",
+    "reference" : "Encounter/e1rLeGBKr5ORXXbm7j16Whg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1086624444"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Left carpal tunnel syndrome",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Left carpal tunnel syndrome",
+          "code" : "354.0"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "Procedure",
+  "basedOn" : [
+    {
+      "display" : "EMG PROCEDURE",
+      "reference" : "ServiceRequest/et5Vq.adv6B34XOrjyaCNujHAaci-1mNM8vfNmzfnWdw3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798268",
+      "value" : "1359085944",
+      "type" : {
+        "text" : "ORD"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.696580",
+      "value" : "10251089",
+      "type" : {
+        "text" : "EAP"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798069",
+      "value" : "1685926",
+      "type" : {
+        "text" : "OPE"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "EMG PROCEDURE",
+    "coding" : [
+      {
+        "system" : "http://www.ama-assn.org/go/cpt",
+        "display" : "PR NERVE CONDUCTION STUDIES 5-6 STUDIES",
+        "code" : "95909"
+      }
+    ]
+  },
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eZoywNmlyR4LKBm2OFH7Krw3",
+    "display" : "J Brubacher, MD"
+  },
+  "performedDateTime" : "2023-02-08T20:45:00Z",
+  "report" : [
+    {
+      "type" : "DiagnosticReport",
+      "reference" : "DiagnosticReport/eeORamqwxbOub1YMelzj-J.EOMfgPjFreqE8qGe0FfZg3",
+      "display" : "EMG PROCEDURE"
+    }
+  ],
+  "status" : "completed",
+  "asserter" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eZoywNmlyR4LKBm2OFH7Krw3",
+    "display" : "J Brubacher, MD"
+  }
+}

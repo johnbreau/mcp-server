@@ -1,0 +1,75 @@
+{
+  "category" : [
+    {
+      "text" : "Problem List Item",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "display" : "Problem List Item",
+          "code" : "problem-list-item"
+        }
+      ]
+    }
+  ],
+  "clinicalStatus" : {
+    "text" : "Active",
+    "coding" : [
+      {
+        "code" : "active",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "display" : "Active",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "id" : "e13jR9z8TegYbf1zOoAHuhj6vj6Apgh4bePtQ8ZDDRTI3",
+  "code" : {
+    "text" : "Carpal tunnel syndrome of left wrist",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+        "display" : "Carpal tunnel syndrome, left upper limb",
+        "code" : "G56.02"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Carpal Tunnel Syndrome Of Left Wrist",
+        "code" : "293861000119102"
+      },
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+        "display" : "Carpal tunnel syndrome of left wrist",
+        "code" : "354.0"
+      },
+      {
+        "system" : "urn:oid:2.16.840.1.113883.3.247.1.1",
+        "display" : "Carpal tunnel syndrome of left wrist",
+        "code" : "1588376"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "verificationStatus" : {
+    "text" : "Confirmed",
+    "coding" : [
+      {
+        "code" : "confirmed",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "display" : "Confirmed",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime" : "2023-07-13"
+    }
+  ],
+  "resourceType" : "Condition",
+  "onsetDateTime" : "2022-12-23",
+  "recordedDate" : "2023-07-13"
+}

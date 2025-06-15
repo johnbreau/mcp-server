@@ -1,0 +1,114 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Vital Signs",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Vital Signs",
+          "code" : "vital-signs"
+        }
+      ]
+    }
+  ],
+  "issued" : "2024-02-12T19:21:11Z",
+  "id" : "e-5RDT6YNv1VJ3P5-uyipsca5pp-Ck-0EwWn8NcGfibCDDo9IODv41dQ19h1HKr2C4Dn-IkPZH3kLv-FlApoZuA3",
+  "code" : {
+    "text" : "Blood Pressure",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.707679",
+        "display" : "Blood Pressure",
+        "code" : "5"
+      },
+      {
+        "system" : "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+        "display" : "Blood Pressure",
+        "code" : "ttRFvn1O8zB.xpgaCuXjyeQ0"
+      },
+      {
+        "system" : "urn:oid:1.2.246.537.6.96",
+        "code" : "8462-4"
+      },
+      {
+        "system" : "urn:oid:1.2.246.537.6.96",
+        "code" : "8480-6"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Blood pressure systolic and diastolic",
+        "code" : "55284-4"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Blood pressure panel with all children optional",
+        "code" : "85354-9"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Vital signs",
+        "code" : "8716-3"
+      }
+    ]
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eh17CVbBiNGDnMvMRj2A68Q3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1104308734"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "performer" : [
+    {
+      "display" : "Brittney S",
+      "reference" : "Practitioner/eZJQLzuQo-cAhl2U7zOwjFA3"
+    }
+  ],
+  "effectiveDateTime" : "2024-02-12T19:20:00Z",
+  "component" : [
+    {
+      "valueQuantity" : {
+        "code" : "mm[Hg]",
+        "value" : 121,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mm[Hg]"
+      },
+      "code" : {
+        "text" : "Systolic blood pressure",
+        "coding" : [
+          {
+            "system" : "http://loinc.org",
+            "display" : "Systolic blood pressure",
+            "code" : "8480-6"
+          }
+        ]
+      }
+    },
+    {
+      "valueQuantity" : {
+        "code" : "mm[Hg]",
+        "value" : 79,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "mm[Hg]"
+      },
+      "code" : {
+        "text" : "Diastolic blood pressure",
+        "coding" : [
+          {
+            "system" : "http://loinc.org",
+            "display" : "Diastolic blood pressure",
+            "code" : "8462-4"
+          }
+        ]
+      }
+    }
+  ],
+  "resourceType" : "Observation"
+}

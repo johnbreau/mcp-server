@@ -1,0 +1,98 @@
+{
+  "id" : "eASRHUWj7AQOTXqUht-6zAODxgxhEg5ww06C.A7byS2JukE-bWxq4oO8pCT6RKwz4j9dOZrp3MoiqUsvJcF-2dw3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Blood Draw",
+    "reference" : "Encounter/eQoT6qVeTbAd4nZjLSM0gmg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3631527016"
+    }
+  },
+  "effectiveDateTime" : "2024-09-11T18:14:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "Comprehensive metabolic panel",
+      "reference" : "ServiceRequest/e1Pp5WuzoW.nA1hIDkQc4qKXvB5GJ.0yx-JaT2mHbqxQ3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen SQ_W7070294_381L369677_",
+    "reference" : "Specimen/epQF4oVxPpEhzydVDNUa8jD4bmQiMxGQYyk-h1MrZxO03"
+  },
+  "code" : {
+    "text" : "ALKALINE PHOSPHATASE",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma",
+        "code" : "6768-6"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.91",
+        "code" : "ALK"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.818",
+        "code" : "5200001152"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.768282",
+        "display" : "ALKALINE PHOSPHATASE",
+        "code" : "5200001152"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "U/L",
+        "value" : 45,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "U/L"
+      },
+      "high" : {
+        "code" : "U/L",
+        "value" : 115,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "U/L"
+      },
+      "text" : "45 - 115 U/L"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "U/L",
+    "value" : 61,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "U/L"
+  },
+  "status" : "final",
+  "issued" : "2024-09-11T19:18:49Z"
+}

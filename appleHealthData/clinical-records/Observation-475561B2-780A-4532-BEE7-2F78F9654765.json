@@ -1,0 +1,152 @@
+{
+  "id" : "e7VQ3erIOTknIprsYm.mbaf-uFfTsfYo3k6Lw-yH-eVdq3wh6c.ZKpPoQDCIQzqz5C9nJpeX.C8JjNalvKfrY4A3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eepgJlPiHA4wxeLHGXWHb5g3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "13196486"
+    }
+  },
+  "effectiveDateTime" : "2015-02-17T16:52:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CBC and Diff (manual diff if neces",
+      "reference" : "ServiceRequest/eoveI3-JJid9iTtLtTvgMsrfQLSM1eycQ9IbCA0jF-g03"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 150484511246",
+    "reference" : "Specimen/eIyB1kezS9ZSkyEp5NltgEIyoTanfWPicpM3N-eFtT5U3"
+  },
+  "code" : {
+    "text" : "RBC",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Erythrocytes [#/volume] in Blood by Automated count",
+        "code" : "789-8"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10081110"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "005068"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "789-8"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "RBC"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10061110"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20001730"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "U5000100"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "30000100"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10071110"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10092710"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "900427809"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "900213200"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "RBC"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L1000200"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L1259650"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.184",
+        "code" : "1577212"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.681",
+        "code" : "000377"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "RBC",
+        "code" : "1577212"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "value" : 4.31,
+        "unit" : "MIL/uL"
+      },
+      "high" : {
+        "value" : 5.84,
+        "unit" : "MIL/uL"
+      },
+      "text" : "4.31 - 5.84 MIL/uL"
+    }
+  ],
+  "valueQuantity" : {
+    "value" : 4.47,
+    "unit" : "MIL/uL"
+  },
+  "status" : "final",
+  "issued" : "2015-02-17T21:51:43Z"
+}

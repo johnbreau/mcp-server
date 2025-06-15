@@ -1,0 +1,146 @@
+{
+  "id" : "e3YsPGJMFYzYsLjwXTwqTeKZddx300LztUDMJChe6actB75NAJt7O74kT6e.NbTGfasa5pLgOeGJB0aEPaGQRsQ3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/e7qDrKqYVrWKJdMVId-EKHpkbmqxGC-nuSD834yNOdIc3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100143453137"
+    }
+  },
+  "effectiveDateTime" : "2020-01-30T16:27:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "COMPREHENSIVE METABOLIC PANEL",
+      "reference" : "ServiceRequest/eP0Vt50NZMMyoN6-qoGGS0wD6lFffke8a.B8sb3PZcjA3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 200308750923",
+    "reference" : "Specimen/evxApt.tU1MMz5bVgDU.LAWXuw454zmIY.hxKi.EvlLY3"
+  },
+  "code" : {
+    "text" : "Sodium",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Sodium [Moles/volume] in Serum or Plasma",
+        "code" : "2951-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10063200"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3102300"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "2951-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "NA"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "001198"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10082170"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20001210"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "25000400"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20001145"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10092350"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L10074350"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3000100"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "NA"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.184",
+        "code" : "1534098"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Sodium",
+        "code" : "1534098"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "MEQ/L",
+        "value" : 133,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "MEQ/L"
+      },
+      "high" : {
+        "code" : "MEQ/L",
+        "value" : 147,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "MEQ/L"
+      },
+      "text" : "133 - 147 MEQ/L"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "MEQ/L",
+    "value" : 139,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "MEQ/L"
+  },
+  "status" : "final",
+  "issued" : "2020-01-30T20:54:33Z"
+}

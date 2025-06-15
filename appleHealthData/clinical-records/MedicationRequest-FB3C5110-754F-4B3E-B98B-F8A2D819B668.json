@@ -1,0 +1,271 @@
+{
+  "id" : "erxjFusohXTnblhdbt4j80LeWsEshXofcLZmX2rjXauQ3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "reportedBoolean" : true,
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "encounter" : {
+    "display" : "Clinical Communication",
+    "reference" : "Encounter/ehV-VvtqM04HEC5YigFn-LbgmQXTIaBL9h.B4iwL0lbM3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+      "value" : "2000608944025"
+    }
+  },
+  "resourceType" : "MedicationRequest",
+  "status" : "active",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "pantoprazole 40 mg EC tablet",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "A02BC02"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "27462"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "40790"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "236632"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "253191"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "314200"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "153045"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "261624"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "153044"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "284400"
+          }
+        ]
+      },
+      "id" : "e6yoZsYh--VRy2PQJ.GMQtdX.TM9ZBT5L1IiG0T9YjSsblTsKjcAyOC5TzplEXEAMj0EnxY8.KUPqbIGLok9gZBMIouFIORxcWE.sMhvfn2o3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "tablet,delayed release (DR/EC)",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.698288.310",
+            "display" : "tablet,delayed release (DR/EC)",
+            "code" : "TbEC"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.698288",
+          "value" : "26225"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "pantoprazole 40 mg EC tablet",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "A02BC02"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "27462"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "40790"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "236632"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "253191"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "314200"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "153045"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "261624"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "153044"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "284400"
+              }
+            ]
+          },
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 40,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 40,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.798268",
+      "value" : "2223393437978"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eUKDnTBOqmG98SqAGe6yvlg3",
+    "display" : "Karla S"
+  },
+  "authoredOn" : "2016-01-01",
+  "dosageInstruction" : [
+    {
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2016-01-01"
+          },
+          "timeOfDay" : [
+            "09:00:00",
+            "21:00:00"
+          ]
+        },
+        "code" : {
+          "text" : "2 (two) times a day",
+          "coding" : [
+            {
+              "system" : "http://hl7.org/fhir/ValueSet/timing-abbreviation",
+              "display" : "2 (two) times a day",
+              "code" : "BID"
+            }
+          ]
+        }
+      },
+      "method" : {
+        "text" : "Take",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Take",
+            "code" : "419652001"
+          }
+        ]
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "{tbl}",
+            "value" : 1,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "tablet"
+          }
+        }
+      ],
+      "patientInstruction" : "Take 1 tablet by mouth 2 (two) times a day.",
+      "text" : "Take 1 tablet by mouth 2 (two) times a day., Starting Fri 1/1/2016, Historical Med",
+      "asNeededBoolean" : false,
+      "route" : {
+        "text" : "oral",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Oral route (qualifier value)",
+            "code" : "26643006"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.4.798268.7025",
+            "display" : "oral",
+            "code" : "15"
+          }
+        ]
+      }
+    }
+  ],
+  "requester" : {
+    "extension" : [
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode" : "unknown"
+      }
+    ]
+  },
+  "intent" : "plan",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "medicationReference" : {
+    "display" : "pantoprazole 40 mg EC tablet",
+    "reference" : "Medication/e6yoZsYh--VRy2PQJ.GMQtdX.TM9ZBT5L1IiG0T9YjSsblTsKjcAyOC5TzplEXEAMj0EnxY8.KUPqbIGLok9gZBMIouFIORxcWE.sMhvfn2o3"
+  }
+}

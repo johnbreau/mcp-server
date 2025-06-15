@@ -1,0 +1,80 @@
+{
+  "id" : "ej1vofWeEUT7sIe7f-BwmhNJQXMbKNhWkg0ukS0CUvH83",
+  "category" : {
+    "text" : "Ordered Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Diagnostic procedure",
+        "code" : "103693007"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eh17CVbBiNGDnMvMRj2A68Q3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1104308734"
+    }
+  },
+  "resourceType" : "Procedure",
+  "basedOn" : [
+    {
+      "display" : "EGD REPORT",
+      "reference" : "ServiceRequest/emnSCXVQL-QJtBiHzxW90eMB0irr5OrTmhgOpPmuvPVc3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798268",
+      "value" : "1414666864",
+      "type" : {
+        "text" : "ORD"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.696580",
+      "value" : "1402",
+      "type" : {
+        "text" : "EAP"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "EGD REPORT",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.696580",
+        "display" : "EGD REPORT",
+        "code" : "1402"
+      }
+    ]
+  },
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/etVxgMyuiwAh81Ay0NRgUGw3",
+    "display" : "J May, MD"
+  },
+  "performedDateTime" : "2024-02-12T18:23:43Z",
+  "report" : [
+    {
+      "type" : "DiagnosticReport",
+      "reference" : "DiagnosticReport/eYrUWuizHLd53zv7-v7W3djO98JrejGAt4lDt8xBB9es3",
+      "display" : "EGD REPORT"
+    }
+  ],
+  "status" : "completed",
+  "asserter" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/etVxgMyuiwAh81Ay0NRgUGw3",
+    "display" : "J May, MD"
+  }
+}

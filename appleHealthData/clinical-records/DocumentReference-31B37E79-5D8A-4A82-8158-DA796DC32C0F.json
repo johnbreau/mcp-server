@@ -1,0 +1,170 @@
+{
+  "id" : "etgKuUNiaskSN-trRT7QVLr3GiusX3VKzpoCRy4NsM.03",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/esSX.3dDXjIPPFjw6Xf3Pfg3",
+      "display" : "J May, MD"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/esSX.3dDXjIPPFjw6Xf3Pfg3",
+    "display" : "J May, MD",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2022-12-24T20:32:36Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Physician",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.836982.1040",
+              "display" : "Physician",
+              "code" : "1"
+            },
+            {
+              "system" : "urn:oid:2.16.840.1.113883.6.101",
+              "display" : "Physician Internal Medicine",
+              "code" : "207R00000X"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2022-12-23T17:20:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Office Visit",
+        "reference" : "Encounter/eSZx7qofmTQDIIh0hoNEAttupxuIDOb4wrGdYTQJPe903",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+          "value" : "100173634213"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Progress Notes",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.737880.5010",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Progress Notes",
+        "code" : "1"
+      },
+      {
+        "code" : "11506-3",
+        "system" : "http://loinc.org",
+        "display" : "Provider-unspecified Progress note",
+        "userSelected" : true
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.727879",
+      "value" : "834269026"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.368.2.7.2.727879_834269026"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2022-12-23T18:45:19Z",
+  "custodian" : {
+    "display" : "Saint Luke's Health System",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:SaintLukes:PRD.CE-PRD"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2022-12-24T20:32:36Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "J May, MD",
+            "reference" : "Practitioner/esSX.3dDXjIPPFjw6Xf3Pfg3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/ebXhGCztKJDaL6QtfdYiccMeTGqs.9psilyjsChEH-zw3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fYmSlddGALgGUZhsrQIW760oLd1fnUtLxxghAGWHH5FU4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

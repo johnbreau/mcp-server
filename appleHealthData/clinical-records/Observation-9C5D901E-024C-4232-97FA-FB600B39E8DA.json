@@ -1,0 +1,57 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MR BRACHIAL PLEXUS LEFT WITHOUT AND WITH IV CONTRAST",
+      "reference" : "ServiceRequest/eHlIIbCxkyt9JOXrWccRoqWcczyPRtPt9oQZ4iVkT0.Q3"
+    }
+  ],
+  "id" : "e9XeUYV6s1YUBe2JalrRpil6Ao6STZDh8rC-c2xmoJ-03",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/ea6AaGptsARYkrjFRWEES9vPUBmsuTHwxpdIzfDbeEtU3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+      "value" : "2000609738990"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "performer" : [
+    {
+      "display" : "Matthew Frick, M.D.",
+      "reference" : "Practitioner/eKbU4lneSUV0xQcH-c-QRgA3"
+    }
+  ],
+  "effectiveDateTime" : "2024-04-23T17:37:29Z",
+  "valueString" : "EXAM:  MR BRACHIAL PLEXUS LEFT WITHOUT AND WITH IV CONTRAST\r\n\r\n\r\nCOMPARISON:  Outside brachial plexus MRIs dated 3/8/2022 and 6/27/2021.\r\n\r\n\r\nFINDINGS:  MRI of the left brachial plexus without and with IV gadolinium performed at 3 Tesla.\r\n\r\n\r\nRedemonstrated is fusiform enlargement of essentially all of the visualized cervical and upper thoracic exiting nerve roots and scattered throughout several peripheral nerves of the visualized left upper chest wall and shoulder compatible with known \r\nhistory of schwannomatosis. The largest, multilobulated, plexiform type peripheral nerve sheath tumor is centered within the exiting left C4 nerve root and measures 3.2 x 3.3 x 4.9 cm (AP X TR X CC) in dimension. Allowing for differences in technique \r\nthis lesion has not changed significantly in size since the more recent outside brachial plexus MRI of 3/8/2022. Slightly smaller peripheral nerve sheath tumor within the exiting C2 nerve root measures approximately 2.0 x 1.9 x 2.1 cm. Additional smaller\r\n peripheral nerve sheath tumors within the lower cervical and upper thoracic nerves centrally. Biapical peripheral nerve sheath tumors (series 8 image 10) are also unchanged in size and appearance. Some of these lesions demonstrate a characteristic \r\ntarget-type appearance, for example series 8, image 23). \r\n\r\n\r\nWhile not optimized for evaluation of the shoulder there is some mild atrophy of the supra and infraspinatus and to a lesser degree subscapularis musculature. Outside bilateral MRI from 3/8/2022 showed this atrophy to be asymmetric. Right side not \r\nincluded on today's imaging. Degenerative subchondral cyst humeral head near the insertional footprint of the supraspinatus.  Minimal enhancing synovitis about the left shoulder. Mild degenerative arthritis left AC joint.\r\n\r\n",
+  "resourceType" : "Observation"
+}

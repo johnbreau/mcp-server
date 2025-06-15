@@ -1,0 +1,123 @@
+{
+  "id" : "eSKGI6JOzu2klYaLNlK1jJBTpqAMIZgAbW4jJnUf.Z-LkTb6oR7aXDszglPB7PzKKpq-z1ujPhpEdR80vlgfdfw3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/ej5vdC6.m0IwYnvToZlxml-4l6mnMfPpZ2rlYlrUhD9U3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100104376927"
+    }
+  },
+  "effectiveDateTime" : "2016-08-23T16:51:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "LUTEINIZING HORMONE",
+      "reference" : "ServiceRequest/e6bbQJKyUhyrfxmIN1FE38zA5NL7kknygr7D-90XQjsM3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 162362628207",
+    "reference" : "Specimen/eFcXSUTNbFZ2xN5IQUHA.YX9fSwc9Upb4ulT1YhiHqqQ3"
+  },
+  "code" : {
+    "text" : "Luteinizing Hormone",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Lutropin [Units/volume] in Serum or Plasma",
+        "code" : "10501-5"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3261100"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "10501-5"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "LH"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "004290"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "85986330"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L20001660"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "LH"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L1411350"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.147",
+        "code" : "LH"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.147",
+        "code" : "LH1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.681",
+        "code" : "000111"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "900434507"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.184",
+        "code" : "1576882"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Luteinizing Hormone",
+        "code" : "1576882"
+      }
+    ]
+  },
+  "valueQuantity" : {
+    "value" : 3,
+    "unit" : "IU/L"
+  },
+  "status" : "final",
+  "issued" : "2016-08-23T23:38:09Z"
+}

@@ -1,0 +1,44 @@
+{
+  "id" : "eU2vHuuIVi0D9J3JP23AW8O9hmRSiCrj.iLY2BgeXYw03",
+  "primarySource" : false,
+  "reportOrigin" : {
+    "text" : "Auto Reconciled From Outside Source",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4082",
+        "display" : "Auto Reconciled From Outside Source",
+        "code" : "4"
+      }
+    ]
+  },
+  "resourceType" : "Immunization",
+  "occurrenceDateTime" : "2021-03-15",
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.768076",
+      "value" : "23123082"
+    }
+  ],
+  "location" : {
+    "display" : "MO1607"
+  },
+  "lotNumber" : "EN6204",
+  "manufacturer" : {
+    "display" : "Pfizer, Inc."
+  },
+  "vaccineCode" : {
+    "text" : "COVID-19 (PFIZER), mRNA vacc, 30 mcg/0.3 mL (PF)",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "208"
+      }
+    ]
+  },
+  "status" : "completed",
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id" : "evGTIdaAB.qKkLXupNEOVl2kx1gnB2FJAWEMIfihhYTfzl1wfXCBMQoO3K5Wx6z85.N26nnxkFMVxnjHN5fvzTw3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Blood Bank Products",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Blood Bank Products",
+          "code" : "BB Products"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Visit Encounter",
+    "reference" : "Encounter/ePTJCitQoO-HzgRQ0yhzKgQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1289967743"
+    }
+  },
+  "effectiveDateTime" : "2019-05-29T17:25:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "TYPE & SCREEN",
+      "reference" : "ServiceRequest/ese6FQp2HRokxJnTK8Ocx6vvQieHkZjc.yN9r1sSKb4Y3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen C52907965:98811068",
+    "reference" : "Specimen/eFY8u3e0su66FGDiclHva4rZwT2A4uUVTkb4VIQ6gjx03"
+  },
+  "code" : {
+    "text" : "Antibody Screen",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Indirect antiglobulin test.IgG specific reagent [Presence] in Serum or Plasma",
+        "code" : "1005-8"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.179",
+        "code" : "ABS"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "Antibody Screen",
+        "code" : "2000002733"
+      }
+    ]
+  },
+  "valueString" : "Negative",
+  "status" : "final",
+  "issued" : "2019-05-29T20:10:47Z"
+}

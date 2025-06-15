@@ -1,0 +1,81 @@
+{
+  "id" : "eUUEn3tZ-7HO9CevXilUFbCDq0O1UGThalremtvPtBJHOLN8FPR7ZbgCu4plG3AhyDyLqc2TPjxaL0zywd5zM1w3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Infusion",
+    "reference" : "Encounter/eg0MDuz65RKYNsdUfSmGZTQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3631499644"
+    }
+  },
+  "effectiveDateTime" : "2024-09-11T20:39:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "Urinalysis",
+      "reference" : "ServiceRequest/eYOtcw9fpU-sCMs.JrI7o25lLEEbiEmKgPiEyZ4lLR8s3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen SQ_W7076643_381L375970_",
+    "reference" : "Specimen/e-Vl3DRBjGqPNJS6xIpztAMGbstjZowNCtL1qingTo9o3"
+  },
+  "code" : {
+    "text" : "BILI",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Bilirubin.total [Presence] in Urine by Test strip",
+        "code" : "5770-3"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.91",
+        "code" : "UBILE"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.818",
+        "code" : "5200014383"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.768282",
+        "display" : "BILI",
+        "code" : "5200014383"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "text" : "Negative"
+    }
+  ],
+  "valueString" : "Negative",
+  "status" : "final",
+  "issued" : "2024-09-11T21:31:45Z"
+}

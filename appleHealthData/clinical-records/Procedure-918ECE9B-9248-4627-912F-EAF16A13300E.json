@@ -1,0 +1,95 @@
+{
+  "id" : "etGiQ-wfc0wivQz7eKZBnWQhHg08hE56xvEqbJ.YWiw7qI3S2f1hDGg0Gd4RNP-VG3",
+  "category" : {
+    "text" : "Surgical Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Surgical procedure",
+        "code" : "387713003"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Surgery",
+    "reference" : "Encounter/eMFdIwXAk.XSQVnhCx.i1TaLLOZcjdHZFXBM36Il-3MI3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100165698187"
+    }
+  },
+  "performedPeriod" : {
+    "start" : "2022-03-28T20:31:00Z",
+    "end" : "2022-03-28T20:47:00Z"
+  },
+  "resourceType" : "Procedure",
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798276",
+      "value" : "4129045",
+      "type" : {
+        "text" : "ORL"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798069",
+      "value" : "1072969",
+      "type" : {
+        "text" : "OPE"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "COLONOSCOPY"
+  },
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ewUQ4vayI20rIMGG-tdbtjA3",
+    "display" : "Sandra D"
+  },
+  "performer" : [
+    {
+      "actor" : {
+        "type" : "Practitioner",
+        "reference" : "Practitioner/ebLrk-44zqTW9x5mSukuOsg3",
+        "display" : "M Allen, MD"
+      }
+    }
+  ],
+  "location" : {
+    "display" : "Saint Luke's Hospital",
+    "reference" : "Location/eP36ChKUmR4yVszcnAyTLtg3"
+  },
+  "report" : [
+    {
+      "reference" : "DocumentReference/e9wAmzG8ICmY00UY998GHYXOd7lLdF-6KDWLYiAs.PCE3"
+    },
+    {
+      "reference" : "DocumentReference/eHpvLN.5ORHnRySXhJJVIetshN1Lz-M5MGbf6XBnTsNQ3"
+    },
+    {
+      "reference" : "DocumentReference/eLzQUK0IQ4U533bBaQnV18iOAmlNeCRp-Wu1tdAZoqEI3"
+    },
+    {
+      "reference" : "DocumentReference/e3M1wfpf2Ldd8v0GriHUa3h68eAWm6wHoSqfbsPuSlt43"
+    }
+  ],
+  "status" : "completed",
+  "outcome" : {
+    "text" : "Home or Self Care",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.798276.402",
+        "display" : "Home or Self Care",
+        "code" : "1"
+      }
+    ]
+  }
+}

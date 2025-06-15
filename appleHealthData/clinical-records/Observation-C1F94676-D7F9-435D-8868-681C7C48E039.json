@@ -1,0 +1,98 @@
+{
+  "id" : "efN0q6kYMu4YuUK4e6yqbD0PBAV8a-J.tnQNbmhIDTWW2mrIahkajgsvBk6Ck3Vi1qTxqGWD1JdZOrU5I2PnTNg3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Blood Draw",
+    "reference" : "Encounter/ejrRQit3Adv0UxdO7jBuGBw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3632893921"
+    }
+  },
+  "effectiveDateTime" : "2024-09-10T14:59:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "Lipase",
+      "reference" : "ServiceRequest/eHa17De7BYCcuLT7qW6UBQlJnCA1nVRqFQH4rRQwiVXY3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen SQ_T7198719_381L314605_",
+    "reference" : "Specimen/erRytmGTjo3D8KYVGu.5vRgKIy7l6WxbbSnORxlzgAGo3"
+  },
+  "code" : {
+    "text" : "LIPASE",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Lipase [Enzymatic activity/volume] in Serum or Plasma",
+        "code" : "3040-3"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.91",
+        "code" : "LIPASE"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.818",
+        "code" : "5200008151"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.768282",
+        "display" : "LIPASE",
+        "code" : "5200008151"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "U/L",
+        "value" : 13,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "U/L"
+      },
+      "high" : {
+        "code" : "U/L",
+        "value" : 60,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "U/L"
+      },
+      "text" : "13 - 60 U/L"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "U/L",
+    "value" : 29,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "U/L"
+  },
+  "status" : "final",
+  "issued" : "2024-09-10T15:53:52Z"
+}

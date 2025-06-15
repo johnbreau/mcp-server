@@ -1,0 +1,126 @@
+{
+  "id" : "e1sENGiW.jLkpk2R4kXuOTn1Cw9TZRD4ZocG.1Y86oJE4CxfpEyEVkMhhSjOU9KiVhcDuD7xwa.GKEitteoFwkg3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/eoerYUdX-f4klyIneO2qybsurF9Kt4n7z0rWGS.s9gfw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100121991353"
+    }
+  },
+  "effectiveDateTime" : "2018-05-18T12:33:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "TESTOSTERONE",
+      "reference" : "ServiceRequest/eZxlRekTYpomlwA.w0cD.KarQqhVSBKoSQNU6W0qXec43"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 181384954937",
+    "reference" : "Specimen/eVL048sNme.w-Y.o7m3MujWTi2iYA3CN1QVFpb7rElFQ3"
+  },
+  "code" : {
+    "text" : "Testosterone",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Testosterone [Mass/volume] in Serum or Plasma",
+        "code" : "2986-8"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "35224-5"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "TESTOS"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "TESTOS"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "004226"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "004227"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.681",
+        "code" : "000135"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Testosterone",
+        "code" : "1628845"
+      }
+    ]
+  },
+  "interpretation" : [
+    {
+      "text" : "Low",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display" : "Low",
+          "code" : "L"
+        }
+      ]
+    }
+  ],
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "ng/dL",
+        "value" : 240,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "ng/dL"
+      },
+      "high" : {
+        "code" : "ng/dL",
+        "value" : 813,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "ng/dL"
+      },
+      "text" : "240 - 813 ng/dL"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "ng/dL",
+    "value" : 214,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "ng/dL"
+  },
+  "status" : "final",
+  "issued" : "2018-05-18T19:26:11Z"
+}

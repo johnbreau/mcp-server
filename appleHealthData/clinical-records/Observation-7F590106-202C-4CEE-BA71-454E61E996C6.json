@@ -1,0 +1,57 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "XR RIBS BIL W/ PA CHEST MIN 4 VWS",
+      "reference" : "ServiceRequest/eP.IRm.YSQpUisVnZwFDIan-HcjWpG8i2dAj1yfXpgnQ3"
+    }
+  ],
+  "id" : "ej978FikJY4pX0Hr6GX2MFCmWDISEx09zf7BM2rljHuY3",
+  "code" : {
+    "text" : "Impression"
+  },
+  "encounter" : {
+    "display" : "Results Only",
+    "reference" : "Encounter/ezbHPdiT4yplg8hRTNF5Sdw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1048655154"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "performer" : [
+    {
+      "display" : "Elizabeth Weihe, MD",
+      "reference" : "Practitioner/eyqcwwvHIoi.ziJ3X3Kzptw3"
+    }
+  ],
+  "effectiveDateTime" : "2013-11-22T21:39:00Z",
+  "valueString" : "IMPRESSION:  Right rib series performed at an outside hospital on \r\n5/10/2011, submitted for second opinion interpretation on 11/22/2013, the \r\ncardiac silhouette and mediastinal contours are within normal limits. No \r\nfocal airspace consolidations, effusions, or pneumothorax is seen within \r\nthe lungs. Grossly no acute displaced fractures or dislocations are \r\nidentified. Subtle changes of neurofibromatosis can be better evaluated \r\non MRI/CT of the thorax.\r\n\r\n\r\n..: Created By EWHE1 . Last update: Nov 22 2013  4:54P.\r\n\r\n\r\n \r\n\r\n\r\n \r\n\r\n\r\nIMAGES AND INTERPRETATION PERSONALLY READ BY:\r\n\r\n\r\nELIZABETH WEIHE MD\r\n\r\n\r\nRESULT ELECTRONICALLY SIGNED",
+  "resourceType" : "Observation"
+}

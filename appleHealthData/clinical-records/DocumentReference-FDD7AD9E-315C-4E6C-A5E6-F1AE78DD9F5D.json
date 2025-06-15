@@ -1,0 +1,172 @@
+{
+  "id" : "eL7sj1yqri9JpMj7vPnvymRMABB8-CA.z06Y-7ZN1sTY3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/epetXPDCf-qsW7LfX7YbAMS7ToBs-o78fMaxvBQh3IKQ3",
+      "display" : "Chad Gordon, DO"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eHaZivUPwqYjGMxbOVgCnPQ3",
+    "display" : "Chad Gordon, DO",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2019-06-28T10:45:51Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Physician",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.836982.1040",
+              "display" : "Physician",
+              "code" : "1"
+            },
+            {
+              "system" : "urn:oid:2.16.840.1.113883.11.19465",
+              "display" : "Physician Plastic Surgery",
+              "code" : "208200000X"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2019-06-21T17:45:00Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Hospital Encounter",
+        "reference" : "Encounter/eQrMEJoYDrWwrlvodgmqSjg3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+          "value" : "1287119909"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Operative Note",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.737880.5010",
+        "display" : "Operative Note",
+        "code" : "1000004"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "OR Surgeon",
+        "code" : "11"
+      },
+      {
+        "code" : "34874-8",
+        "system" : "http://loinc.org",
+        "display" : "Surgery Surgical operation note",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Note",
+        "code" : "34109-9"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.727879",
+      "value" : "961256758"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2019-06-26T10:14:34Z",
+  "custodian" : {
+    "extension" : [
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode" : "unknown"
+      }
+    ]
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Addendum/Transcription Authenticator",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Addendum/Transcription Authenticator",
+                "code" : "4"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2019-06-28T10:45:51Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Chad Gordon, DO",
+            "reference" : "Practitioner/eHaZivUPwqYjGMxbOVgCnPQ3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/ebGAYzs6aorjqZZVBoPl.hmE64puA8noPYrkeaUOu7M43"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fTlQdKAk3BtwQZ3EcYSvGNB9B2L8k-QNdT.93ho-aH0g4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

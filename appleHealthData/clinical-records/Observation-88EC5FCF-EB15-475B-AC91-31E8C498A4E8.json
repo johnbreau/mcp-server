@@ -1,0 +1,61 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MRI UPPER EXTREM WO/W CONT LT",
+      "reference" : "ServiceRequest/e1YucsylnuwJl3429hTQbX391z5.4JlWsWg6fsYccJ983"
+    }
+  ],
+  "id" : "eJ75RdU9sQUTmXGkBYEDlw-UQ94ZRg7peAeBkUUb3KDw3",
+  "code" : {
+    "text" : "Impression"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/e.QDnRPtkhNLpTRzFt1Jqkw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1041879886"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "performer" : [
+    {
+      "display" : "K Brown, MD",
+      "reference" : "Practitioner/e6IX35rp7-UhnrPIrDnt9VA3"
+    },
+    {
+      "display" : "S Hund, MD",
+      "reference" : "Practitioner/eXehYmqtYUD5sRrcJcHzPzw3"
+    }
+  ],
+  "effectiveDateTime" : "2019-10-28T20:19:27Z",
+  "valueString" : "\r\n\r\n\r\n\r\n1.  No visualized abnormality of the left upper extremity arm and forearm.\r\n2.  Incomplete evaluation of several T2 hyperintense left upper thoracic neural foraminal and intercostal lesions likely reflecting nerve sheath tumors. Correlation with prior imaging recommended.\r\n\r\n\r\n\r\n\r\n Approved by Samuel Hund, M.D. on 10/28/2019 5:06 PM\r\n\r\n\r\nBy my electronic signature, I attest that I have personally reviewed the images for this examination and formulated the interpretations and opinions expressed in this report\r\n\r\n\r\n\r\n\r\n Finalized by Kevin Brown, M.D. on 10/28/2019 5:33 PM. Dictated by Samuel Hund, M.D. on 10/28/2019 3:44 PM.\r\n\r\n",
+  "resourceType" : "Observation"
+}

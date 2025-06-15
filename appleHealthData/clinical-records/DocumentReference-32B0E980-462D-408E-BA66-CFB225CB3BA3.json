@@ -1,0 +1,203 @@
+{
+  "id" : "edoS3q8Ta8Lzx85DASPBc1DpwX2f4YPTyo6u-EYxJacA3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/e095Q0orJbeG3HZLCuV.F8XHLLp.U1U7MQt61TQz033k3",
+      "display" : "Colletta Richards, MD"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/e095Q0orJbeG3HZLCuV.F8XHLLp.U1U7MQt61TQz033k3",
+    "display" : "Colletta Richards, MD",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2021-10-29T22:09:54Z"
+      }
+    ]
+  },
+  "context" : {
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Anesthesiologist",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.836982.1040",
+              "display" : "Anesthesiologist",
+              "code" : "4"
+            },
+            {
+              "system" : "urn:oid:2.16.840.1.113883.11.19465",
+              "display" : "Anesthesiologist Anesthesiology",
+              "code" : "207L00000X"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2021-10-29T19:30:42Z"
+    },
+    "encounter" : [
+      {
+        "display" : "Anesthesia Event",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+          "value" : "1348634602"
+        }
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Anesthesia Postprocedure Evaluation",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.737880.5010",
+        "display" : "Anesthesia Postprocedure Evaluation",
+        "code" : "25"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Anesthesia Postprocedure Evaluation",
+        "code" : "25"
+      },
+      {
+        "code" : "84061-1",
+        "system" : "http://loinc.org",
+        "display" : "Anesthesiology Postoperative evaluation and management note",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Surgical operation note",
+        "code" : "11504-8"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.727879",
+      "value" : "2141100139"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.331.2.7.2.727879_2141100139"
+    }
+  ],
+  "docStatus" : "amended",
+  "date" : "2021-10-29T19:30:42Z",
+  "custodian" : {
+    "display" : "Johns Hopkins Medicine",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:Hopkins:Interconnect-CareEverywhere_PRD"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2021-10-29T19:30:52Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Jackie Howell, CRNA",
+            "reference" : "Practitioner/efRSyVVbaSNeoNFuVTctFmM1jD.UDvo.uSU1gGlLAOEc3"
+          }
+        }
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Addendum/Transcription Authenticator",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Addendum/Transcription Authenticator",
+                "code" : "4"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2021-10-29T22:09:54Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Colletta Richards, MD",
+            "reference" : "Practitioner/e095Q0orJbeG3HZLCuV.F8XHLLp.U1U7MQt61TQz033k3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eQd-jekaR3NJmhXT0dM3qKvUvt1hGGe3G1lofsS.kB-s3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fzLq8tS.dokToS1Jt-Tqac-I3CNVJ1nUl1LucWzOGzW44"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

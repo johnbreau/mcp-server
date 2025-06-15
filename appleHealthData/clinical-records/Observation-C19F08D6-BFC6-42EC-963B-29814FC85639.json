@@ -1,0 +1,61 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MRI PELVIS W/WO CONTRAST",
+      "reference" : "ServiceRequest/eyzG14m6ppW6xMcPqJezj6tY0hJZ6d5fyfZRUj0ILN2c3"
+    }
+  ],
+  "id" : "eaXAKNinrV39Vj05y672RYWvpHGMaC3OrsfFe9KOdxZI3",
+  "code" : {
+    "text" : "Impression"
+  },
+  "encounter" : {
+    "display" : "Results Only",
+    "reference" : "Encounter/eCoKWMuABVHOyuynidf9PyQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1163747142"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "performer" : [
+    {
+      "display" : "Shivani Ahlawat, MD",
+      "reference" : "Practitioner/eH3zJEQ5R3oT.X85Wvt5fsg3"
+    },
+    {
+      "display" : "Michael Hakky, MD",
+      "reference" : "Practitioner/eOrEdRxyCjKOqI3Uzt0UcTg3"
+    }
+  ],
+  "effectiveDateTime" : "2016-04-28T23:11:00Z",
+  "valueString" : "IMPRESSION:   \r\n\r\n\r\nHEAD AND NECK:\r\nUnchanged multiple head and neck lesions as described above.\r\n\r\n\r\nCHEST:\r\nUnchanged multiple paraspinal and lung apical lesions as described above.\r\n\r\n\r\nABDOMEN:\r\nUnchanged left subdiaphragmatic subcentimeter presumed lesion.\r\n\r\n\r\nPELVIS:\r\nNo suspicious lesions identified.\r\n\r\n\r\nRIGHT LE:\r\nNo suspicious lesions identified.\r\n\r\n\r\nLEFT LE:\r\nNo suspicious lesions identified.\r\n\r\n\r\n..: Created By MHKY1. Last update: Apr 29 2016 11:41A.\r\n\r\n\r\nMICHAEL HAKKY MD\r\n\r\n\r\n\r\n\r\n\r\n\r\nIMAGES AND INTERPRETATION PERSONALLY REVIEWED BY:\r\n\r\n\r\nSHIVANI AHLAWAT MD\r\n\r\n\r\nRESULT ELECTRONICALLY SIGNED",
+  "resourceType" : "Observation"
+}

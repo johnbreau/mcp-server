@@ -1,0 +1,110 @@
+{
+  "id" : "ex25OM9gcEz89Dfcxeo1rMXbcr3Y35Cs-vGbpvZqtzhg3",
+  "primarySource" : true,
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eDQYEe8ZwLcgFNCXJAbELlQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1099710815"
+    }
+  },
+  "resourceType" : "Immunization",
+  "occurrenceDateTime" : "2023-11-21",
+  "expirationDate" : "2025-05-20",
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.768076",
+      "value" : "26986769"
+    }
+  ],
+  "location" : {
+    "display" : "University of Kansas Health System"
+  },
+  "lotNumber" : "U7745AA",
+  "manufacturer" : {
+    "display" : "Sanofi Pasteur"
+  },
+  "route" : {
+    "text" : "Intramuscular",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4030",
+        "display" : "Intramuscular",
+        "code" : "2"
+      }
+    ]
+  },
+  "vaccineCode" : {
+    "text" : "Td Vaccine (>= 7 Yo) 5-2 Adsorbed PF IM (Tenivac)",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "113"
+      },
+      {
+        "system" : "http://hl7.org/fhir/sid/ndc",
+        "code" : "49281-215-88"
+      }
+    ]
+  },
+  "site" : {
+    "text" : "Right deltoid",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4040",
+        "display" : "Right deltoid",
+        "code" : "6"
+      }
+    ]
+  },
+  "doseQuantity" : {
+    "code" : "1",
+    "value" : 0.5,
+    "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4019",
+    "unit" : "mL"
+  },
+  "performer" : [
+    {
+      "actor" : {
+        "type" : "Practitioner",
+        "reference" : "Practitioner/eVZCye1i91BhgqW85rv4vsQ3",
+        "display" : "Rebecca K"
+      },
+      "function" : {
+        "text" : "Administering Provider",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+            "display" : "Administering Provider",
+            "code" : "AP"
+          }
+        ]
+      }
+    },
+    {
+      "actor" : {
+        "type" : "Practitioner",
+        "reference" : "Practitioner/etVxgMyuiwAh81Ay0NRgUGw3",
+        "display" : "J May, MD"
+      },
+      "function" : {
+        "text" : "Ordering Provider",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+            "display" : "Ordering Provider",
+            "code" : "OP"
+          }
+        ]
+      }
+    }
+  ],
+  "status" : "completed",
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  }
+}

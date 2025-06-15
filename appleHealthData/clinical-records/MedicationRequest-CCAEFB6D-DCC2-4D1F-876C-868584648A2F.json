@@ -1,0 +1,246 @@
+{
+  "id" : "eYAYnfHL0jGqWB5hOpFHVJWo31TxQJMkJtlupUrLIaao3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Refill",
+    "reference" : "Encounter/eFYgBoDD2HVQqm7ja-DZl-boQEdJg597l7jGwCOgt-c83",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100141773278"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Esophageal reflux",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Gastroesophageal reflux disease without esophagitis (disorder)",
+          "code" : "266435005"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Gastro-esophageal reflux disease without esophagitis",
+          "code" : "K21.9"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "MedicationRequest",
+  "status" : "stopped",
+  "medicationReference" : {
+    "display" : "pantoprazole 40 MG tablet",
+    "reference" : "Medication/eFJdOwJBTNdenKE9OqoBDPH0FpaqZ.xwtdmjYvUflitcyqFGnLCiR1pc4sj1Nt6TLnXiAtVfjHjt9jU2eYCj4kSQMyPTC1KF7viTtNMlNcFs3"
+  },
+  "contained" : [
+    {
+      "code" : {
+        "text" : "pantoprazole 40 MG tablet",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "A02BC02"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "27462"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "40790"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "236632"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "253191"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "314200"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "153045"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "261624"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "153044"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "284400"
+          }
+        ]
+      },
+      "id" : "eFJdOwJBTNdenKE9OqoBDPH0FpaqZ.xwtdmjYvUflitcyqFGnLCiR1pc4sj1Nt6TLnXiAtVfjHjt9jU2eYCj4kSQMyPTC1KF7viTtNMlNcFs3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "tablet,delayed release (DR/EC)",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.698288.310",
+            "display" : "tablet,delayed release (DR/EC)",
+            "code" : "TbEC"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.698288",
+          "value" : "26225"
+        }
+      ],
+      "ingredient" : [
+        {
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 40,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 40,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            }
+          },
+          "itemCodeableConcept" : {
+            "text" : "pantoprazole 40 MG tablet",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "A02BC02"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "27462"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "40790"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "236632"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "253191"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "314200"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "153045"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "261624"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "153044"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "284400"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "283921579"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ex.ogNv0OHMmKrxfrIA8Jkg3",
+    "display" : "J May, MD"
+  },
+  "authoredOn" : "2019-12-02",
+  "dosageInstruction" : [
+    {
+      "patientInstruction" : "TAKE 1 TABLET BY MOUTH EVERY DAY",
+      "text" : "TAKE 1 TABLET BY MOUTH EVERY DAY, Normal",
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2019-12-02",
+            "end" : "2020-12-10"
+          }
+        }
+      }
+    }
+  ],
+  "dispenseRequest" : {
+    "quantity" : {
+      "value" : 90,
+      "unit" : "tablet"
+    },
+    "expectedSupplyDuration" : {
+      "code" : "d",
+      "value" : 374,
+      "system" : "http://unitsofmeasure.org",
+      "unit" : "Day"
+    },
+    "validityPeriod" : {
+      "start" : "2019-12-02",
+      "end" : "2020-12-10"
+    },
+    "numberOfRepeatsAllowed" : 4
+  },
+  "priorPrescription" : {
+    "display" : "pantoprazole 40 MG tablet",
+    "reference" : "MedicationRequest/emraOjlGzAVobyiDeN623-EF5ax3mR1M1P6aY3sLoWsI3"
+  },
+  "courseOfTherapyType" : {
+    "text" : "Continuous long term therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Continuous long term therapy",
+        "code" : "continuous"
+      }
+    ]
+  },
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ex.ogNv0OHMmKrxfrIA8Jkg3",
+    "display" : "J May, MD"
+  },
+  "intent" : "order"
+}

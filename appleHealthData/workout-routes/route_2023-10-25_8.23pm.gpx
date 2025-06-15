@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Apple Health Export" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <time>2025-05-16T16:02:36Z</time>
+  </metadata>
+  <trk>
+    <name>Route 2023-10-25 8:23pm</name>
+    <trkseg>
+      <trkpt lon="-94.713460" lat="38.813451"><ele>319.797028</ele><time>2023-10-26T01:23:15Z</time><extensions><speed>0.026003</speed><course>103.741596</course><hAcc>4.820258</hAcc><vAcc>3.254174</vAcc></extensions></trkpt>
+      <trkpt lon="-94.713460" lat="38.813451"><ele>319.803499</ele><time>2023-10-26T01:23:16Z</time><extensions><speed>0.000000</speed><course>103.741596</course><hAcc>4.814970</hAcc><vAcc>3.261993</vAcc></extensions></trkpt>
+      <trkpt lon="-94.713446" lat="38.813444"><ele>319.833163</ele><time>2023-10-26T01:23:17Z</time><extensions><speed>0.081071</speed><course>103.741607</course><hAcc>4.844525</hAcc><vAcc>3.217936</vAcc></extensions></trkpt>
+      <trkpt lon="-94.713447" lat="38.813444"><ele>319.853325</ele><time>2023-10-26T01:23:18Z</time><extensions><speed>0.000000</speed><course>103.741606</course><hAcc>4.863089</hAcc><vAcc>3.189812</vAcc></extensions></trkpt>
+      <trkpt lon="-94.713447" lat="38.813444"><ele>319.853325</ele><time>2023-10-26T01:23:19Z</time><extensions><speed>0.000000</speed><course>103.741606</course><hAcc>4.847025</hAcc><vAcc>3.214169</vAcc></extensions></trkpt>
+      <trkpt lon="-94.713447" lat="38.813444"><ele>319.853325</ele><time>2023-10-26T01:23:20Z</time><extensions><speed>0.000000</speed><course>103.741606</course><hAcc>4.828142</hAcc><vAcc>3.242466</vAcc></extensions></trkpt>
+      <trkpt lon="-94.713447" lat="38.813444"><ele>319.853325</ele><time>2023-10-26T01:23:21Z</time><extensions><speed>0.000000</speed><course>103.741606</course><hAcc>4.817975</hAcc><vAcc>3.257554</vAcc></extensions></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

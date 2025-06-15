@@ -1,0 +1,439 @@
+{
+  "id" : "ecUxDEwVtw8hFBUDBJ6ScT37g4cEZGAJ0avB.qMgTbys3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Refill",
+    "reference" : "Encounter/ekv91JpPGCMlNzHlYDhyxXk17wtZl-4PIUBtP5DCczpE3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100175316779"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Left upper limb pain",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Pain in left arm (finding)",
+          "code" : "287045000"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Pain in left arm",
+          "code" : "M79.602"
+        }
+      ]
+    },
+    {
+      "text" : "Chronic left shoulder pain",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Chronic pain of left upper limb (finding)",
+          "code" : "15743561000119103"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Pain in left shoulder",
+          "code" : "M25.512"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Other chronic pain",
+          "code" : "G89.29"
+        }
+      ]
+    },
+    {
+      "text" : "Schwannomatosis",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Full schwannomatosis (disorder)",
+          "code" : "1332358007"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Schwannomatosis",
+          "code" : "Q85.03"
+        }
+      ]
+    },
+    {
+      "text" : "Encounter for therapeutic drug monitoring",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Patient encounter status (finding)",
+          "code" : "305058001"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Encounter for therapeutic drug level monitoring",
+          "code" : "Z51.81"
+        }
+      ]
+    },
+    {
+      "text" : "Continuous use of opioids",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Continuous opioid dependence (disorder)",
+          "code" : "191819002"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Opioid use, unspecified, uncomplicated",
+          "code" : "F11.90"
+        }
+      ]
+    },
+    {
+      "text" : "Chronic pain syndrome",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Chronic pain syndrome (disorder)",
+          "code" : "373621006"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Chronic pain syndrome",
+          "code" : "G89.4"
+        }
+      ]
+    },
+    {
+      "text" : "Neuropathic pain",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Neuropathic pain (finding)",
+          "code" : "247398009"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Neuralgia and neuritis, unspecified",
+          "code" : "M79.2"
+        }
+      ]
+    },
+    {
+      "text" : "Upper back pain",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Backache (finding)",
+          "code" : "161891005"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Dorsalgia, unspecified",
+          "code" : "M54.9"
+        }
+      ]
+    },
+    {
+      "text" : "Chronic head pain",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Chronic pain (finding)",
+          "code" : "82423001"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Headache, unspecified",
+          "code" : "R51.9"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Other chronic pain",
+          "code" : "G89.29"
+        }
+      ]
+    },
+    {
+      "text" : "Tumor of nerve sheath",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Neoplasm of nerve sheath origin (disorder)",
+          "code" : "402874001"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Neoplasm of unspecified behavior of bone, soft tissue, and skin",
+          "code" : "D49.2"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "MedicationRequest",
+  "status" : "stopped",
+  "medicationReference" : {
+    "display" : "meloxicam 15 MG tablet",
+    "reference" : "Medication/eyo-Hn5VVwhFpOSKZ.oR40rMik.JwoFACNdHZR-Kw3ELAJaPSnr.MMiFXFZNXacPb46O7WlMy2Mf1sBfcrPsCPxDyo8JnPRzy.3R5l8TdDYM3"
+  },
+  "contained" : [
+    {
+      "code" : {
+        "text" : "meloxicam 15 MG tablet",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "M01AC06"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "29157"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "41493"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "152695"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "152699"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1086708"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1364057"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1439977"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1482670"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1495051"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1788847"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2118582"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2267587"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2281107"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "2621702"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "152698"
+          }
+        ]
+      },
+      "id" : "eyo-Hn5VVwhFpOSKZ.oR40rMik.JwoFACNdHZR-Kw3ELAJaPSnr.MMiFXFZNXacPb46O7WlMy2Mf1sBfcrPsCPxDyo8JnPRzy.3R5l8TdDYM3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "tablet",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.698288.310",
+            "display" : "tablet",
+            "code" : "Tab"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.698288",
+          "value" : "20580"
+        }
+      ],
+      "ingredient" : [
+        {
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 15,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 15,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            }
+          },
+          "itemCodeableConcept" : {
+            "text" : "meloxicam 15 MG tablet",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "M01AC06"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "29157"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "41493"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "152695"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "152699"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1086708"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1364057"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1439977"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1482670"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1495051"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1788847"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2118582"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2267587"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2281107"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "2621702"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "152698"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "370843205"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eQxn0XWj5AuiAgT-cKVqBTw3",
+    "display" : "M Bilezikjian, MD"
+  },
+  "authoredOn" : "2022-11-03",
+  "dosageInstruction" : [
+    {
+      "patientInstruction" : "TAKE ONE TABLET BY MOUTH EVERY DAY",
+      "text" : "TAKE ONE TABLET BY MOUTH EVERY DAY, Normal",
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2022-11-03",
+            "end" : "2023-01-23"
+          }
+        }
+      }
+    }
+  ],
+  "dispenseRequest" : {
+    "quantity" : {
+      "value" : 180,
+      "unit" : "tablet"
+    },
+    "expectedSupplyDuration" : {
+      "code" : "d",
+      "value" : 81,
+      "system" : "http://unitsofmeasure.org",
+      "unit" : "Day"
+    },
+    "validityPeriod" : {
+      "start" : "2022-11-03",
+      "end" : "2023-01-23"
+    },
+    "numberOfRepeatsAllowed" : 0
+  },
+  "priorPrescription" : {
+    "display" : "meloxicam 15 MG tablet",
+    "reference" : "MedicationRequest/e1xEHwK-C6D7DY6BVnrVEe.KYs9RJiEXPwTdcQJhpj1M3"
+  },
+  "courseOfTherapyType" : {
+    "text" : "Continuous long term therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Continuous long term therapy",
+        "code" : "continuous"
+      }
+    ]
+  },
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eQxn0XWj5AuiAgT-cKVqBTw3",
+    "display" : "M Bilezikjian, MD"
+  },
+  "intent" : "order"
+}

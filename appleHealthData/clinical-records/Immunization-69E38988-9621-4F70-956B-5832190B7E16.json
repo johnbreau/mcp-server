@@ -1,0 +1,36 @@
+{
+  "status" : "completed",
+  "primarySource" : false,
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "id" : "ebNKOvv2Ng2S3AKvAo-LpfLuWj16.5gEjr7TSHROLidE3",
+  "occurrenceDateTime" : "2012-11-09",
+  "vaccineCode" : {
+    "text" : "Tdap Vaccine",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "115"
+      }
+    ]
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/ekAZyCMCC8gumyL2EDL3omQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1094714623"
+    }
+  },
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.768076",
+      "value" : "25267646"
+    }
+  ],
+  "resourceType" : "Immunization"
+}

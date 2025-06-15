@@ -1,0 +1,97 @@
+{
+  "id" : "eYdUhHBl98RQ8t-2FT9hFun.C5iEIhuX.L8eOX0gBGm78J4HugB31G33-EpUNe8FvMMoiCM9yxtgTTIrqnTw-Bw3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Blood Draw",
+    "reference" : "Encounter/eZve909L9JXCQzcXEZ1h0xQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3637819455"
+    }
+  },
+  "effectiveDateTime" : "2024-12-05T14:31:00Z",
+  "resourceType" : "Observation",
+  "note" : [
+    {
+      "text" : "Check MAR for the target range that is ordered for your patient."
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "PTT",
+      "reference" : "ServiceRequest/ebACiQjq17Y8r7m09Bc9BTSRYMnoN36Lmcz2JOJPtTGA3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen SQ_H7325798_384L168814_",
+    "reference" : "Specimen/enBRQ9hsQLGBYySOldXfS1tAmenBiKAbjJvGXsOhsRoA3"
+  },
+  "code" : {
+    "text" : "APTT",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "aPTT in Blood by Coagulation assay",
+        "code" : "3173-2"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.91",
+        "code" : "PTT"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.818",
+        "code" : "5200011266"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.768282",
+        "display" : "APTT",
+        "code" : "5200011266"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "value" : 24,
+        "unit" : "sec"
+      },
+      "high" : {
+        "value" : 37.5,
+        "unit" : "sec"
+      },
+      "text" : "24.0 - 37.5 sec"
+    }
+  ],
+  "valueQuantity" : {
+    "value" : 35.3,
+    "unit" : "sec"
+  },
+  "status" : "final",
+  "issued" : "2024-12-05T15:08:30Z"
+}

@@ -1,0 +1,80 @@
+{
+  "category" : [
+    {
+      "text" : "Problem List Item",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "display" : "Problem List Item",
+          "code" : "problem-list-item"
+        }
+      ]
+    }
+  ],
+  "clinicalStatus" : {
+    "text" : "Active",
+    "coding" : [
+      {
+        "code" : "active",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "display" : "Active",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "id" : "exaYStx6scOfajZ.haTWHixGF.MFvvP9DJ2FXhFXWWTA3",
+  "code" : {
+    "text" : "Gastroesophageal reflux disease",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+        "display" : "Gastro-esophageal reflux disease without esophagitis",
+        "code" : "K21.9"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Gastroesophageal Reflux Disease",
+        "code" : "235595009"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Acid Reflux",
+        "code" : "698065002"
+      },
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+        "display" : "Gastroesophageal reflux disease",
+        "code" : "530.81"
+      },
+      {
+        "system" : "urn:oid:2.16.840.1.113883.3.247.1.1",
+        "display" : "Gastroesophageal reflux disease",
+        "code" : "8169"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "verificationStatus" : {
+    "text" : "Confirmed",
+    "coding" : [
+      {
+        "code" : "confirmed",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "display" : "Confirmed",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime" : "2023-07-13"
+    }
+  ],
+  "resourceType" : "Condition",
+  "onsetDateTime" : "2011-02-16",
+  "recordedDate" : "2023-07-13"
+}

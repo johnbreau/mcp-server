@@ -1,0 +1,38 @@
+{
+  "status" : "completed",
+  "primarySource" : false,
+  "patient" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "id" : "ezMSXLbviQVLGFGNVEOxLZM0lj8Sz4BcKP9tCFhNXIjE3",
+  "occurrenceDateTime" : "2021-04-05",
+  "vaccineCode" : {
+    "text" : "PFIZER 12+ YR PURPLE CAP (must dilute) SARS-COV-2 (COVID-19) vaccine, mRNA, 30mcg/0.3mL dose",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "208"
+      }
+    ]
+  },
+  "lotNumber" : "ER8730",
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768076",
+      "value" : "50409812"
+    }
+  ],
+  "resourceType" : "Immunization",
+  "reportOrigin" : {
+    "text" : "Auto Reconciled From Outside Source",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.768076.4082",
+        "display" : "Auto Reconciled From Outside Source",
+        "code" : "4"
+      }
+    ]
+  }
+}

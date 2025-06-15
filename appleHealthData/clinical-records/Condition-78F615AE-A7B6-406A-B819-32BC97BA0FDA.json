@@ -1,0 +1,84 @@
+{
+  "category" : [
+    {
+      "text" : "Problem List Item",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "display" : "Problem List Item",
+          "code" : "problem-list-item"
+        }
+      ]
+    },
+    {
+      "text" : "Health Concern",
+      "coding" : [
+        {
+          "system" : "http://loinc.org",
+          "display" : "Health concerns Document",
+          "code" : "75310-3"
+        },
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
+          "display" : "Health Concern",
+          "code" : "health-concern"
+        }
+      ]
+    }
+  ],
+  "clinicalStatus" : {
+    "text" : "Active",
+    "coding" : [
+      {
+        "code" : "active",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "display" : "Active",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "id" : "eyrlEQ-UB9MH4iYIHmZDWaQ3",
+  "code" : {
+    "text" : "Schwannomatosis",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+        "display" : "Schwannomatosis",
+        "code" : "Q85.03"
+      },
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Full Schwannomatosis",
+        "code" : "1332358007"
+      },
+      {
+        "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+        "display" : "Schwannomatosis (CMS/HCC)",
+        "code" : "237.73"
+      },
+      {
+        "system" : "urn:oid:2.16.840.1.113883.3.247.1.1",
+        "display" : "Schwannomatosis (CMS/HCC)",
+        "code" : "954064"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "verificationStatus" : {
+    "text" : "Confirmed",
+    "coding" : [
+      {
+        "code" : "confirmed",
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "display" : "Confirmed",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "onsetDateTime" : "2012-11-09",
+  "resourceType" : "Condition",
+  "recordedDate" : "2015-04-11"
+}

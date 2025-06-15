@@ -1,0 +1,61 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MR BRACHIAL PLEXUS RIGHT WITHOUT AND WITH IV CONTRAST",
+      "reference" : "ServiceRequest/ebwNQWSvxJZobAJCKDMtY02jv63ky9hCIKlNjFdhcsP03"
+    }
+  ],
+  "id" : "e3MM2yV6mzN-Ta38POeOQBpneK84fpWLrl2Nygmdijjw3",
+  "code" : {
+    "text" : "Impression"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/erXKpTFgudWq3SMmzlzp6H62jr.BVSR26xvLUw0hqYl03",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+      "value" : "2000613057208"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "performer" : [
+    {
+      "display" : "Mark Collins, M.D.",
+      "reference" : "Practitioner/eTbvPwylD1c9fxV63qeKC6A3"
+    },
+    {
+      "display" : "Sean Huls, M.D.",
+      "reference" : "Practitioner/eUuzZyE11V3ia.ErM0AVb6w3"
+    }
+  ],
+  "effectiveDateTime" : "2024-06-19T17:29:38Z",
+  "valueString" : "Numerous peripheral nerve sheath tumors involving the right cervical nerve roots the largest of which measured 2.2 cm relatively C8 nerve root and 3.3 cm arising from the T1 nerve root. No significant change in right-sided schwannomas since \r\n2/23/2015.. No focal suspicious findings.",
+  "resourceType" : "Observation"
+}

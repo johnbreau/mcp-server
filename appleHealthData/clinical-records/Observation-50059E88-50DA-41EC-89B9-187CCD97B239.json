@@ -1,0 +1,146 @@
+{
+  "id" : "eiLC5ArNoEoWp8WLEPxMRxJylU.m8OGmGuz.Ohypg9nwPQAgSlmRWpIt3Z0Jf9lnq5lz0JOBCHDUeDBV8gc5lIA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eDQYEe8ZwLcgFNCXJAbELlQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1099710815"
+    }
+  },
+  "effectiveDateTime" : "2023-11-21T19:12:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "LIPID PROFILE",
+      "reference" : "ServiceRequest/eYRuF7z3OhXVip2gS3h9aBWIaz4xtDcgVDjY3NdQJdz43"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen T60965",
+    "reference" : "Specimen/enSqaJfHFR6fPTYL09cHgNlxfyLFIbJLZ80IajkQ2AT43"
+  },
+  "code" : {
+    "text" : "Triglycerides",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Triglyceride [Mass/volume] in Serum or Plasma",
+        "code" : "2571-8"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.36",
+        "code" : "TRIG"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.69",
+        "code" : "TRIG"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "25002900"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "85999595"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.234",
+        "code" : "TRIG"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900605100"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "85991150"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.259",
+        "code" : "TST17"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.259",
+        "code" : "TST413"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900427604"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "86025199"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900435278"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900443007"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.97",
+        "code" : "900445101"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.768282",
+        "display" : "Triglycerides",
+        "code" : "2319"
+      }
+    ]
+  },
+  "interpretation" : [
+    {
+      "text" : "High",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display" : "High",
+          "code" : "H"
+        }
+      ]
+    }
+  ],
+  "referenceRange" : [
+    {
+      "text" : "<150"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "MG/DL",
+    "value" : 355,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "MG/DL"
+  },
+  "status" : "final",
+  "issued" : "2023-11-21T22:19:10Z"
+}

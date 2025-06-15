@@ -1,0 +1,106 @@
+{
+  "id" : "eeGnfSwTOSG-zmVxTj9NgCNuVT6vv5GDEd-vswDKAcsgvbevmuJq0RrUr7l74qdl1dPdMui.FKJ6F0OrjTt81xA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Visit Encounter",
+    "reference" : "Encounter/ePTJCitQoO-HzgRQ0yhzKgQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1289967743"
+    }
+  },
+  "effectiveDateTime" : "2019-05-29T17:25:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CBC W/ AUTO DIFFERENTIAL",
+      "reference" : "ServiceRequest/ese6FQp2HRokxJnTK8Ocx6uFZhs5GVZoBv6tnwMA8uvo3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen C52907964:98811066",
+    "reference" : "Specimen/eM3uhmbQa8yvif76s5exaFx2SIw9U6-yoHkOvZkRcBUw3"
+  },
+  "code" : {
+    "text" : "Hemoglobin",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Hemoglobin [Mass/volume] in Blood",
+        "code" : "718-7"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.179",
+        "code" : "HGB"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "Hemoglobin",
+        "code" : "2000000002"
+      }
+    ]
+  },
+  "interpretation" : [
+    {
+      "text" : "High",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display" : "High",
+          "code" : "H"
+        }
+      ]
+    }
+  ],
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "g/dL",
+        "value" : 13.9,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "g/dL"
+      },
+      "high" : {
+        "code" : "g/dL",
+        "value" : 16.3,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "g/dL"
+      },
+      "text" : "13.9 - 16.3 g/dL"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "g/dL",
+    "value" : 16.6,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "g/dL"
+  },
+  "status" : "final",
+  "issued" : "2019-05-29T17:52:29Z"
+}

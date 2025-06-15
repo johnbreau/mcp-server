@@ -1,0 +1,62 @@
+{
+  "id" : "e9aV7.JAGZ-gJjakh6c2fe7C6GV81AbIg1S53RTCF08s3",
+  "primarySource" : false,
+  "reportOrigin" : {
+    "text" : "Auto Reconciled From Outside Source",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4082"
+      }
+    ]
+  },
+  "resourceType" : "Immunization",
+  "occurrenceDateTime" : "2022-11-16",
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.768076",
+      "value" : "23202134"
+    }
+  ],
+  "location" : {
+    "display" : "KS5003007"
+  },
+  "lotNumber" : "GJ6738",
+  "manufacturer" : {
+    "display" : "Pfizer, Inc."
+  },
+  "route" : {
+    "text" : "Intramuscular",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4030",
+        "display" : "Intramuscular",
+        "code" : "2"
+      }
+    ]
+  },
+  "vaccineCode" : {
+    "text" : "COVID-19 Bivalent (12YR+)(PFIZER), mRNA vacc, 30mcg/0.3mL",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "300"
+      }
+    ]
+  },
+  "site" : {
+    "text" : "Left deltoid",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4040",
+        "display" : "Left deltoid",
+        "code" : "7"
+      }
+    ]
+  },
+  "status" : "completed",
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  }
+}

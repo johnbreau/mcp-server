@@ -1,0 +1,133 @@
+{
+  "id" : "emMeux8hQaYgZ77K-65S36OqrHV..a5JyMTI8oqqqYnpVUikswugh6hP5MPRwVGRx3",
+  "category" : {
+    "text" : "Surgical Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Surgical procedure",
+        "code" : "387713003"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Procedure",
+    "reference" : "Encounter/e8xa1Exxl3FVbk2VQQHE7gg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1104308472"
+    }
+  },
+  "performedPeriod" : {
+    "start" : "2024-02-12T18:46:00Z",
+    "end" : "2024-02-12T19:20:00Z"
+  },
+  "resourceType" : "Procedure",
+  "reasonCode" : [
+    {
+      "text" : "Gastroesophageal reflux disease with esophagitis without hemorrhage",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Gastroesophageal reflux disease with esophagitis without hemorrhage",
+          "code" : "530.81"
+        }
+      ]
+    }
+  ],
+  "usedReference" : [
+    {
+      "display" : "STERILE WATER/SIMETHICONE IRRIGATION",
+      "reference" : "Medication/eRaZFx7Gv07VV6D1bYTljWg3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798276",
+      "value" : "3098789",
+      "type" : {
+        "text" : "ORL"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.696580",
+      "value" : "14047",
+      "type" : {
+        "text" : "EAP"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798069",
+      "value" : "2258199",
+      "type" : {
+        "text" : "OPE"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "EGD TRANSORAL BIOPSY SINGLE/MULTIPLE",
+    "coding" : [
+      {
+        "system" : "http://www.ama-assn.org/go/cpt",
+        "display" : "PR EGD TRANSORAL BIOPSY SINGLE/MULTIPLE",
+        "code" : "43239"
+      }
+    ]
+  },
+  "recorder" : {
+    "type" : "Practitioner",
+    "display" : "Reports O"
+  },
+  "performer" : [
+    {
+      "actor" : {
+        "type" : "Practitioner",
+        "reference" : "Practitioner/eRkdcqIYJ9mvxbBpx2RyHLw3",
+        "display" : "R Hejazi, MD"
+      }
+    }
+  ],
+  "location" : {
+    "display" : "KU MEDWEST",
+    "reference" : "Location/eVcobnDz0tdx7u.4taVbltw3"
+  },
+  "report" : [
+    {
+      "reference" : "DocumentReference/eRpnss.m-VWkQaepDoY1znwsqSzkBHaqiTOnODo3lkm43"
+    },
+    {
+      "reference" : "DocumentReference/ehlbDIumQMFs0Ab7ppaHA6JaSSZKHCbNf0ImhonDUq9Q3"
+    },
+    {
+      "reference" : "DocumentReference/eg6Qt93W.Fe7xk1BNkzC5hhWPo75rpJgmqIcBraOpy643"
+    },
+    {
+      "reference" : "DocumentReference/emceH3fmls3ITkVNyrvsX5nCN3csEJ2mD7k2OY58hdlA3"
+    },
+    {
+      "reference" : "DocumentReference/eE6pUdMOYNI-.ovvENFwbFiYvjiZEEc-dv8exV3p7vvI3"
+    },
+    {
+      "reference" : "DocumentReference/eKc1l93ZyYCJRw521HNVslF.GdQRwAFjeRfJt61E6KBo3"
+    }
+  ],
+  "status" : "completed",
+  "outcome" : {
+    "text" : "Home or Self Care",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.798276.402",
+        "display" : "Home or Self Care",
+        "code" : "01"
+      }
+    ]
+  }
+}

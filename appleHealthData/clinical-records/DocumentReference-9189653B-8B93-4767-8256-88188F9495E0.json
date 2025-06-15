@@ -1,0 +1,289 @@
+{
+  "id" : "e.6ZTlH2qczY.Vu-OARYnIHnoPWloizD9nFwhvCYlQ9w3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eW6zhJzje9aVvQ663F6wVdS6JdlkBz1thZ1ZvMwbsZS43",
+      "display" : "J Southwell, DO"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eW6zhJzje9aVvQ663F6wVdS6JdlkBz1thZ1ZvMwbsZS43",
+    "display" : "J Southwell, DO",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2023-02-08T22:01:54Z"
+      }
+    ]
+  },
+  "context" : {
+    "related" : [
+      {
+        "reference" : "ServiceRequest/et5Vq.adv6B34XOrjyaCNujHAaci-1mNM8vfNmzfnWdw3",
+        "display" : "EMG PROCEDURE",
+        "type" : "ServiceRequest",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798268",
+          "value" : "1359085944"
+        }
+      }
+    ],
+    "encounter" : [
+      {
+        "display" : "Procedure visit",
+        "reference" : "Encounter/es4hItU7Y7rhfdAJpeaUMIw3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+          "value" : "1087375005"
+        }
+      }
+    ],
+    "period" : {
+      "start" : "2023-02-08T20:45:00Z"
+    },
+    "event" : [
+      {
+        "text" : "NEEDLE EMG EA EXTREMTY W/PARASPINL AREA COMPLETE",
+        "coding" : [
+          {
+            "system" : "http://www.ama-assn.org/go/cpt",
+            "display" : "PR NEEDLE EMG EA EXTREMTY W/PARASPINL AREA COMPLETE",
+            "code" : "95886"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.304",
+            "code" : "95886"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.696580",
+            "display" : "NEEDLE EMG EA EXTREMTY W/PARASPINL AREA COMPLETE",
+            "code" : "10222160"
+          }
+        ]
+      },
+      {
+        "text" : "NERVE CONDUCTION STUDIES 5-6 STUDIES",
+        "coding" : [
+          {
+            "system" : "http://www.ama-assn.org/go/cpt",
+            "display" : "PR NERVE CONDUCTION STUDIES 5-6 STUDIES",
+            "code" : "95909"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.5.737384.304",
+            "code" : "95909"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.696580",
+            "display" : "NERVE CONDUCTION STUDIES 5-6 STUDIES",
+            "code" : "10251089"
+          }
+        ]
+      }
+    ],
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Physician",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.836982.1040",
+              "display" : "Physician",
+              "code" : "1"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      },
+      {
+        "valueCodeableConcept" : {
+          "text" : "Left carpal tunnel syndrome",
+          "coding" : [
+            {
+              "system" : "http://snomed.info/sct",
+              "display" : "Carpal tunnel syndrome of left wrist (disorder)",
+              "code" : "293861000119102"
+            },
+            {
+              "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+              "display" : "Carpal tunnel syndrome, left upper limb",
+              "code" : "G56.02"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-pre-procedure-diagnosis"
+      },
+      {
+        "valueCodeableConcept" : {
+          "text" : "Entrapment of left ulnar nerve",
+          "coding" : [
+            {
+              "system" : "http://snomed.info/sct",
+              "display" : "Entrapment of left ulnar nerve (disorder)",
+              "code" : "292741000119101"
+            },
+            {
+              "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+              "display" : "Lesion of ulnar nerve, left upper limb",
+              "code" : "G56.22"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-post-procedure-diagnosis"
+      },
+      {
+        "valueCodeableConcept" : {
+          "text" : "Left median nerve neuropathy",
+          "coding" : [
+            {
+              "system" : "http://snomed.info/sct",
+              "display" : "Disorder of left median nerve (disorder)",
+              "code" : "292801000119105"
+            },
+            {
+              "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+              "display" : "Other lesions of median nerve, left upper limb",
+              "code" : "G56.12"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-post-procedure-diagnosis"
+      },
+      {
+        "valueCodeableConcept" : {
+          "text" : "Brachial plexopathy",
+          "coding" : [
+            {
+              "system" : "http://snomed.info/sct",
+              "display" : "Brachial plexus disorder (disorder)",
+              "code" : "3548001"
+            },
+            {
+              "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+              "display" : "Brachial plexus disorders",
+              "code" : "G54.0"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-post-procedure-diagnosis"
+      }
+    ]
+  },
+  "type" : {
+    "text" : "Procedures",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.737880.5010",
+        "display" : "Procedures",
+        "code" : "3"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Procedures",
+        "code" : "3"
+      },
+      {
+        "code" : "28570-0",
+        "system" : "http://loinc.org",
+        "display" : "Procedure note",
+        "userSelected" : true
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.727879",
+      "value" : "1487073174"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.177.2.7.2.727879_1487073174"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2023-02-08T22:01:11Z",
+  "custodian" : {
+    "display" : "University of Kansas Health System",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:TheUniversityofKansasHospital:PRD.CE"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2023-02-08T22:01:54Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "J Southwell, DO",
+            "reference" : "Practitioner/eW6zhJzje9aVvQ663F6wVdS6JdlkBz1thZ1ZvMwbsZS43"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eIUB4PCUMR7syzsxyFq.pcNPOds1ibOmecwqgQZ7ccAc3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fiXO0IW0pilI2Wl6MWJFJT51I5ANAvLiAmZy0XNBdK784"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

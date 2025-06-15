@@ -1,0 +1,61 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MRI BRACH PLEX & AXIL WOW CONT",
+      "reference" : "ServiceRequest/ef9S6L2JgkKKg-EGOfv6hhyLmQy54JyxI308cHXuxLwg3"
+    }
+  ],
+  "id" : "ezhVIPiNPICmjxbIPveduzpNeYzFWicHtRZlWTqBWO4Q3",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eqJrJSflvPV19ac3zrGSvNg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1041879885"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "performer" : [
+    {
+      "display" : "N Harn, MD",
+      "reference" : "Practitioner/eYdfb1ArNuSODsqJLE54DXw3"
+    },
+    {
+      "display" : "Bryce Hansen, MD",
+      "reference" : "Practitioner/eUuI8Q0rCKYsDqkDkvDMo8A3"
+    }
+  ],
+  "effectiveDateTime" : "2019-10-28T20:18:01Z",
+  "valueString" : "\r\n\r\nEXAM: MRI BRACHIAL PLEXUS\r\n\r\n\r\nHISTORY: \r\n\r\n\r\nSchwannomatosis, neuropathic pain, muscle weakness, left shoulder pain\r\n\r\n\r\nTechnique: Sagittal, coronal, and axial images were obtained of the left brachial plexus.\r\n\r\n\r\nComparison: None\r\n\r\n\r\nFINDINGS: \r\n\r\n\r\nDr. Nicholas Harn, M.D. has personally reviewed these images and formulated the interpretations and opinions expressed in this report.\r\n\r\n\r\nThere are multiple large T2 hyperintense lesions involving all left cervical and visualized upper thoracic nerve roots. There is artifactual distortion of the cervical fat saturation which limits evaluation of postcontrast imaging. The largest measured lesion is involves the left C3 foraminal and extraforaminal measuring 7 cm x 2.3 cm (series 7#19). \r\n\r\n\r\nThe root lesions extend to the brachial plexus involving the upper trunk and inferior trunk (series 7#18 and series 7#17, respectively). No involvement of the distal brachial plexus is confidently seen. \r\n\r\n\r\nA 2.3 cm lesion in the left cricothyroid notch is present, which could involve the recurrent laryngeal nerve (series 5#27). A small submucosal T2 hyperintense lesion in the lower left tonsillar pillar, with additional scattered smaller submucosal lesions. \r\n\r\n\r\nAdditional intercostal, intramuscular, and subcutaneous lesions are seen. One is seen in the posterior mediastinum at the level of the carina.\r\n\r\n",
+  "resourceType" : "Observation"
+}

@@ -1,0 +1,71 @@
+{
+  "id" : "eIgMEsW-1qS3tH9ds8Em6RZ5UJ03d3IugDiaqqhLrxAw8Y-uZtSTLSfCGgi1vO3QoYzdDfbFA6OuX-42SMFoOrA3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Pathology and Cytology",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Pathology and Cytology",
+          "code" : "Path,Cyt"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Encounter",
+    "reference" : "Encounter/eQrMEJoYDrWwrlvodgmqSjg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1287119909"
+    }
+  },
+  "effectiveDateTime" : "2019-06-21T18:53:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "SURGICAL PATHOLOGY: ROUTINE SPECIMEN",
+      "reference" : "ServiceRequest/eOm57Z3DODONvT.MplxUAHH3ajO9luhuoJBvtzDon00U3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen A",
+    "reference" : "Specimen/eYKvo5qFvTplC.SEjWfj9-vr9TnSWnTzUHvL.ZvMeCaY3"
+  },
+  "code" : {
+    "text" : "Diagnosis",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.335",
+        "code" : "DIAG"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.5.737384.349",
+        "code" : "DIAG"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "Diagnosis",
+        "code" : "1230000007"
+      }
+    ]
+  },
+  "valueString" : "1. Head, Posterior scalp mass (excision): Schwannoma (5.4 cm) with \r\ndegenerative changes and osseous metaplasia involving the subcutaneous \r\ntissue, focally extending to the deep specimen edge. Associated benign \r\nskin and skeletal muscle. See note.\r\n\r\n\r\nNOTE:  This case was shown at the Daily Quality Assurance Conference.\r\n\r\n",
+  "status" : "final",
+  "issued" : "2019-06-26T22:05:45Z"
+}

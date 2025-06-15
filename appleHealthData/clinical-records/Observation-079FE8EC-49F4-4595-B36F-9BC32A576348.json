@@ -1,0 +1,122 @@
+{
+  "id" : "e.-oy1OGiQl-UmxwdpQyvlWYQjrg1.icSgt6xW5R4yw77Rdo.y54c1uYWyaxx-KG1hDb0ctequKpXa4YZIuKFCQ3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Lab",
+    "reference" : "Encounter/ej5vdC6.m0IwYnvToZlxml-4l6mnMfPpZ2rlYlrUhD9U3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100104376927"
+    }
+  },
+  "effectiveDateTime" : "2016-08-23T16:51:00Z",
+  "resourceType" : "Observation",
+  "note" : [
+    {
+      "text" : "Reference ranges:\r\n AM  5.0 - 25.0 ug/dl\r\n PM  0.0 - 10.0 ug/dl\r\n"
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "CORTISOL",
+      "reference" : "ServiceRequest/e6bnwaHfhJ6m17ZQkmpiuWpr58zwJRTVnTKUFv08Q9q83"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen 162362621794",
+    "reference" : "Specimen/eVhcsMy5K6tQQlp4goG5Z3DfiUTyV3vYcZqkGh22fkcg3"
+  },
+  "code" : {
+    "text" : "Cortisol",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Cortisol [Mass/volume] in Serum or Plasma",
+        "code" : "2143-6"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3262300"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.70",
+        "code" : "35202-1"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.47",
+        "code" : "CORTISOL"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.26",
+        "code" : "004054"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "55072600"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3154100"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3154300"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.286",
+        "code" : "CORTISOL"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.187",
+        "code" : "L3006100"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.24",
+        "code" : "85990260"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.681",
+        "code" : "000041"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.768282",
+        "display" : "Cortisol",
+        "code" : "1526246"
+      }
+    ]
+  },
+  "valueQuantity" : {
+    "code" : "ug/dL",
+    "value" : 2.5,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "ug/dL"
+  },
+  "status" : "final",
+  "issued" : "2016-08-23T23:46:01Z"
+}

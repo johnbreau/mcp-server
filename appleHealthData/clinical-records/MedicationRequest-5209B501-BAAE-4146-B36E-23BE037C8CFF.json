@@ -1,0 +1,269 @@
+{
+  "id" : "eekJEhpUm-eyJ5DjXzUtOG-rwZEW0nj2fyz7hRX.-j2E3",
+  "category" : [
+    {
+      "text" : "Outpatient",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Outpatient",
+          "code" : "outpatient"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Infusion",
+    "reference" : "Encounter/eEIBkJY50Gxm5euGyJhseSA3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3634114152"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Chronic pain due to neoplasm",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Pain due to neoplastic disease (finding)",
+          "code" : "98921000119102"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Chronic pain due to neoplasm",
+          "code" : "338.3"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Chronic pain due to neoplasm",
+          "code" : "G89.3"
+        }
+      ]
+    },
+    {
+      "text" : "Schwannomatosis",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Full schwannomatosis (disorder)",
+          "code" : "1332358007"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Schwannomatosis",
+          "code" : "237.73"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Schwannomatosis",
+          "code" : "Q85.03"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "MedicationRequest",
+  "status" : "completed",
+  "medicationReference" : {
+    "display" : "ID-siltuximab or placebo (22-512) powder for reconstitution 100 mg",
+    "reference" : "Medication/eiU3D9zWjzrQldqJC0FNyLqSHnKWDd5Z2v5nBkcTGgOEBQC0PQk8pgM0J8AcEEQVtNKqlsBzkqQuUzNyTaFggOPdgbMY2WLKud-2aiU6SvQ83"
+  },
+  "priority" : "routine",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "ID-siltuximab or placebo (22-512) powder for reconstitution 100 mg"
+      },
+      "id" : "eiU3D9zWjzrQldqJC0FNyLqSHnKWDd5Z2v5nBkcTGgOEBQC0PQk8pgM0J8AcEEQVtNKqlsBzkqQuUzNyTaFggOPdgbMY2WLKud-2aiU6SvQ83",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Bag",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.4.698288.310",
+            "display" : "Bag",
+            "code" : "Bag"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.698288",
+          "value" : "9004086788"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemReference" : {
+            "display" : "ID-siltuximab or placebo",
+            "reference" : "Medication/e3lQ06vGpXPB6-22FWyHzAA3"
+          },
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 938,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mg"
+            },
+            "denominator" : {
+              "code" : "mL",
+              "value" : 250,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mL"
+            }
+          }
+        },
+        {
+          "itemReference" : {
+            "display" : "D5W",
+            "reference" : "Medication/eeNVviOFUZhfpv-sbt4taJQ3"
+          },
+          "strength" : {
+            "numerator" : {
+              "code" : "mL",
+              "value" : 203.1,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mL"
+            },
+            "denominator" : {
+              "code" : "mL",
+              "value" : 250,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "mL"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.798268",
+      "value" : "1487578669"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ej1zxM0eOK91G7-VuLyLPIg3",
+    "display" : "Scott Plotkin, MD, PhD"
+  },
+  "authoredOn" : "2024-11-11T15:24:34Z",
+  "dosageInstruction" : [
+    {
+      "asNeededBoolean" : false,
+      "timing" : {
+        "code" : {
+          "text" : "once"
+        },
+        "repeat" : {
+          "durationUnit" : "min",
+          "boundsPeriod" : {
+            "start" : "2024-11-11T16:15:00Z",
+            "end" : "2024-11-11T19:10:00Z"
+          },
+          "count" : 1,
+          "duration" : 60
+        }
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "calculated",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "calculated",
+                "code" : "calculated"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 938,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        },
+        {
+          "type" : {
+            "text" : "admin-amount",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "admin-amount",
+                "code" : "admin-amount"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 938,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        },
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg/kg",
+            "value" : 11,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg/kg"
+          }
+        }
+      ],
+      "route" : {
+        "text" : "Intravenous",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Intravenous route (qualifier value)",
+            "code" : "47625008"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.4.798268.7025",
+            "display" : "Intravenous",
+            "code" : "11"
+          }
+        ]
+      },
+      "text" : "938 mg (rounded from 938.3 mg = 11 mg/kg × 85.3 kg Treatment plan Recorded weight), Intravenous, Administer over 60 Minutes, Once, On Mon 11/11/24 at 1115, For 1 dose\nPatient is to be observed for 30 minutes after infusion completion. Administer using a 0.2 micron polyethersulfone (PES) in-line filter.\n"
+    }
+  ],
+  "priorPrescription" : {
+    "display" : "ID-siltuximab or placebo (22-512) powder for reconstitution 100 mg",
+    "reference" : "MedicationRequest/e.pke8bfjHJlE0ahkhB4gRyyJsmeKRNkNgXJaQc9Rrrg3"
+  },
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ej1zxM0eOK91G7-VuLyLPIg3",
+    "display" : "Scott Plotkin, MD, PhD"
+  },
+  "intent" : "order"
+}

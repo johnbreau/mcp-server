@@ -1,0 +1,63 @@
+{
+  "id" : "eIgMEsW-1qS3tH9ds8Em6RZ5UJ03d3IugDiaqqhLrxAxkeYAG2jEequk1hIRjxvFd3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Pathology and Cytology",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Pathology and Cytology",
+          "code" : "Path,Cyt"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Encounter",
+    "reference" : "Encounter/eQrMEJoYDrWwrlvodgmqSjg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1287119909"
+    }
+  },
+  "effectiveDateTime" : "2019-06-21T18:53:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "SURGICAL PATHOLOGY: ROUTINE SPECIMEN",
+      "reference" : "ServiceRequest/eOm57Z3DODONvT.MplxUAHH3ajO9luhuoJBvtzDon00U3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen A",
+    "reference" : "Specimen/eYKvo5qFvTplC.SEjWfj9-vr9TnSWnTzUHvL.ZvMeCaY3"
+  },
+  "code" : {
+    "text" : "Gross Description",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.768282",
+        "display" : "Gross Description",
+        "code" : "30"
+      }
+    ]
+  },
+  "valueString" : "1. Head:\r\nSpecimen received: Fresh\r\nPatient's name on label:  John Breau \r\nSpecimen designation: Posterior scalp mass (permanent)\r\n\r\n\r\nThe specimen consists of an ellipse of skin sitting atop a portion of pink \r\ntan-yellow soft tissue, weighing 77 g and measuring 8.5 x 5.7 x 3.5 cm.  \r\nThe ellipse of skin is tan-white and hairbearing.  It is 9 x 1.4 x 0.4 cm. \r\n Beneath the skin ellipse is a 7 x 5.1 x 4.2 cm portion of fibrofatty and \r\nfibromuscular tissue.  Palpation reveals multiple spherical mobile \r\nnodules.\r\n\r\n\r\nThe resection margin is inked black.  The specimen is serially sectioned \r\nto reveal a multi septated mass measuring 5.4 x 4 x 2.5 cm.  The cut \r\nsurfaces of the mass range from clear tan gelatinous to tan-white opaque.  \r\nThe entire mass is thickly encapsulated.  The capsule comes within 0.1 cm \r\nof the overlying dermis (Block A).  The capsule of the mass also abuts the \r\ninked resection margin. \r\n\r\n\r\nThe remainder of the specimen is made up of unremarkable fibrofatty \r\ntissue. Photographs are taken. Representative sections are submitted.\r\n\r\n\r\nSummary of Sections\r\n------------------------------------\r\nAs of: 06/22/19 6:35 PM\r\n------------------------------------\r\n1A - Block - 1 -mass to dermis\r\n1B - Block - 1 -mass with capsule abutting margin\r\n1C - Block - 1 -rep mass\r\n1D - Block - 1 -rep mass with opaque portion\r\n1E - Block - 1 -rep mass to skin\r\n1F - Block - 1 -rep mass with deep margin\r\n1G - Block - 1 -rep uninvolved\r\n\r\n\r\nTotal blocks - 7\r\n\r\n\r\nEntered by Regina Kwon, MD MPH, 06/22/19 6:12 PM.\r\n\r\n",
+  "status" : "final",
+  "issued" : "2019-06-26T22:05:45Z"
+}

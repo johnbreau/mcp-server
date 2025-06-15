@@ -1,0 +1,129 @@
+{
+  "id" : "eT.bGN2umBrTe9.4aCuXCdr5GewKlir-4-7J-tE4apgU3",
+  "category" : [
+    {
+      "text" : "Microbiology",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.10.798268.30",
+          "code" : "Microbiology"
+        }
+      ]
+    },
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "display" : "Laboratory",
+          "code" : "LAB"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Hist-Appointment",
+    "reference" : "Encounter/een7PlnPB6pwgt7bBqjsXNA3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "22407206"
+    }
+  },
+  "effectiveDateTime" : "2015-03-10T05:00:00Z",
+  "resourceType" : "DiagnosticReport",
+  "identifier" : [
+    {
+      "use" : "official",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "107018446",
+      "type" : {
+        "text" : "Placer Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Placer Identifier",
+            "code" : "PLAC"
+          }
+        ]
+      }
+    },
+    {
+      "use" : "official",
+      "system" : "https://open.epic.com/FHIR/368/order-accession-number/%3F%3F%3F",
+      "value" : "8770040200073",
+      "type" : {
+        "text" : "Filler Identifier",
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display" : "Filler Identifier",
+            "code" : "FILL"
+          }
+        ]
+      }
+    }
+  ],
+  "code" : {
+    "text" : "Culture, Throat for Rapid Strep Screen",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.696580",
+        "display" : "CULTURE, THROAT FOR RAPID STREP SCREEN",
+        "code" : "108472"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.41",
+        "code" : "C STREP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.23",
+        "code" : "008169"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.185",
+        "code" : "M5999965"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.185",
+        "code" : "M8000560"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.25",
+        "code" : "10553"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.285",
+        "code" : "C STREP"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.5.737384.310",
+        "code" : "10201704"
+      }
+    ]
+  },
+  "performer" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/emXhKbOCAKEpRj3vIHcrwMQ3",
+      "display" : "Ashley English"
+    },
+    {
+      "type" : "Organization",
+      "reference" : "Organization/ewrbn5rHwks7f7DAY6ummEvryp2WQpwu4SU4FTMAYpgk3",
+      "display" : "OFFICE ENTERED"
+    }
+  ],
+  "result" : [
+    {
+      "display" : "Component (1): STREP SCREEN FOR GROUP A STREP",
+      "reference" : "Observation/eVft-kwcu4x6m.77X6OsUHI.6QraewbgMptxxzRqww-x8whI8CM8-9HZRHSj9dV8rq.ZtjNQpdL5NtX-cJB4iVQ3"
+    }
+  ],
+  "status" : "final",
+  "issued" : "2015-03-10T20:01:00Z"
+}

@@ -1,0 +1,226 @@
+{
+  "id" : "eo1DtN6Sb.zqU41zhKnNr.H5SDypDzsdL4DRsRmJNF-43",
+  "category" : [
+    {
+      "text" : "Inpatient",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Inpatient",
+          "code" : "inpatient"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Encounter",
+    "reference" : "Encounter/eQrMEJoYDrWwrlvodgmqSjg3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1287119909"
+    }
+  },
+  "medicationReference" : {
+    "display" : "Isolyte/Plasma-Lyte",
+    "reference" : "Medication/eeMRIv-9oxPj-Wqro8XTGBSXrUP8ZUwGB5jrB2d9PlLitaIsldMmnoyxx8EomcoCGmoDbtLfY-o82.Uj.nP..M67V7wq9687FybWf2hG62qM3"
+  },
+  "resourceType" : "MedicationRequest",
+  "contained" : [
+    {
+      "code" : {
+        "text" : "Isolyte/Plasma-Lyte",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "B05BB01"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "1447"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "801109"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "33829"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "33834"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "801112"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "801357"
+          }
+        ]
+      },
+      "id" : "eeMRIv-9oxPj-Wqro8XTGBSXrUP8ZUwGB5jrB2d9PlLitaIsldMmnoyxx8EomcoCGmoDbtLfY-o82.Uj.nP..M67V7wq9687FybWf2hG62qM3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "Parenteral Solution",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.698288.310",
+            "display" : "Parenteral Solution",
+            "code" : "Solp"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.698288",
+          "value" : "28113"
+        }
+      ],
+      "ingredient" : [
+        {
+          "itemCodeableConcept" : {
+            "text" : "Isolyte/Plasma-Lyte",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "B05BB01"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "1447"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "801109"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "33829"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "33834"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "801112"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "801357"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.798268",
+      "value" : "491900880"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eCiJ9o1gdfFUFuhaSAiQOFw3",
+    "display" : "Joseph Walpole, MD PhD"
+  },
+  "authoredOn" : "2019-06-21T16:11:20Z",
+  "dosageInstruction" : [
+    {
+      "asNeededBoolean" : false,
+      "timing" : {
+        "code" : {
+          "text" : "continuous"
+        },
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2019-06-21T17:00:00Z",
+            "end" : "2019-06-23T17:37:29Z"
+          }
+        }
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "calculated",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "calculated",
+                "code" : "calculated"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mL/h",
+            "value" : 10,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mL/hr"
+          }
+        },
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mL/h",
+            "value" : 10,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mL/hr"
+          }
+        }
+      ],
+      "route" : {
+        "text" : "Intravenous",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Intravenous route (qualifier value)",
+            "code" : "47625008"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.4.798268.7025",
+            "display" : "Intravenous",
+            "code" : "11"
+          }
+        ]
+      },
+      "text" : "10 mL/hr, Intravenous, Continuous, Starting Fri 6/21/19 at 1300, Pre-op"
+    }
+  ],
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/eCiJ9o1gdfFUFuhaSAiQOFw3",
+    "display" : "Joseph Walpole, MD PhD"
+  },
+  "intent" : "order",
+  "courseOfTherapyType" : {
+    "text" : "Short course (acute) therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Short course (acute) therapy",
+        "code" : "acute"
+      }
+    ]
+  },
+  "status" : "stopped"
+}

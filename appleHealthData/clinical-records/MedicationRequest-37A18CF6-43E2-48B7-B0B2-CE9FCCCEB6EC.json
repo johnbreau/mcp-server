@@ -1,0 +1,332 @@
+{
+  "id" : "epQVXxKZjR1ULYTPaASAKhNSLVnOt.VxtiGuVxXf06Ho3",
+  "category" : [
+    {
+      "text" : "Community",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "display" : "Community",
+          "code" : "community"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Refill",
+    "reference" : "Encounter/el7GVV28NNzdtfZr5D6d75GRISAOKVucJG8ZZpaSr7fU3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100117354941"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Major depressive disorder",
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "display" : "Mild major depression, single episode (disorder)",
+          "code" : "79298009"
+        },
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+          "display" : "Major depressive disorder, single episode, mild",
+          "code" : "F32.0"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "MedicationRequest",
+  "status" : "stopped",
+  "medicationReference" : {
+    "display" : "buPROPion 150 MG XL 24 hr tablet",
+    "reference" : "Medication/e3NzUHfEZitOEBYBxzcJ4hCcf1HzKdonqRdDuR4uHiJ6huryb2NpR.Qj1-wyU9p-Wj8JH6jihMHAzkKJhewnOeVO2AkYTQn0KEa3GiO3A.SI3"
+  },
+  "contained" : [
+    {
+      "code" : {
+        "text" : "buPROPion 150 MG XL 24 hr tablet",
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N06AX12"
+          },
+          {
+            "system" : "urn:oid:2.16.840.1.113883.6.208",
+            "code" : "53006"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "42347"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "203204"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "993548"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "993541"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "42568"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "581646"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "1232586"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "993542"
+          },
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "993545"
+          }
+        ]
+      },
+      "id" : "e3NzUHfEZitOEBYBxzcJ4hCcf1HzKdonqRdDuR4uHiJ6huryb2NpR.Qj1-wyU9p-Wj8JH6jihMHAzkKJhewnOeVO2AkYTQn0KEa3GiO3A.SI3",
+      "resourceType" : "Medication",
+      "form" : {
+        "text" : "tablet extended release 24 hr",
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.698288.310",
+            "display" : "tablet extended release 24 hr",
+            "code" : "Tb24"
+          }
+        ]
+      },
+      "identifier" : [
+        {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.698288",
+          "value" : "36775"
+        }
+      ],
+      "ingredient" : [
+        {
+          "strength" : {
+            "numerator" : {
+              "code" : "mg",
+              "value" : 150,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            },
+            "denominator" : {
+              "code" : "mg",
+              "value" : 150,
+              "system" : "http://unitsofmeasure.org",
+              "unit" : "MG"
+            }
+          },
+          "itemCodeableConcept" : {
+            "text" : "buPROPion 150 MG XL 24 hr tablet",
+            "coding" : [
+              {
+                "system" : "http://www.whocc.no/atc",
+                "code" : "N06AX12"
+              },
+              {
+                "system" : "urn:oid:2.16.840.1.113883.6.208",
+                "code" : "53006"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "42347"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "203204"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "993548"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "993541"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "42568"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "581646"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "1232586"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "993542"
+              },
+              {
+                "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code" : "993545"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "187497787"
+    }
+  ],
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ex.ogNv0OHMmKrxfrIA8Jkg3",
+    "display" : "J May, MD"
+  },
+  "authoredOn" : "2017-12-08",
+  "dosageInstruction" : [
+    {
+      "asNeededBoolean" : false,
+      "timing" : {
+        "code" : {
+          "text" : "every morning"
+        },
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2017-12-08",
+            "end" : "2018-02-08"
+          },
+          "timeOfDay" : [
+            "07:00:00"
+          ]
+        }
+      },
+      "doseAndRate" : [
+        {
+          "type" : {
+            "text" : "calculated",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "calculated",
+                "code" : "calculated"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 150,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        },
+        {
+          "type" : {
+            "text" : "admin-amount",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "admin-amount",
+                "code" : "admin-amount"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "{tbl}",
+            "value" : 1,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "tablet"
+          }
+        },
+        {
+          "type" : {
+            "text" : "ordered",
+            "coding" : [
+              {
+                "system" : "http://epic.com/CodeSystem/dose-rate-type",
+                "display" : "ordered",
+                "code" : "ordered"
+              }
+            ]
+          },
+          "doseQuantity" : {
+            "code" : "mg",
+            "value" : 150,
+            "system" : "http://unitsofmeasure.org",
+            "unit" : "mg"
+          }
+        }
+      ],
+      "patientInstruction" : "TAKE 1 TABLET (150 MG TOTAL) BY MOUTH EVERY MORNING.",
+      "route" : {
+        "text" : "Oral",
+        "coding" : [
+          {
+            "system" : "http://snomed.info/sct",
+            "display" : "Oral route (qualifier value)",
+            "code" : "26643006"
+          },
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.798268.7025",
+            "display" : "Oral",
+            "code" : "15"
+          }
+        ]
+      },
+      "text" : "TAKE 1 TABLET (150 MG TOTAL) BY MOUTH EVERY MORNING., Starting Fri 12/8/2017, Until Thu 2/8/2018, Normal"
+    }
+  ],
+  "dispenseRequest" : {
+    "quantity" : {
+      "value" : 30,
+      "unit" : "tablet"
+    },
+    "expectedSupplyDuration" : {
+      "code" : "d",
+      "value" : 30,
+      "system" : "http://unitsofmeasure.org",
+      "unit" : "Day"
+    },
+    "validityPeriod" : {
+      "start" : "2017-12-08",
+      "end" : "2018-02-08"
+    },
+    "numberOfRepeatsAllowed" : 1
+  },
+  "priorPrescription" : {
+    "display" : "buPROPion 150 MG XL 24 hr tablet",
+    "reference" : "MedicationRequest/ehIS4ZOxEz6C6rt0kY-Binwe9U84psCHGEyr-3mOGos43"
+  },
+  "courseOfTherapyType" : {
+    "text" : "Continuous long term therapy",
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "display" : "Continuous long term therapy",
+        "code" : "continuous"
+      }
+    ]
+  },
+  "requester" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ex.ogNv0OHMmKrxfrIA8Jkg3",
+    "display" : "J May, MD"
+  },
+  "intent" : "order"
+}

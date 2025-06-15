@@ -1,0 +1,61 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MRI Whole Body MSK W/WO Contrast Prot",
+      "reference" : "ServiceRequest/eSwkCRXIGgaM9JY9yQygWKfbdVccvU7GJmDTaCmBo4jg3"
+    }
+  ],
+  "id" : "eR-r-o9RHThWDHrMC5xopoowKREijCzyUdgmKIAwo8tU3",
+  "code" : {
+    "text" : "Narrative"
+  },
+  "encounter" : {
+    "display" : "Appointment",
+    "reference" : "Encounter/ecLlcjmUrmSFkXu1.iZC5YA3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1064916964"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "performer" : [
+    {
+      "display" : "Laura Fayad, MD",
+      "reference" : "Practitioner/epoYYYPEff7rPhgKuMCOm3Q3"
+    },
+    {
+      "display" : "Shrey Thawait, MD",
+      "reference" : "Practitioner/eKo2mD6nFtzXh6RCSWJnmbQ3"
+    }
+  ],
+  "effectiveDateTime" : "2015-02-23T20:49:00Z",
+  "valueString" : "RESULT:  CLINICAL HISTORY: Schwannomatosis and neuropathic pain. History \r\nof resection of a mass at the back of his head and a left apical lung \r\nmass in 2001.\r\n\r\n\r\nTECHNIQUE: Whole body MRI was performed before and after intravenous \r\nadministration of 8.5 cc of gadavist. Three-dimensional fluid sensitive \r\nsequences, diffusion-weighted images, pre- and post fat-saturated \r\nT1-weighted images were obtained.\r\n\r\n\r\nCOMPARISON: Whole body MRI from 11/7/2013.\r\n\r\n\r\nBRAIN:\r\n\r\n\r\nNo definite intracranial enhancing abnormalities are identified on this \r\nlimited large field of view study. No midline shift. The dural venous \r\nsinuses appear patent.\r\n\r\n\r\nAgain identified is soft tissue fullness of the scalp without definite \r\nenhancement to the left side of the occipital region ( image 85, series \r\n7, axial reformatted images).\r\n\r\n\r\nSmall air-fluid level in the right maxillary sinus, new from the previous \r\nstudy.\r\n\r\n\r\nStable appearing mucous retention cyst or polyp in the bilateral \r\nmaxillary sinuses. No enhancement.\r\n\r\n\r\nHEAD AND NECK STRUCTURES:\r\n\r\n\r\nMinimal increase in size of a left occipital scalp lesion which now \r\nmeasures 4.5 x 2.4 x 2.2 cm. It has increased in size from the previous \r\nexamination when it measured 3.9 x 2.8 x 1.5 cm. Heterogenous contrast \r\nenhancement is again identified. No suspicious ADC values are detected, \r\nhowever, there is artifact in this region on ADC map.\r\n\r\n\r\nStable 1.8 x 1 cm T2 hyperintense structure at the anterior edge of the \r\njaw muscles on the left side. Minimal heterogenous enhancement\r\n\r\n\r\nStable 4 mm T2 hyperintense nodule without definite enhancement in the \r\nparotid gland.\r\n\r\n\r\nStable subcutaneous enhancing nodule measuring 6 mm in the left posterior \r\nsubcutaneous location in the neck.\r\n\r\n\r\nStable T2 hyperintense nonenhancing structure adjacent to the spinous \r\nprocess on the left side, in the lower cervical spine.\r\n\r\n\r\nStable 5 mm enhancing focus in the left nasopharynx.\r\n\r\n\r\nStable heterogeneously enhancing T2 hyperintense lesion posterior to the \r\nlarynx towards the left side measuring 1.5 x 1 cm.\r\n\r\n\r\nStable T2 hyperintense the subcentimeter lesion in the left jaw.\r\n\r\n\r\nThere is several other tiny masses identified which appears stable from \r\nthe previous examination.\r\n\r\n\r\nCHEST:\r\n\r\n\r\nBilateral apical lung masses, both of which are heterogeneously T2 \r\nhypointense and do not demonstrate contrast enhancement. The right apical \r\nmass measures 3.6 x 2.4 cm and the left apical mass measures 2.3 x 1.3 \r\ncm. Stable.\r\n\r\n\r\nAlong the bilateral nerve roots of C8, nonenhancing T2 hyperintense \r\nstable masses are identified measuring approximately 1.3 x 1 cm on the \r\nleft side.\r\n\r\n\r\nParaspinal masses adjacent to the neural foramina are also identified at \r\nthe level of T3. These masses are again heterogenous T2 hyperintense \r\nwithout enhancement and appear similar in size from the previous \r\nexamination.\r\n\r\n\r\nT2 hyperintense structure measuring 1 cm in short axis at the subcarinal \r\nlocation with enhancement and suggestion of a target sign, may represent \r\nanother peripheral nerve sheath tumor.\r\n\r\n\r\nThe lesions in the chest were evaluated on the ADC map, and no definite \r\nsuspicious low ADC values and were identified. However, evaluation of ADC \r\nmaps is limited due to artifact.\r\n\r\n\r\nABDOMEN AND PELVIS:\r\n\r\n\r\nAt the left subdiaphragmatic region, there is a stable T2 hyperintense \r\nnonenhancing structure measuring 1 cm.\r\n\r\n\r\nThe liver, spleen, pancreas, adrenals, kidneys and gallbladder appear \r\nwithin normal limits. No definite enhancing or T2 hyperintense lesion is \r\nidentified to suggest a peripheral nerve sheath tumor.\r\n\r\n\r\nEvaluation of the pelvis and lower abdomen is markedly limited due to \r\nmotion artifact from the bowel.\r\n\r\n\r\nBILATERAL LOWER EXTREMITIES:\r\n\r\n\r\nStable trace bilateral hip effusions.\r\n\r\n\r\nTrace bilateral hydroceles, stable.\r\n\r\n\r\nNo enhancing or T2 hyperintense lesions to suggest a peripheral nerve \r\nsheath tumor.\r\n\r\n\r\nSmall bilateral knee effusions.  \r\n\r\n",
+  "resourceType" : "Observation"
+}

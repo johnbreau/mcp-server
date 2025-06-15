@@ -1,0 +1,98 @@
+{
+  "id" : "eDSALln4wJWlD5EQYnho5RbYwpN7erSByXFK.ko-K8ynlDNCUjNPggdd0oiLUl6ySX.ij0n78ZJDL58g6jSp5-A3",
+  "category" : [
+    {
+      "text" : "Laboratory",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Laboratory",
+          "code" : "laboratory"
+        }
+      ]
+    },
+    {
+      "text" : "Lab",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.10.798268.30",
+          "display" : "Lab",
+          "code" : "Lab"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "encounter" : {
+    "display" : "Blood Draw",
+    "reference" : "Encounter/erZINA4CZ0gvzeNFvAc9efQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3647173371"
+    }
+  },
+  "effectiveDateTime" : "2024-11-11T14:05:00Z",
+  "resourceType" : "Observation",
+  "basedOn" : [
+    {
+      "display" : "CBC and differential",
+      "reference" : "ServiceRequest/eTN.8juoBSu5vxE-28YiFwJ1-ZGhwE-phE.CsW1BDb.A3"
+    }
+  ],
+  "specimen" : {
+    "display" : "Specimen SQ_M6994351_383L354022_",
+    "reference" : "Specimen/eFl6hbB.TsPNzq7rc5tF5MrLsZiG.PiKezzJuftY67h03"
+  },
+  "code" : {
+    "text" : "MPV",
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "display" : "Platelet [Entitic mean volume] in Blood by Rees-Ecker",
+        "code" : "776-5"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.91",
+        "code" : "MPV"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.5.737384.818",
+        "code" : "5200009325"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.768282",
+        "display" : "MPV",
+        "code" : "5200009325"
+      }
+    ]
+  },
+  "referenceRange" : [
+    {
+      "low" : {
+        "code" : "fL",
+        "value" : 8.4,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "fL"
+      },
+      "high" : {
+        "code" : "fL",
+        "value" : 12,
+        "system" : "http://unitsofmeasure.org",
+        "unit" : "fL"
+      },
+      "text" : "8.4 - 12.0 fL"
+    }
+  ],
+  "valueQuantity" : {
+    "code" : "fL",
+    "value" : 9,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "fL"
+  },
+  "status" : "final",
+  "issued" : "2024-11-11T14:33:29Z"
+}

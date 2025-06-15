@@ -1,0 +1,39 @@
+{
+  "status" : "completed",
+  "primarySource" : false,
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "id" : "eUlGDHDq2ZR9.HRwwIzy9812VkceTtmnwyTu0Udugb.43",
+  "occurrenceDateTime" : "2023-10-20",
+  "vaccineCode" : {
+    "text" : "SARS-COV-2 (COVID-19) - MODERNA (12 YEARS AND OLDER) 2023-2024",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "312"
+      }
+    ]
+  },
+  "location" : {
+    "display" : "KS5004054"
+  },
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.768076",
+      "value" : "104072541"
+    }
+  ],
+  "lotNumber" : "3030338",
+  "resourceType" : "Immunization",
+  "reportOrigin" : {
+    "text" : "Auto Reconciled From Outside Source",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.10.768076.4082"
+      }
+    ]
+  }
+}

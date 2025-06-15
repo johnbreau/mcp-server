@@ -1,0 +1,61 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Imaging",
+          "code" : "imaging"
+        }
+      ]
+    },
+    {
+      "text" : "Imaging",
+      "coding" : [
+        {
+          "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.10.798268.30",
+          "display" : "Imaging",
+          "code" : "Imaging"
+        }
+      ]
+    }
+  ],
+  "basedOn" : [
+    {
+      "display" : "MR CERVICAL SPINE WITHOUT AND WITH IV CONTRAST",
+      "reference" : "ServiceRequest/eZapKWZMTJJGRWic41iF5jYLsHVb1SpVUPd4ErQCtPRQ3"
+    }
+  ],
+  "id" : "e4dlROebkzZwsNGsupl1AyIJNCsPggu04Xli6Ywc8Scc3",
+  "code" : {
+    "text" : "Impression"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/eRgWIMhx1WY71vbJqU9EJVoPoNIrE41N9YdrwiwoirXw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+      "value" : "2000613053684"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "performer" : [
+    {
+      "display" : "E. Lindell, M.D.",
+      "reference" : "Practitioner/eMH5jmIO.0t97mbN9FFjJ3A3"
+    },
+    {
+      "display" : "Crystal Kang, M.D.",
+      "reference" : "Practitioner/eSEUekkdoIShnSSIoWpSPBg3"
+    }
+  ],
+  "effectiveDateTime" : "2024-04-24T13:00:23Z",
+  "valueString" : "Findings compatible with schwannomatosis. The largest lesion at C4-C5 has mildly increased in size since 6/27/2021. The remainder are not significantly changed.\r\n\r\n",
+  "resourceType" : "Observation"
+}

@@ -1,0 +1,107 @@
+{
+  "id" : "e2GHDrQaTYUWdc1MtAvA1oecWzjc87ERBnVVYyKRXTEc3",
+  "category" : {
+    "text" : "Ordered Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Diagnostic procedure",
+        "code" : "103693007"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "encounter" : {
+    "display" : "Nurse Only",
+    "reference" : "Encounter/esoU2ApBKPV6.eh5PS0G211MWg70.ug.xFK-H.ZTVQKI3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+      "value" : "100104015908"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Difficulty falling or staying asleep",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Insomnia",
+          "code" : "780.52"
+        }
+      ]
+    },
+    {
+      "text" : "Excessive sleepiness",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Hypersomnia",
+          "code" : "780.54"
+        }
+      ]
+    },
+    {
+      "text" : "Fatigue",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Fatigue",
+          "code" : "780.79"
+        }
+      ]
+    }
+  ],
+  "resourceType" : "Procedure",
+  "basedOn" : [
+    {
+      "display" : "Sleep Study (SLE20)",
+      "reference" : "ServiceRequest/e9JqQNGDhbzcd3y14Kf.hb6ZLk8u0NpBIGp8Tct-JZgs3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.798268",
+      "value" : "181805322",
+      "type" : {
+        "text" : "ORD"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.696580",
+      "value" : "231751",
+      "type" : {
+        "text" : "EAP"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "Sleep Study (SLE20)",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.696580",
+        "display" : "HOME SLEEP APNEA TEST",
+        "code" : "231751"
+      }
+    ]
+  },
+  "performedDateTime" : "2016-11-01T13:29:00Z",
+  "report" : [
+    {
+      "type" : "DiagnosticReport",
+      "reference" : "DiagnosticReport/eQty.D.494NSr3PLqIKe5AzMWHKewXPBft8nPiv-nkzE3",
+      "display" : "Sleep Study"
+    }
+  ],
+  "status" : "completed",
+  "asserter" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ex.ogNv0OHMmKrxfrIA8Jkg3",
+    "display" : "J May, MD"
+  }
+}

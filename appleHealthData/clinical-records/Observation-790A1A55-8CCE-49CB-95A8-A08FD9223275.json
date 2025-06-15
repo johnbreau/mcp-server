@@ -1,0 +1,72 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Vital Signs",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Vital Signs",
+          "code" : "vital-signs"
+        }
+      ]
+    }
+  ],
+  "issued" : "2025-01-13T13:41:23Z",
+  "id" : "elwmo2pLK0o6AEMgdbaaujAiTmVNlC3KnhE0cSd5yLn4Z2flHHUmioQMF9yvmS1.IoizDzM2UV6f7K1s35cZ.UQ3",
+  "code" : {
+    "text" : "Pain Score",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.2.707679",
+        "display" : "Pain Score",
+        "code" : "3040104280"
+      },
+      {
+        "system" : "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+        "display" : "Pain Score",
+        "code" : "tTKYUO4SKNmSaS6wvPOkRbA0"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+        "code" : "72514-3"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Vital signs",
+        "code" : "8716-3"
+      }
+    ]
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/el1wHfGexHm9E8p4S.LHx6Q3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.362.2.7.3.698084.8",
+      "value" : "3634115893"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "performer" : [
+    {
+      "display" : "Stacey Ortiz, MA",
+      "reference" : "Practitioner/e0UC57rx8xzpDNQ2gswf0SQ3"
+    }
+  ],
+  "effectiveDateTime" : "2025-01-13T13:40:00Z",
+  "valueCodeableConcept" : {
+    "text" : "4",
+    "coding" : [
+      {
+        "display" : "4",
+        "code" : "4"
+      }
+    ]
+  },
+  "resourceType" : "Observation"
+}

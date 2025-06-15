@@ -1,0 +1,170 @@
+{
+  "id" : "e029vUlOpTntEJFFyZQOnbuV2MTUKe759C-S6Gxn-5vk3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eAOeZxEiNAPoP4OKSAzj2zA3",
+      "display" : "Nurse Brenna, RN"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eAOeZxEiNAPoP4OKSAzj2zA3",
+    "display" : "Nurse Brenna, RN",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2022-01-13T17:06:00Z"
+      }
+    ]
+  },
+  "context" : {
+    "encounter" : [
+      {
+        "display" : "Emergency Department",
+        "reference" : "Encounter/eYPzCLNioPhCvpbKCocziwBnl6kW4ZTP9Sl13LPT6WwQ3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+          "value" : "100164657683"
+        }
+      }
+    ],
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Registered Nurse",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.836982.1040",
+              "display" : "Registered Nurse",
+              "code" : "3"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2022-01-13T17:00:59Z"
+    }
+  },
+  "type" : {
+    "text" : "Pre-Procedure Instructions",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.737880.5010",
+        "display" : "Pre-Procedure Instructions",
+        "code" : "1000006"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Patient Instructions",
+        "code" : "37"
+      },
+      {
+        "code" : "69730-0",
+        "system" : "http://loinc.org",
+        "display" : "Instructions",
+        "userSelected" : true
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Discharge instructions",
+        "code" : "74213-0"
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.727879",
+      "value" : "698739561"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.368.2.7.2.727879_698739561"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2022-01-13T17:00:59Z",
+  "custodian" : {
+    "display" : "Saint Luke's Health System",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:SaintLukes:PRD.CE-PRD"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2022-01-13T17:06:00Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Nurse Brenna, RN",
+            "reference" : "Practitioner/eAOeZxEiNAPoP4OKSAzj2zA3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eZ6nM7k5XSIQ0ol88K6ZYlQm.rFOdfLU7HgIRL9wDwWA3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/f6kdM1QSr7irICq3JC8hhmzKq3qS1U1j4ORB5vFg6b3w4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "status" : "final",
+  "category" : [
+    {
+      "text" : "Vital Signs",
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display" : "Vital Signs",
+          "code" : "vital-signs"
+        }
+      ]
+    }
+  ],
+  "issued" : "2024-10-21T17:54:45Z",
+  "id" : "eMtS-lnDQmk5hcs.e7ctnFVoekGew52f3SOZCpmQfutqU3.iguQMGRb0wQWAVXFQ.Wc5uLghzrLC1ai-izngoDQ3",
+  "code" : {
+    "text" : "Weight",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.2.707679",
+        "display" : "Weight",
+        "code" : "14"
+      },
+      {
+        "system" : "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+        "display" : "Weight",
+        "code" : "tzhRQqRjbt9js69mhJ3m.Ig0"
+      },
+      {
+        "system" : "urn:oid:1.2.246.537.6.96",
+        "code" : "29463-7"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Body weight",
+        "code" : "29463-7"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Body weight Measured",
+        "code" : "3141-9"
+      },
+      {
+        "system" : "http://loinc.org",
+        "display" : "Vital signs",
+        "code" : "8716-3"
+      }
+    ]
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/eXOsLlr.Aa6ZWremSAuB48A3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.331.2.7.3.698084.8",
+      "value" : "1442309032"
+    }
+  },
+  "subject" : {
+    "display" : "Breau, John",
+    "reference" : "Patient/eIedWkGcqFH2y893Gd06Mpg3"
+  },
+  "performer" : [
+    {
+      "display" : "Roseline C",
+      "reference" : "Practitioner/e11onkNrweaRI0AXDtgYccuUWv2GNK4Iq3ZYQu.bt5nI3"
+    }
+  ],
+  "effectiveDateTime" : "2024-10-21T17:54:00Z",
+  "valueQuantity" : {
+    "code" : "kg",
+    "value" : 83.4,
+    "system" : "http://unitsofmeasure.org",
+    "unit" : "kg"
+  },
+  "resourceType" : "Observation"
+}

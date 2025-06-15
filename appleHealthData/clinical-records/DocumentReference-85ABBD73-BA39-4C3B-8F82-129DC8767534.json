@@ -1,0 +1,165 @@
+{
+  "id" : "ebax5DPiMOVgaTZG1mPwsmUC.dCdIP9lUaMOppr70SuA3",
+  "category" : [
+    {
+      "text" : "Clinical Note",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "display" : "Clinical Note",
+          "code" : "clinical-note"
+        }
+      ]
+    }
+  ],
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eToRJkWLNO9qyxHUJm4WHHQ3"
+  },
+  "resourceType" : "DocumentReference",
+  "author" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/eBwIBVDhmVHNJH72EE4TJ4A3",
+      "display" : "Nurse Rochelle, RN"
+    }
+  ],
+  "authenticator" : {
+    "reference" : "Practitioner/eBwIBVDhmVHNJH72EE4TJ4A3",
+    "display" : "Nurse Rochelle, RN",
+    "type" : "Practitioner",
+    "extension" : [
+      {
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-authentication-instant",
+        "valueDateTime" : "2016-11-07T17:57:46Z"
+      }
+    ]
+  },
+  "context" : {
+    "encounter" : [
+      {
+        "display" : "Hospital Outpatient Visit",
+        "reference" : "Encounter/eXcL593bTYGqwhD9DqmVGDTtbS87etCZaysVN.Hq1PVQ3",
+        "identifier" : {
+          "use" : "usual",
+          "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.3.698084.8",
+          "value" : "100105310535"
+        }
+      }
+    ],
+    "extension" : [
+      {
+        "valueCodeableConcept" : {
+          "text" : "Registered Nurse",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.836982.1040",
+              "display" : "Registered Nurse",
+              "code" : "3"
+            }
+          ]
+        },
+        "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+      }
+    ],
+    "period" : {
+      "start" : "2016-11-07T17:57:46Z"
+    }
+  },
+  "type" : {
+    "text" : "Discharge Instr - Appointments",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.4.737880.5010",
+        "display" : "Discharge Instr - Appointments",
+        "code" : "65"
+      },
+      {
+        "system" : "urn:oid:1.2.840.114350.1.72.727879.69848980",
+        "display" : "Discharge Instr - Appointments",
+        "code" : "65"
+      },
+      {
+        "code" : "74213-0",
+        "system" : "http://loinc.org",
+        "display" : "Discharge instructions",
+        "userSelected" : true
+      }
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.840.114350.1.13.368.2.7.2.727879",
+      "value" : "126000813"
+    },
+    {
+      "system" : "urn:oid:1.2.840.114350.1.72.3.15",
+      "value" : "1.2.840.114350.1.13.368.2.7.2.727879_126000813"
+    }
+  ],
+  "docStatus" : "final",
+  "date" : "2016-11-07T17:57:46Z",
+  "custodian" : {
+    "display" : "Saint Luke's Health System",
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:SaintLukes:PRD.CE-PRD"
+    }
+  },
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension" : [
+        {
+          "valueCodeableConcept" : {
+            "text" : "Signer",
+            "coding" : [
+              {
+                "system" : "urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.72072",
+                "display" : "Signer",
+                "code" : "1"
+              }
+            ]
+          },
+          "url" : "mode"
+        },
+        {
+          "url" : "time",
+          "valueDateTime" : "2016-11-07T17:57:46Z"
+        },
+        {
+          "url" : "party",
+          "valueReference" : {
+            "display" : "Nurse Rochelle, RN",
+            "reference" : "Practitioner/eBwIBVDhmVHNJH72EE4TJ4A3"
+          }
+        }
+      ]
+    }
+  ],
+  "status" : "current",
+  "content" : [
+    {
+      "attachment" : {
+        "contentType" : "text/html",
+        "url" : "Binary/eD.1ywlMaZhoX87AOI3YU3w-990w7gba208t2GdHJ2NE3"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    },
+    {
+      "attachment" : {
+        "contentType" : "text/rtf",
+        "url" : "Binary/fbnH2nZ5eT1MUJ3pVoI.IEeP4arnNTjlvnsjTCZjugdg4"
+      },
+      "format" : {
+        "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display" : "mimeType Sufficient",
+        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient"
+      }
+    }
+  ]
+}

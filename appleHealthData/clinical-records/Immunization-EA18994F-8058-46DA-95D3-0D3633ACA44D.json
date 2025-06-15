@@ -1,0 +1,47 @@
+{
+  "id" : "eDkiiCh475kz9O2EdeP6UBjLnXKB.1kL1o6De1mt6M4o3",
+  "primarySource" : false,
+  "reportOrigin" : {
+    "text" : "Auto Reconciled From Outside Source",
+    "coding" : [
+      {
+        "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4082",
+        "display" : "Auto Reconciled From Outside Source",
+        "code" : "4"
+      }
+    ]
+  },
+  "resourceType" : "Immunization",
+  "occurrenceDateTime" : "2021-11-07",
+  "doseQuantity" : {
+    "code" : "1",
+    "value" : 0.25,
+    "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4019",
+    "unit" : "mL"
+  },
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.768076",
+      "value" : "23123083"
+    }
+  ],
+  "location" : {
+    "display" : "KS5004043"
+  },
+  "lotNumber" : "066F21A",
+  "vaccineCode" : {
+    "text" : "COVID-19 (MODERNA BOOSTER), mRNA vacc, 50 mcg/0.25 mL (PF)",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "207"
+      }
+    ]
+  },
+  "status" : "completed",
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  }
+}

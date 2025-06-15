@@ -1,0 +1,46 @@
+{
+  "id" : "ebM08l8vo5pmVyzBb4vgeBymbb6IM-JL4R6Pa2dnI-tM3",
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Office Visit",
+    "reference" : "Encounter/ekAZyCMCC8gumyL2EDL3omQ3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1094714623"
+    }
+  },
+  "resourceType" : "Immunization",
+  "occurrenceDateTime" : "2017-11-16",
+  "doseQuantity" : {
+    "code" : "1",
+    "value" : 0.5,
+    "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.768076.4019",
+    "unit" : "mL"
+  },
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.768076",
+      "value" : "25267653"
+    }
+  ],
+  "location" : {
+    "display" : "CVS Health & MinuteClinic"
+  },
+  "lotNumber" : "BF7CA",
+  "vaccineCode" : {
+    "text" : "Flu Vaccine Quadrivalent =>3 Yo (Preservative Free)",
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/sid/cvx",
+        "code" : "150"
+      }
+    ]
+  },
+  "status" : "completed",
+  "primarySource" : false
+}

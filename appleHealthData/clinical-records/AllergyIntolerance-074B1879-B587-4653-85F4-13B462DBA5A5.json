@@ -1,0 +1,44 @@
+{
+  "clinicalStatus" : {
+    "coding" : [
+      {
+        "code" : "active",
+        "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "display" : "Active",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "id" : "eOYKy0XVh5hJFcY5GEznPhCuBoPUKxjtPWOHVdKlJ.FsU8w8T5-ETydFAYjU02aMWxAC9faerGGle4LfaApOk6w3",
+  "code" : {
+    "text" : "No Known Allergies",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "No known allergy",
+        "code" : "716186003"
+      }
+    ]
+  },
+  "patient" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eRJfyLcBgTHBZa0kSozO5uUQXrsm4yGViSxaeg-ztErw3"
+  },
+  "verificationStatus" : {
+    "coding" : [
+      {
+        "code" : "confirmed",
+        "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+        "display" : "Confirmed",
+        "version" : "4.0.0"
+      }
+    ]
+  },
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/ezcGEE1GCiGCxo7XKvp2JWw3",
+    "display" : "Christina Orr, CNP"
+  },
+  "recordedDate" : "2024-12-23T13:52:59Z",
+  "resourceType" : "AllergyIntolerance"
+}

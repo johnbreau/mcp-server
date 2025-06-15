@@ -1,0 +1,73 @@
+{
+  "id" : "eHash5M4cFDjV2CV5rXeShwgmUup.NrpBgCbgJ45Xtkg3",
+  "category" : {
+    "text" : "Ordered Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Diagnostic procedure",
+        "code" : "103693007"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eTWHVFzM8pQO8zLh.IPlGGA3"
+  },
+  "encounter" : {
+    "display" : "Orders Only",
+    "reference" : "Encounter/e-Zq74LquzJNGaAdhx2kiqw3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.3.698084.8",
+      "value" : "1094732561"
+    }
+  },
+  "resourceType" : "Procedure",
+  "basedOn" : [
+    {
+      "display" : "HM COLONOSCOPY",
+      "reference" : "ServiceRequest/ea.XIT-tfJgC6qT5NNJ1YSC8EENYWX6OWGP1lieAC0wU3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.798268",
+      "value" : "1382683662",
+      "type" : {
+        "text" : "ORD"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.2.696580",
+      "value" : "39240",
+      "type" : {
+        "text" : "EAP"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "HM COLONOSCOPY",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "HM COLONOSCOPY",
+        "code" : "73761001"
+      }
+    ]
+  },
+  "performedDateTime" : "2022-03-28",
+  "report" : [
+    {
+      "type" : "DiagnosticReport",
+      "reference" : "DiagnosticReport/eSd0nOtjZUcoRoPmnfoHlDoX-j4hJhr4PRmguASWly383",
+      "display" : "HM COLONOSCOPY"
+    }
+  ],
+  "status" : "completed",
+  "asserter" : {
+    "type" : "Practitioner"
+  }
+}

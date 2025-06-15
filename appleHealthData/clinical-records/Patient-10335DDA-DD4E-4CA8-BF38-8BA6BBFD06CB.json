@@ -1,0 +1,232 @@
+{
+  "id" : "eTWHVFzM8pQO8zLh.IPlGGA3",
+  "generalPractitioner" : [
+    {
+      "type" : "Practitioner",
+      "reference" : "Practitioner/etVxgMyuiwAh81Ay0NRgUGw3",
+      "display" : "J May, MD"
+    }
+  ],
+  "birthDate" : "1971-12-20",
+  "resourceType" : "Patient",
+  "active" : true,
+  "telecom" : [
+    {
+      "system" : "phone",
+      "value" : "816-810-5685",
+      "use" : "home"
+    },
+    {
+      "system" : "email",
+      "value" : "johnbreau@gmail.com",
+      "rank" : 1
+    }
+  ],
+  "contact" : [
+    {
+      "name" : {
+        "use" : "usual",
+        "text" : "Singleton,Catherine"
+      },
+      "telecom" : [
+        {
+          "system" : "phone",
+          "value" : "816-522-3100",
+          "use" : "mobile"
+        }
+      ],
+      "relationship" : [
+        {
+          "text" : "Spouse",
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.4.827665.1000",
+              "display" : "Spouse",
+              "code" : "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "address" : {
+        "use" : "work",
+        "country" : "US"
+      },
+      "organization" : {
+        "display" : "VMLR"
+      },
+      "relationship" : [
+        {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+              "display" : "Employer",
+              "code" : "E"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deceasedBoolean" : false,
+  "maritalStatus" : {
+    "text" : "Married"
+  },
+  "address" : [
+    {
+      "use" : "home",
+      "city" : "Overland Park",
+      "district" : "JOHNSON",
+      "postalCode" : "66221-7121",
+      "country" : "US",
+      "line" : [
+        "17225 Nieman Rd"
+      ],
+      "state" : "KS"
+    },
+    {
+      "use" : "old",
+      "line" : [
+        "3523 MANOR"
+      ],
+      "state" : "MO",
+      "city" : "KANSAS CITY",
+      "postalCode" : "64111"
+    },
+    {
+      "use" : "old",
+      "city" : "KANSAS CITY",
+      "district" : "JACKSON",
+      "postalCode" : "64113",
+      "country" : "US",
+      "line" : [
+        "1206 W 66th Street"
+      ],
+      "state" : "MO"
+    },
+    {
+      "use" : "old",
+      "city" : "Overland Park",
+      "district" : "JOHNSON",
+      "postalCode" : "66221",
+      "country" : "US",
+      "line" : [
+        "17225 Nieman Rd"
+      ],
+      "state" : "KS"
+    }
+  ],
+  "communication" : [
+    {
+      "preferred" : true,
+      "language" : {
+        "text" : "English",
+        "coding" : [
+          {
+            "system" : "urn:ietf:bcp:47",
+            "display" : "English",
+            "code" : "en"
+          }
+        ]
+      }
+    }
+  ],
+  "extension" : [
+    {
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.698084.130.768080.39128",
+            "display" : "male",
+            "code" : "male"
+          }
+        ]
+      },
+      "url" : "http://open.epic.com/FHIR/StructureDefinition/extension/legal-sex"
+    },
+    {
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://hl7.org/fhir/gender-identity",
+            "display" : "male",
+            "code" : "male"
+          }
+        ]
+      },
+      "url" : "http://hl7.org/fhir/StructureDefinition/patient-genderIdentity"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+      "extension" : [
+        {
+          "valueCoding" : {
+            "system" : "urn:oid:2.16.840.1.113883.6.238",
+            "display" : "White",
+            "code" : "2106-3"
+          },
+          "url" : "ombCategory"
+        },
+        {
+          "valueString" : "White or Caucasian",
+          "url" : "text"
+        }
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+      "extension" : [
+        {
+          "valueCoding" : {
+            "system" : "urn:oid:2.16.840.1.113883.6.238",
+            "display" : "Not Hispanic or Latino",
+            "code" : "2186-5"
+          },
+          "url" : "ombCategory"
+        },
+        {
+          "valueString" : "Not Hispanic or Latino",
+          "url" : "text"
+        }
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+      "valueCode" : "184115007"
+    }
+  ],
+  "managingOrganization" : {
+    "display" : "The University of Kansas Health System",
+    "reference" : "Organization/e0X75bawAGFmpmPTrPRRT4g3"
+  },
+  "gender" : "male",
+  "name" : [
+    {
+      "use" : "official",
+      "text" : "John A Breau",
+      "family" : "Breau",
+      "given" : [
+        "John",
+        "A"
+      ]
+    },
+    {
+      "use" : "usual",
+      "text" : "John A Breau",
+      "family" : "Breau",
+      "given" : [
+        "John",
+        "A"
+      ]
+    },
+    {
+      "use" : "old",
+      "text" : "BREAU,JOHN",
+      "family" : "Breau",
+      "given" : [
+        "John"
+      ]
+    }
+  ]
+}

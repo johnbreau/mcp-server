@@ -1,0 +1,119 @@
+{
+  "id" : "eVUPlzqrjPWXQGdgOST3nmBKM3JGJNsQnpS-0lblFQQ03IZhSAkZUtKFJpANYDt3W3",
+  "category" : {
+    "text" : "Ordered Procedures",
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "display" : "Diagnostic procedure",
+        "code" : "103693007"
+      }
+    ]
+  },
+  "subject" : {
+    "display" : "Breau, John A",
+    "reference" : "Patient/eKTNN78gFdMMq4ofPsJoTHm0JJZkqBwwsQaE8QjjDShg3"
+  },
+  "encounter" : {
+    "display" : "Hospital Outpatient Visit",
+    "reference" : "Encounter/elumw1SXNlfJYudGvykNzhNmDFeu0wd.rtR0ev3fcc6c3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.3.698084.8",
+      "value" : "2000609696586"
+    }
+  },
+  "reasonCode" : [
+    {
+      "text" : "Pain Arm Left",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Pain Arm Left",
+          "code" : "729.5"
+        }
+      ]
+    },
+    {
+      "text" : "Weakness Arm Left",
+      "coding" : [
+        {
+          "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+          "display" : "Weakness Arm Left",
+          "code" : "728.89"
+        }
+      ]
+    },
+    {
+      "text" : "Schwannomatosis"
+    }
+  ],
+  "resourceType" : "Procedure",
+  "basedOn" : [
+    {
+      "display" : "EMG",
+      "reference" : "ServiceRequest/eZapKWZMTJJGRWic41iF5jd5Jw.H-WgXeGZGNf1CMj-k3"
+    }
+  ],
+  "identifier" : [
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.798268",
+      "value" : "2223402843961",
+      "type" : {
+        "text" : "ORD"
+      }
+    },
+    {
+      "use" : "usual",
+      "system" : "urn:oid:1.2.840.114350.1.13.451.2.7.2.696580",
+      "value" : "1220",
+      "type" : {
+        "text" : "EAP"
+      }
+    }
+  ],
+  "code" : {
+    "text" : "EMG",
+    "coding" : [
+      {
+        "system" : "http://www.ama-assn.org/go/cpt",
+        "display" : "PR NERVE CONDCT STUDIES 7-8",
+        "code" : "95910"
+      }
+    ]
+  },
+  "recorder" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/er87YnyZm.Y7b7fDjD.I0Mg3",
+    "display" : "Michelle Mauermann, M.D."
+  },
+  "performedDateTime" : "2024-04-23T18:12:50Z",
+  "performer" : [
+    {
+      "actor" : {
+        "type" : "Practitioner",
+        "reference" : "Practitioner/eIISRzm-0kP6yl0X4vwN8Xw3",
+        "display" : "Nathan Staff, M.D., Ph.D."
+      },
+      "onBehalfOf" : {
+        "type" : "Organization",
+        "reference" : "Organization/e551dHSmOZM-it7GuxPIHgHkZGmO-xVAW.jJcrqYcdl03",
+        "display" : "MC EMG"
+      }
+    }
+  ],
+  "report" : [
+    {
+      "type" : "DiagnosticReport",
+      "reference" : "DiagnosticReport/e2LYa4PsHh.bu6Y8vyhyFgxrbXN8pB0GYeaaxqIdEUdE3",
+      "display" : "EMG"
+    }
+  ],
+  "status" : "completed",
+  "asserter" : {
+    "type" : "Practitioner",
+    "reference" : "Practitioner/er87YnyZm.Y7b7fDjD.I0Mg3",
+    "display" : "Michelle Mauermann, M.D."
+  }
+}
