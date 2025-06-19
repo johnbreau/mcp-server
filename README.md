@@ -49,6 +49,31 @@ To start the React frontend:
 
 The application will be available at `http://localhost:5173` by default.
 
+### Apple Health Data Server
+
+The application includes a server to serve Apple Health data. Follow these steps to set it up:
+
+1. Ensure you have Python 3.8+ installed
+2. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Start the server:
+   ```bash
+   python server/main.py
+   ```
+
+The server will start on `http://localhost:8000` by default.
+
+#### API Endpoints
+
+- `GET /` - List all files and directories in the appleHealthData directory
+- `GET /file/{path}` - Get file contents or list directory contents
+- `GET /docs` - Interactive API documentation (Swagger UI)
+- `GET /redoc` - Alternative API documentation (ReDoc)
+
+For more details, see [APPLE_HEALTH_SERVER.md](APPLE_HEALTH_SERVER.md).
+
 ### Available Scripts
 
 This project includes several npm scripts to help with development and testing:
