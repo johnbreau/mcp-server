@@ -5,7 +5,7 @@ import { RandomJournalEntry } from '../features/journal/RandomJournalEntry';
 export default function HomePage() {
   return (
     <Container size="xl" py="md">
-      <Title order={1} mb="lg">Welcome to Breau Bot</Title>
+      <Title order={1} mb="lg">Welcome to BreauBot</Title>
       
       <SimpleGrid cols={2} spacing="lg">
         <JournalsView />
