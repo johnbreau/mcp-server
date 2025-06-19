@@ -1,11 +1,17 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from pathlib import Path
 import os
-from typing import List, Optional, Union
+from typing import List, Optional, Union, Dict, Any
 from pydantic import BaseModel, Field
 from enum import Enum
+from datetime import datetime, timedelta
+import xml.etree.ElementTree as ET
+import json
+
+# Import the health data parser
+from health_data_parser import HealthDataParser
 
 app = FastAPI(title="Apple Health Data Server")
 
@@ -92,6 +98,92 @@ async def get_file(file_path: str):
             pass  # Skip content if not decodable as text
     
     return file_info
+
+@app.get("/api/health/debug/export-status")
+async def debug_export_status():
+    """Debug endpoint to check the status of the export file"""
+    export_file = BASE_DIR / "export.xml"
+    
+    if not export_file.exists():
+        return {
+            "status": "error",
+            "message": f"Export file not found at {export_file}",
+            "files_in_directory": [f.name for f in BASE_DIR.glob("*")]
+        }
+    
+    try:
+        file_size = export_file.stat().st_size
+        return {
+            "status": "success",
+            "file_path": str(export_file),
+            "file_size_bytes": file_size,
+            "file_size_mb": round(file_size / (1024 * 1024), 2),
+            "last_modified": datetime.fromtimestamp(export_file.stat().st_mtime).isoformat()
+        }
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": f"Error checking export file: {str(e)}"
+        }
+
+@app.get("/api/health/sleep")
+async def get_sleep_data(days: int = 30):
+    """
+    Get sleep data for the specified number of days.
+    
+    Args:
+        days: Number of days of data to return
+        
+    Returns:
+        List of daily sleep data points
+    """
+    try:
+        # Initialize the parser
+        export_file = BASE_DIR / "export.xml"
+        if not export_file.exists():
+            return JSONResponse(
+                status_code=404,
+                content={"detail": f"Apple Health export.xml file not found at {export_file}"}
+            )
+            
+        parser = HealthDataParser(export_file)
+        
+        # Get sleep data (this will need to be implemented in the parser)
+        sleep_data = parser.get_sleep_data(days)
+        
+        return sleep_data
+        
+    except Exception as e:
+        print(f"Error getting sleep data: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error processing sleep data: {str(e)}"
+        )
+
+# Initialize the health data parser
+EXPORT_XML_PATH = BASE_DIR / "export.xml"
+health_parser = HealthDataParser(EXPORT_XML_PATH)
+
+@app.get("/api/activity")
+async def get_activity_data(days: int = 7):
+    """
+    Get activity data for the specified number of days.
+    
+    Args:
+        days: Number of days of data to return (default: 7)
+        
+    Returns:
+        List of daily activity data points
+    """
+    try:
+        if not EXPORT_XML_PATH.exists():
+            raise HTTPException(status_code=404, detail="Health data export file not found")
+            
+        activity_data = health_parser.parse_activity_data(days)
+        return JSONResponse(content=activity_data)
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error processing activity data: {str(e)}")
 
 if __name__ == "__main__":
     import uvicorn
