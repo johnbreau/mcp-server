@@ -54,8 +54,6 @@ const ITEMS_PER_PAGE = 20;
 
 export default function BooksPage() {
   // State management
-  const [books, setBooks] = useState<Book[]>([]);
-  const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'dateRead' | 'title' | 'author' | 'rating'>('dateRead');
@@ -102,7 +100,7 @@ export default function BooksPage() {
     },
   } as const;
   
-  // Function to fetch books with caching
+  // Function to fetch books with caching for 1 week
   const { data: booksData, isLoading, error: fetchError, refetch } = useQuery<Book[], Error>({
     queryKey: ['books'],
     queryFn: async (): Promise<Book[]> => {
@@ -183,21 +181,22 @@ export default function BooksPage() {
       
       return uniqueBooks;
     },
-    staleTime: 60 * 60 * 1000, // 1 hour before data is considered stale
-    gcTime: 24 * 60 * 60 * 1000, // Keep unused data in cache for 24 hours
-    refetchOnWindowFocus: false // Don't refetch when window regains focus
+    staleTime: 7 * 24 * 60 * 60 * 1000, // 1 week before data is considered stale
+    gcTime: 10 * 24 * 60 * 60 * 1000, // Keep unused data in cache for 10 days (longer than staleTime)
+    refetchOnWindowFocus: false, // Don't refetch when window regains focus
+    refetchOnMount: false, // Don't refetch when component mounts if data is fresh
+    refetchOnReconnect: false, // Don't refetch when regaining network connection
+    retry: 1, // Only retry once if the request fails
   });
   
-  // Update local state when query data changes
+  // Update error state
   useEffect(() => {
-    if (booksData && booksData.length > 0) {
-      setBooks(booksData);
-      setFilteredBooks(booksData);
+    if (fetchError) {
+      setError(fetchError instanceof Error ? fetchError.message : 'An unknown error occurred');
     } else {
-      setBooks([]);
-      setFilteredBooks([]);
+      setError(null);
     }
-  }, [booksData]);
+  }, [fetchError]);
   
   // Update error state
   useEffect(() => {
@@ -213,9 +212,15 @@ export default function BooksPage() {
     refetch().catch(console.error);
   }, [refetch]);
   
-  // Filter and sort books based on search query and sort options
-  const filteredAndSortedBooks = useMemo(() => {
-    if (!booksData) return [];
+  // Filter, sort and paginate books based on search query and sort options
+  const { filteredBooks, totalPages, paginatedBooks } = useMemo(() => {
+    if (!booksData) {
+      return {
+        filteredBooks: [],
+        totalPages: 0,
+        paginatedBooks: []
+      };
+    }
     
     let result = [...booksData];
     
@@ -251,26 +256,23 @@ export default function BooksPage() {
       return sortOrder === 'asc' ? compareResult : -compareResult;
     });
     
-    return result;
-  }, [booksData, searchQuery, sortBy, sortOrder]);
-  
-  // Update filtered books when the filteredAndSortedBooks changes
-  useEffect(() => {
-    setFilteredBooks(filteredAndSortedBooks);
-  }, [filteredAndSortedBooks]);
-  
-
-  
-  // Calculate pagination
-  const totalPages = Math.ceil(filteredBooks.length / ITEMS_PER_PAGE);
-  const paginatedBooks = filteredBooks.slice(
-    (activePage - 1) * ITEMS_PER_PAGE,
-    activePage * ITEMS_PER_PAGE
-  );
+    // Calculate pagination
+    const total = Math.ceil(result.length / ITEMS_PER_PAGE);
+    const paginated = result.slice(
+      (activePage - 1) * ITEMS_PER_PAGE,
+      activePage * ITEMS_PER_PAGE
+    );
+    
+    return {
+      filteredBooks: result,
+      totalPages: total,
+      paginatedBooks: paginated
+    };
+  }, [booksData, searchQuery, sortBy, sortOrder, activePage]);
   
 
 
-  if (isLoading && books.length === 0) {
+  if (isLoading && !booksData?.length) {
     return (
       <Container size="lg" py="xl" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <LoadingOverlay visible={isLoading} />
