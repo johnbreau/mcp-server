@@ -23,14 +23,40 @@ A command-line interface for interacting with your Obsidian vault.
 
 ## Development
 
-### Client Application
+### Starting and Stopping Services
 
-To start the backend:
+#### Start All Services
+To start the backend, frontend, and health data server simultaneously:
+
 ```bash
+# From the project root directory
 npm run dev
 ```
 
-To start the React frontend:
+This will start:
+- Backend server (default: http://localhost:3000)
+- Frontend development server (default: http://localhost:5173)
+- Health data server (default: http://localhost:8000)
+
+#### Stop All Services
+To stop all running services:
+
+```bash
+# From the project root directory
+npm run stop
+```
+
+### Manual Service Management
+
+#### Backend Server
+
+```bash
+# Start backend server
+cd server
+npm run dev
+```
+
+#### Frontend Development Server
 
 1. Navigate to the client directory:
    ```bash
