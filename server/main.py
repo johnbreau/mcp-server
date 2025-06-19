@@ -25,7 +25,8 @@ app.add_middleware(
 )
 
 # Base directory for Apple Health data
-BASE_DIR = Path(__file__).parent.parent / "appleHealthData"
+BASE_DIR = Path(__file__).parent.parent.absolute() / "appleHealthData"
+print(f"Looking for Apple Health data in: {BASE_DIR}")
 
 class ItemType(str, Enum):
     FILE = "file"

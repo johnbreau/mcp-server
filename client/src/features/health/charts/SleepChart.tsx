@@ -4,9 +4,46 @@ import { useState, useEffect, useMemo } from 'react';
 import type { SleepData } from '../../../api/health';
 import { healthApiClient } from '../../../api/health';
 
-// Helper function to format date for X-axis
+// Define the type for the tick props
+interface CustomizedAxisTickProps {
+  x?: number;
+  y?: number;
+  payload?: {
+    value: string;
+  };
+}
+
+// Custom tick component for XAxis to handle multi-line labels
+const CustomizedAxisTick = ({ x = 0, y = 0, payload }: CustomizedAxisTickProps) => {
+  if (!payload?.value) return null;
+  const date = new Date(payload.value);
+  const weekday = date.toLocaleDateString('en-US', { weekday: 'short' });
+  const monthDay = date.toLocaleDateString('en-US', { 
+    month: 'short', 
+    day: 'numeric' 
+  });
+  
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <text x={0} y={0} dy={16} textAnchor="middle" fill="#666" fontSize={11}>
+        {weekday}
+      </text>
+      <text x={0} y={0} dy={32} textAnchor="middle" fill="#666" fontSize={11}>
+        {monthDay}
+      </text>
+    </g>
+  );
+};
+
+// Keep the original formatter for tooltips
 const formatXAxis = (date: string) => {
-  return new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  const dateObj = new Date(date);
+  const weekday = dateObj.toLocaleDateString('en-US', { weekday: 'short' });
+  const monthDay = dateObj.toLocaleDateString('en-US', { 
+    month: 'short', 
+    day: 'numeric' 
+  });
+  return `${weekday} ${monthDay}`;
 };
 
 interface EnhancedSleepData extends SleepData {
@@ -117,7 +154,6 @@ export const SleepChart = () => {
     );
   }
 
-
   if (error) {
     return (
       <Paper p="md" withBorder>
@@ -172,13 +208,14 @@ export const SleepChart = () => {
           >
             <CartesianGrid strokeDasharray="3 3" vertical={false} />
             <XAxis 
-              dataKey="date" 
-              tick={{ fontSize: 12 }}
-              tickFormatter={formatXAxis}
+              dataKey="date"
               axisLine={false}
               tickLine={false}
               interval="preserveStartEnd"
-              minTickGap={30}
+              minTickGap={15}
+              height={60}
+              tickMargin={10}
+              tick={<CustomizedAxisTick />}
             />
             <YAxis 
               tick={{ fontSize: 12 }}
@@ -228,13 +265,14 @@ export const SleepChart = () => {
           >
             <CartesianGrid strokeDasharray="3 3" vertical={false} />
             <XAxis 
-              dataKey="date" 
-              tick={{ fontSize: 12 }}
-              tickFormatter={formatXAxis}
+              dataKey="date"
               axisLine={false}
               tickLine={false}
               interval="preserveStartEnd"
-              minTickGap={30}
+              minTickGap={15}
+              height={60}
+              tickMargin={10}
+              tick={<CustomizedAxisTick />}
             />
             <YAxis 
               tick={{ fontSize: 12 }}
@@ -262,13 +300,13 @@ export const SleepChart = () => {
             <Bar 
               dataKey={(data: EnhancedSleepData) => data.rem / (data.inBed || 1)} 
               name="REM" 
-              fill={isDark ? '#5c940d' : '#82c91e'} 
+              fill={isDark ? '#e64980' : '#f06595'} 
               stackId="a"
             />
             <Bar 
               dataKey={(data: EnhancedSleepData) => data.light / (data.inBed || 1)} 
               name="Light" 
-              fill={isDark ? '#fcc419' : '#ffd43b'} 
+              fill={isDark ? '#4dabf7' : '#74c0fc'} 
               stackId="a"
             />
             <Bar 

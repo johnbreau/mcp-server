@@ -32,7 +32,8 @@ class ActivityRecord:
 class HealthDataParser:
     def __init__(self, export_file_path: str):
         self.export_file_path = Path(export_file_path)
-        self.ns = {'ns': 'http://www.apple.com/Health/'}
+        # Apple Health export uses a default namespace, which we need to handle specially
+        self.ns = {'default': 'http://www.apple.com/Health/'}
     
     def get_sleep_data(self, days: int = 30) -> List[Dict[str, Any]]:
         """
@@ -98,9 +99,13 @@ class HealthDataParser:
                 log(f"Root element: {root.tag}")
                 log(f"Root attributes: {root.attrib}")
                 
-                # Count total records
-                all_records = list(root.findall('.//Record'))
+                # Count total records with namespace
+                all_records = list(root.findall('.//default:Record', self.ns) or root.findall('.//Record'))
                 log(f"Total records in export: {len(all_records)}")
+                
+                # Print first few records to debug
+                for i, record in enumerate(all_records[:5]):
+                    log(f"Record {i+1} type: {record.get('type', 'N/A')} source: {record.get('sourceName', 'N/A')}")
                 
                 # Count records by type
                 record_types = {}
@@ -112,8 +117,9 @@ class HealthDataParser:
                 for rtype, count in sorted(record_types.items()):
                     log(f"  {rtype}: {count}")
                 
-                # Look for sleep records using the correct XPath syntax
-                sleep_records = root.findall(".//*[@type='HKCategoryTypeIdentifierSleepAnalysis']")
+                # Look for sleep records - try both with and without namespace
+                sleep_records = root.findall(".//default:Record[@type='HKCategoryTypeIdentifierSleepAnalysis']", self.ns) or \
+                              root.findall(".//Record[@type='HKCategoryTypeIdentifierSleepAnalysis']")
                 log(f"Found {len(sleep_records)} sleep records")
                 
                 # Print first few sleep records if any
@@ -142,8 +148,9 @@ class HealthDataParser:
             # Dictionary to store sleep data by date
             sleep_data = {}
             
-            # First, find all sleep records
-            sleep_records = root.findall(".//Record[@type='HKCategoryTypeIdentifierSleepAnalysis']")
+            # First, find all sleep records - try both with and without namespace
+            sleep_records = root.findall(".//default:Record[@type='HKCategoryTypeIdentifierSleepAnalysis']", self.ns) or \
+                          root.findall(".//Record[@type='HKCategoryTypeIdentifierSleepAnalysis']")
             log(f"Found {len(sleep_records)} sleep records in the export file")
             
             if not sleep_records:
