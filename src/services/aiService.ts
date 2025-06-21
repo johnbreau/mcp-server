@@ -35,6 +35,11 @@ interface SemanticSearchResponse {
   reasoning: string;
 }
 
+export type ChatMessage = {
+  role: 'system' | 'user' | 'assistant';
+  content: string;
+};
+
 export class AIService {
   static async semanticSearch(
     query: string, 
@@ -180,6 +185,28 @@ Return a JSON object with:
     } catch (error) {
       console.error('Error in answerQuestion:', error);
       throw new Error(`Failed to generate answer: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
+  }
+
+  static async chatCompletion(messages: ChatMessage[]): Promise<string> {
+    try {
+      const openai = getOpenAIClient();
+      const completion = await openai.chat.completions.create({
+        model: 'gpt-4-turbo',
+        messages: [
+          {
+            role: 'system',
+            content: 'You are a helpful assistant that helps users with their notes and information retrieval.'
+          },
+          ...messages
+        ],
+        temperature: 0.7,
+      });
+
+      return completion.choices[0]?.message?.content || 'I apologize, but I could not generate a response.';
+    } catch (error) {
+      console.error('Error in chatCompletion:', error);
+      throw new Error(`Failed to generate chat response: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   }
 }

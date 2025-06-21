@@ -257,9 +257,97 @@ const askHandler = async (req: Request, res: Response, next: NextFunction): Prom
   }
 };
 
-// Register route handlers
-router.post('/semantic-search', semanticSearchHandler);
-router.post('/summarize', summarizeHandler);
-router.post('/ask', askHandler);
+// Chat handler
+const chatHandler = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  try {
+    const { messages } = req.body as { messages: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> };
+    
+    if (!messages || !Array.isArray(messages) || messages.length === 0) {
+      return res.apiError('Messages array is required', 400);
+    }
+
+    try {
+      const response = await AIService.chatCompletion(messages);
+      res.apiSuccess({ response });
+    } catch (error) {
+      console.error('Error in OpenAI API call:', error);
+      res.apiError('Failed to get response from AI service');
+    }
+  } catch (error) {
+    console.error('Error in chat handler:', error);
+    next(error);
+  }
+};
+
+// Register route handlers with logging
+function registerRoute(method: string, path: string, handler: any) {
+  console.log(`Registering route: ${method.toUpperCase()} ${path}`);
+  (router as any)[method.toLowerCase()](path, handler);
+}
+
+// Register all routes
+registerRoute('post', '/semantic-search', semanticSearchHandler);
+registerRoute('post', '/summarize', summarizeHandler);
+registerRoute('post', '/ask', askHandler);
+
+// Chat endpoint
+console.log('Registering chat endpoint at POST /chat');
+registerRoute('post', '/chat', async (req: any, res: any, next: any) => {
+  console.log('Chat endpoint hit - Request body:', req.body);
+  try {
+    await chatHandler(req, res, next);
+  } catch (err) {
+    console.error('Error in chat handler:', err);
+    next(err);
+  }
+});
+
+// Test endpoint to verify router is working
+registerRoute('get', '/test', (req: any, res: any) => {
+  console.log('Test endpoint hit');
+  res.json({ 
+    success: true, 
+    message: 'AI router is working',
+    timestamp: new Date().toISOString()
+  });
+});
+
+// Debug: Log all registered routes
+interface RouteLayer {
+  route?: {
+    path: string;
+    methods: { [method: string]: boolean };
+  };
+}
+
+console.log('All registered AI routes:');
+(router.stack as RouteLayer[]).forEach(layer => {
+  if (layer.route) {
+    const methods = Object.keys(layer.route.methods || {})
+      .filter(m => m !== '_all')
+      .map(m => m.toUpperCase())
+      .join(', ');
+    console.log(`- ${methods} ${layer.route.path}`);
+  }
+});
+
+// Debug: Log registered routes
+interface RouteLayer {
+  route?: {
+    path: string;
+    methods: { [method: string]: boolean };
+  };
+}
+
+console.log('AI Routes registered:');
+(router.stack as RouteLayer[]).forEach(layer => {
+  if (layer.route) {
+    const methods = Object.keys(layer.route.methods || {})
+      .filter(method => method !== '_all')
+      .map(method => method.toUpperCase())
+      .join(', ');
+    console.log(`- ${methods} ${layer.route.path}`);
+  }
+});
 
 export default router;
