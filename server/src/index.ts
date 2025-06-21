@@ -6,6 +6,7 @@ import goodreadsRoutes from './routes/goodreads.js';
 import timelineRoutes from './routes/timeline.js';
 import calendarRoutes from './routes/calendar.js';
 import obsidianRoutes from './routes/obsidian.js';
+import aiRoutes from './routes/ai.js';
 
 // Load environment variables from .env file
 const envPath = path.resolve(process.cwd(), '.env');
@@ -17,13 +18,18 @@ console.log('OBSIDIAN_VAULT_PATH:', process.env.OBSIDIAN_VAULT_PATH || 'Not set'
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// CORS Configuration
+// CORS Configuration - Allow all origins in development
 const corsOptions = {
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+  origin: true, // Allow all origins in development
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
+  allowedHeaders: ['Content-Type', 'Authorization', 'Content-Length', 'X-Requested-With'],
+  credentials: true,
+  preflightContinue: false,
+  optionsSuccessStatus: 204
 };
+
+// Log CORS configuration
+console.log('CORS Configuration:', JSON.stringify(corsOptions, null, 2));
 
 // Middleware
 app.use(cors(corsOptions));
@@ -42,6 +48,13 @@ app.use('/api/timeline', timelineRoutes);
 app.use('/api/calendar', calendarRoutes);
 app.use('/api/tools/obsidian', obsidianRoutes);
 
+// AI Routes
+console.log('Mounting AI routes at /api/ai');
+app.use('/api/ai', (req, _res, next) => {
+  console.log(`[${new Date().toISOString()}] AI Router hit: ${req.method} ${req.path}`);
+  next();
+}, aiRoutes);
+
 // Log all registered routes
 const printRoutes = () => {
   const routes: string[] = [];
@@ -52,6 +65,12 @@ const printRoutes = () => {
       stack?: Array<{
         route?: { path: string; methods: { [method: string]: boolean } };
       }>;
+      // Add type for router
+      router?: {
+        stack: Array<{
+          route: { path: string; methods: { [method: string]: boolean } };
+        }>;
+      };
     };
   }>;
   
@@ -60,12 +79,16 @@ const printRoutes = () => {
       // Routes registered directly on the app
       const methods = Object.keys(middleware.route.methods).join(',').toUpperCase();
       routes.push(`${methods.padEnd(7)} ${middleware.route.path}`);
-    } else if (middleware.name === 'router' && middleware.handle?.stack) {
-      // Routes registered via app.use()
-      middleware.handle.stack.forEach((handler) => {
+    } else if (middleware.name === 'router' && middleware.handle) {
+      // Handle both handle.stack and handle.router.stack
+      const routerStack = middleware.handle.router?.stack || middleware.handle.stack || [];
+      
+      routerStack.forEach((handler: any) => {
         if (handler.route) {
           const methods = Object.keys(handler.route.methods).join(',').toUpperCase();
-          routes.push(`${methods.padEnd(7)} /api${handler.route.path}`);
+          // Get the base path from the parent route if it exists
+          const basePath = middleware.route?.path || '';
+          routes.push(`${methods.padEnd(7)} ${basePath}${handler.route.path}`);
         }
       });
     }

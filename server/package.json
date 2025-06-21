@@ -6,25 +6,43 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "tsx watch src/index.ts",
+    "dev": "nodemon --watch src --exec tsx src/index.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts,js,json"
+  },
   "dependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.11.0",
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.23",
+    "@types/fs-extra": "^11.0.4",
+    "@xenova/transformers": "^2.17.2",
+    "axios": "^1.9.0",
+    "chrono-node": "^2.8.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "playwright": "^1.42.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "fast-glob": "^3.3.3",
+    "fs-extra": "^11.3.0",
+    "node-ical": "^0.20.1",
+    "node-mac": "^1.0.1",
+    "openai": "^4.103.0",
+    "playwright": "^1.52.0",
+    "zod": "^3.25.28"
   },
   "engines": {
     "node": ">=14.0.0"
   },
   "devDependencies": {
-    "tsx": "^4.19.4"
+    "@types/node": "^24.0.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
   }
 }

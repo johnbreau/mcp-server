@@ -102,10 +102,54 @@ console.log('Loading environment variables from:', envPath);
   app.use(express.json({ limit: '10mb' }));
   app.use(express.urlencoded({ extended: true }));
 
+  // Debug: Log all registered routes before mounting
+  console.log('Mounting routers...');
+  
   // Mount routers
   app.use('/api/tools', toolRouter);
-  app.use('/api/ai', aiRouter);
+  console.log('- Mounted /api/tools router');
+  
+  // Mount AI router with debug logging
+  console.log('Mounting AI router at /api/ai');
+  
+  // Add a test route before the router
+  app.get('/api/ai/health', (_req, res) => {
+    res.json({ 
+      status: 'ok', 
+      timestamp: new Date().toISOString(),
+      message: 'AI router is working'
+    });
+  });
+  
+  // Mount the AI router
+  app.use('/api/ai', (req, res, next) => {
+    console.log(`[${new Date().toISOString()}] AI Router hit: ${req.method} ${req.path}`);
+    next();
+  }, aiRouter);
+  
+  console.log('- Mounted /api/ai router with middleware');
+  
   app.use('/api/timeline', timelineRouter);
+  console.log('- Mounted /api/timeline router');
+  
+  // Debug: Log all routes after mounting
+  console.log('All mounted routes:');
+  app._router.stack.forEach((middleware: any) => {
+    if (middleware.route) {
+      // Routes registered directly on the app
+      console.log(`- ${Object.keys(middleware.route.methods).join(', ').toUpperCase()} ${middleware.route.path}`);
+    } else if (middleware.name === 'router') {
+      // Router middleware
+      console.log(`- Router mounted at: ${middleware.regexp}`);
+      // Log routes for this router
+      middleware.handle.stack.forEach((handler: any) => {
+        const route = handler.route;
+        if (route) {
+          console.log(`  ${Object.keys(route.methods).join(', ').toUpperCase()} ${route.path}`);
+        }
+      });
+    }
+  });
 
   // Add a test endpoint
   app.get('/api/test', (_req, res) => {

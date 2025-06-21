@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "commonjs",
+    "moduleResolution": "node",
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
@@ -10,16 +10,20 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    "isolatedModules": false,
+    "noEmit": false,
     "allowJs": true,
     "checkJs": true,
     "baseUrl": ".",
-    "types": ["node"]
-  },
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node"
+    "types": ["node"],
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": true,
+    "lib": ["es2020"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.test.ts"]
