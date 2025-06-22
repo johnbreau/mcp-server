@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { format, isSameDay } from 'date-fns';
+import { format, isSameDay, parseISO } from 'date-fns';
 import { api } from '../../api/obsidian';
 import { 
   Box, 
@@ -75,17 +75,14 @@ export default function JournalsView() {
 
   // Handle date selection from the calendar
   const handleDateSelect = useCallback((date: Date) => {
-    setSelectedDate(date);
-    fetchJournalEntry(date);
+    // Create a new date object to avoid timezone issues
+    const localDate = new Date(date);
+    localDate.setMinutes(localDate.getMinutes() + localDate.getTimezoneOffset());
+    setSelectedDate(localDate);
+    fetchJournalEntry(localDate);
   }, [fetchJournalEntry]);
 
-  // Handle calendar change event
-  const handleCalendarChange = useCallback((date: string | Date | null) => {
-    if (date) {
-      const newDate = typeof date === 'string' ? new Date(date) : date;
-      setSelectedDate(newDate);
-    }
-  }, []);
+  // Handle calendar change event is now handled by handleDateSelect
 
   // Fetch events when the month changes
   const fetchEvents = useCallback(async (start: Date, end: Date) => {
@@ -161,6 +158,14 @@ export default function JournalsView() {
 
   // Helper function to parse date strings from the API
   const parseDateString = (dateStr: string): Date => {
+    // First try to parse as ISO string
+    if (dateStr.includes('T')) {
+      const isoDate = parseISO(dateStr);
+      if (!isNaN(isoDate.getTime())) {
+        return isoDate;
+      }
+    }
+    
     // Try parsing with the format: "Sunday, June 8, 2025 at 12:00:00 PM"
     const parsed = new Date(dateStr);
     if (!isNaN(parsed.getTime())) {
@@ -242,89 +247,133 @@ export default function JournalsView() {
     <Container size="lg" py="xl">
       <Paper withBorder p="md" radius="md">
         <Title className="journalsTitleBar" order={2} mb="md">Journals</Title>
-        <Box mt="md" className='journalsBox'>
-          <MantineCalendar
-            className="journalsCalendar"
-            getDayProps={(date) => ({
-              onClick: () => handleCalendarChange(date),
-            })}
-            renderDay={(date) => {
-              // Convert date to Date object if it's a string
-              const dayDate = date ? new Date(date) : new Date();
-              const day = dayDate.getDate();
-              const today = new Date();
-              const dayHasEvents = hasEvents(dayDate);
-              const isToday = isSameDay(dayDate, today);
-              const isSelected = selectedDate ? isSameDay(dayDate, selectedDate) : false;
-
-              return (
-                <div
-                  style={{
-                    height: 40,
+        
+        <div className="journalsBox" style={{ display: 'flex', flexDirection: 'row' }}>
+          <div className="journalsCalendar" style={{ flex: 1, marginRight: '20px' }}>
+            <MantineCalendar
+              size="sm"
+              firstDayOfWeek={0} // Sunday
+              getDayProps={(date) => {
+                const day = new Date(date);
+                const dayHasEvents = hasEvents(day);
+                const isToday = isSameDay(day, new Date());
+                const isSelected = selectedDate ? isSameDay(day, selectedDate) : false;
+                
+                return {
+                  onClick: () => handleDateSelect(day),
+                  style: {
+                    width: '100%',
+                    height: '100%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    borderRadius: theme.radius.sm,
-                    backgroundColor: isSelected
-                      ? theme.colors.blue[6]
-                      : 'transparent',
+                    backgroundColor: isSelected ? 'var(--mantine-color-blue-6)' : 'transparent',
+                    color: isSelected ? 'var(--mantine-color-white)' : 'var(--mantine-color-text)',
+                    borderRadius: 'var(--mantine-radius-sm)',
                     position: 'relative',
-                    color: isSelected ? 'white' : 'inherit',
-                    border: isToday ? `2px solid ${theme.colors.blue[6]}` : 'none',
+                    border: isToday ? '1px solid var(--mantine-color-blue-6)' : 'none',
                     cursor: 'pointer',
-                  }}
-                  onClick={() => handleDateSelect(dayDate)}
-                >
-                  {day}
-                  {dayHasEvents && (
-                    <div style={{
-                      position: 'absolute',
-                      bottom: 4,
-                      width: 6,
-                      height: 6,
-                      borderRadius: '50%',
-                      backgroundColor: isSelected ? 'white' : theme.colors.blue[6],
-                    }} />
-                  )}
-                </div>
-              );
-            }}
-          />
-          <div className="journalEntries" style={{ flex: 2, marginTop: 0 }}>
-            <Title className="journalEntryDate" order={3} mb="md">
-              {selectedDate ? format(selectedDate, 'MMMM d, yyyy') : 'Journal Entry'}
-            </Title>
+                  },
+                  children: (
+                    <>
+                      {day.getDate()}
+                      {dayHasEvents && (
+                        <div style={{
+                          position: 'absolute',
+                          bottom: '4px',
+                          width: '6px',
+                          height: '6px',
+                          borderRadius: '50%',
+                          backgroundColor: isSelected ? 'var(--mantine-color-white)' : 'var(--mantine-color-blue-6)',
+                        }} />
+                      )}
+                    </>
+                  ),
+                };
+              }}
+              styles={{
+                calendarHeader: {
+                  marginBottom: 'var(--mantine-spacing-xs)',
+                  marginTop: 'var(--mantine-spacing-xs)',
+                  padding: '0 var(--mantine-spacing-xs)',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                },
+                calendarHeaderControl: {
+                  color: 'var(--mantine-color-text)',
+                  borderRadius: 'var(--mantine-radius-sm)',
+                  width: '36px',
+                  height: '36px',
+                  '&:hover': {
+                    backgroundColor: 'var(--mantine-color-gray-1)',
+                  },
+                },
+                calendarHeaderLevel: {
+                  color: 'var(--mantine-color-text)',
+                  fontWeight: 600,
+                  fontSize: 'var(--mantine-font-size-md)',
+                  '&:hover': {
+                    backgroundColor: 'var(--mantine-color-gray-1)',
+                  },
+                },
+                weekday: {
+                  color: 'var(--mantine-color-dimmed)',
+                  fontWeight: 500,
+                  fontSize: 'var(--mantine-font-size-sm)',
+                  padding: 'var(--mantine-spacing-xs) 0',
+                  textAlign: 'center',
+                },
+                day: {
+                  height: '36px',
+                  width: '36px',
+                  fontSize: 'var(--mantine-font-size-sm)',
+                  borderRadius: 'var(--mantine-radius-sm)',
+                  '&:hover': {
+                    backgroundColor: 'var(--mantine-color-gray-1)',
+                  },
+                },
+                weekdaysRow: {
+                  borderBottom: '1px solid var(--mantine-color-gray-2)',
+                  marginBottom: 'var(--mantine-spacing-xs)',
+                },
+                month: {
+                  width: '100%',
+                  borderCollapse: 'separate',
+                  borderSpacing: '2px',
+                  tableLayout: 'fixed',
+                },
+              }}
+            />
+          </div>
+
+          <div className="journalEntries" style={{ flex: 2 }}>
             {isJournalLoading ? (
               <Text>Loading journal entry...</Text>
             ) : journalEntry ? (
-              <Paper style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace' }}>
+              <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace' }}>
                 <div style={{ lineHeight: 1.6 }}>
                   {journalEntry.content}
                 </div>
-              </Paper>
+              </div>
             ) : (
               <Text c="dimmed">No journal entry for this date</Text>
             )}
-          </div>
-        </Box>
-
-        {selectedDate && (
-          <Box mt="md">
-            <Text fw={500} mb="sm">
-              Events for {format(selectedDate, 'MMMM d, yyyy')}
-            </Text>
-            {isLoading ? (
-              <Text>Loading events...</Text>
-            ) : error ? (
-              <Text c="red">{error}</Text>
-            ) : selectedDateEvents.length === 0 ? (
-              <Text c="dimmed">No events for this day</Text>
-            ) : (
-              <div>
-                {selectedDateEvents.map((event) => {
-                  try {
-                    const eventDate = parseDateString(event.timestamp);
-                    return (
+            
+            {selectedDate && (
+              <Box mt="md">
+                <Text fw={500} mb="sm">
+                  Events for {format(selectedDate, 'MMMM d, yyyy')}
+                </Text>
+                {isLoading ? (
+                  <Text>Loading events...</Text>
+                ) : error ? (
+                  <Text c="red">{error}</Text>
+                ) : selectedDateEvents.length === 0 ? (
+                  <Text c="dimmed">No events for this day</Text>
+                ) : (
+                  <div>
+                    {selectedDateEvents.map((event) => (
                       <div
                         key={event.id}
                         style={{
@@ -334,7 +383,6 @@ export default function JournalsView() {
                           backgroundColor: colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
                           cursor: 'pointer',
                         }}
-                        onClick={() => setSelectedDate(eventDate)}
                       >
                         <Text size="sm" fw={500}>
                           {event.title}
@@ -348,16 +396,13 @@ export default function JournalsView() {
                           {formatEventTime(event.timestamp)}
                         </Text>
                       </div>
-                    );
-                  } catch (error) {
-                    console.error('Error rendering event:', error, event);
-                    return null;
-                  }
-                })}
-              </div>
+                    ))}
+                  </div>
+                )}
+              </Box>
             )}
-          </Box>
-        )}
+          </div>
+        </div>
       </Paper>
     </Container>
   );
