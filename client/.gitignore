@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .appleHealthData/
+.server/__pycache__/health_data_parser.cpython-313.pyc
 
 # Editor directories and files
 .vscode/*
