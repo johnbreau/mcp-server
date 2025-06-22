@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Paper, Text, Title, Button, Group, LoadingOverlay } from '@mantine/core';
-import api from '../../../api';
+import { Paper, Text, Title, Button, Group, LoadingOverlay } from '@mantine/core';
+import { journalApi, type JournalEntry } from '../../api/journal';
 import { format } from 'date-fns';
-
-type JournalEntry = {
-  id: string;
-  title: string;
-  description: string;
-  date: string;
-  metadata: {
-    path: string;
-    wordCount: number;
-  };
-};
 
 export const RandomJournalEntry: React.FC = () => {
   const [entry, setEntry] = useState<JournalEntry | null>(null);
@@ -20,76 +9,75 @@ export const RandomJournalEntry: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   const fetchRandomEntry = async () => {
+    setIsLoading(true);
+    setError(null);
     try {
-      setIsLoading(true);
-      setError(null);
-      
-      const response = await api.get('/timeline/random-journal');
-      
-      if (response.data.success && response.data.data) {
-        setEntry({
-          id: response.data.data.id,
-          title: response.data.data.title,
-          description: response.data.data.description || '',
-          date: response.data.data.date,
-          metadata: {
-            path: response.data.data.metadata?.path || '',
-            wordCount: response.data.data.metadata?.wordCount || 0
-          }
-        });
-      } else {
-        setError('No journal entries found');
-      }
+      const randomEntry = await journalApi.getRandomEntry();
+      setEntry(randomEntry);
     } catch (err) {
       console.error('Error fetching random journal entry:', err);
-      setError('Failed to load a random journal entry');
+      setError('Failed to load journal entry');
     } finally {
       setIsLoading(false);
     }
   };
 
-  // Fetch a random entry when the component mounts
   useEffect(() => {
     fetchRandomEntry();
   }, []);
 
+  if (isLoading) {
+    return (
+      <Paper p="md" withBorder style={{ minHeight: '200px', position: 'relative' }}>
+        <LoadingOverlay visible={isLoading} />
+      </Paper>
+    );
+  }
+
+  if (error) {
+    return (
+      <Paper p="md" withBorder>
+        <Text color="red">{error}</Text>
+        <Button mt="md" onClick={fetchRandomEntry}>
+          Try Again
+        </Button>
+      </Paper>
+    );
+  }
+
+  if (!entry) {
+    return (
+      <Paper p="md" withBorder>
+        <Text>No journal entries found.</Text>
+      </Paper>
+    );
+  }
+
   return (
-    <Paper p="md" shadow="sm" withBorder style={{ position: 'relative' }}>
-      <LoadingOverlay visible={isLoading} />
-      
+    <Paper p="md" withBorder>
       <Group justify="space-between" mb="md">
-        <Title order={3}>Random Journal Entry</Title>
+        <Title order={3}>
+          {entry.title || 'Untitled'}
+        </Title>
+        <Text c="dimmed" size="sm">
+          {format(new Date(entry.date), 'MMMM d, yyyy')}
+        </Text>
+      </Group>
+      <Text style={{ whiteSpace: 'pre-line' }} mb="md">
+        {entry.description}
+      </Text>
+      <Group justify="space-between">
+        <Text size="sm" c="dimmed">
+          {entry.metadata?.wordCount || 0} words
+        </Text>
         <Button 
-          variant="subtle" 
-          size="sm" 
+          variant="outline" 
+          size="xs" 
           onClick={fetchRandomEntry}
-          disabled={isLoading}
         >
-          Get Another
+          Another Entry
         </Button>
       </Group>
-      
-      {error ? (
-        <Text color="red">{error}</Text>
-      ) : entry ? (
-        <Box>
-          <Text color="dimmed" size="sm" mb="md">
-            {format(new Date(entry.date), 'MMMM d, yyyy')} • {entry.metadata.wordCount} words
-          </Text>
-          
-          <Text style={{ whiteSpace: 'pre-line' }}>
-            {entry.description}
-          </Text>
-          
-          {entry.metadata.path && (
-            <Text size="sm" color="blue" mt="sm">
-              From: {entry.metadata.path}
-            </Text>
-          )}
-        </Box>
-      ) : (
-        <Text>No journal entries found</Text>
-      )}
     </Paper>
   );
 };

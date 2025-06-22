@@ -35,16 +35,6 @@ const CustomizedAxisTick = ({ x = 0, y = 0, payload }: CustomizedAxisTickProps) 
   );
 };
 
-// Keep the original formatter for tooltips
-const formatXAxis = (date: string) => {
-  const dateObj = new Date(date);
-  const weekday = dateObj.toLocaleDateString('en-US', { weekday: 'short' });
-  const monthDay = dateObj.toLocaleDateString('en-US', { 
-    month: 'short', 
-    day: 'numeric' 
-  });
-  return `${weekday} ${monthDay}`;
-};
 
 interface EnhancedSleepData extends SleepData {
   efficiency: number;

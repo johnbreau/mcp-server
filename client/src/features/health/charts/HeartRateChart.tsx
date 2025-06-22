@@ -82,9 +82,9 @@ export const HeartRateChart: React.FC = () => {
   const isDark = colorScheme === 'dark';
   const [timeRange, setTimeRange] = useState<TimeRange>('day');
   const [isLoading, setIsLoading] = useState(true);
-  // Error state is used in the error handling but marked as unused by linter
   // Error state for handling API errors
-  const [error, setError] = useState<string | null>(null);
+  // Note: Error state is preserved in the component for future error handling
+  const [, setError] = useState<string | null>(null);
   const [rawData, setRawData] = useState<DayDataPoint[]>([]);
   const [chartData, setChartData] = useState<ChartDataPoint[]>([]);
   

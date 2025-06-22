@@ -5,31 +5,31 @@ import {
   Title, 
   Text, 
   Group, 
-  Rating, 
   Stack, 
-  LoadingOverlay,
+  TextInput, 
+  Select, 
+  Box, 
+  LoadingOverlay, 
   Button,
-  Alert,
-  Box,
-  Badge,
-  TextInput,
   Paper,
   Pagination,
-  Select,
+  Rating,
+  Anchor,
   Flex,
-  Anchor
+  Alert,
+  Badge
 } from '@mantine/core';
 import { 
   IconBook, 
-  IconAlertCircle, 
   IconRefresh, 
   IconSearch, 
   IconExternalLink,
   IconChevronLeft,
-  IconChevronRight 
+  IconChevronRight
 } from '@tabler/icons-react';
 
 interface Book {
+  id: string;
   title: string;
   author: string;
   coverImage: string;
@@ -45,20 +45,23 @@ interface ApiResponse {
     totalBooks: number;
     pagesProcessed: number;
   };
+  totalBooks: number;
+  pagesProcessed: number;
   fromCache?: boolean;
   cachedAt?: string;
   error?: string;
 }
 
-const ITEMS_PER_PAGE = 20;
-
 export default function BooksPage() {
+  // Constants
+  const ITEMS_PER_PAGE = 10;
+  
   // State management
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'dateRead' | 'title' | 'author' | 'rating'>('dateRead');
+  const [sortOption, setSortOption] = useState<'title' | 'author' | 'rating' | 'date'>('date');
+  const [currentPage, setCurrentPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
-  const [activePage, setActivePage] = useState(1);
   
   // Process book cover images to handle Goodreads hotlinking restrictions
   const processBookCover = (url: string) => {
@@ -101,103 +104,38 @@ export default function BooksPage() {
   } as const;
   
   // Function to fetch books with caching for 1 week
-  const { data: booksData, isLoading, error: fetchError, refetch } = useQuery<Book[], Error>({
+  const fetchBooks = async (): Promise<ApiResponse> => {
+    const url = new URL('http://localhost:3000/api/books/read');
+    
+    console.log('Fetching books from:', url.toString());
+    const response = await fetch(url.toString());
+    const data: ApiResponse = await response.json();
+    
+    if (!response.ok) {
+      throw new Error(data.error || 'Failed to load books');
+    }
+    
+    return data;
+  };
+
+  const { 
+    data: booksData, 
+    isLoading, 
+    error: fetchError, 
+    refetch 
+  } = useQuery<ApiResponse, Error>({
     queryKey: ['books'],
-    queryFn: async (): Promise<Book[]> => {
-      const url = new URL('http://localhost:3000/api/books/read');
-      
-      console.log('Fetching books from:', url.toString());
-      const response = await fetch(url.toString());
-      const data: ApiResponse = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to load books');
-      }
-      
-      // Log raw data for debugging
-      console.log('Raw books data from server:', data.books);
-      
-      // Log the first few books with all their properties
-      console.log('First 5 books with all properties:', JSON.parse(JSON.stringify(data.books.slice(0, 5))));
-      
-      // Process the books data
-      const processedBooks = (data.books || []).map((book, index) => {
-        // Log the raw rating for each book
-        console.group(`Book ${index + 1}`);
-        console.log('Title:', book.title);
-        console.log('All properties:', Object.entries(book).map(([key, value]) => `${key}: ${value} (${typeof value})`));
-        console.log('Raw rating:', book.rating, 'Type:', typeof book.rating);
-        console.groupEnd();
-        
-        // Clean up the rating - handle both string and number ratings
-        let ratingValue = 0;
-        const rating: string | number | null | undefined = book.rating as string | number | null | undefined;
-        
-        if (rating === null || rating === undefined) {
-          console.log('No rating found for book:', book.title);
-        } else if (typeof rating === 'number') {
-          console.log('Number rating found:', rating);
-          ratingValue = rating;
-        } else if (typeof rating === 'string') {
-          console.log('String rating found:', rating);
-          // Handle different string formats like '5.00', '5', '5 stars', etc.
-          const numMatch = rating.match(/([0-9.]+)/);
-          if (numMatch) {
-            ratingValue = parseFloat(numMatch[1]);
-            console.log('Extracted rating from string:', ratingValue);
-          } else if (rating.includes('star')) {
-            // Handle star ratings like '5 stars'
-            const starMatch = rating.match(/([0-9.]+)/);
-            if (starMatch) {
-              ratingValue = parseFloat(starMatch[1]);
-              console.log('Extracted rating from stars:', ratingValue);
-            }
-          }
-        }
-        
-        console.log('Final processed rating:', ratingValue);
-        
-        // Clean up the date
-        let cleanDate = book.dateRead;
-        if (typeof cleanDate === 'string') {
-          cleanDate = cleanDate.replace(/^date read\s*[\n\s]*/i, '').trim();
-        }
-        
-        return {
-          ...book,
-          rating: ratingValue,
-          dateRead: cleanDate
-        } as Book;
-      });
-      
-      // Remove duplicates by title and author
-      const uniqueBooks = Array.from(new Map(
-        processedBooks.map(book => [`${book.title}-${book.author}`, book])
-      ).values());
-      
-      if (uniqueBooks.length !== processedBooks.length) {
-        console.log(`Removed ${processedBooks.length - uniqueBooks.length} duplicate books`);
-      }
-      
-      return uniqueBooks;
-    },
-    staleTime: 7 * 24 * 60 * 60 * 1000, // 1 week before data is considered stale
-    gcTime: 10 * 24 * 60 * 60 * 1000, // Keep unused data in cache for 10 days (longer than staleTime)
-    refetchOnWindowFocus: false, // Don't refetch when window regains focus
-    refetchOnMount: false, // Don't refetch when component mounts if data is fresh
-    refetchOnReconnect: false, // Don't refetch when regaining network connection
-    retry: 1, // Only retry once if the request fails
+    queryFn: fetchBooks,
+    gcTime: 7 * 24 * 60 * 60 * 1000, // 1 week cache
+    refetchOnWindowFocus: false,
+    refetchOnMount: true,
+    refetchOnReconnect: false,
+    retry: 2,
   });
   
-  // Update error state
-  useEffect(() => {
-    if (fetchError) {
-      setError(fetchError instanceof Error ? fetchError.message : 'An unknown error occurred');
-    } else {
-      setError(null);
-    }
-  }, [fetchError]);
-  
+  // Use the books from the API response or default to an empty array
+  const books = useMemo(() => booksData?.books || [], [booksData]);
+
   // Update error state
   useEffect(() => {
     if (fetchError) {
@@ -207,72 +145,68 @@ export default function BooksPage() {
     }
   }, [fetchError]);
 
-  // Handle refresh button click
-  const handleRefresh = useCallback<React.MouseEventHandler<HTMLButtonElement>>(() => {
-    refetch().catch(console.error);
+  // Handle refresh
+  const handleRefresh = useCallback(() => {
+    refetch();
   }, [refetch]);
   
+  // Handle page change
+  const handlePageChange = useCallback((page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  
+  // Toggle sort order is not used in the current implementation
+  // const toggleSortOrder = useCallback(() => {
+  //   setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc');
+  // }, []);
+
+  // Handle sort option change
+  const handleSortChange = useCallback((value: string | null) => {
+    if (value) {
+      setSortOption(value as 'title' | 'author' | 'rating' | 'date');
+      setCurrentPage(1);
+    }
+  }, []);
+
   // Filter, sort and paginate books based on search query and sort options
-  const { filteredBooks, totalPages, paginatedBooks } = useMemo(() => {
-    if (!booksData) {
-      return {
-        filteredBooks: [],
-        totalPages: 0,
-        paginatedBooks: []
-      };
-    }
-    
-    let result = [...booksData];
-    
-    // Apply search filter
-    if (searchQuery.trim() !== '') {
-      const query = searchQuery.toLowerCase();
-      result = result.filter(book => 
-        book.title.toLowerCase().includes(query) || 
-        book.author.toLowerCase().includes(query)
-      );
-    }
-    
-    // Apply sorting
-    result.sort((a, b) => {
-      let compareResult = 0;
-      
-      switch (sortBy) {
-        case 'title':
-          compareResult = a.title.localeCompare(b.title);
-          break;
-        case 'author':
-          compareResult = a.author.localeCompare(b.author);
-          break;
-        case 'rating':
-          compareResult = a.rating - b.rating;
-          break;
-        case 'dateRead':
-        default:
-          compareResult = new Date(b.dateRead).getTime() - new Date(a.dateRead).getTime();
-          break;
-      }
-      
-      return sortOrder === 'asc' ? compareResult : -compareResult;
-    });
-    
-    // Calculate pagination
-    const total = Math.ceil(result.length / ITEMS_PER_PAGE);
-    const paginated = result.slice(
-      (activePage - 1) * ITEMS_PER_PAGE,
-      activePage * ITEMS_PER_PAGE
+  const { processedBooks, totalPages } = useMemo(() => {
+    // Filter books by search query
+    const filtered = books.filter((book: Book) => 
+      book.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      book.author?.toLowerCase().includes(searchQuery.toLowerCase())
     );
     
-    return {
-      filteredBooks: result,
-      totalPages: total,
-      paginatedBooks: paginated
-    };
-  }, [booksData, searchQuery, sortBy, sortOrder, activePage]);
-  
+    // Sort books
+    const sorted = [...filtered].sort((a: Book, b: Book) => {
+      if (sortOption === 'title') {
+        return (a.title || '').localeCompare(b.title || '');
+      } else if (sortOption === 'author') {
+        return (a.author || '').localeCompare(b.author || '');
+      } else if (sortOption === 'rating') {
+        return (b.rating || 0) - (a.rating || 0);
+      } else if (sortOption === 'date') {
+        return new Date(b.dateRead || 0).getTime() - new Date(a.dateRead || 0).getTime();
+      }
+      return 0;
+    });
+    
+    // Apply sort order
+    if (sortOrder === 'asc' && sortOption !== 'rating') {
+      sorted.reverse();
+    }
+    
+    // Calculate total pages
+    const totalPages = Math.ceil(sorted.length / ITEMS_PER_PAGE);
+    
+    // Apply pagination
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const paginated = sorted.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+    
+    return { processedBooks: paginated, totalPages };
+  }, [books, searchQuery, sortOption, currentPage, sortOrder]);
 
-
-  if (isLoading && !booksData?.length) {
+  if (isLoading && !books.length) {
     return (
       <Container size="lg" py="xl" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <LoadingOverlay visible={isLoading} />
@@ -288,7 +222,7 @@ export default function BooksPage() {
             <IconBook size={32} />
             <Title order={1}>My Read Books</Title>
             <Badge color="blue" variant="filled" size="lg">
-              {filteredBooks.length} books
+              {processedBooks.length} books
             </Badge>
           </Group>
           <Button 
@@ -313,14 +247,10 @@ export default function BooksPage() {
           
           <Select
             label="Sort by"
-            value={sortBy}
-            onChange={(value) => {
-              if (value === 'title' || value === 'author' || value === 'rating' || value === 'dateRead') {
-                setSortBy(value);
-              }
-            }}
+            value={sortOption}
+            onChange={(value) => handleSortChange(value)}
             data={[
-              { value: 'dateRead', label: 'Date Read' },
+              { value: 'date', label: 'Date Read' },
               { value: 'title', label: 'Title' },
               { value: 'author', label: 'Author' },
               { value: 'rating', label: 'Rating' },
@@ -347,13 +277,12 @@ export default function BooksPage() {
         </Group>
         
         <Text size="sm" c="dimmed">
-          Showing {(activePage - 1) * ITEMS_PER_PAGE + 1} to {Math.min(activePage * ITEMS_PER_PAGE, filteredBooks.length)} of {filteredBooks.length} books
+          Showing {(currentPage - 1) * ITEMS_PER_PAGE + 1} to {Math.min(currentPage * ITEMS_PER_PAGE, processedBooks.length)} of {processedBooks.length} books
         </Text>
       </Stack>
 
       {error && (
         <Alert 
-          icon={<IconAlertCircle size={16} />} 
           title="Error loading books" 
           color="red"
           mb="xl"
@@ -362,7 +291,7 @@ export default function BooksPage() {
         </Alert>
       )}
 
-      {!isLoading && filteredBooks.length === 0 ? (
+      {!isLoading && processedBooks.length === 0 ? (
         <Box style={{
           display: 'flex',
           flexDirection: 'column',
@@ -386,7 +315,7 @@ export default function BooksPage() {
         </Box>
       ) : (
         <Stack gap="md" mt="md">
-          {paginatedBooks.map((book, index) => (
+          {processedBooks.map((book: Book, index: number) => (
             <Paper 
               key={index}
               withBorder 
@@ -558,8 +487,8 @@ export default function BooksPage() {
             >
               <Pagination
                 total={totalPages}
-                value={activePage}
-                onChange={setActivePage}
+                value={currentPage}
+                onChange={handlePageChange}
                 siblings={1}
                 boundaries={1}
                 withEdges
@@ -573,7 +502,7 @@ export default function BooksPage() {
                     padding: '8px 12px',
                     borderRadius: '4px',
                   },
-                  'data-active': page === activePage,
+                  'data-active': page === currentPage,
                 })}
                 styles={paginationStyles}
               />

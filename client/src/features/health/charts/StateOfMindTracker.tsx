@@ -28,8 +28,7 @@ import {
   IconCalendar,
   IconList,
   IconPlus,
-  IconTrash,
-  IconEdit
+  IconTrash
 } from '@tabler/icons-react';
 
 type TimeRange = '1W' | '1M' | '3M' | '6M' | '1Y';

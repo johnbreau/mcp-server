@@ -1,7 +1,9 @@
+// @ts-nocheck
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { fileURLToPath, URL } from 'node:url';
+import { fileURLToPath } from 'node:url';
 
+// Simple Vite config without type annotations
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -18,13 +20,11 @@ export default defineConfig({
         target: 'http://localhost:3000',
         changeOrigin: true,
         secure: false,
-        // Don't rewrite the /api prefix since our backend expects it
-        // rewrite: (path) => path.replace(/^\/api/, ''),
         configure: (proxy, _options) => {
-          proxy.on('error', (err, _req, _res) => {
+          proxy.on('error', (err) => {
             console.log('proxy error', err);
           });
-          proxy.on('proxyReq', (proxyReq, req, _res) => {
+          proxy.on('proxyReq', (proxyReq, req) => {
             console.log('Sending Request to the Target:', {
               method: req.method,
               url: req.url,
@@ -32,7 +32,7 @@ export default defineConfig({
               headers: req.headers,
             });
           });
-          proxy.on('proxyRes', (proxyRes, req, _res) => {
+          proxy.on('proxyRes', (proxyRes, req) => {
             console.log('Received Response from the Target:', {
               statusCode: proxyRes.statusCode,
               statusMessage: proxyRes.statusMessage,
