@@ -169,8 +169,8 @@ export default function BooksPage() {
     }
   }, []);
 
-  // Filter, sort and paginate books based on search query and sort options
-  const { processedBooks, totalPages } = useMemo(() => {
+  // Filter and sort all books based on search query and sort options
+  const { filteredBooks, totalPages, totalFilteredBooks } = useMemo(() => {
     // Filter books by search query
     const filtered = books.filter((book: Book) => 
       book.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -196,15 +196,21 @@ export default function BooksPage() {
       sorted.reverse();
     }
     
-    // Calculate total pages
+    // Calculate total pages based on filtered results
     const totalPages = Math.ceil(sorted.length / ITEMS_PER_PAGE);
     
-    // Apply pagination
+    return { 
+      filteredBooks: sorted,
+      totalPages,
+      totalFilteredBooks: sorted.length 
+    };
+  }, [books, searchQuery, sortOption, sortOrder]);
+  
+  // Apply pagination to filtered and sorted books
+  const processedBooks = useMemo(() => {
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const paginated = sorted.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-    
-    return { processedBooks: paginated, totalPages };
-  }, [books, searchQuery, sortOption, currentPage, sortOrder]);
+    return filteredBooks.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [filteredBooks, currentPage]);
 
   if (isLoading && !books.length) {
     return (
@@ -277,7 +283,7 @@ export default function BooksPage() {
         </Group>
         
         <Text size="sm" c="dimmed">
-          Showing {(currentPage - 1) * ITEMS_PER_PAGE + 1} to {Math.min(currentPage * ITEMS_PER_PAGE, processedBooks.length)} of {processedBooks.length} books
+          Showing {(currentPage - 1) * ITEMS_PER_PAGE + 1} to {Math.min(currentPage * ITEMS_PER_PAGE, totalFilteredBooks)} of {totalFilteredBooks} books
         </Text>
       </Stack>
 
